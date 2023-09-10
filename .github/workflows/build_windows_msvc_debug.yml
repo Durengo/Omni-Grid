@@ -34,8 +34,8 @@ jobs:
         uses: shogo82148/actions-setup-perl@v1
         with:
           perl-version: '5.38'
-        run: cpanm --installdeps .
-        run: prove -lv t
+      - run: cpanm --installdeps .
+      - run: prove -lv t
 
       - name: Setup Python
         uses: actions/setup-python@v4
