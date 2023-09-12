@@ -1,0 +1,7 @@
+build
+out
+install
+vendor
+utils/options_cache.json
+.vs
+.vscode
