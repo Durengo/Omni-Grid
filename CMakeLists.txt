@@ -407,7 +407,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${raylib_LIBRARIES}
                 ${Python3_LIBRARIES}
                 ${Boost_LIBRARIES}
-                ${VCPKG_CORE}/lib/python311.lib
+                ${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib
                 PkgConfig::GTKMM_LIB
         )
 
