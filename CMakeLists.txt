@@ -22,7 +22,7 @@ set(PROJECT_FULL_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PRO
 # CREATING PROJECT.
 project(OMNI-GRID-FRAMEWORK VERSION ${PROJECT_VERSION})
 
-# RUN SETUP.PY TO ASSIGN BUILD TYPE.
+# RUN BUILD.PY TO ASSIGN BUILD TYPE.
 execute_process(
         COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "build_type"
         OUTPUT_VARIABLE BUILD_TYPE_SETUP_OUTPUT
@@ -109,7 +109,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 message(STATUS "VCPKG STATUS: ${USE_VCPKG}")
         endif()
 
-        # RUN SETUP.PY TO GET VCPKG ROOT PATH.
+        # RUN BUILD.PY TO GET VCPKG ROOT PATH.
         execute_process(
                 COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "vcpkg_root"
                 OUTPUT_VARIABLE VCPKG_SETUP_OUTPUT
@@ -161,6 +161,16 @@ find_package(PkgConfig REQUIRED)
 
 # SETTING UP PYTHON.
 find_package(Python3 REQUIRED COMPONENTS Development Interpreter)
+
+# RUN BUILD.PY TO ASSIGN BUILD TYPE.
+# execute_process(
+#         COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "venv_root"
+#         OUTPUT_VARIABLE VENV_ROOT_OUTPUT
+#         RESULT_VARIABLE VENV_ROOT_RESULT
+#         OUTPUT_STRIP_TRAILING_WHITESPACE
+# )
+
+# set(${Python3_EXECUTABLE} ${VENV_ROOT_OUTPUT}/python.exe)
 
 if(${VERBOSE})
         message(STATUS "SETTING PYTHON VERSION...")
