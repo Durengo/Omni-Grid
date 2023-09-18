@@ -51,6 +51,14 @@ def get_from_cache(key):
         return None
 
 
+def delete_from_cache(key):
+    with open(options_cache_dir, "r") as cache_file:
+        cache_data = json.load(cache_file)
+    del cache_data[key]
+    with open(options_cache_dir, "w") as cache_file:
+        json.dump(cache_data, cache_file)
+
+
 def print_cache():
     print("Cache contents:")
     with open(options_cache_dir, "r") as cache_file:
@@ -416,6 +424,8 @@ def cache_help():
           setup.py [-ca | --cache] ---> print cache contents
           setup.py [-cae | --cache-edit] ---> edit cache
           setup.py [-cag | --cache-get <key>] ---> get value from cache
+          setup.py [-can | --cache-new <key>:<value>] ---> add new entry to cache
+          setup.py [-cad | --cache-delete <key>] ---> delete entry from cache
           ''')
 
 
@@ -470,6 +480,22 @@ if __name__ == "__main__":
                     print("No key specified!")
                     exit()
                 print(get_from_cache(sys.argv[2]))
+                exit()
+            case "-can" | "--cache-new":
+                if (sys.argv[2] is None):
+                    print("No key:value pair specified!")
+                    exit()
+                key_value = sys.argv[2].split(":")
+                if (len(key_value) != 2):
+                    print("Invalid key:value pair!")
+                    exit()
+                write_to_cache(key_value[0], key_value[1])
+                exit()
+            case "-cad" | "--cache-delete":
+                if (sys.argv[2] is None):
+                    print("No key specified!")
+                    exit()
+                delete_from_cache(sys.argv[2])
                 exit()
             # Project operations
             case "-ph" | "--project-help":
