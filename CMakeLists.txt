@@ -413,6 +413,18 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         set_target_properties(OMNI-GRID PROPERTIES VERSION ${PROJECT_FULL_VERSION})
 
         set_target_properties(OMNI-GRID PROPERTIES OUTPUT_NAME "OMNI-GRID")
+
+        # CHECK PYTHON.LIB PATH.
+        if(${VERBOSE})
+                message(STATUS "PYTHON.LIB PATH: ${VCPKG_CORE}/lib/python311.lib")
+
+                if(EXISTS "${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib")
+                        set(PYTHON_LIB_PATH "${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib")
+                else()
+                        message(FATAL_ERROR "PYTHON.LIB NOT FOUND.")
+                endif()
+        endif()
+
         target_link_libraries(OMNI-GRID PUBLIC
                 fmt::fmt
                 spdlog::spdlog
@@ -421,7 +433,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${raylib_LIBRARIES}
                 ${Python3_LIBRARIES}
                 ${Boost_LIBRARIES}
-                ${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib
+                ${PYTHON_LIB_PATH}
                 PkgConfig::GTKMM_LIB
         )
 
