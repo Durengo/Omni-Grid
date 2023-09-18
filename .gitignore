@@ -5,3 +5,4 @@ vendor
 utils/options_cache.json
 .vs
 .vscode
+py_venv
