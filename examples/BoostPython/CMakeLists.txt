@@ -6,7 +6,7 @@ message(STATUS "PYTHON3_LIBRARIES: ${Boost_LIBRARIES}")
 target_link_libraries(HelloBoostPythonLib PRIVATE
     ${Python3_LIBRARIES}
     ${Boost_LIBRARIES}
-    ${VCPKG_CORE}/lib/python311.lib
+    ${PYTHON_LIB_PATH}
 )
 
 target_include_directories(HelloBoostPythonLib PRIVATE
@@ -30,7 +30,7 @@ add_executable(OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonEXE "HelloBoostPyth
 target_link_libraries(OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonEXE PRIVATE
     ${Python3_LIBRARIES}
     ${Boost_LIBRARIES}
-    ${VCPKG_CORE}/lib/python311.lib
+    ${PYTHON_LIB_PATH}
 )
 target_include_directories(OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonEXE PRIVATE
     ${Python3_INCLUDE_DIRS}
@@ -58,7 +58,7 @@ add_executable(OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries "HelloPyt
 target_link_libraries(OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries PRIVATE
     ${Python3_LIBRARIES}
     ${Boost_LIBRARIES}
-    ${VCPKG_CORE}/lib/python311.lib
+    ${PYTHON_LIB_PATH}
 )
 target_include_directories(OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries PRIVATE
     ${Python3_INCLUDE_DIRS}
