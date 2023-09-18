@@ -1,6 +1,6 @@
 # escape=`
 
-ARG FROM_IMAGE=mcr.microsoft.com/dotnet/framework/sdk:4.8.1
+ARG FROM_IMAGE=mcr.microsoft.com/windows:ltsc2019
 FROM ${FROM_IMAGE}
 
 LABEL maintainer="sebastian.termen@gmail.com"
@@ -17,10 +17,6 @@ RUN powershell -Command Write-Host "Windows Docker initialized."
 COPY Install.cmd C:\TEMP\
 ADD https://aka.ms/vscollect.exe C:\TEMP\collect.exe
 
-# Install Node.js LTS
-ADD https://nodejs.org/dist/v8.11.3/node-v8.11.3-x64.msi C:\TEMP\node-install.msi
-RUN start /wait msiexec.exe /i C:\TEMP\node-install.msi /l*vx "%TEMP%\MSI-node-install.log" /qn ADDLOCAL=ALL
-
 # Download channel for fixed install.
 ARG CHANNEL_URL=https://aka.ms/vs/17/release/channel
 ADD ${CHANNEL_URL} C:\TEMP\VisualStudio.chman
@@ -30,19 +26,14 @@ ADD https://aka.ms/vs/17/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 RUN C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --channelUri C:\TEMP\VisualStudio.chman `
     --installChannelUri C:\TEMP\VisualStudio.chman `
-    --add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools `
-    --add Microsoft.Net.Component.3.5.DeveloperTools `
-    --add Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools `
-    --add Microsoft.Net.ComponentGroup.TargetingPacks.Common `
-    --add Microsoft.VisualStudio.Component.TestTools.BuildTools `
+    --add Microsoft.Component.MSBuild `
+    --add Microsoft.VisualStudio.Component.VC.CoreIde `
+    --add Microsoft.VisualStudio.Component.VC.DiagnosticTools `
+    --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
     --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended`
     --add Microsoft.VisualStudio.Component.VC.143 `
-    --add Microsoft.VisualStudio.Component.VC.ATL `
-    --add Microsoft.VisualStudio.Component.VC.CLI.Support `
-    --add Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop `
-    --add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.WinXP `
-    --add Microsoft.VisualStudio.Workload.NodeBuildTools `
-    --add Microsoft.VisualStudio.Component.TypeScript.2.8 `
+    --add Microsoft.VisualStudio.Component.Windows10SDK `
+    --add Microsoft.VisualStudio.Component.Windows11SDK.22621 `
     --installPath C:\BuildTools
 
 # Download and install PowerShell Core
@@ -95,9 +86,13 @@ ENV PATH="${PATH};C:\Python;C:\Python\Scripts"
 
 # Set environment variables for MSVC v143
 ENV PATH="${PATH};C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild"
+ENV PATH="${PATH};C:\BuildTools\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x64"
 
-RUN dir "C:\BuildTools\VC\Auxiliary\Build"
-RUN dir "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild"
+# RUN dir "C:\BuildTools\VC\Auxiliary\Build"
+# RUN dir "C:\Program Files (x86)\Microsoft Visual Studio"
+# RUN dir "C:\BuildTools\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x64"
+# RUN dir /s /b "C:\BuildTools\cl.exe"
+# RUN dir "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild"
 
 # Clone vcpkg repository using Git
 RUN git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
@@ -126,7 +121,7 @@ RUN vcpkg install vcpkg-pkgconfig-get-modules --triplet=x64-windows
 # Integrate vcpkg
 RUN vcpkg integrate install
 RUN vcpkg integrate powershell
-RUN C:\vcpkg\installed\x64-windows\tools\boost-build\bootstrap.bat
+RUN cd C:\vcpkg\installed\x64-windows\tools\boost-build && powershell .\bootstrap.bat & cd C:\
 
 # Check dependencies
 RUN vcpkg list
