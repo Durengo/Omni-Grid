@@ -270,7 +270,6 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${VCPKG_CORE}/debug/bin/cairomm-1.16-1.dll
                 ${VCPKG_CORE}/debug/bin/cairo-script-interpreter-2.dll
                 ${VCPKG_CORE}/debug/bin/epoxy-0.dll
-                ${VCPKG_CORE}/debug/bin/ffi-8.dll
                 ${VCPKG_CORE}/debug/bin/fontconfig-1.dll
                 ${VCPKG_CORE}/debug/bin/freetyped.dll
                 ${VCPKG_CORE}/debug/bin/fribidi-0.dll
@@ -304,6 +303,14 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${VCPKG_CORE}/debug/bin/zlibd1.dll
         )
 
+        if(EXISTS "${VCPKG_CORE}/debug/bin/ffi-8.dll")
+                list(APPEND GTK_DLL_DEBUG_FILES "${VCPKG_CORE}/debug/bin/ffi-8.dll")
+        elseif(EXISTS "${VCPKG_CORE}/debug/bin/libffi.dll")
+                list(APPEND GTK_DLL_DEBUG_FILES "${VCPKG_CORE}/debug/bin/libffi.dll")
+        else()
+                message(WARNING "DEBUG FFI DLL NOT FOUND.")
+        endif()
+
         # GTK RELEASE DLLS.
         set(GTK_DLL_RELEASE_FILES
                 ${VCPKG_CORE}/bin/brotlicommon.dll
@@ -314,7 +321,6 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${VCPKG_CORE}/bin/cairomm-1.16-1.dll
                 ${VCPKG_CORE}/bin/cairo-script-interpreter-2.dll
                 ${VCPKG_CORE}/bin/epoxy-0.dll
-                ${VCPKG_CORE}/bin/ffi-8.dll
                 ${VCPKG_CORE}/bin/fontconfig-1.dll
                 ${VCPKG_CORE}/bin/freetype.dll
                 ${VCPKG_CORE}/bin/fribidi-0.dll
@@ -347,6 +353,14 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${VCPKG_CORE}/bin/tiff.dll
                 ${VCPKG_CORE}/bin/zlib1.dll
         )
+
+        if(EXISTS "${VCPKG_CORE}/bin/ffi-8.dll")
+                list(APPEND GTK_DLL_RELEASE_FILES "${VCPKG_CORE}/bin/ffi-8.dll")
+        elseif(EXISTS "${VCPKG_CORE}/bin/libffi.dll")
+                list(APPEND GTK_DLL_RELEASE_FILES "${VCPKG_CORE}/bin/libffi.dll")
+        else()
+                message(WARNING "DEBUG FFI DLL NOT FOUND.")
+        endif()
 
         # BOOST PYTHON DEBUG DLLS.
         set(BOOST_PYTHON_DLL_DEBUG_FILES
