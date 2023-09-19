@@ -6,8 +6,8 @@ jobs:
   Build-Windows-x64-Debug:
     runs-on: windows-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      # - name: Checkout repository
+      #   uses: actions/checkout@v2
 
 #
       # - name: Set up MSVC
