@@ -6,8 +6,8 @@ jobs:
   Build-Windows-x64-Debug:
     runs-on: windows-latest
     steps:
-      # - name: Checkout repository
-      #   uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
 #
       # - name: Set up MSVC
@@ -46,7 +46,8 @@ jobs:
       - name: Pull Windows Image
         run: docker pull durengo/vcpkg_base:1.0
 
-      - name: docker run --rm -it durengo/vcpkg_base:1.0
+      - name: Run Image
+        run: docker run --rm -it durengo/vcpkg_base:1.0
 
       - name: cmake test
         run: cmake --version
