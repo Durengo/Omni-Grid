@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   Build-Windows-x64-Debug:
-    runs-on: durengo/vcpkg_core
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -42,6 +42,11 @@ jobs:
       #   uses: actions/setup-python@v4
       #   with:
       #     python-version: '3.11'
+
+      - name: Pull Windows Image
+        run: docker pull durengo/vcpkg_base:1.0
+
+      - name: docker run --rm -it durengo/vcpkg_base:1.0
 
       - name: cmake test
         run: cmake --version
