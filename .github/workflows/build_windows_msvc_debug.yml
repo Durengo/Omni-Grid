@@ -4,8 +4,7 @@ on: [push, pull_request]
 
 jobs:
   Build-Windows-x64-Debug:
-    runs-on: windows-latest
-    container: durengo/vcpkg_core
+    runs-on: durengo/vcpkg_core
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
