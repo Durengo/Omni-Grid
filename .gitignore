@@ -6,3 +6,6 @@ utils/options_cache.json
 .vs
 .vscode
 py_venv
+/Tools/CPM
+cpm.bat
+cpm.pl
