@@ -64,7 +64,7 @@ It will download the CPM module which will be located in Tools/CPM.
 
 ~~There are a few scripts available that should streamline all project generation, building, and installing~~
 
-Everything has been mode to a single submodule - [CPM](cpm.md)
+Everything has been moved to a single submodule - [CPM](cpm.md)
 
 ## CMakeLists.txt structure/debbuging
 
