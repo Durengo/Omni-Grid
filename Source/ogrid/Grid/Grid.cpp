@@ -2,7 +2,7 @@
 
 #include <stdexcept>
 
-namespace GridWorks
+namespace OGRID
 {
     // Constructors & Destructors
     Grid::Grid(unsigned char rows, unsigned char cols, char initialChar) : defaultChar(initialChar)
