@@ -34,7 +34,7 @@
 13. > $ cl
 14. > Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32822 for x64 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-*b* - local vcpkg installation can be used, otherwise the setup script will download and setup vcpkg in the repository (vendor/vcpkg). If using a local vcpkg install, the following packages must be installed with the x64-windows triplet (just add ``--triplet=x64-windows`` flag at the end of the command, i.e. ``vcpkg install fmt --triplet=x64-windows``) OR they can be automatically installed by running the ``setup.bat --vcpkg-location "path/to/vcpkg"`` script:
+*b* - local vcpkg installation can be used, otherwise the setup script will download and setup vcpkg in the repository (Vendor/vcpkg). If using a local vcpkg install, the following packages must be installed with the x64-windows triplet (just add ``--triplet=x64-windows`` flag at the end of the command, i.e. ``vcpkg install fmt --triplet=x64-windows``) OR they can be automatically installed by running the ``setup.bat --vcpkg-location "path/to/vcpkg"`` script:
 
 1. [fmt](https://github.com/fmtlib/fmt)
 2. [spdlog](https://github.com/gabime/spdlog)
@@ -51,13 +51,20 @@
   > $ vcpkg install vcpkg-pkgconfig-get-modules
 * Make sure to install vcpkg to ``C:/vcpkg`` or ``C:/dev/vcpkg`` - long filepaths may cause errors on Windows
 
+Note: It is better if you setup vcpkg somewhere close to the root drive otherwise there might be issue with building the libraries (on the vcpkg side).
+
 ## Building the source
 
-There are a few scripts available that should streamline all project generation, building, and installing:
+Before proceeding __make absolutely sure__ you cd into the root repository directory and run the following command:
 
-1. [setup.bat](setup.md)
-2. [build.bat](build.md)
-3. ~~run.bat~~ - not available yet.
+> $ git submodule update --init --recursive
+
+This will download any submodules the repository has.
+It will download the CPM module which will be located in Tools/CPM.
+
+~~There are a few scripts available that should streamline all project generation, building, and installing~~
+
+Everything has been mode to a single submodule - [CPM](cpm.md)
 
 ## CMakeLists.txt structure/debbuging
 
@@ -75,16 +82,18 @@ This will show which .dll files are missing. These files can be found in the vcp
 
 Do not forget that debug .dll files are stored in ${VCPKG_CORE}/debug/bin and release .dll files are stored in ${VCPKG_CORE}/bin.
 
-Whenever CMakeLists.txt files are edited, it is highly recommended to do ``./build --clean-rebuild`` as just regenerating the project and rebuilding the source from an already existing file-base can cause a lot of conflicts. My advice would be to keep using ``./build --debug`` while iterating on the code, and if something doesn't compile or the code execution just doesn't seem right, then use the ol' ``./build --clean-rebuild``.
+Whenever CMakeLists.txt files are edited, it is highly recommended to do ``./cpm -cdb`` as just regenerating the project and rebuilding the source from an already existing file-base can cause a lot of conflicts. My advice would be to keep using ``./cpm -db`` while iterating on the code, and if something doesn't compile or the code execution just doesn't seem right, then use the ol' ``./cpm -cdb``.
+
+Remember! If you add a file it will not be automatically detected by CMake (not always at least). You will either need to provide an additional .cpp or .h filepath in the CMakeLists.txt. After you do that sometimes ``./cpm -db`` might not identify that changes were made to the CMakeLists.txt, therefore it might be necessary to use ``./cpm -cdb``.
 
 ## Additional Information
 
-There are a few issues with how vcpkg distributes some packages, specifically with Boost and Python libraries. When all the sources are built, some executables that link these libraries will have missing .dll files. Therefore, after building the cmake --install should be use (this is automatically handled by [build.bat](build.md)).
+There are a few issues with how vcpkg distributes some packages, specifically with Boost and Python libraries. When all the sources are built, some executables that link these libraries will have missing .dll files. Therefore, after building the cmake --install should be used (this is automatically handled by [CPM](build.md)).
 
 Tested IDEs:
 VSCode, Visual Studio
 
 Notes for IDEs:
 
-* VSCode doesn't always show includes.
-* Visual Studio - building the project with the built-in tools should work completely fine (but again, sources may have missing .dll files therefore using [install] executable option should resolve any issues), but in case something fails, try doing a clear rebuild with [build.bat](build.md).
+* VSCode doesn't always show includes -> this has been fixed with the inclusion of the .vscode workspace folder.
+* Visual Studio - building the project with the built-in tools should work completely fine ~~(but again, sources may have missing .dll files therefore using [install] executable option should resolve any issues), but in case something fails, try doing a clear rebuild with [build.bat](build.md)~~.

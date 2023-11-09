@@ -15,7 +15,8 @@ py_venv
 
 # IDE
 .vs
-.vscode
+# Keeping .vscode workspace, as it allows us to show includes.
+# .vscode
 
 # Other
 out
