@@ -213,6 +213,30 @@ if(CURRENT_PLATFORM STREQUAL "WIN32")
 endif()
 
 if(${VERBOSE})
+        message(STATUS "LOOKING FOR DURLIB...")
+endif()
+
+set(DURLIB_DIRECTORY "${PROJECT_SOURCE_DIR}/Library/durlib")
+
+if(EXISTS ${DURLIB_DIRECTORY})
+        message(STATUS "THE DIRECTORY \'${DURLIB_DIRECTORY}\' FOUND.")
+else()
+        message(FATAL_ERROR "THE DIRECTORY \'${DURLIB_DIRECTORY}\' NOT FOUND.\nPLEASE RUN \"git submodule update --init --recursive\" TO GET THE DEPENDENCIES.")
+endif()
+
+configure_file(
+        "${PROJECT_SOURCE_DIR}/Tools/CPM/Cache/options_cache.json"
+        "${PROJECT_SOURCE_DIR}/Library/durlib/scripts/options_cache.json"
+        COPYONLY
+)
+
+add_subdirectory(${DURLIB_DIRECTORY})
+
+if(${VERBOSE})
+        message(STATUS "DURLIB FOUND.")
+endif()
+
+if(${VERBOSE})
         message(STATUS "ALL DEPENDENCIES FOUND.")
 endif()
 
@@ -422,14 +446,13 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # OMNI-GRID .CPP FILES
         file(GLOB_RECURSE OMNI-GRID_CPP
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Log/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.cpp"
         )
 
         # OMNI-GRID .H FILES
         file(GLOB_RECURSE OMNI-GRID_H
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Core/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Log/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
         )
 
         if(${VERBOSE})
@@ -456,6 +479,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         endif()
 
         target_link_libraries(OMNI-GRID PUBLIC
+                DURLIB
                 fmt::fmt
                 spdlog::spdlog
                 OpenGL::GL

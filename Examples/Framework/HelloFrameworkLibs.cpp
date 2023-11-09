@@ -1,5 +1,5 @@
 #include <boost/python.hpp>
-#include <ogrid.h>
+#include <durlib.h>
 #include <thread>
 #include <gtkmm-4.0/gtkmm.h>
 #include <gtkmm-4.0/gtkmm/button.h>
@@ -77,7 +77,7 @@ void HelloWorld::on_button_clicked()
 }
 int main(int argc, char *argv[])
 {
-    OGRID::Log::Init();
+    DURLIB::Log::Init();
 
     CLI_TRACE("Hello Framework!");
     CLI_INFO("Hello Framework!");
