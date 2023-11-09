@@ -11,7 +11,7 @@
 * *b* *c* [MSVC v143 compiler](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 * *d* _(Optional)_ [vcpkg](https://vcpkg.io/en/getting-started)
 
-*a* - Make sure to select Windows 64-bit; add python.exe to PATH; also do a custom installation and make sure to select __ALL__ the options.
+*a* - Make sure to select Windows 64-bit; add python.exe to PATH; also do a custom installation and make sure to select *ALL* the options.
 
 *b* - Can be acquired with [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) install. Select "Desktop development with C++".
 
@@ -55,7 +55,7 @@ Note: It is better if you setup vcpkg somewhere close to the root drive otherwis
 
 ## Building the source
 
-Before proceeding __make absolutely sure__ you cd into the root repository directory and run the following command:
+Before proceeding *make absolutely sure* you cd into the root repository directory and run the following command:
 
 > $ git submodule update --init --recursive
 
@@ -70,7 +70,7 @@ Everything has been moved to a single submodule - [CPM](cpm.md)
 
 Learning and understanding CMake can be an extremely tedious chore, that's why any developer-error should be reduced to near zero if the following guidelines are followed.
 
-Pay extremely close attention as to how some CMakeLists.txt files are prepared for specific executables, especially the ones that use libraries without the main OMNI-GRID framework. It will save __a lot__ of time if the exact structure is used in new CMakeLists.txt files.
+Pay extremely close attention as to how some CMakeLists.txt files are prepared for specific executables, especially the ones that use libraries without the main OMNI-GRID framework. It will save *a lot* of time if the exact structure is used in new CMakeLists.txt files.
 
 If you have closely followed the CMakeLists.txt structure and are still getting errors for missing .dll files, then firstly check the executable with:
 
