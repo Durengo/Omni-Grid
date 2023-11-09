@@ -1,8 +1,8 @@
-#include <ogrid.h>
+#include <durlib.h>
 
 int main()
 {
-    OGRID::Log::Init();
+    DURLIB::Log::Init();
 
     CLI_TRACE("Hello Framework!");
     CLI_INFO("Hello Framework!");
