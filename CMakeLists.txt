@@ -548,6 +548,71 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
         # TODO: Find a way to fix this issue without having to run a script or manually copying the dlls.
         # install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/utils/core_copy_missing_dlls.cmake")
+
+        # ADD SOURCE FILES
+        # Ogrid-Sandbox .CPP FILES
+        file(GLOB_RECURSE Ogrid-Sandbox_CPP
+
+                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.cpp"
+        )
+
+        # Ogrid-Sandbox .H FILES
+        file(GLOB_RECURSE Ogrid-Sandbox_H
+
+                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.h"
+        )
+
+        if(${VERBOSE})
+                message(STATUS "Ogrid-Sandbox SOURCE FILES ADDED.")
+        endif()
+
+        add_executable(Ogrid-Sandbox
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/main.cpp"
+                ${Ogrid-Sandbox_CPP}
+                ${Ogrid-Sandbox_H}
+        )
+
+        target_compile_features(Ogrid-Sandbox PUBLIC ${CXX_VERSION_NAME})
+        set_target_properties(Ogrid-Sandbox PROPERTIES VERSION ${PROJECT_FULL_VERSION})
+
+        set_target_properties(Ogrid-Sandbox PROPERTIES OUTPUT_NAME "Ogrid-Sandbox")
+        target_link_libraries(Ogrid-Sandbox PUBLIC
+                OMNI-GRID
+        )
+
+        target_include_directories(Ogrid-Sandbox PUBLIC
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox"
+                ${Ogrid-Sandbox_H}
+        )
+
+        # COMPILER DEFINITIONS FOR Ogrid-Sandbox.
+        target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_PLATFORM_WINDOWS)
+
+        target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_ENABLE_ASSERTS)
+        target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_COMPILER_${CURRENT_COMPILER})
+
+        # ENABLE PROFILING FOR DEBUG BUILDS.
+        if(CMAKE_BUILD_TYPE STREQUAL Debug)
+                target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_DEBUG_PROFILING)
+                target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_ENABLE_DEBUG_LOG)
+        endif(CMAKE_BUILD_TYPE STREQUAL Debug)
+
+        if(${VERBOSE})
+                get_target_property(DEFINITIONS_LIST Ogrid-Sandbox COMPILE_DEFINITIONS)
+                message(STATUS "Ogrid-Sandbox COMPILE DEFINITIONS: ${DEFINITIONS_LIST}")
+        endif()
+
+        # INSTALLATION PROCEDURE.
+        install(TARGETS Ogrid-Sandbox
+                LIBRARY DESTINATION bin
+                ARCHIVE DESTINATION bin
+                RUNTIME DESTINATION bin)
+
+        # if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        #         install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
+        # elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+        #         install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+        # endif()
 endif()
 
 message(STATUS "OMNI-GRID/CMAKE SUCCESSFULLY FINISHED.")
