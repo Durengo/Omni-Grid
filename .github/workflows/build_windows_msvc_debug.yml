@@ -1,6 +1,6 @@
 name: Windows x64 Debug
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   Build-Windows-x64-Debug:
@@ -46,10 +46,15 @@ jobs:
         run: |
           echo CONFIGURATION
           dir
-          echo ./setup --no-deps-check
-          ./setup.bat --no-deps-check
-          echo ./build --clean-rebuild
-          ./build --clean-rebuild
+
+          echo git submodule update --init --recursive
+          git submodule update --init --recursive
+
+          echo perl ./Tools/CPM/init.pl
+          perl ./Tools/CPM/init.pl
+
+          echo ./cpm setup -n
+          ./cpm setup -n
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
