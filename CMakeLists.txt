@@ -9,6 +9,9 @@ set(MAIN_TEST ON)
 # TOGGLE EXAMPLES.
 set(EXAMPLES ON)
 
+# TOGGLE .DLL IN INSTALLS
+set(INSTALL_DLLS OFF)
+
 # SETTING PROJECT VERSION.
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 0)
@@ -541,14 +544,16 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ARCHIVE DESTINATION bin
                 RUNTIME DESTINATION bin)
 
-        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-                install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
-                install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
-                install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
-        elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-                install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
-                install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
-                install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
+        if(${INSTALL_DLLS})
+                if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+                        install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
+                        install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
+                        install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
+                elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+                        install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
+                        install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+                        install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
+                endif()
         endif()
 
         # TODO: Find a way to fix this issue without having to run a script or manually copying the dlls.
