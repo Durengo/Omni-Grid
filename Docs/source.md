@@ -34,7 +34,7 @@
 13. > $ cl
 14. > Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32822 for x64 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-*b* - local vcpkg installation can be used, otherwise the setup script will download and setup vcpkg in the repository (Vendor/vcpkg). If using a local vcpkg install, the following packages must be installed with the x64-windows triplet (just add ``--triplet=x64-windows`` flag at the end of the command, i.e. ``vcpkg install fmt --triplet=x64-windows``) OR they can be automatically installed by running the ``setup.bat --vcpkg-location "path/to/vcpkg"`` script:
+*b* - (*[CPM](cpm.md) HANDLES THIS AUTOMATICALLY SO NO NEED TO INSTALL THESE BEFOREHAND*) local vcpkg installation can be used, otherwise the setup script will download and setup vcpkg in the repository (Vendor/vcpkg). If using a local vcpkg install, the following packages must be installed with the x64-windows triplet (just add ``--triplet=x64-windows`` flag at the end of the command, i.e. ``vcpkg install fmt --triplet=x64-windows``) OR they can be automatically installed by running the ``setup.bat --vcpkg-location "path/to/vcpkg"`` script:
 
 1. [fmt](https://github.com/fmtlib/fmt)
 2. [spdlog](https://github.com/gabime/spdlog)
