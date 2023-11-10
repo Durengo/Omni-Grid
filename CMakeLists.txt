@@ -457,7 +457,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         endif()
 
         if(${MAIN_TEST})
-                add_subdirectory("${PROJECT_SOURCE_DIR}/tests")
+                add_subdirectory("${PROJECT_SOURCE_DIR}/Tests")
 
                 # add_executable(OMNI-GRID_TEST_ENV "${PROJECT_SOURCE_DIR}/tests/main.cpp")
                 # target_link_libraries(OMNI-GRID_TEST_ENV PUBLIC OMNI-GRID)
@@ -466,7 +466,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         endif()
 
         if(${EXAMPLES})
-                add_subdirectory("${PROJECT_SOURCE_DIR}/examples")
+                add_subdirectory("${PROJECT_SOURCE_DIR}/Examples")
         endif()
 
         # INSTALLATION PROCEDURE.
