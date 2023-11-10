@@ -15,10 +15,12 @@ Install(TARGETS HelloRaylib
 
 install(FILES $<TARGET_RUNTIME_DLLS:HelloRaylib> DESTINATION examples/raylib)
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION examples/raylib)
-elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-    install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION examples/raylib)
+if(${INSTALL_DLLS})
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION examples/raylib)
+    elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+        install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION examples/raylib)
+    endif()
 endif()
 
 if(${VERBOSE})

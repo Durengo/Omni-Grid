@@ -9,6 +9,9 @@ set(MAIN_TEST ON)
 # TOGGLE EXAMPLES.
 set(EXAMPLES ON)
 
+# TOGGLE .DLL IN INSTALLS
+set(INSTALL_DLLS ON)
+
 # SETTING PROJECT VERSION.
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 0)
@@ -447,12 +450,17 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # OMNI-GRID .CPP FILES
         file(GLOB_RECURSE OMNI-GRID_CPP
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.cpp"
         )
 
         # OMNI-GRID .H FILES
         file(GLOB_RECURSE OMNI-GRID_H
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_gui.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"
         )
 
         if(${VERBOSE})
@@ -536,14 +544,16 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ARCHIVE DESTINATION bin
                 RUNTIME DESTINATION bin)
 
-        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-                install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
-                install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
-                install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
-        elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-                install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
-                install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
-                install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
+        if(${INSTALL_DLLS})
+                if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+                        install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
+                        install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
+                        install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
+                elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+                        install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
+                        install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+                        install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
+                endif()
         endif()
 
         # TODO: Find a way to fix this issue without having to run a script or manually copying the dlls.
@@ -552,14 +562,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # Ogrid-Sandbox .CPP FILES
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
-
-                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
-
-                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.h"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
         )
 
         if(${VERBOSE})
@@ -608,11 +616,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ARCHIVE DESTINATION bin
                 RUNTIME DESTINATION bin)
 
-        # if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-        #         install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
-        # elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-        #         install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
-        # endif()
+        install(FILES $<TARGET_RUNTIME_DLLS:Ogrid-Sandbox> DESTINATION bin)
 endif()
 
 message(STATUS "OMNI-GRID/CMAKE SUCCESSFULLY FINISHED.")

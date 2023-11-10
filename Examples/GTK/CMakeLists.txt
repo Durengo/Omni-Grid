@@ -17,10 +17,12 @@ Install(TARGETS OMNI-GRID_EXAMPLES_HELLOGTK
 
 install(FILES $<TARGET_RUNTIME_DLLS:OMNI-GRID_EXAMPLES_HELLOGTK> DESTINATION examples/gtk)
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION examples/gtk)
-elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-    install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION examples/gtk)
+if(${INSTALL_DLLS})
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION examples/gtk)
+    elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+        install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION examples/gtk)
+    endif()
 endif()
 
 if(${VERBOSE})
