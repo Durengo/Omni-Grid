@@ -447,12 +447,17 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # OMNI-GRID .CPP FILES
         file(GLOB_RECURSE OMNI-GRID_CPP
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.cpp"
         )
 
         # OMNI-GRID .H FILES
         file(GLOB_RECURSE OMNI-GRID_H
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_gui.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"
         )
 
         if(${VERBOSE})
@@ -552,14 +557,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # Ogrid-Sandbox .CPP FILES
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
-
-                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
-
-                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.h"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
         )
 
         if(${VERBOSE})
@@ -609,9 +612,9 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 RUNTIME DESTINATION bin)
 
         # if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-        #         install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
+        # install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
         # elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-        #         install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+        # install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
         # endif()
 endif()
 
