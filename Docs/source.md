@@ -96,4 +96,5 @@ VSCode, Visual Studio
 Notes for IDEs:
 
 * VSCode doesn't always show includes -> this has been fixed with the inclusion of the .vscode workspace folder.
-* Visual Studio - building the project with the built-in tools should work completely fine ~~(but again, sources may have missing .dll files therefore using [install] executable option should resolve any issues), but in case something fails, try doing a clear rebuild with [build.bat](build.md)~~. It is important to note that CPM project setup must be done before using this IDE, otherwise many things will break.
+* Visual Studio - building the project with the built-in tools should work completely fine ~~(but again, sources may have missing .dll files therefore using [install] executable option should resolve any issues), but in case something fails, try doing a clear rebuild with [build.bat](build.md)~~. It is important to note that CPM project setup must be done as well as generating the project once with CPM before using this IDE, this needs to be done to save all cache-able variables that are required for CMake to operate.
+TLDR: Things will break if you don't use CPM at least once.
