@@ -24,8 +24,8 @@ This part reduces the amount of time needed for developers to get and setup all 
 
 Notes:
 
-1. If you delete the whole repository on accident then init.pl won't have to re-download all the dependencies as they are not stored in the repository.
-2. ./cpm setup -n or ./cpm setup -l has been run at least once, the configuration of specific packages can be skipped with "--spc" flag, e.g. "$ ./cpm setup -l "c:/dev/vcpkg" --spc". This will save some time if you accidentally delete the repository. Do take note that it might cause some issues with building or generating the CMake project, so you should usually run without the "--spc" flag.
+1. If you are using a local vcpkg installation and you delete the whole repository on accident then init.pl won't have to re-download all the dependencies as they are not stored in the repository.
+2. ./cpm setup -n or ./cpm setup -l has to be run at least once, the configuration of specific packages can be skipped with "--spc" flag, e.g. "$ ./cpm setup -l "c:/dev/vcpkg" --spc". This will save some time if you accidentally delete the repository. Do take note that it might cause some issues with building or generating the CMake project, so you should usually run without the "--spc" flag.
 
 ## Project Generation
 
@@ -41,7 +41,7 @@ That's it! It's simple as that, just one command. And better yet, once you delet
 
 ## Project Build
 
-The build part has been through many iteration at it has become quite intuitive and easy to use.
+The build part has been through many iteration and now has become quite intuitive and easy to use.
 
 First of all, before even running any build commands you must generate the project at least once.
 
