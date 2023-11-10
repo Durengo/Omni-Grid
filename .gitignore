@@ -1,8 +1,22 @@
-build
-out
-install
-vendor
-utils/options_cache.json
-.vs
-.vscode
+# Source Build
+Build
+Install
+
+# Vendor / Local VCPKG install
+Vendor
+
+# Tools
+/Tools/CPM
+cpm.bat
+cpm.pl
+
+# Python Environment
 py_venv
+
+# IDE
+.vs
+# Keeping .vscode workspace, as it allows us to show includes.
+# .vscode
+
+# Other
+out

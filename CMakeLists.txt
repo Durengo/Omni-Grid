@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.22)
 set(CMAKE_CXX_STANDARD 23)
 set(CXX_VERSION_NAME "cxx_std_${CMAKE_CXX_STANDARD}")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 # TOGGLE TESTING.
 set(MAIN_TEST ON)
@@ -24,7 +23,7 @@ project(OMNI-GRID-FRAMEWORK VERSION ${PROJECT_VERSION})
 
 # RUN BUILD.PY TO ASSIGN BUILD TYPE.
 execute_process(
-        COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "build_type"
+        COMMAND python "${PROJECT_SOURCE_DIR}/Tools/CPM/PyScripts/build.py" "-cag" "build_type"
         OUTPUT_VARIABLE BUILD_TYPE_SETUP_OUTPUT
         RESULT_VARIABLE BUILD_TYPE_SETUP_RESULT
         OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -33,22 +32,21 @@ set(CMAKE_BUILD_TYPE ${BUILD_TYPE_SETUP_OUTPUT})
 
 # SET INSTALLATION PATH BASED ON BUILD TYPE.
 # SETTING BUILD TYPE.
+# TOGGLING CUSTOM VERBOSITY.
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
         set(INSTALL_PATH_SUFFIX "Debug")
         set(CMAKE_BUILD_TYPE Debug)
-
-        # TOGGLE CUSTOM VERBOSITY.
         set(VERBOSE ON CACHE INTERNAL "Verbosity on")
+        set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
         set(INSTALL_PATH_SUFFIX "Release")
-
-        # TOGGLE CUSTOM VERBOSITY.
+        set(CMAKE_BUILD_TYPE Release)
         set(VERBOSE OFF CACHE INTERNAL "Verbosity off")
+        set(CMAKE_EXPORT_COMPILE_COMMANDS FALSE)
 else()
         set(INSTALL_PATH_SUFFIX "Unknown")
-
-        # TOGGLE CUSTOM VERBOSITY.
         set(VERBOSE ON CACHE INTERNAL "Verbosity on")
+        message(FATAL_ERROR "UNKNOWN BUILD TYPE: \"${CMAKE_BUILD_TYPE}\".")
 endif()
 
 # PATH TO INSTALLATION DIRECTORY.
@@ -66,8 +64,8 @@ if(${VERBOSE})
         message(STATUS "CURRENT PLATFORM: ${CMAKE_SYSTEM_NAME}")
 endif()
 
-# DOUBLE CHECKS IF THE SYSTEM IS RUNNING ON WINDOWS-X64 SYSTEM.
-# THIS ALSO FAILS IF THE COMPILER IS NOT 64-BIT.
+# DOUBLE CHECKS IF THE SYSTEM IS RUNNING ON X64 SYSTEM.
+# THIS ALSO FAILS IF THE COMPILER IS NOT 64-BIT COMPATIBLE.
 if(NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
         message(FATAL_ERROR "OMNI-GRID-FRAMEWORK SUPPORTS X64 SYSTEMS ONLY.")
         return()
@@ -83,13 +81,14 @@ string(TOLOWER "${CMAKE_CXX_COMPILER_ID}" LOWER_COMPILER_ID)
 if(LOWER_COMPILER_ID STREQUAL "msvc")
         set(CURRENT_COMPILER "MSVC")
         set(COMPILATION_PLATFORM "WIN32")
-
-# elseif(LOWER_COMPILER_ID STREQUAL "gnu")
-# set(CURRENT_COMPILER "GNU")
-# set(COMPILATION_PLATFORM "UNIX")
-# elseif(LOWER_COMPILER_ID STREQUAL "clang")
-# set(CURRENT_COMPILER "CLANG")
-# set(COMPILATION_PLATFORM "UNIX")
+elseif(LOWER_COMPILER_ID STREQUAL "gnu")
+        set(CURRENT_COMPILER "GNU")
+        set(COMPILATION_PLATFORM "UNIX")
+        message(FATAL_ERROR "GNU COMPILER NOT SUPPORTED.")
+elseif(LOWER_COMPILER_ID STREQUAL "clang")
+        set(CURRENT_COMPILER "CLANG")
+        set(COMPILATION_PLATFORM "UNIX")
+        message(FATAL_ERROR "CLANG COMPILER NOT SUPPORTED.")
 else()
         message(FATAL_ERROR "COMPILER NOT SUPPORTED.")
 endif()
@@ -111,7 +110,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
         # RUN BUILD.PY TO GET VCPKG ROOT PATH.
         execute_process(
-                COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "vcpkg_root"
+                COMMAND python "${PROJECT_SOURCE_DIR}/Tools/CPM/PyScripts/build.py" "-cag" "vcpkg_root"
                 OUTPUT_VARIABLE VCPKG_SETUP_OUTPUT
                 RESULT_VARIABLE VCPKG_SETUP_RESULT
                 OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -144,7 +143,7 @@ elseif(COMPILATION_PLATFORM STREQUAL "UNIX")
                 message(STATUS "VCPKG STATUS: ${USE_VCPKG}")
         endif()
 
-        meesage(FATAL_ERROR "VCPKG NOT SUPPORTED ON UNIX SYSTEMS.")
+        message(FATAL_ERROR "VCPKG NOT SUPPORTED ON UNIX SYSTEMS.")
 endif()
 
 # ADDING DEPENDENCIES.
@@ -211,6 +210,30 @@ endif()
 
 if(CURRENT_PLATFORM STREQUAL "WIN32")
         find_package(Stb REQUIRED)
+endif()
+
+if(${VERBOSE})
+        message(STATUS "LOOKING FOR DURLIB...")
+endif()
+
+set(DURLIB_DIRECTORY "${PROJECT_SOURCE_DIR}/Library/durlib")
+
+if(EXISTS ${DURLIB_DIRECTORY})
+        message(STATUS "THE DIRECTORY \'${DURLIB_DIRECTORY}\' FOUND.")
+else()
+        message(FATAL_ERROR "THE DIRECTORY \'${DURLIB_DIRECTORY}\' NOT FOUND.\nPLEASE RUN \"git submodule update --init --recursive\" TO GET THE DEPENDENCIES.")
+endif()
+
+configure_file(
+        "${PROJECT_SOURCE_DIR}/Tools/CPM/Cache/options_cache.json"
+        "${PROJECT_SOURCE_DIR}/Library/durlib/scripts/options_cache.json"
+        COPYONLY
+)
+
+add_subdirectory(${DURLIB_DIRECTORY})
+
+if(${VERBOSE})
+        message(STATUS "DURLIB FOUND.")
 endif()
 
 if(${VERBOSE})
@@ -423,14 +446,13 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # OMNI-GRID .CPP FILES
         file(GLOB_RECURSE OMNI-GRID_CPP
-                "${PROJECT_SOURCE_DIR}/omnigrid/ogrid/Log/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.cpp"
         )
 
         # OMNI-GRID .H FILES
         file(GLOB_RECURSE OMNI-GRID_H
-                "${PROJECT_SOURCE_DIR}/omnigrid/ogrid/ogrid.h"
-                "${PROJECT_SOURCE_DIR}/omnigrid/ogrid/Core/*.h"
-                "${PROJECT_SOURCE_DIR}/omnigrid/ogrid/Log/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
         )
 
         if(${VERBOSE})
@@ -457,6 +479,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         endif()
 
         target_link_libraries(OMNI-GRID PUBLIC
+                DURLIB
                 fmt::fmt
                 spdlog::spdlog
                 OpenGL::GL
@@ -469,12 +492,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         )
 
         target_precompile_headers(OMNI-GRID PUBLIC
-                "${PROJECT_SOURCE_DIR}/omnigrid/ogrid/PCH.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/PCH.h"
         )
 
         target_include_directories(OMNI-GRID PUBLIC
                 ${OMNI-GRID_H}
-                "${PROJECT_SOURCE_DIR}/omnigrid/ogrid"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid"
                 ${OPENGL_INCLUDE_DIR}
                 ${raylib_INCLUDE_DIRS}
                 ${Python3_INCLUDE_DIRS}
@@ -501,11 +524,6 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
         if(${MAIN_TEST})
                 add_subdirectory("${PROJECT_SOURCE_DIR}/Tests")
-
-                # add_executable(OMNI-GRID_TEST_ENV "${PROJECT_SOURCE_DIR}/tests/main.cpp")
-                # target_link_libraries(OMNI-GRID_TEST_ENV PUBLIC OMNI-GRID)
-
-                # message("OMNI-GRID MAIN CPP TEST EXECUTABLE ADDED.")
         endif()
 
         if(${EXAMPLES})
@@ -520,18 +538,81 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
         if(CMAKE_BUILD_TYPE STREQUAL "Debug")
                 install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
-
-                # install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
+                install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
                 install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
         elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
                 install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
-
-                # install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+                install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
                 install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
         endif()
 
         # TODO: Find a way to fix this issue without having to run a script or manually copying the dlls.
         # install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/utils/core_copy_missing_dlls.cmake")
+
+        # ADD SOURCE FILES
+        # Ogrid-Sandbox .CPP FILES
+        file(GLOB_RECURSE Ogrid-Sandbox_CPP
+
+                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.cpp"
+        )
+
+        # Ogrid-Sandbox .H FILES
+        file(GLOB_RECURSE Ogrid-Sandbox_H
+
+                # "${PROJECT_SOURCE_DIR}/Source/Sandbox//*.h"
+        )
+
+        if(${VERBOSE})
+                message(STATUS "Ogrid-Sandbox SOURCE FILES ADDED.")
+        endif()
+
+        add_executable(Ogrid-Sandbox
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/main.cpp"
+                ${Ogrid-Sandbox_CPP}
+                ${Ogrid-Sandbox_H}
+        )
+
+        target_compile_features(Ogrid-Sandbox PUBLIC ${CXX_VERSION_NAME})
+        set_target_properties(Ogrid-Sandbox PROPERTIES VERSION ${PROJECT_FULL_VERSION})
+
+        set_target_properties(Ogrid-Sandbox PROPERTIES OUTPUT_NAME "Ogrid-Sandbox")
+        target_link_libraries(Ogrid-Sandbox PUBLIC
+                OMNI-GRID
+        )
+
+        target_include_directories(Ogrid-Sandbox PUBLIC
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox"
+                ${Ogrid-Sandbox_H}
+        )
+
+        # COMPILER DEFINITIONS FOR Ogrid-Sandbox.
+        target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_PLATFORM_WINDOWS)
+
+        target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_ENABLE_ASSERTS)
+        target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_COMPILER_${CURRENT_COMPILER})
+
+        # ENABLE PROFILING FOR DEBUG BUILDS.
+        if(CMAKE_BUILD_TYPE STREQUAL Debug)
+                target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_DEBUG_PROFILING)
+                target_compile_definitions(Ogrid-Sandbox PUBLIC GWS_ENABLE_DEBUG_LOG)
+        endif(CMAKE_BUILD_TYPE STREQUAL Debug)
+
+        if(${VERBOSE})
+                get_target_property(DEFINITIONS_LIST Ogrid-Sandbox COMPILE_DEFINITIONS)
+                message(STATUS "Ogrid-Sandbox COMPILE DEFINITIONS: ${DEFINITIONS_LIST}")
+        endif()
+
+        # INSTALLATION PROCEDURE.
+        install(TARGETS Ogrid-Sandbox
+                LIBRARY DESTINATION bin
+                ARCHIVE DESTINATION bin
+                RUNTIME DESTINATION bin)
+
+        # if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        #         install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
+        # elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+        #         install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+        # endif()
 endif()
 
 message(STATUS "OMNI-GRID/CMAKE SUCCESSFULLY FINISHED.")

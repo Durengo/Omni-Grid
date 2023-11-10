@@ -1,6 +1,6 @@
 # Omni-Grid
 
-## [Working With Source](docs/source.md)
+## [Working With Source](Docs/source.md)
 
 ## Hardware/Software Requirements
 

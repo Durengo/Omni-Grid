@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
-#include <ogrid.h>
+#include <durlib.h>
 
 int main(int argc, char *argv[])
 {
-    OGRID::Log::Init();
+    DURLIB::Log::Init();
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

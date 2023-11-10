@@ -1,0 +1,6 @@
+[submodule "Tools/CPM"]
+	path = Tools/CPM
+	url = git@github.com:Durengo/CPM.git
+[submodule "Library/durlib"]
+	path = Library/durlib
+	url = https://github.com/Durengo/durlib
