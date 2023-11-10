@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${vcpkgRoot}/x64-windows/include",
-                "${workspaceFolder}/Source/ogrid"
+                "${workspaceFolder}/Source/ogrid",
                 "${workspaceFolder}/Library/durlib"
             ],
             "defines": [
