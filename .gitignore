@@ -20,3 +20,6 @@ py_venv
 
 # Other
 out
+
+# Venv
+venv
