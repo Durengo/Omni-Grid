@@ -1,6 +1,6 @@
 name: Windows x64 Debug
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   Build-Windows-x64-Debug:
@@ -9,17 +9,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up MSVC
-        uses: TheMrMilchmann/setup-msvc-dev@v2.0.1
-        with:
-          arch: x64
+#
+      # - name: Set up MSVC
+      #   uses: TheMrMilchmann/setup-msvc-dev@v2.0.1
+      #   with:
+      #     arch: x64
 
-      - name: Set up CMake
-        uses: jwlawson/actions-setup-cmake@v1.13
-        with:
-          cmake-version: "3.22"
-      - name: Test CMake
-        run: cmake --version
+      # - name: Set up CMake
+      #   uses: jwlawson/actions-setup-cmake@v1.13
+      #   with:
+      #     cmake-version: "3.22"
+      # - name: Test CMake
+      #   run: cmake --version
 
       # - name: Install VCPKG
       #   run: |
@@ -30,31 +31,40 @@ jobs:
       #   run: |
       #     ./vcpkg/vcpkg.exe install fmt spdlog jsoncpp stb gtest --triplet x64-windows
 
-      - name: Install Perl
-        uses: shogo82148/actions-setup-perl@v1
-        with:
-          perl-version: '5.38'
+      # - name: Install Perl
+      #   uses: shogo82148/actions-setup-perl@v1
+      #   with:
+      #     perl-version: '5.38'
       # - run: cpanm --installdeps .
       # - run: prove -lv t
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+      # - name: Setup Python
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '3.11'
 
-      - name: Configure and build the project
-        run: |
-          echo CONFIGURATION
-          dir
-          echo ./setup --no-deps-check
-          ./setup.bat --no-deps-check
-          echo ./build --clean-rebuild
-          ./build --clean-rebuild
+      - name: Pull Windows Image
+        run: docker pull durengo/vcpkg_base:1.0
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-artifacts
-          path: |
-            build
-            Install
+      - name: Run Image
+        run: docker run --rm -it durengo/vcpkg_base:1.0
+
+      - name: cmake test
+        run: cmake --version
+
+      # - name: Configure and build the project
+      #   run: |
+      #     echo CONFIGURATION
+      #     dir
+      #     echo ./setup --no-deps-check
+      #     ./setup.bat --no-deps-check
+      #     echo ./build --clean-rebuild
+      #     ./build --clean-rebuild
+
+      # - name: Upload artifacts
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: build-artifacts
+      #     path: |
+      #       build
+      #       Install

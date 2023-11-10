@@ -22,7 +22,7 @@ set(PROJECT_FULL_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PRO
 # CREATING PROJECT.
 project(OMNI-GRID-FRAMEWORK VERSION ${PROJECT_VERSION})
 
-# RUN SETUP.PY TO ASSIGN BUILD TYPE.
+# RUN BUILD.PY TO ASSIGN BUILD TYPE.
 execute_process(
         COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "build_type"
         OUTPUT_VARIABLE BUILD_TYPE_SETUP_OUTPUT
@@ -109,7 +109,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 message(STATUS "VCPKG STATUS: ${USE_VCPKG}")
         endif()
 
-        # RUN SETUP.PY TO GET VCPKG ROOT PATH.
+        # RUN BUILD.PY TO GET VCPKG ROOT PATH.
         execute_process(
                 COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "vcpkg_root"
                 OUTPUT_VARIABLE VCPKG_SETUP_OUTPUT
@@ -162,6 +162,15 @@ find_package(PkgConfig REQUIRED)
 # SETTING UP PYTHON.
 find_package(Python3 REQUIRED COMPONENTS Development Interpreter)
 
+# RUN BUILD.PY TO ASSIGN BUILD TYPE.
+# execute_process(
+# COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "venv_root"
+# OUTPUT_VARIABLE VENV_ROOT_OUTPUT
+# RESULT_VARIABLE VENV_ROOT_RESULT
+# OUTPUT_STRIP_TRAILING_WHITESPACE
+# )
+
+# set(${Python3_EXECUTABLE} ${VENV_ROOT_OUTPUT}/python.exe)
 if(${VERBOSE})
         message(STATUS "SETTING PYTHON VERSION...")
 endif()
@@ -364,13 +373,27 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
         # BOOST PYTHON DEBUG DLLS.
         set(BOOST_PYTHON_DLL_DEBUG_FILES
-                ${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_82.dll
-                ${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll
                 ${VCPKG_CORE}/debug/bin/${PYTHON_VERSION}_d.dll
                 ${VCPKG_CORE}/bin/${PYTHON_VERSION}.dll
                 ${VCPKG_CORE}/debug/bin/zlibd1.dll
                 ${VCPKG_CORE}/bin/zlib1.dll
         )
+
+        if(EXISTS "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_82.dll")
+                list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_82.dll")
+        elseif(EXISTS "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_83.dll")
+                list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_83.dll")
+        else()
+                message(WARNING "DEBUG boost_${PYTHON_VERSION}-vc143 DLL NOT FOUND.")
+        endif()
+
+        if(EXISTS "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
+                list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
+        elseif(EXISTS "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
+                list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
+        else()
+                message(WARNING "DEBUG (release) boost_${PYTHON_VERSION}-vc143 DLL NOT FOUND.")
+        endif()
 
         # BOOST PYTHON RELEASE DLLS.
         set(BOOST_PYTHON_DLL_RELEASE_FILES
@@ -378,6 +401,14 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${VCPKG_CORE}/bin/${PYTHON_VERSION}.dll
                 ${VCPKG_CORE}/bin/zlib1.dll
         )
+
+        if(EXISTS "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
+                list(APPEND BOOST_PYTHON_DLL_RELEASE_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
+        elseif(EXISTS "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
+                list(APPEND BOOST_PYTHON_DLL_RELEASE_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
+        else()
+                message(WARNING "RELEASE boost_${PYTHON_VERSION}-vc143 DLL NOT FOUND.")
+        endif()
 
         # RAYLIB DEBUG DLLS.
         set(RAYLIB_DLL_DEBUG_FILES
@@ -413,6 +444,18 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         set_target_properties(OMNI-GRID PROPERTIES VERSION ${PROJECT_FULL_VERSION})
 
         set_target_properties(OMNI-GRID PROPERTIES OUTPUT_NAME "OMNI-GRID")
+
+        # CHECK PYTHON.LIB PATH.
+        if(${VERBOSE})
+                message(STATUS "PYTHON.LIB PATH: ${VCPKG_CORE}/lib/python311.lib")
+
+                if(EXISTS "${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib")
+                        set(PYTHON_LIB_PATH "${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib")
+                else()
+                        message(FATAL_ERROR "PYTHON.LIB NOT FOUND.")
+                endif()
+        endif()
+
         target_link_libraries(OMNI-GRID PUBLIC
                 fmt::fmt
                 spdlog::spdlog
@@ -421,7 +464,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 ${raylib_LIBRARIES}
                 ${Python3_LIBRARIES}
                 ${Boost_LIBRARIES}
-                ${VCPKG_CORE}/lib/${PYTHON_VERSION}.lib
+                ${PYTHON_LIB_PATH}
                 PkgConfig::GTKMM_LIB
         )
 

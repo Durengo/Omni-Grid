@@ -7,11 +7,15 @@ use Data::Dumper;
 my $working_dir = getcwd();
 chdir $working_dir or die "Unable to change directory: $working_dir\n";
 
+my $venv_dir = "py_venv";
+
 my %options;
 my %option_actions = (
     "help"           => sub { print_help(); },
     "vcpkg-location" => sub { vcpkg_location(); },
     "no-deps-check"  => sub { core_setup_no_dep_check(); },
+    "init-venv"      => sub { setup_venv(); },
+    "venv-location"  => sub { store_venv_location_to_cache(); },
 );
 
 GetOptions( \%options, keys %option_actions )
@@ -38,6 +42,8 @@ sub print_help {
     $0 [--help] - shows help
     $0 [--vcpkg-location <path/to/vcpkg>] - runs the setup with the specified vcpkg directory
     $0 [--no-deps-check] - runs the setup without checking for runtime dependencies (ONLY FOR CI USE)
+    $0 [--init-venv (<path/to/vcpkg>)] - cleans previous venv and creates a new one path to vcpkg must be provided if using local installation of vcpkg, otherwise do not provide argument to use vendor/vcpkg installation
+    $0 [--venv-location <path/to/local/venv>] - adds the local venv location to the build cache (ONLY FOR CMAKE PROJECT GENERATION - INTERNAL USE)
     ";
     exit;
 }
@@ -280,6 +286,82 @@ sub vcpkg_location {
                     die "Failed to setup build.py: $!\n";
                 }
 
+                chdir $working_dir
+                  or die "Unable to change directory: $working_dir\n";
+            },
+            sub {
+                print "Setting up venv for usage ...\n";
+
+                if ( -d $venv_dir ) {
+                    print "Directory '$venv_dir' already exists. Clearing...\n";
+                    chdir "$working_dir/$venv_dir/Scripts" or die "Unable to change directory: $working_dir/$venv_dir/Scripts\n";
+                    my $exit_status = system("deactivate");
+                    if ( $exit_status == 0 ) {
+                        print "Python venv deactivated successfully.\n";
+                    }
+                    else {
+                        die "Failed to deactivate Python venv: $!\n";
+                    }
+                    chdir $working_dir or die "Unable to change directory: $working_dir\n";
+                    my $exit_status2 = system("git clean -dfx $venv_dir");
+                    if ( $exit_status2 == 0 ) {
+                        print "py_venv cleaned successfully.\n";
+                    }
+                    else {
+                        die "Failed to clean py_venv: $!\n";
+                    }
+                    # rmdir $venv_dir or die "Failed to clear directory '$venv_dir': $!\n";
+                }
+                else {
+                    mkdir $venv_dir
+                      or die "Failed to create directory '$venv_dir': $!\n";
+                    print "Directory '$venv_dir' created successfully.\n";
+                }
+
+                # chdir $venv_dir or die "Unable to change directory: '$venv_dir'\n";
+
+                my $path_to_python_interpretor =
+                  "$location/installed/x64-windows/tools/python3";
+                chdir $path_to_python_interpretor
+                  or die "Unable to change directory: $path_to_python_interpretor\n";
+                my $exit_status = system("python -m venv $working_dir/$venv_dir");
+                if ( $exit_status == 0 ) {
+                    print "Python venv initialized successfully.\n";
+                }
+                else {
+                    die "Failed to initialize Python venv: $!\n";
+                }
+
+                chdir "$working_dir\\$venv_dir\\Scripts"
+                  or die "Unable to change directory: $working_dir\\$venv_dir\\Scripts\n";
+                {
+                    my $exit_status = system("activate");
+                    if ( $exit_status == 0 ) {
+                        print "Python venv activated successfully.\n";
+                    }
+                    else {
+                        die "Failed to activate Python venv: $!\n";
+                    }
+                }
+
+                chdir $working_dir or die "Unable to change directory: $working_dir\n";
+            },
+            sub {
+                print "Using build.py to set venv location to cache...\n";
+
+                chdir "utils" or die "Unable to change directory: utils\n";
+            
+                my $cmd  = "build.bat";
+                my @args = ( "-can-vp", "venv_root:$location/installed/x64-windows/tools/python3" );
+            
+                my $exit_status = system( $cmd, @args );
+                if ( $exit_status == 0 ) {
+                    print "venv location saved to cache.\n";
+                }
+                else {
+                    die "Failed to save venv location to cache: $!\n";
+                }
+            
                 chdir $working_dir
                   or die "Unable to change directory: $working_dir\n";
             },
@@ -602,8 +684,117 @@ sub vcpkg_integrate {
     chdir $working_dir or die "Unable to change directory: $working_dir\n";
 }
 
+sub setup_venv {
+    print "Setting up venv for usage ...\n";
+
+    if ( -d $venv_dir ) {
+        print "Directory '$venv_dir' already exists. Clearing...\n";
+        chdir "$working_dir/$venv_dir/Scripts" or die "Unable to change directory: $working_dir/$venv_dir/Scripts\n";
+        my $exit_status = system("deactivate");
+        if ( $exit_status == 0 ) {
+            print "Python venv deactivated successfully.\n";
+        }
+        else {
+            die "Failed to deactivate Python venv: $!\n";
+        }
+        chdir $working_dir or die "Unable to change directory: $working_dir\n";
+        rmdir $venv_dir or die "Failed to clear directory '$venv_dir': $!\n";
+    }
+    else {
+        mkdir $venv_dir
+          or die "Failed to create directory '$venv_dir': $!\n";
+        print "Directory '$venv_dir' created successfully.\n";
+    }
+
+    # chdir $venv_dir or die "Unable to change directory: '$venv_dir'\n";
+
+    my $vcpkg_location = $ARGV[0];
+
+    if ( defined $vcpkg_location ) {
+        my $path_to_python_interpretor =
+          "$vcpkg_location/installed/x64-windows/tools/python3";
+        chdir $path_to_python_interpretor
+          or die "Unable to change directory: $path_to_python_interpretor\n";
+        my $exit_status = system("python -m venv $working_dir/$venv_dir");
+        if ( $exit_status == 0 ) {
+            print "Python venv initialized successfully.\n";
+        }
+        else {
+            die "Failed to initialize Python venv: $!\n";
+        }
+    }
+    else {
+        my $path_to_python_interpretor =
+          "$working_dir/vendor/vcpkg/installed/x64-windows/tools/python3";
+        chdir $path_to_python_interpretor
+          or die "Unable to change directory: $path_to_python_interpretor\n";
+        my $exit_status = system("python -m venv $working_dir/$venv_dir");
+        if ( $exit_status == 0 ) {
+            print "Python venv initialized successfully.\n";
+        }
+        else {
+            die "Failed to initialize Python venv: $!\n";
+        }
+    }
+
+    chdir "$working_dir\\$venv_dir\\Scripts"
+      or die "Unable to change directory: $working_dir\\$venv_dir\\Scripts\n";
+    {
+        my $exit_status = system("activate");
+        if ( $exit_status == 0 ) {
+            print "Python venv activated successfully.\n";
+        }
+        else {
+            die "Failed to activate Python venv: $!\n";
+        }
+    }
+
+    chdir $working_dir or die "Unable to change directory: $working_dir\n";
+}
+
+sub store_venv_location_to_cache {
+    print "Using build.py to set venv location to cache...\n";
+
+    chdir "utils" or die "Unable to change directory: utils\n";
+
+    my $cmd  = "build.bat";
+    my @args = ( "-can-vp", "venv_root:$working_dir/vendor/vcpkg/installed/x64-windows/tools/python3" );
+
+    my $exit_status = system( $cmd, @args );
+    if ( $exit_status == 0 ) {
+        print "venv location saved to cache.\n";
+    }
+    else {
+        die "Failed to save venv location to cache: $!\n";
+    }
+
+    chdir $working_dir
+      or die "Unable to change directory: $working_dir\n";
+}
+
+# sub setup_build_script {
+#     print "Setting up build.py for internal use...\n";
+
+#     chdir "utils" or die "Unable to change directory: utils\n";
+
+#     my $cmd  = "build.bat";
+#     my @args = ( "-cg", "$location" );
+
+#     my $exit_status = system( $cmd, @args );
+#     if ( $exit_status == 0 ) {
+#         print "build.py setup successfully.\n";
+#     }
+#     else {
+#         die "Failed to setup build.py: $!\n";
+#     }
+
+#     chdir $working_dir
+#       or die "Unable to change directory: $working_dir\n";
+# }
+
 # Prerequisite Checks
 # TODO: Add stricter version checking.
+# TODO: Provide instructions how to fix errors.
 sub check_git {
     print("Checking if Git is installed...\n");
 
@@ -676,4 +867,3 @@ sub check_msvc_compiler {
         die "MSVC compiler is not installed or an error occurred.\n";
     }
 }
-
