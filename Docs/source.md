@@ -96,4 +96,4 @@ VSCode, Visual Studio
 Notes for IDEs:
 
 * VSCode doesn't always show includes -> this has been fixed with the inclusion of the .vscode workspace folder.
-* Visual Studio - building the project with the built-in tools should work completely fine ~~(but again, sources may have missing .dll files therefore using [install] executable option should resolve any issues), but in case something fails, try doing a clear rebuild with [build.bat](build.md)~~.
+* Visual Studio - building the project with the built-in tools should work completely fine ~~(but again, sources may have missing .dll files therefore using [install] executable option should resolve any issues), but in case something fails, try doing a clear rebuild with [build.bat](build.md)~~. It is important to note that CPM project setup must be done before using this IDE, otherwise many things will break.
