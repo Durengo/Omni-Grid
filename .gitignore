@@ -15,6 +15,9 @@ py_venv
 
 # IDE
 .vs
+cmake-build-debug
+cmake-build-debug-visual-studio
+.idea
 # Keeping .vscode workspace, as it allows us to show includes.
 # .vscode
 
