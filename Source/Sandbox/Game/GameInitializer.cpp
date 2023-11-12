@@ -53,7 +53,7 @@ namespace Sandbox {
                                               .setMaxPlayers(2)
                                               .addPlayer(p1)
                                               .addPlayer(p2)
-                                              .build(new Sandbox::TicTacToeTurnManager()));
+                                              .build(new OGRIDSandbox::TicTacToeTurnManager()));
         }
         else if (choice == 2)
         {
@@ -67,7 +67,7 @@ namespace Sandbox {
                                               .setMaxPlayers(2)
                                               .addPlayer(p2)
                                               .addPlayer(p1)
-                                              .build(new Sandbox::TicTacToeTurnManager()));
+                                              .build(new OGRIDSandbox::TicTacToeTurnManager()));
         }
         else if (choice == 3)
         {
@@ -79,7 +79,7 @@ namespace Sandbox {
                                               .setMaxPlayers(2)
                                               .addPlayer(p1)
                                               .addPlayer(p2)
-                                              .build(new Sandbox::TicTacToeTurnManager()));
+                                              .build(new OGRIDSandbox::TicTacToeTurnManager()));
         }
 
         gui->InitializeWindow("Sandbox", 800, 600, 60);
