@@ -164,19 +164,25 @@ find_package(PkgConfig REQUIRED)
 # SETTING UP PYTHON.
 find_package(Python3 REQUIRED COMPONENTS Development Interpreter)
 
-# RUN BUILD.PY TO ASSIGN BUILD TYPE.
+# # RUN BUILD.PY TO GET VEVN PYTHON PATH.
 # execute_process(
-# COMMAND python "${PROJECT_SOURCE_DIR}/utils/build.py" "-cag" "venv_root"
+# COMMAND python "${PROJECT_SOURCE_DIR}/Tools/CPM/PyScripts/build.py" "-cag" "local_python_interpretor"
 # OUTPUT_VARIABLE VENV_ROOT_OUTPUT
 # RESULT_VARIABLE VENV_ROOT_RESULT
 # OUTPUT_STRIP_TRAILING_WHITESPACE
 # )
+
+# if(NOT EXISTS "${VENV_ROOT_OUTPUT}" OR ${VENV_ROOT_OUTPUT} STREQUAL "")
+# message(FATAL_ERROR "VENV ROOT NOT FOUND - MAKE SURE \"${VENV_ROOT_OUTPUT}\" IS SET CORRECTLY.\nDID YOU RUN $ CPM VENV -i ?")
+# endif()
 
 # set(${Python3_EXECUTABLE} ${VENV_ROOT_OUTPUT}/python.exe)
 if(${VERBOSE})
         message(STATUS "SETTING PYTHON VERSION...")
 endif()
 
+# MITIGATING A PESKY WARNING THAT IS THROWN IN CLION.
+set(Boost_NO_WARN_NEW_VERSIONS 1)
 set(PYTHON_VERSION "python${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}")
 
 if(${VERBOSE})
@@ -407,23 +413,28 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
         if(EXISTS "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_82.dll")
                 list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_82.dll")
+                set(Boost_Python_Debug_DLL "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_82.dll")
         elseif(EXISTS "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_83.dll")
                 list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_83.dll")
+                set(Boost_Python_Debug_DLL "${VCPKG_CORE}/debug/bin/boost_${PYTHON_VERSION}-vc143-mt-gyd-x64-1_83.dll")
         else()
                 message(WARNING "DEBUG boost_${PYTHON_VERSION}-vc143 DLL NOT FOUND.")
         endif()
 
         if(EXISTS "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
+                list(APPEND BOOST_PYTHON_DLL_RELEASE_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
                 list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
+                set(Boost_Python_Release_DLL "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll")
         elseif(EXISTS "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
+                list(APPEND BOOST_PYTHON_DLL_RELEASE_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
                 list(APPEND BOOST_PYTHON_DLL_DEBUG_FILES "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
+                set(Boost_Python_Release_DLL "${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_83.dll")
         else()
                 message(WARNING "DEBUG (release) boost_${PYTHON_VERSION}-vc143 DLL NOT FOUND.")
         endif()
 
         # BOOST PYTHON RELEASE DLLS.
         set(BOOST_PYTHON_DLL_RELEASE_FILES
-                ${VCPKG_CORE}/bin/boost_${PYTHON_VERSION}-vc143-mt-x64-1_82.dll
                 ${VCPKG_CORE}/bin/${PYTHON_VERSION}.dll
                 ${VCPKG_CORE}/bin/zlib1.dll
         )
