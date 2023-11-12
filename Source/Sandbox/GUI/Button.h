@@ -5,7 +5,7 @@
 
 #include "raylib.h"
 
-namespace OGRID
+namespace Sandbox
 {
     struct Button
     {

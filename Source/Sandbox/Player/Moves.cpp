@@ -1,6 +1,6 @@
 #include "Moves.h"
 
-namespace OGRID
+namespace GENERICS
 {
     MoveType MoveTypeStringToEnum(const std::string &s)
     {

@@ -1,8 +1,8 @@
 #include "Player.h"
 
-#include "Player/Moves.h"
+#include "Moves.h"
 
-namespace OGRID
+namespace GENERICS
 {
     PlayerType PlayerTypeStringToEnum(const std::string &s)
     {

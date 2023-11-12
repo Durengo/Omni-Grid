@@ -1,4 +1,4 @@
 #pragma once
 
-#include "GUI/Button.h"
-#include "GUI/Text.h"
+#include "../Sandbox/GUI/Button.h"
+#include "../Sandbox/GUI/Text.h"

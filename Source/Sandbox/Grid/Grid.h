@@ -2,7 +2,7 @@
 
 #include "fmt/format.h"
 
-namespace OGRID
+namespace GENERICS
 {
     class Grid
     {
@@ -66,14 +66,14 @@ namespace OGRID
 
 // Formatting for fmt library.
 template <>
-struct fmt::formatter<OGRID::Grid> : fmt::formatter<std::string>
+struct fmt::formatter<GENERICS::Grid> : fmt::formatter<std::string>
 {
     // Parses format specifications of the form '[:...]' which you can ignore.
     constexpr auto parse(format_parse_context &ctx) { return ctx.begin(); }
 
     // Formats the Grid using provided format specifiers.
     template <typename FormatContext>
-    auto format(const OGRID::Grid &grid, FormatContext &ctx)
+    auto format(const GENERICS::Grid &grid, FormatContext &ctx)
     {
         // Use a memory buffer to store the temporary output.
         fmt::memory_buffer buf;
