@@ -1,6 +1,6 @@
 #include "Player.h"
 
-#include "Player/Moves.h"
+#include "Moves.h"
 
 namespace OGRID
 {
