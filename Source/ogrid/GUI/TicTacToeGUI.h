@@ -12,7 +12,7 @@ namespace OGRIDSandbox
     class TicTacToeGUI : GENERICS::iGUI
     {
     private:
-        static Sandbox::TicTacToeLogic *i_gameLogic;
+        static TicTacToeLogic *i_gameLogic;
         static bool i_randomizeFirstPlayer;
 
     public:
@@ -22,7 +22,7 @@ namespace OGRIDSandbox
         TicTacToeGUI();
 
     public:
-        static Sandbox::TicTacToeLogic *GetGameLogic();
+        static TicTacToeLogic *GetGameLogic();
 
         static void SetGameConfiguration(GENERICS::GameConfiguration *gameConfiguration);
 

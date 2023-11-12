@@ -5,7 +5,7 @@
 #include "TicTacToeGUIInstance.h"
 
 namespace OGRIDSandbox{
-    OGRIDSandbox::TicTacToeGUI* TicTacToeGUIInstance::i_instance{nullptr};
+    TicTacToeGUI* TicTacToeGUIInstance::i_instance{nullptr};
 
     void TicTacToeGUIInstance::DeleteInstance() {
         std::lock_guard<std::mutex> lock(i_mutex);

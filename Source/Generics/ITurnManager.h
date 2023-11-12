@@ -9,6 +9,10 @@
 
 #include "fmt/format.h"
 
+//*************************************************************
+//Can't have virtual static methods, so implement them yourself
+//*************************************************************
+
 namespace GENERICS{
     // Forward declarations
     enum MoveType;

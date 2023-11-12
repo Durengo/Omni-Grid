@@ -10,7 +10,7 @@
 namespace OGRIDSandbox{
     class TicTacToeGUIInstance : GENERICS::Singleton {
     private:
-        static OGRIDSandbox::TicTacToeGUI *i_instance;
+        static TicTacToeGUI *i_instance;
 
     public:
         static void DeleteInstance();

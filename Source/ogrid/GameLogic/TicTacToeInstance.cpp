@@ -4,7 +4,7 @@
 
 #include "TicTacToeInstance.h"
 
-namespace Sandbox{
+namespace OGRIDSandbox{
 
     TicTacToeLogic *TicTacToeInstance::i_instance{nullptr};
 

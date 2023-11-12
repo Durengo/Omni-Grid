@@ -5,7 +5,7 @@
 #include "../../Sandbox/Player/Player.h"
 #include "../../Sandbox/Game/GameConfiguration.h"
 
-namespace Sandbox
+namespace OGRIDSandbox
 {
     class TicTacToeTurnManager : public GENERICS::ITurnManager
     {

@@ -7,7 +7,7 @@
 #include "TicTacToeLogic.h"
 #include "../../Generics/Singleton.h"
 
-namespace Sandbox{
+namespace OGRIDSandbox{
     class TicTacToeInstance : GENERICS::Singleton {
     private:
         static TicTacToeLogic* i_instance;

@@ -2,7 +2,7 @@
 #include "TicTacToeInstance.h"
 
 
-namespace Sandbox
+namespace OGRIDSandbox
 {
     // Static variables
 

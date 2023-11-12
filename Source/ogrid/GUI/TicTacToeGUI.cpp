@@ -11,13 +11,13 @@
 namespace OGRIDSandbox
 {
     TicTacToeGUI* instance = TicTacToeGUIInstance::GetInstance();
-    Sandbox::TicTacToeLogic *TicTacToeGUI::i_gameLogic;
+    TicTacToeLogic *TicTacToeGUI::i_gameLogic;
     bool TicTacToeGUI::i_randomizeFirstPlayer{true};
 
     // Constructors & Destructors
     TicTacToeGUI::TicTacToeGUI()
     {
-        instance->i_gameLogic = Sandbox::TicTacToeInstance::GetInstance();
+        instance->i_gameLogic = TicTacToeInstance::GetInstance();
     }
 
     TicTacToeGUI::~TicTacToeGUI()
@@ -25,13 +25,13 @@ namespace OGRIDSandbox
         if (instance->i_gameLogic != nullptr)
         {
             instance->i_gameLogic = nullptr;
-            Sandbox::TicTacToeInstance::DeleteInstance();
+            TicTacToeInstance::DeleteInstance();
         }
     }
 
     // Getters & Setters
 
-    Sandbox::TicTacToeLogic *TicTacToeGUI::GetGameLogic()
+    TicTacToeLogic *TicTacToeGUI::GetGameLogic()
     {
         return instance->i_gameLogic;
     }

@@ -9,6 +9,11 @@
 #include "../Sandbox/Game/GameState.h"
 #include "../Sandbox/Game/GameConfiguration.h"
 
+
+//*************************************************************
+//Can't have virtual static methods, so implement them yourself
+//*************************************************************
+
 namespace GENERICS{
     enum GameState;
     enum GameOverType;

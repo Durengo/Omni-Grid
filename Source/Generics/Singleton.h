@@ -6,6 +6,10 @@
 #include <mutex>
 #include "IGameLogic.h"
 
+//*************************************************************
+//Can't have virtual static methods, so implement them yourself
+//*************************************************************
+
 namespace GENERICS {
     class Singleton {
     protected:

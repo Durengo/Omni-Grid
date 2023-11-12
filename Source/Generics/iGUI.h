@@ -7,6 +7,10 @@
 #include <mutex>
 #include <string>
 
+//*************************************************************
+//Can't have virtual static methods, so implement them yourself
+//*************************************************************
+
 namespace GENERICS{
     struct WindowResolution
     {

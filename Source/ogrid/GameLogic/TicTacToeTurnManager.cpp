@@ -7,7 +7,7 @@
 #include "../../Sandbox/Player/Moves.h"
 #include "../../Sandbox/Game/GameState.h"
 
-namespace Sandbox
+namespace OGRIDSandbox
 {
     // Constructors & Destructors
     TicTacToeTurnManager::TicTacToeTurnManager(const std::vector<GENERICS::PlayerNameAndPtr> &players)

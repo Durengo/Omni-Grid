@@ -6,7 +6,7 @@
 #include "../../Sandbox/Player/Player.h"
 #include "../../Sandbox/Player/Moves.h"
 
-namespace Sandbox
+namespace OGRIDSandbox
 {
     class TicTacToeLogic : public GENERICS::IGameLogic
     {
