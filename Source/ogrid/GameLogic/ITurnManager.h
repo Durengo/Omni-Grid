@@ -1,7 +1,3 @@
-//
-// Created by LastWeek on 12/11/2023.
-//
-
 #pragma once
 
 #include <string>
@@ -10,10 +6,11 @@
 #include "fmt/format.h"
 
 //*************************************************************
-//Can't have virtual static methods, so implement them yourself
+// Can't have virtual static methods, so implement them yourself
 //*************************************************************
 
-namespace GENERICS{
+namespace OGRID
+{
     // Forward declarations
     enum MoveType;
     class Player;
@@ -27,17 +24,19 @@ namespace GENERICS{
         Player *ptr;
     };
 
-    class ITurnManager {
+    class ITurnManager
+    {
     protected:
-        std::vector<GENERICS::PlayerNameAndPtr> m_Players;
+        std::vector<OGRID::PlayerNameAndPtr> m_Players;
         size_t m_currentTurn = 0;
         unsigned int m_totalTurns = 0;
 
     public:
         // Constructors & Destructors
-        ITurnManager(const std::vector<GENERICS::PlayerNameAndPtr> &players);
+        ITurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players);
         ITurnManager() = default;
         ~ITurnManager();
+
     protected:
         // Operators
         ITurnManager &operator++()
@@ -47,54 +46,54 @@ namespace GENERICS{
             return *this;
         }
 
-        //ITurnManager operator++(int)
+        // ITurnManager operator++(int)
         //{
-        //    ITurnManager temp = *this;
-        //    ++(*this);
-        //    return temp;
-        //}
+        //     ITurnManager temp = *this;
+        //     ++(*this);
+        //     return temp;
+        // }
 
         // Private methods:
     private:
-        virtual bool IsWinningCondition(GENERICS::Grid *grid, unsigned char row, unsigned char col) = 0;
-        virtual bool IsWinningCondition(GENERICS::Grid *grid, char playerChar) = 0;
-        virtual bool IsDrawCondition(GENERICS::Grid *grid, unsigned char row, unsigned char col) = 0;
+        virtual bool IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col) = 0;
+        virtual bool IsWinningCondition(OGRID::Grid *grid, char playerChar) = 0;
+        virtual bool IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col) = 0;
 
         // Getters & Setters
     public:
-        GENERICS::PlayerNameAndPtr GetCurrentPlayer() const;
+        OGRID::PlayerNameAndPtr GetCurrentPlayer() const;
 
         size_t GetCurrentTurn() const;
 
         std::vector<std::string> GetPlayerNames() const;
 
-        std::vector<GENERICS::Player *> GetPlayerPtrs() const;
+        std::vector<OGRID::Player *> GetPlayerPtrs() const;
 
-        GENERICS::PlayerNameAndPtr GetPlayerPair(size_t at) const;
+        OGRID::PlayerNameAndPtr GetPlayerPair(size_t at) const;
 
-        std::vector<GENERICS::PlayerNameAndPtr> GetPlayerPairs() const;
+        std::vector<OGRID::PlayerNameAndPtr> GetPlayerPairs() const;
 
-        void SetPlayerPairs(const std::vector<GENERICS::PlayerNameAndPtr> &players);
+        void SetPlayerPairs(const std::vector<OGRID::PlayerNameAndPtr> &players);
 
         // Public methods:
     public:
         void Reset();
         void PrintPlayerMoves() const;
-        virtual void SetupPlayers(GENERICS::GameConfiguration *gameConfiguration, const std::vector<GENERICS::MoveType> &moveTypes, bool randomize = true) = 0;
-        virtual bool MakeMove(GENERICS::Grid *grid, unsigned char row, unsigned char col) = 0;
-        GENERICS::GameOverType CheckGameOverState(GENERICS::Grid *grid, unsigned char row, unsigned char col);
+        virtual void SetupPlayers(OGRID::GameConfiguration *gameConfiguration, const std::vector<OGRID::MoveType> &moveTypes, bool randomize = true) = 0;
+        virtual bool MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col) = 0;
+        OGRID::GameOverType CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col);
 
         void SwapPlayerPositions();
     };
 }
 
 template <>
-struct fmt::formatter<GENERICS::PlayerNameAndPtr> : fmt::formatter<std::string>
+struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
 {
     constexpr auto parse(format_parse_context &ctx) { return ctx.begin(); }
 
     template <typename FormatContext>
-    auto format(const GENERICS::PlayerNameAndPtr &player, FormatContext &ctx)
+    auto format(const OGRID::PlayerNameAndPtr &player, FormatContext &ctx)
     {
         fmt::memory_buffer buf;
 
@@ -105,7 +104,8 @@ struct fmt::formatter<GENERICS::PlayerNameAndPtr> : fmt::formatter<std::string>
     }
 };
 
-namespace GENERICS{
+namespace OGRID
+{
     static std::string PlayerNameAndPtrVecToString(const std::vector<PlayerNameAndPtr> &players)
     {
         std::ostringstream ss;
@@ -118,5 +118,3 @@ namespace GENERICS{
         return ss.str();
     }
 }
-
-

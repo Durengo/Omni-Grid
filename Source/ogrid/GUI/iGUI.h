@@ -1,27 +1,25 @@
-//
-// Created by LastWeek on 12/11/2023.
-//
-
 #pragma once
 
 #include <mutex>
 #include <string>
 
 //*************************************************************
-//Can't have virtual static methods, so implement them yourself
+// Can't have virtual static methods, so implement them yourself
 //*************************************************************
 
-namespace GENERICS{
+namespace OGRID
+{
     struct WindowResolution
     {
         int width;
         int height;
     };
 
-    class iGUI {
+    class iGUI
+    {
     protected:
         std::string m_windowName;
-        GENERICS::WindowResolution m_windowResolution;
+        OGRID::WindowResolution m_windowResolution;
         int m_targetFPS;
         float m_gridSize;
         float m_cellSize;
@@ -37,5 +35,3 @@ namespace GENERICS{
         virtual void BeginMainLoop() = 0;
     };
 }
-
-

@@ -1,14 +1,14 @@
-//
-// Created by LastWeek on 12/11/2023.
-//
-
 #include "TicTacToeGUIInstance.h"
 
-namespace OGRIDSandbox{
-    TicTacToeGUI* TicTacToeGUIInstance::i_instance{nullptr};
+#include <durlib.h>
 
-    void TicTacToeGUIInstance::DeleteInstance() {
-        std::lock_guard<std::mutex> lock(i_mutex);
+namespace OGRIDSandbox
+{
+    TicTacToeGUI *TicTacToeGUIInstance::i_instance{nullptr};
+
+    void TicTacToeGUIInstance::DeleteInstance()
+    {
+        // std::lock_guard<std::mutex> lock(i_mutex);
         if (i_instance != nullptr)
         {
             delete i_instance;
@@ -16,8 +16,9 @@ namespace OGRIDSandbox{
         }
     }
 
-    TicTacToeGUI *TicTacToeGUIInstance::GetInstance() {
-        std::lock_guard<std::mutex> lock(i_mutex);
+    TicTacToeGUI *TicTacToeGUIInstance::GetInstance()
+    {
+        // std::lock_guard<std::mutex> lock(i_mutex);
         if (i_instance == nullptr)
         {
             i_instance = new TicTacToeGUI();
@@ -27,7 +28,8 @@ namespace OGRIDSandbox{
         return i_instance;
     }
 
-    bool TicTacToeGUIInstance::CheckInit() {
+    bool TicTacToeGUIInstance::CheckInit()
+    {
         if (i_instance == nullptr)
         {
             CLI_ERROR("TicTacToeGUI instance not initialized.");
@@ -36,7 +38,4 @@ namespace OGRIDSandbox{
         return true;
     }
 
-
 }
-
-

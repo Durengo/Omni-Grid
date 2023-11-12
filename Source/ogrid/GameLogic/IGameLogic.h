@@ -1,24 +1,22 @@
-//
-// Created by LastWeek on 11/11/2023.
-//
 #pragma once
 
 #include <durlib.h>
-#include "../Sandbox/Grid/Grid.h"
-#include "../Sandbox/Player/Player.h"
-#include "../Sandbox/Game/GameState.h"
-#include "../Sandbox/Game/GameConfiguration.h"
-
 
 //*************************************************************
-//Can't have virtual static methods, so implement them yourself
+// Can't have virtual static methods, so implement them yourself
 //*************************************************************
 
-namespace GENERICS{
+namespace OGRID
+{
+    // Forward declarations
     enum GameState;
     enum GameOverType;
+    class Player;
+    struct GameConfiguration;
+    class Grid;
 
-    class IGameLogic {
+    class IGameLogic
+    {
     protected:
         static GameState m_gameState;
         static GameOverType m_gameOverType;

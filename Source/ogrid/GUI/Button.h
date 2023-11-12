@@ -3,9 +3,9 @@
 #include <functional>
 #include <string>
 
-#include "raylib.h"
+#include <raylib.h>
 
-namespace Sandbox
+namespace OGRID
 {
     struct Button
     {

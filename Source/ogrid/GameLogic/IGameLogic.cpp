@@ -1,10 +1,12 @@
-//
-// Created by LastWeek on 11/11/2023.
-//
-
 #include "IGameLogic.h"
 
-namespace GENERICS{
+#include <Grid/Grid.h>
+#include <Player/Player.h>
+#include <GameLogic/GameState.h>
+#include <GameLogic/GameConfiguration.h>
+
+namespace OGRID
+{
     // Static variables
     GameState IGameLogic::m_gameState{GameState::NotStarted};
     GameOverType IGameLogic::m_gameOverType{GameOverType::None};

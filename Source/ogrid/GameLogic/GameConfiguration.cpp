@@ -1,8 +1,12 @@
 #include "GameConfiguration.h"
 
-#include "durlib.h"
+#include <durlib.h>
 
-namespace GENERICS
+#include "Grid/Grid.h"
+#include "Player/Player.h"
+#include "GameLogic/iTurnManager.h"
+
+namespace OGRID
 {
     ConfigurationBuilder &GameConfigurationBuilder::setGameName(const std::string &gameName)
     {
@@ -52,7 +56,7 @@ namespace GENERICS
         m_GameConfiguration.turnManager = turnManager;
         m_GameConfiguration.turnManager->SetPlayerPairs(playerPairs);
         CLI_INFO("TicTacToeTurnManager initialized.");
-        CLI_INFO("Player Pairs:\n{0}", GENERICS::PlayerNameAndPtrVecToString(m_GameConfiguration.turnManager->GetPlayerPairs()));
+        CLI_INFO("Player Pairs:\n{0}", OGRID::PlayerNameAndPtrVecToString(m_GameConfiguration.turnManager->GetPlayerPairs()));
 
         return new GameConfiguration(m_GameConfiguration);
     }

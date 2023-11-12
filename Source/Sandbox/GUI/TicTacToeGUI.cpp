@@ -1,16 +1,17 @@
 #include "TicTacToeGUI.h"
 
 #include <durlib.h>
+#include <ogrid.h>
 #include <ogrid_gui.h>
-
 #include <raylib.h>
-#include <GameLogic/TicTacToeLogic.h>
-#include <GameLogic/TicTacToeInstance.h>
+
+#include "Game/TicTacToeLogic.h"
+#include "Game/TicTacToeInstance.h"
 #include "GUI/TicTacToeGUIInstance.h"
 
 namespace OGRIDSandbox
 {
-    TicTacToeGUI* instance = TicTacToeGUIInstance::GetInstance();
+    TicTacToeGUI *instance = TicTacToeGUIInstance::GetInstance();
     TicTacToeLogic *TicTacToeGUI::i_gameLogic;
     bool TicTacToeGUI::i_randomizeFirstPlayer{true};
 
@@ -36,7 +37,7 @@ namespace OGRIDSandbox
         return instance->i_gameLogic;
     }
 
-    void TicTacToeGUI::SetGameConfiguration(GENERICS::GameConfiguration *gameConfiguration)
+    void TicTacToeGUI::SetGameConfiguration(OGRID::GameConfiguration *gameConfiguration)
     {
         DEBUG_ASSERT(instance->i_gameLogic, "TicTacToeLogic instance not initialized.");
 
@@ -87,11 +88,11 @@ namespace OGRIDSandbox
         {
             for (int j = 0; j < instance->m_gridSize; j++)
             {
-                if (instance->i_gameLogic->GetGrid()->GetCharAt(i, j) == GENERICS::MoveTypeEnumToChar(GENERICS::MoveType::X))
+                if (instance->i_gameLogic->GetGrid()->GetCharAt(i, j) == OGRID::MoveTypeEnumToChar(OGRID::MoveType::X))
                 {
                     instance->DrawX(i, j);
                 }
-                else if (instance->i_gameLogic->GetGrid()->GetCharAt(i, j) == GENERICS::MoveTypeEnumToChar(GENERICS::MoveType::O))
+                else if (instance->i_gameLogic->GetGrid()->GetCharAt(i, j) == OGRID::MoveTypeEnumToChar(OGRID::MoveType::O))
                 {
                     instance->DrawO(i, j);
                 }
@@ -202,13 +203,13 @@ namespace OGRIDSandbox
         {
             if (instance->i_gameLogic->GetPlayers()[0]->GetPlayerName() == "Player1")
             {
-                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(GENERICS::MoveType::X);
-                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(GENERICS::MoveType::O);
+                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(OGRID::MoveType::X);
+                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(OGRID::MoveType::O);
             }
             else
             {
-                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(GENERICS::MoveType::O);
-                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(GENERICS::MoveType::X);
+                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(OGRID::MoveType::O);
+                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(OGRID::MoveType::X);
                 instance->i_gameLogic->SwapPlayerPositions();
             }
 
@@ -218,13 +219,13 @@ namespace OGRIDSandbox
         {
             if (instance->i_gameLogic->GetPlayers()[0]->GetPlayerName() == "Player1")
             {
-                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(GENERICS::MoveType::O);
-                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(GENERICS::MoveType::X);
+                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(OGRID::MoveType::O);
+                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(OGRID::MoveType::X);
             }
             else
             {
-                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(GENERICS::MoveType::X);
-                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(GENERICS::MoveType::O);
+                instance->i_gameLogic->GetPlayers()[0]->SetPlayerMoveType(OGRID::MoveType::X);
+                instance->i_gameLogic->GetPlayers()[1]->SetPlayerMoveType(OGRID::MoveType::O);
                 instance->i_gameLogic->SwapPlayerPositions();
             }
 
@@ -297,17 +298,17 @@ namespace OGRIDSandbox
         instance->i_gameLogic->SetupGame();
         instance->i_gameLogic->StartGame();
 
-        Sandbox::Button restartButton(
+        OGRID::Button restartButton(
             {static_cast<float>(instance->m_windowResolution.width) / 2 - 100,
              static_cast<float>(instance->m_windowResolution.height) / 2 + 30, 200, 40},
             GRAY, DARKGRAY, LIGHTGRAY, []()
             {
                 CLI_TRACE("Restarting game...");
                 instance->i_gameLogic->ResetGame();
-                instance->i_gameLogic->SetGameState(GENERICS::GameState::InProgress); },
+                instance->i_gameLogic->SetGameState(OGRID::GameState::InProgress); },
             "Restart", false);
 
-        Sandbox::Button changeGridButton(
+        OGRID::Button changeGridButton(
             {static_cast<float>(instance->m_windowResolution.width) / 2 - 100,
              static_cast<float>(instance->m_windowResolution.height) / 2 + 90, 200, 40},
             GRAY, DARKGRAY, LIGHTGRAY, []()
@@ -316,7 +317,7 @@ namespace OGRIDSandbox
                 instance->ChangeGridLayout();
 
                 instance->i_gameLogic->ResetGame();
-                instance->i_gameLogic->SetGameState(GENERICS::GameState::InProgress); },
+                instance->i_gameLogic->SetGameState(OGRID::GameState::InProgress); },
             "Change Grid", false);
 
         // Button changeTurnOrderButton(
@@ -330,21 +331,21 @@ namespace OGRIDSandbox
         //         i_instance->i_gameLogic->SetGameState(Sandbox::GameState::InProgress); },
         //     "Change Turns", false);
 
-        Sandbox::Text gameOverText("Game Over!", 20, 0, 100, BLACK, Sandbox::Justify::CENTER_X, instance->m_windowResolution.width, instance->m_windowResolution.height);
+        OGRID::Text gameOverText("Game Over!", 20, 0, 100, BLACK, OGRID::Justify::CENTER_X, instance->m_windowResolution.width, instance->m_windowResolution.height);
 
-        Sandbox::Text winnerText("Winner: ", 20, 0, 150, BLACK, Sandbox::Justify::CENTER_X, instance->m_windowResolution.width, instance->m_windowResolution.height);
+        OGRID::Text winnerText("Winner: ", 20, 0, 150, BLACK, OGRID::Justify::CENTER_X, instance->m_windowResolution.width, instance->m_windowResolution.height);
 
-        Sandbox::Text currentPlayerText("Current Player: ", 8, 5, 5, BLACK, Sandbox::Justify::NONE, instance->m_windowResolution.width, instance->m_windowResolution.height);
-        Sandbox::Text turnText("Turn: ", 8, 5, 20, BLACK, Sandbox::Justify::NONE, instance->m_windowResolution.width, instance->m_windowResolution.height);
+        OGRID::Text currentPlayerText("Current Player: ", 8, 5, 5, BLACK, OGRID::Justify::NONE, instance->m_windowResolution.width, instance->m_windowResolution.height);
+        OGRID::Text turnText("Turn: ", 8, 5, 20, BLACK, OGRID::Justify::NONE, instance->m_windowResolution.width, instance->m_windowResolution.height);
 
-        Sandbox::Text drawText("Draw!", 20, 0, 100, BLACK, Sandbox::Justify::CENTER_X, instance->m_windowResolution.width, instance->m_windowResolution.height);
+        OGRID::Text drawText("Draw!", 20, 0, 100, BLACK, OGRID::Justify::CENTER_X, instance->m_windowResolution.width, instance->m_windowResolution.height);
 
         while (!WindowShouldClose()) // Detect window close button or ESC key
         {
             instance->m_windowResolution.width = GetScreenWidth();
             instance->m_windowResolution.height = GetScreenHeight();
             // Update
-            if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && instance->i_gameLogic->GetGameState() != GENERICS::GameState::GameOver)
+            if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && instance->i_gameLogic->GetGameState() != OGRID::GameState::GameOver)
             {
                 Vector2 cell = GetCellFromMouse(GetMousePosition());
 
@@ -372,7 +373,7 @@ namespace OGRIDSandbox
             // Draw
             BeginDrawing();
             ClearBackground(RAYWHITE);
-            if (instance->i_gameLogic->GetGameState() == GENERICS::GameState::InProgress)
+            if (instance->i_gameLogic->GetGameState() == OGRID::GameState::InProgress)
             {
                 restartButton.isEnabled = false;
                 changeGridButton.isEnabled = false;
@@ -380,26 +381,26 @@ namespace OGRIDSandbox
 
                 DrawGrid();
                 currentPlayerText.SetText("Current Player: " + instance->i_gameLogic->GetGameConfiguration()->turnManager->GetCurrentPlayer().ptr->GetPlayerName());
-                turnText.SetText("Turn: " + GENERICS::MoveTypeEnumToString(instance->i_gameLogic->GetGameConfiguration()->turnManager->GetCurrentPlayer().ptr->GetPlayerMoveType()));
+                turnText.SetText("Turn: " + OGRID::MoveTypeEnumToString(instance->i_gameLogic->GetGameConfiguration()->turnManager->GetCurrentPlayer().ptr->GetPlayerMoveType()));
                 currentPlayerText.Draw();
                 turnText.Draw();
             }
-            else if (instance->i_gameLogic->GetGameState() == GENERICS::GameState::GameOver)
+            else if (instance->i_gameLogic->GetGameState() == OGRID::GameState::GameOver)
             {
-                if (instance->i_gameLogic->GetGameOverType() == GENERICS::GameOverType::Win)
+                if (instance->i_gameLogic->GetGameOverType() == OGRID::GameOverType::Win)
                 {
                     restartButton.isEnabled = true;
                     changeGridButton.isEnabled = true;
                     // changeTurnOrderButton.isEnabled = true;
 
-                    winnerText.SetText("Winner: " + instance->i_gameLogic->GetWinner()->GetPlayerName() + " (" + GENERICS::MoveTypeEnumToString(instance->i_gameLogic->GetWinner()->GetPlayerMoveType()) + ")");
+                    winnerText.SetText("Winner: " + instance->i_gameLogic->GetWinner()->GetPlayerName() + " (" + OGRID::MoveTypeEnumToString(instance->i_gameLogic->GetWinner()->GetPlayerMoveType()) + ")");
                     gameOverText.Draw();
                     winnerText.Draw();
                     restartButton.Draw();
                     changeGridButton.Draw();
                     // changeTurnOrderButton.Draw();
                 }
-                else if (instance->i_gameLogic->GetGameOverType() == GENERICS::GameOverType::Draw)
+                else if (instance->i_gameLogic->GetGameOverType() == OGRID::GameOverType::Draw)
                 {
                     restartButton.isEnabled = true;
                     changeGridButton.isEnabled = true;

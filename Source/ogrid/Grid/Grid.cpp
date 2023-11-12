@@ -2,10 +2,10 @@
 
 #include <stdexcept>
 
-namespace GENERICS
+namespace OGRID
 {
     // Constructors & Destructors
-    GENERICS::Grid::Grid(unsigned char rows, unsigned char cols, char initialChar) : defaultChar(initialChar)
+    Grid::Grid(unsigned char rows, unsigned char cols, char initialChar) : defaultChar(initialChar)
     {
         this->rows = rows;
         this->cols = cols;
@@ -20,7 +20,7 @@ namespace GENERICS
         }
     }
 
-    GENERICS::Grid::~Grid()
+    Grid::~Grid()
     {
         // Deallocate memory for the grid.
         for (int i = 0; i < rows; i++)
@@ -32,52 +32,52 @@ namespace GENERICS
 
     // Getters & Setters
 
-    unsigned char GENERICS::Grid::GetRows() const
+    unsigned char Grid::GetRows() const
     {
         return rows;
     }
 
-    void GENERICS::Grid::SetRows(unsigned char rows)
+    void Grid::SetRows(unsigned char rows)
     {
         this->rows = rows;
     }
 
-    unsigned char GENERICS::Grid::GetCols() const
+    unsigned char Grid::GetCols() const
     {
         return cols;
     }
 
-    void GENERICS::Grid::SetCols(unsigned char cols)
+    void Grid::SetCols(unsigned char cols)
     {
         this->cols = cols;
     }
 
-    char **GENERICS::Grid::GetGrid() const
+    char **Grid::GetGrid() const
     {
         return grid;
     }
 
-    void GENERICS::Grid::SetGrid(char **grid)
+    void Grid::SetGrid(char **grid)
     {
         this->grid = grid;
     }
 
-    char GENERICS::Grid::GetDefaultChar() const
+    char Grid::GetDefaultChar() const
     {
         return defaultChar;
     }
 
-    void GENERICS::Grid::SetDefaultChar(char defaultChar)
+    void Grid::SetDefaultChar(char defaultChar)
     {
         this->defaultChar = defaultChar;
     }
 
-    char GENERICS::Grid::GetCharAt(unsigned char row, unsigned char col) const
+    char Grid::GetCharAt(unsigned char row, unsigned char col) const
     {
         return grid[row][col];
     }
 
-    void GENERICS::Grid::SetCharAt(unsigned char row, unsigned char col, char newChar)
+    void Grid::SetCharAt(unsigned char row, unsigned char col, char newChar)
     {
         if (row < 0 || row >= this->GetRows() || col < 0 || col >= this->GetCols())
         {
@@ -88,14 +88,14 @@ namespace GENERICS
         grid[row][col] = newChar;
     }
 
-    std::pair<unsigned char, unsigned char> GENERICS::Grid::GetLastChangedChar() const
+    std::pair<unsigned char, unsigned char> Grid::GetLastChangedChar() const
     {
         return std::make_pair(lastChangedChar[0], lastChangedChar[1]);
     }
 
     // Operators
 
-    char *GENERICS::Grid::operator[](int index)
+    char *Grid::operator[](int index)
     {
         if (index < 0 || index >= this->GetRows())
         {
@@ -105,12 +105,12 @@ namespace GENERICS
     }
 
     // Public methods
-    const std::string GENERICS::Grid::GetGridInfo() const
+    const std::string Grid::GetGridInfo() const
     {
         return fmt::format("Grid: {0}x{1}", rows, cols);
     }
 
-    void GENERICS::Grid::ResetGrid()
+    void Grid::ResetGrid()
     {
         for (int i = 0; i < rows; i++)
         {
@@ -120,7 +120,7 @@ namespace GENERICS
         lastChangedChar[1] = 0;
     }
 
-    void GENERICS::Grid::ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, char newChar)
+    void Grid::ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, char newChar)
     {
         defaultChar = newChar;
         ResetGrid();
@@ -144,7 +144,7 @@ namespace GENERICS
         }
     }
 
-    void GENERICS::Grid::ResetGridWithNewChar(char newChar)
+    void Grid::ResetGridWithNewChar(char newChar)
     {
         defaultChar = newChar;
         ResetGrid();
@@ -153,7 +153,7 @@ namespace GENERICS
     // Previous methods checked for the occurrence of a character in a row, column, diagonal or anti-diagonal.
     // But it checked the whole row, column, diagonal or anti-diagonal.
     // This is incorrect. Because we need to check for at the very least 3 occurrences of the character in a row.
-    bool GENERICS::Grid::CheckForRecurringCharsInRow(char playerChar)
+    bool Grid::CheckForRecurringCharsInRow(char playerChar)
     {
         for (int row = 0; row < rows; ++row)
         {
@@ -174,7 +174,7 @@ namespace GENERICS
         return false;
     }
 
-    bool GENERICS::Grid::CheckForRecurringCharsInCol(char playerChar)
+    bool Grid::CheckForRecurringCharsInCol(char playerChar)
     {
         for (int col = 0; col < cols; ++col)
         {
@@ -195,7 +195,7 @@ namespace GENERICS
         return false;
     }
 
-    bool GENERICS::Grid::CheckForRecurringCharsInDiagonal(char playerChar)
+    bool Grid::CheckForRecurringCharsInDiagonal(char playerChar)
     {
         // Check from top-left to bottom-right
         for (int row = 0; row <= rows - 3; ++row)
@@ -220,7 +220,7 @@ namespace GENERICS
         return false;
     }
 
-    bool GENERICS::Grid::CheckForRecurringCharsInAntiDiagonal(char playerChar)
+    bool Grid::CheckForRecurringCharsInAntiDiagonal(char playerChar)
     {
         // Check from top-right to bottom-left
         for (int row = 0; row <= rows - 3; ++row)
@@ -245,7 +245,7 @@ namespace GENERICS
         return false;
     }
 
-    char GENERICS::Grid::GetCharCenterMostElement() const
+    char Grid::GetCharCenterMostElement() const
     {
         unsigned char centerRow = rows / 2;
         unsigned char centerCol = cols / 2;
@@ -258,7 +258,7 @@ namespace GENERICS
         return GetCharAt(centerRow, centerCol);
     }
 
-    std::pair<unsigned char, unsigned char> GENERICS::Grid::GetCenterMostCoords() const
+    std::pair<unsigned char, unsigned char> Grid::GetCenterMostCoords() const
     {
         // The center for both rows and columns in case of odd dimensions.
         unsigned char centerRow = rows / 2;

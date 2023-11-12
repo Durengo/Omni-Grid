@@ -2,9 +2,9 @@
 
 #include <string>
 
-#include "raylib.h"
+#include <raylib.h>
 
-namespace Sandbox
+namespace OGRID
 {
     // Enumeration to specify text justification options
     enum class Justify

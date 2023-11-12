@@ -3,7 +3,7 @@
 #include <string>
 #include <map>
 
-namespace GENERICS
+namespace OGRID
 {
     enum MoveType
     {

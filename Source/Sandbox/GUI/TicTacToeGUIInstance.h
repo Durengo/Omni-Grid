@@ -1,14 +1,13 @@
-//
-// Created by LastWeek on 12/11/2023.
-//
-
 #pragma once
 
-#include "../../Generics/Singleton.h"
+#include <Helpers/Singleton.h>
+
 #include "TicTacToeGUI.h"
 
-namespace OGRIDSandbox{
-    class TicTacToeGUIInstance : GENERICS::Singleton {
+namespace OGRIDSandbox
+{
+    class TicTacToeGUIInstance : OGRID::Singleton
+    {
     private:
         static TicTacToeGUI *i_instance;
 
@@ -23,5 +22,3 @@ namespace OGRIDSandbox{
         static bool CheckInit();
     };
 }
-
-

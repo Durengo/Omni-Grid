@@ -1,6 +1,6 @@
 #pragma once
 
-namespace GENERICS
+namespace OGRID
 {
     enum GameState
     {

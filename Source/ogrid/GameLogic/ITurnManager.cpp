@@ -1,21 +1,21 @@
-//
-// Created by LastWeek on 12/11/2023.
-//
-
-#include <durlib/Log/Log.h>
 #include "ITurnManager.h"
+
+#include <durlib.h>
 
 #include <Player/Moves.h>
 #include <Player/Player.h>
-#include "../Sandbox/Game/GameState.h"
+#include <GameLogic/GameState.h>
 
-namespace GENERICS{
+namespace OGRID
+{
 
-    ITurnManager::ITurnManager(const std::vector<GENERICS::PlayerNameAndPtr> &players) {
+    ITurnManager::ITurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players)
+    {
         m_Players = players;
     }
 
-    ITurnManager::~ITurnManager() {
+    ITurnManager::~ITurnManager()
+    {
         for (auto &playerPair : m_Players)
         {
             playerPair.ptr = nullptr;
@@ -24,7 +24,7 @@ namespace GENERICS{
     }
 
     // Getters & Setters
-    GENERICS::PlayerNameAndPtr ITurnManager::GetCurrentPlayer() const
+    OGRID::PlayerNameAndPtr ITurnManager::GetCurrentPlayer() const
     {
         return m_Players[m_currentTurn];
     }
@@ -44,9 +44,9 @@ namespace GENERICS{
         return playerNames;
     }
 
-    std::vector<GENERICS::Player *> ITurnManager::GetPlayerPtrs() const
+    std::vector<OGRID::Player *> ITurnManager::GetPlayerPtrs() const
     {
-        std::vector<GENERICS::Player *> playerPtrs;
+        std::vector<OGRID::Player *> playerPtrs;
         for (const auto &playerPair : m_Players)
         {
             playerPtrs.push_back(playerPair.ptr);
@@ -54,7 +54,7 @@ namespace GENERICS{
         return playerPtrs;
     }
 
-    GENERICS::PlayerNameAndPtr ITurnManager::GetPlayerPair(size_t at) const
+    OGRID::PlayerNameAndPtr ITurnManager::GetPlayerPair(size_t at) const
     {
         if (at < m_Players.size())
         {
@@ -66,17 +66,19 @@ namespace GENERICS{
         }
     }
 
-    std::vector<GENERICS::PlayerNameAndPtr> ITurnManager::GetPlayerPairs() const
+    std::vector<OGRID::PlayerNameAndPtr> ITurnManager::GetPlayerPairs() const
     {
         return m_Players;
     }
 
-    void ITurnManager::Reset() {
+    void ITurnManager::Reset()
+    {
         m_currentTurn = 0;
         m_totalTurns = 0;
     }
 
-    void ITurnManager::PrintPlayerMoves() const {
+    void ITurnManager::PrintPlayerMoves() const
+    {
         for (const auto &playerPair : m_Players)
         {
             std::string move = MoveTypeEnumToString(playerPair.ptr->GetPlayerMoveType());
@@ -84,28 +86,30 @@ namespace GENERICS{
         }
     }
 
-    GENERICS::GameOverType
-    ITurnManager::CheckGameOverState(GENERICS::Grid *grid, unsigned char row, unsigned char col) {
-        GENERICS::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
+    OGRID::GameOverType
+    ITurnManager::CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    {
+        OGRID::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
         // PlayerNameAndPtr previousPlayer = GetPlayerPair((GetCurrentTurn() - 1) % m_Players.size());
 
         if (IsWinningCondition(grid, row, col))
         {
             CLI_INFO("Player {0} won the game!", currentPlayer.name);
-            return GENERICS::GameOverType::Win;
+            return OGRID::GameOverType::Win;
         }
         if (IsDrawCondition(grid, row, col))
         {
             CLI_INFO("The game ended in a draw!");
-            return GENERICS::GameOverType::Draw;
+            return OGRID::GameOverType::Draw;
         }
         CLI_TRACE("Player {0} finished his move.", currentPlayer.name);
         this->operator++();
         CLI_TRACE("Player {0} is now playing.", GetCurrentPlayer().name);
-        return GENERICS::GameOverType::None;
+        return OGRID::GameOverType::None;
     }
 
-    void ITurnManager::SwapPlayerPositions() {
+    void ITurnManager::SwapPlayerPositions()
+    {
         if (m_Players.size() == 2)
         {
             std::swap(m_Players[0], m_Players[1]);
@@ -116,7 +120,8 @@ namespace GENERICS{
         }
     }
 
-    void ITurnManager::SetPlayerPairs(const std::vector<GENERICS::PlayerNameAndPtr> &players) {
+    void ITurnManager::SetPlayerPairs(const std::vector<OGRID::PlayerNameAndPtr> &players)
+    {
         m_Players = players;
     }
 }

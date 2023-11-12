@@ -3,12 +3,14 @@
 #include <string>
 #include <vector>
 
-#include "../Grid/Grid.h"
-#include "../Player/Player.h"
-#include "GameLogic/TicTacToeTurnManager.h"
-
-namespace GENERICS
+namespace OGRID
 {
+    // Forward declarations
+    class ConfigurationBuilder;
+    class ITurnManager;
+    class Player;
+    class Grid;
+
     struct GameConfiguration
     {
         std::string gameName;

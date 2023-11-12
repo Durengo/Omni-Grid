@@ -5,7 +5,7 @@
 
 #include "fmt/format.h"
 
-namespace GENERICS
+namespace OGRID
 {
     // Forward declarations
     enum MoveType;
@@ -43,25 +43,25 @@ namespace GENERICS
 
 // Formatting for fmt library.
 template <>
-struct fmt::formatter<GENERICS::PlayerType> : formatter<std::string>
+struct fmt::formatter<OGRID::PlayerType> : formatter<std::string>
 {
     template <typename FormatContext>
-    auto format(GENERICS::PlayerType p, FormatContext &ctx)
+    auto format(OGRID::PlayerType p, FormatContext &ctx)
     {
-        std::string name = p == GENERICS::PlayerType::Human ? "Human" : "AI";
+        std::string name = p == OGRID::PlayerType::Human ? "Human" : "AI";
         return formatter<std::string>::format(name, ctx);
     }
 };
 
 template <>
-struct fmt::formatter<GENERICS::Player> : fmt::formatter<std::string>
+struct fmt::formatter<OGRID::Player> : fmt::formatter<std::string>
 {
     // Parses format specifications of the form '[:...]' which you can ignore.
     constexpr auto parse(format_parse_context &ctx) { return ctx.begin(); }
 
     // Formats the Player using provided format specifiers.
     template <typename FormatContext>
-    auto format(const GENERICS::Player &player, FormatContext &ctx)
+    auto format(const OGRID::Player &player, FormatContext &ctx)
     {
         // Use a memory buffer to store the temporary output.
         fmt::memory_buffer buf;
@@ -73,9 +73,9 @@ struct fmt::formatter<GENERICS::Player> : fmt::formatter<std::string>
     }
 };
 
-namespace GENERICS
+namespace OGRID
 {
-    static std::string PlayerVecToString(const std::vector<GENERICS:: Player*> &players)
+    static std::string PlayerVecToString(const std::vector<OGRID::Player *> &players)
     {
         std::ostringstream ss;
         for (size_t i = 0; i < players.size(); ++i)

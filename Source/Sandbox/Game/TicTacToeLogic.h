@@ -1,14 +1,10 @@
 #pragma once
 
-#include <durlib.h>
-#include <mutex>
-#include "../../Generics/IGameLogic.h"
-#include "../../Sandbox/Player/Player.h"
-#include "../../Sandbox/Player/Moves.h"
+#include <GameLogic/IGameLogic.h>
 
 namespace OGRIDSandbox
 {
-    class TicTacToeLogic : public GENERICS::IGameLogic
+    class TicTacToeLogic : public OGRID::IGameLogic
     {
     private:
         static bool m_randomizeTurnOrder;

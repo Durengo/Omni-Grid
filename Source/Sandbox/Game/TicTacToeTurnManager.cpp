@@ -4,34 +4,33 @@
 #include <random>
 
 #include <durlib.h>
-#include "../../Sandbox/Player/Moves.h"
-#include "../../Sandbox/Game/GameState.h"
+#include <ogrid.h>
 
 namespace OGRIDSandbox
 {
     // Constructors & Destructors
-    TicTacToeTurnManager::TicTacToeTurnManager(const std::vector<GENERICS::PlayerNameAndPtr> &players)
-            : ITurnManager(players) {
+    TicTacToeTurnManager::TicTacToeTurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players)
+        : ITurnManager(players)
+    {
     }
 
-    TicTacToeTurnManager::~TicTacToeTurnManager()
-    = default;
+    TicTacToeTurnManager::~TicTacToeTurnManager() = default;
 
     // Private methods
-    bool TicTacToeTurnManager::IsWinningCondition(GENERICS::Grid *grid, unsigned char row, unsigned char col)
+    bool TicTacToeTurnManager::IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
         char playerChar = grid->GetCharAt(row, col);
         return grid->CheckForRecurringCharsInRow(playerChar) || grid->CheckForRecurringCharsInCol(playerChar) ||
                grid->CheckForRecurringCharsInDiagonal(playerChar) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar);
     }
 
-    bool TicTacToeTurnManager::IsWinningCondition(GENERICS::Grid *grid, char playerChar)
+    bool TicTacToeTurnManager::IsWinningCondition(OGRID::Grid *grid, char playerChar)
     {
         return grid->CheckForRecurringCharsInRow(playerChar) || grid->CheckForRecurringCharsInCol(playerChar) ||
                grid->CheckForRecurringCharsInDiagonal(playerChar) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar);
     }
 
-    bool TicTacToeTurnManager::IsDrawCondition(GENERICS::Grid *grid, unsigned char row, unsigned char col)
+    bool TicTacToeTurnManager::IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
         // Check if all spots are filled.
         bool allSpotsFilled = true;
@@ -55,7 +54,7 @@ namespace OGRIDSandbox
 
     // Public methods
 
-    void TicTacToeTurnManager::SetupPlayers(GENERICS::GameConfiguration *gameConfiguration, const std::vector<GENERICS::MoveType> &moveTypes, bool randomize = true)
+    void TicTacToeTurnManager::SetupPlayers(OGRID::GameConfiguration *gameConfiguration, const std::vector<OGRID::MoveType> &moveTypes, bool randomize = true)
     {
         size_t allowedPlayers = gameConfiguration->maxPlayers;
 
@@ -63,7 +62,7 @@ namespace OGRIDSandbox
 
         if (randomize)
         {
-            std::vector<GENERICS::MoveType> shuffledMoveTypes = moveTypes;
+            std::vector<OGRID::MoveType> shuffledMoveTypes = moveTypes;
             std::random_device rd;
             auto rng = std::default_random_engine{rd()};
             std::shuffle(shuffledMoveTypes.begin(), shuffledMoveTypes.end(), rng);
@@ -75,9 +74,9 @@ namespace OGRIDSandbox
 
             // Assuming MoveType::X is the MoveType that goes first.
             std::stable_sort(m_Players.begin(), m_Players.end(),
-                             [](const GENERICS::PlayerNameAndPtr &a, const GENERICS::PlayerNameAndPtr &b)
+                             [](const OGRID::PlayerNameAndPtr &a, const OGRID::PlayerNameAndPtr &b)
                              {
-                                 return a.ptr->GetPlayerMoveType() == GENERICS::MoveType::X;
+                                 return a.ptr->GetPlayerMoveType() == OGRID::MoveType::X;
                              });
         }
         else
@@ -88,14 +87,14 @@ namespace OGRIDSandbox
             }
 
             std::stable_sort(m_Players.begin(), m_Players.end(),
-                             [](const GENERICS::PlayerNameAndPtr &a, const GENERICS::PlayerNameAndPtr &b)
+                             [](const OGRID::PlayerNameAndPtr &a, const OGRID::PlayerNameAndPtr &b)
                              {
-                                 return a.ptr->GetPlayerMoveType() == GENERICS::MoveType::X;
+                                 return a.ptr->GetPlayerMoveType() == OGRID::MoveType::X;
                              });
         }
     }
 
-    bool TicTacToeTurnManager::MakeMove(GENERICS::Grid *grid, unsigned char row, unsigned char col)
+    bool TicTacToeTurnManager::MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
         CLI_TRACE("Player {0} is making a move at ({1}, {2}).", GetCurrentPlayer().name, row, col);
         char gridChar = grid->GetCharAt(row, col);
@@ -105,9 +104,9 @@ namespace OGRIDSandbox
             return false;
         }
 
-        GENERICS::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
+        OGRID::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
 
-        grid->SetCharAt(row, col, GENERICS::MoveTypeEnumToChar(currentPlayer.ptr->GetPlayerMoveType()));
+        grid->SetCharAt(row, col, OGRID::MoveTypeEnumToChar(currentPlayer.ptr->GetPlayerMoveType()));
 
         // this->operator++();
         return true;

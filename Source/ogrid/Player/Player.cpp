@@ -2,7 +2,7 @@
 
 #include "Moves.h"
 
-namespace GENERICS
+namespace OGRID
 {
     PlayerType PlayerTypeStringToEnum(const std::string &s)
     {

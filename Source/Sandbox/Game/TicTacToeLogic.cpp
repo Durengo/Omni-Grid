@@ -1,13 +1,15 @@
 #include "TicTacToeLogic.h"
 #include "TicTacToeInstance.h"
 
+#include <durlib.h>
+#include <ogrid.h>
 
 namespace OGRIDSandbox
 {
     // Static variables
 
     bool TicTacToeLogic::m_randomizeTurnOrder{true};
-    TicTacToeLogic* instance = TicTacToeInstance::GetInstance();
+    TicTacToeLogic *instance = TicTacToeInstance::GetInstance();
 
     // Constructors & Destructors
     TicTacToeLogic::TicTacToeLogic() = default;
@@ -35,9 +37,9 @@ namespace OGRIDSandbox
         CLI_ASSERT(instance->m_GameConfiguration->turnManager, "TicTacToeTurnManager not initialized.");
 
         // HARDCODED
-        std::vector<GENERICS::MoveType> moveTypes;
-        moveTypes.push_back(GENERICS::MoveType::X);
-        moveTypes.push_back(GENERICS::MoveType::O);
+        std::vector<OGRID::MoveType> moveTypes;
+        moveTypes.push_back(OGRID::MoveType::X);
+        moveTypes.push_back(OGRID::MoveType::O);
         // HARDCODED
 
         instance->m_GameConfiguration->turnManager->SetupPlayers(instance->m_GameConfiguration, moveTypes, m_randomizeTurnOrder);
@@ -52,8 +54,8 @@ namespace OGRIDSandbox
         {
             players +=
                 playerPairs[i].ptr->GetPlayerName() + "\t| " +
-                GENERICS::PlayerTypeEnumToString(playerPairs[i].ptr->GetPlayerType()) + "\t| " +
-                GENERICS::MoveTypeEnumToString(playerPairs[i].ptr->GetPlayerMoveType());
+                OGRID::PlayerTypeEnumToString(playerPairs[i].ptr->GetPlayerType()) + "\t| " +
+                OGRID::MoveTypeEnumToString(playerPairs[i].ptr->GetPlayerMoveType());
             // Add the newline character if it's not the last player
             if (i < playerPairs.size() - 1)
             {
@@ -71,8 +73,8 @@ namespace OGRIDSandbox
 
     void TicTacToeLogic::SetupGame()
     {
-        m_gameState = GENERICS::GameState::NotStarted;
-        m_gameOverType = GENERICS::GameOverType::None;
+        m_gameState = OGRID::GameState::NotStarted;
+        m_gameOverType = OGRID::GameOverType::None;
         ResetGame();
     }
 
@@ -80,8 +82,8 @@ namespace OGRIDSandbox
     {
         if (TicTacToeInstance::CheckInit())
         {
-            m_gameState = GENERICS::GameState::NotStarted;
-            m_gameOverType = GENERICS::GameOverType::None;
+            m_gameState = OGRID::GameState::NotStarted;
+            m_gameOverType = OGRID::GameOverType::None;
 
             CLI_INFO("Setting up game: {}", instance->m_GameConfiguration->gameName);
             CLI_TRACE("Game description: {}", instance->m_GameConfiguration->gameDescription);
@@ -106,7 +108,7 @@ namespace OGRIDSandbox
             CLI_INFO("Starting game: {}", instance->m_GameConfiguration->gameName);
             CLI_TRACE("Game description: {}", instance->m_GameConfiguration->gameDescription);
 
-            m_gameState = GENERICS::GameState::InProgress;
+            m_gameState = OGRID::GameState::InProgress;
 
             CLI_TRACE("Grid: {}", *instance->m_GameConfiguration->grid);
             instance->PrintPlayersTurnOrder();
@@ -118,24 +120,24 @@ namespace OGRIDSandbox
     {
         if (TicTacToeInstance::CheckInit())
         {
-            if (instance->m_GameConfiguration->turnManager->MakeMove(instance->m_GameConfiguration->grid, row, col) && m_gameState == GENERICS::GameState::InProgress)
+            if (instance->m_GameConfiguration->turnManager->MakeMove(instance->m_GameConfiguration->grid, row, col) && m_gameState == OGRID::GameState::InProgress)
             {
                 CLI_TRACE("{}", *instance->m_GameConfiguration->grid);
                 switch (instance->m_GameConfiguration->turnManager->CheckGameOverState(instance->m_GameConfiguration->grid, row, col))
                 {
-                case GENERICS::GameOverType::None:
-                    m_gameState = GENERICS::GameState::InProgress;
+                case OGRID::GameOverType::None:
+                    m_gameState = OGRID::GameState::InProgress;
                     // i_instance->m_GameConfiguration->turnManager++;
                     break;
-                case GENERICS::GameOverType::Win:
-                    m_gameState = GENERICS::GameState::GameOver;
-                    m_gameOverType = GENERICS::GameOverType::Win;
+                case OGRID::GameOverType::Win:
+                    m_gameState = OGRID::GameState::GameOver;
+                    m_gameOverType = OGRID::GameOverType::Win;
                     m_winner = instance->m_GameConfiguration->turnManager->GetCurrentPlayer().ptr;
                     instance->PrintPlayersTurnOrder();
                     break;
-                case GENERICS::GameOverType::Draw:
-                    m_gameState = GENERICS::GameState::GameOver;
-                    m_gameOverType = GENERICS::GameOverType::Draw;
+                case OGRID::GameOverType::Draw:
+                    m_gameState = OGRID::GameState::GameOver;
+                    m_gameOverType = OGRID::GameOverType::Draw;
                     instance->PrintPlayersTurnOrder();
                     break;
                 default:

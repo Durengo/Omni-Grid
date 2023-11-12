@@ -1,15 +1,16 @@
 #pragma once
 
-
-#include <GameLogic/TicTacToeLogic.h>
-#include "../../Generics/iGUI.h"
+#include <GUI/iGUI.h>
+#include <GameLogic/GameConfiguration.h>
 
 struct Vector2;
 
 namespace OGRIDSandbox
 {
+    // Forward declarations
+    class TicTacToeLogic;
 
-    class TicTacToeGUI : GENERICS::iGUI
+    class TicTacToeGUI : OGRID::iGUI
     {
     private:
         static TicTacToeLogic *i_gameLogic;
@@ -24,7 +25,7 @@ namespace OGRIDSandbox
     public:
         static TicTacToeLogic *GetGameLogic();
 
-        static void SetGameConfiguration(GENERICS::GameConfiguration *gameConfiguration);
+        static void SetGameConfiguration(OGRID::GameConfiguration *gameConfiguration);
 
         static void SetRandomizeFirstPlayer(bool randomizeFirstPlayer);
 
