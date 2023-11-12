@@ -55,6 +55,9 @@ Note: It is better if you setup vcpkg somewhere close to the root drive otherwis
 
 ## Building the source
 
+Before adding any submodules you must first generate an ssh key for your GitHub account.
+More information [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
 Before proceeding *make absolutely sure* you cd into the root repository directory and run the following command:
 
 > $ git submodule update --init --recursive
