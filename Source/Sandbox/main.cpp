@@ -1,7 +1,6 @@
 #include <durlib.h>
-#include <GUI/TicTacToeGUIInstance.h>
-#include <Game/GameInitializer.h>
-#include "GUI/TicTacToeGUI.h"
+
+#include "Core/GameInitializer.h"
 
 int main()
 {
