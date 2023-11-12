@@ -75,7 +75,7 @@ struct fmt::formatter<OGRID::Player> : fmt::formatter<std::string>
 
 namespace OGRID
 {
-    static std::string PlayerVecToString(const std::vector<Player *> &players)
+    static std::string PlayerVecToString(const std::vector<OGRID::Player *> &players)
     {
         std::ostringstream ss;
         for (size_t i = 0; i < players.size(); ++i)

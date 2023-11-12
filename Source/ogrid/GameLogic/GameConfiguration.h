@@ -3,12 +3,14 @@
 #include <string>
 #include <vector>
 
-#include "Grid/Grid.h"
-#include "Player/Player.h"
-#include "GameLogic/TurnManager.h"
-
 namespace OGRID
 {
+    // Forward declarations
+    class ConfigurationBuilder;
+    class ITurnManager;
+    class Player;
+    class Grid;
+
     struct GameConfiguration
     {
         std::string gameName;
@@ -17,7 +19,7 @@ namespace OGRID
         size_t maxPlayers = 0;
         std::vector<Player *> players;
 
-        TurnManager *turnManager = nullptr;
+        ITurnManager *turnManager = nullptr;
     };
 
     // Builder Interface
@@ -29,7 +31,7 @@ namespace OGRID
         virtual ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, char initialChar = '.') = 0;
         virtual ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) = 0;
         virtual ConfigurationBuilder &addPlayer(Player *player) = 0;
-        virtual GameConfiguration *build() = 0;
+        virtual GameConfiguration *build(ITurnManager *turnManager) = 0;
     };
 
     // Concrete Builder
@@ -47,6 +49,6 @@ namespace OGRID
         ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, char initialChar) override;
         ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) override;
         ConfigurationBuilder &addPlayer(Player *player) override;
-        GameConfiguration *build() override;
+        GameConfiguration *build(ITurnManager *turnManager) override;
     };
 }

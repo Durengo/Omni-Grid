@@ -1,6 +1,9 @@
 # Source Build
 Build
 Install
+# CLion
+cmake-build-debug
+cmake-build-debug-visual-studio
 
 # Vendor / Local VCPKG install
 Vendor
@@ -15,6 +18,7 @@ py_venv
 
 # IDE
 .vs
+.idea
 # Keeping .vscode workspace, as it allows us to show includes.
 # .vscode
 

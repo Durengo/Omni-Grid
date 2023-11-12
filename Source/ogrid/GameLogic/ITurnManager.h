@@ -5,6 +5,10 @@
 
 #include "fmt/format.h"
 
+//*************************************************************
+// Can't have virtual static methods, so implement them yourself
+//*************************************************************
+
 namespace OGRID
 {
     // Forward declarations
@@ -20,67 +24,69 @@ namespace OGRID
         Player *ptr;
     };
 
-    class TurnManager
+    class ITurnManager
     {
-    private:
-        std::vector<PlayerNameAndPtr> m_Players;
+    protected:
+        std::vector<OGRID::PlayerNameAndPtr> m_Players;
         size_t m_currentTurn = 0;
         unsigned int m_totalTurns = 0;
 
     public:
         // Constructors & Destructors
-        TurnManager(const std::vector<PlayerNameAndPtr> &players);
-        ~TurnManager();
+        ITurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players);
+        ITurnManager() = default;
+        ~ITurnManager();
 
+    protected:
         // Operators
-        TurnManager &operator++()
+        ITurnManager &operator++()
         {
             m_currentTurn = (m_currentTurn + 1) % m_Players.size();
             m_totalTurns++;
             return *this;
         }
 
-        TurnManager operator++(int)
-        {
-            TurnManager temp = *this;
-            ++(*this);
-            return temp;
-        }
+        // ITurnManager operator++(int)
+        //{
+        //     ITurnManager temp = *this;
+        //     ++(*this);
+        //     return temp;
+        // }
+
+        // Private methods:
+    private:
+        virtual bool IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col) = 0;
+        virtual bool IsWinningCondition(OGRID::Grid *grid, char playerChar) = 0;
+        virtual bool IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col) = 0;
 
         // Getters & Setters
     public:
-        PlayerNameAndPtr GetCurrentPlayer() const;
+        OGRID::PlayerNameAndPtr GetCurrentPlayer() const;
 
         size_t GetCurrentTurn() const;
 
         std::vector<std::string> GetPlayerNames() const;
 
-        std::vector<Player *> GetPlayerPtrs() const;
+        std::vector<OGRID::Player *> GetPlayerPtrs() const;
 
-        PlayerNameAndPtr GetPlayerPair(size_t at) const;
+        OGRID::PlayerNameAndPtr GetPlayerPair(size_t at) const;
 
-        std::vector<PlayerNameAndPtr> GetPlayerPairs() const;
+        std::vector<OGRID::PlayerNameAndPtr> GetPlayerPairs() const;
 
-        // Private methods:
-    private:
-        bool IsWinningCondition(Grid *grid, unsigned char row, unsigned char col);
-        bool IsWinningCondition(Grid *grid, char playerChar);
-        bool IsDrawCondition(Grid *grid, unsigned char row, unsigned char col);
+        void SetPlayerPairs(const std::vector<OGRID::PlayerNameAndPtr> &players);
 
         // Public methods:
     public:
         void Reset();
-        void SetupPlayers(GameConfiguration *gameConfiguration, const std::vector<MoveType> &moveTypes, bool randomize = true);
         void PrintPlayerMoves() const;
-
-        bool MakeMove(Grid *grid, unsigned char row, unsigned char col);
-        GameOverType CheckGameOverState(Grid *grid, unsigned char row, unsigned char col);
+        virtual void SetupPlayers(OGRID::GameConfiguration *gameConfiguration, const std::vector<OGRID::MoveType> &moveTypes, bool randomize = true) = 0;
+        virtual bool MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col) = 0;
+        OGRID::GameOverType CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col);
 
         void SwapPlayerPositions();
     };
 }
 
-// Formatting for fmt library.
 template <>
 struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
 {

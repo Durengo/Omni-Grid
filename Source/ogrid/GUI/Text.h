@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "raylib.h"
+#include <raylib.h>
 
 namespace OGRID
 {
