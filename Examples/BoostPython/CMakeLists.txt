@@ -127,6 +127,49 @@ if(${INSTALL_DLLS})
     endif()
 endif()
 
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+    add_custom_command(TARGET OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries POST_BUILD
+
+        # COPY PYTHON RUNTIME DLLS
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${Python3_RUNTIME_LIBRARY}"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+
+        # COPY BOOST PYTHON DEBUG DLLS
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${Boost_Python_Debug_DLL}"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+
+        # ALSO COPY BOOST PYTHON RELEASE DLLS AS THEY ARE NEEDED FOR RUNTIME
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${Boost_Python_Release_DLL}"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+
+        # ALSO COPY ZLIB RELEASE DLLS AS THEY ARE NEEDED FOR RUNTIME
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${VCPKG_CORE}/bin/zlib1.dll"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+    )
+elseif(${CMAKE_BUILD_TYPE} STREQUAL "Release")
+    add_custom_command(TARGET OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries POST_BUILD
+
+        # COPY PYTHON RUNTIME DLLS
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${Python3_RUNTIME_LIBRARY}"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+
+        # COPY BOOST PYTHON RELEASE DLLS
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${Boost_Python_Release_DLL}"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+
+        # COPY ZLIB RELEASE DLLS
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${VCPKG_CORE}/bin/zlib1.dll"
+        $<TARGET_FILE_DIR:OMNI-GRID_EXAMPLES_BOOSTPYTHONHelloBoostPythonLibraries>
+    )
+endif()
+
 if(${VERBOSE})
     message(STATUS "BOOST PYTHON EXAMPLES ADDED.")
 endif()
