@@ -20,14 +20,14 @@ namespace OGRIDSandbox
     bool TicTacToeTurnManager::IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
         char playerChar = grid->GetCharAt(row, col);
-        return grid->CheckForRecurringCharsInRow(playerChar) || grid->CheckForRecurringCharsInCol(playerChar) ||
-               grid->CheckForRecurringCharsInDiagonal(playerChar) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar);
+        return grid->CheckForRecurringCharsInRow(playerChar, 3) || grid->CheckForRecurringCharsInCol(playerChar, 3) ||
+               grid->CheckForRecurringCharsInDiagonal(playerChar, 3) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 3);
     }
 
     bool TicTacToeTurnManager::IsWinningCondition(OGRID::Grid *grid, char playerChar)
     {
-        return grid->CheckForRecurringCharsInRow(playerChar) || grid->CheckForRecurringCharsInCol(playerChar) ||
-               grid->CheckForRecurringCharsInDiagonal(playerChar) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar);
+        return grid->CheckForRecurringCharsInRow(playerChar, 3) || grid->CheckForRecurringCharsInCol(playerChar, 3) ||
+               grid->CheckForRecurringCharsInDiagonal(playerChar, 3) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 3);
     }
 
     bool TicTacToeTurnManager::IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
