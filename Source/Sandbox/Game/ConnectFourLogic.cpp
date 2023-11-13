@@ -118,9 +118,9 @@ namespace OGRIDSandbox{
                 // Because of not enough generalizations, I'll have to create a method
                 // that checks from the position the piece was placed, and not the position that was clicked.
                 row = GetTopMostPiecePositionInColumn(col);
-                if (row == static_cast<unsigned char>(-1))
+                if (row > m_GameConfiguration->grid->GetRows() - 1 || row < 0)
                 {
-                    throw std::runtime_error("Why is it -1 if we just placed a piece there?.");
+                    throw std::runtime_error("GetTopMostPiecePositionInColumn returned invalid row.");
                 }
                 CLI_TRACE("{}", *instance->m_GameConfiguration->grid);
                 switch (instance->m_GameConfiguration->turnManager->CheckGameOverState(instance->m_GameConfiguration->grid, row, col))
@@ -163,8 +163,6 @@ namespace OGRIDSandbox{
     unsigned char ConnectFourLogic::GetTopMostPiecePositionInColumn(int col) {
         // Go down the column
         for (unsigned char row = 0; row < instance->m_GameConfiguration->grid->GetRows(); ++row) {
-            CLI_TRACE("GetTopMostPiecePositionInColumn {0}: Checking row {1})", col, row);
-            CLI_TRACE("Row contains {0}", instance->m_GameConfiguration->grid->GetCharAt(row, col));
             if (instance->m_GameConfiguration->grid->GetCharAt(row, col) != instance->m_GameConfiguration->grid->GetDefaultChar()) {
                 // Found the first piece
                 return row;
@@ -172,6 +170,6 @@ namespace OGRIDSandbox{
         }
 
         // Column is empty
-        return static_cast<unsigned char>(-1);
+        return static_cast<unsigned char>(instance->m_GameConfiguration->grid->GetRows());
     }
 }
