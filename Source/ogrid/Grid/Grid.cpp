@@ -152,7 +152,7 @@ namespace OGRID
 
     // Previous methods checked for the occurrence of a character in a row, column, diagonal or anti-diagonal.
     // But it checked the whole row, column, diagonal or anti-diagonal.
-    // This is incorrect. Because we need to check for at the very least 3 occurrences of the character in a row.
+    // This is incorrect. Because we need to check for at the very least dupCount occurrences of the character in a row.
     bool Grid::CheckForRecurringCharsInRow(char playerChar, int dupCount)
     {
         for (int row = 0; row < rows; ++row)
