@@ -24,6 +24,9 @@ namespace OGRIDSandbox
 
         static void PrintPlayersTurnOrder();
 
+        // Specific to this game logic
+        static unsigned char GetTopMostPiecePositionInColumn(int col);
+
         // Public methods
     public:
         static void SetupGame();
