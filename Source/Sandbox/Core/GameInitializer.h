@@ -7,5 +7,6 @@ namespace Sandbox {
         static void Start();
     private:
         static void StartTicTacToe();
+        static void StartConnectFour();
     };
 }
