@@ -54,10 +54,10 @@ namespace OGRID
         void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, char newChar = '.');
         void ResetGridWithNewChar(char newChar);
 
-        bool CheckForRecurringCharsInRow(char playerChar);
-        bool CheckForRecurringCharsInCol(char playerChar);
-        bool CheckForRecurringCharsInDiagonal(char playerChar);
-        bool CheckForRecurringCharsInAntiDiagonal(char playerChar);
+        bool CheckForRecurringCharsInRow(char playerChar, int dupCount);
+        bool CheckForRecurringCharsInCol(char playerChar, int dupCount);
+        bool CheckForRecurringCharsInDiagonal(char playerChar, int dupCount);
+        bool CheckForRecurringCharsInAntiDiagonal(char playerChar, int dupCount);
 
         char GetCharCenterMostElement() const;
         std::pair<unsigned char, unsigned char> GetCenterMostCoords() const;
