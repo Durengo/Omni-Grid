@@ -94,7 +94,8 @@ namespace Sandbox
         gui->BeginMainLoop();
     }
 
-    void GameInitializer::StartConnectFour() {
+    void GameInitializer::StartConnectFour()
+    {
         auto *p1 = new OGRID::Player("Player1", OGRID::Human);
         auto *p2 = new OGRID::Player("Player2", OGRID::Human);
 
@@ -116,13 +117,13 @@ namespace Sandbox
             p2->SetPlayerMoveType(OGRID::MoveType::O);
             gui->SetRandomizeFirstPlayer(false);
             gui->SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                              .setGameName("ConnectFour")
-                                              .setGameDescription("ConnectFour Game")
-                                              .setGrid(dimensions, dimensions, '.')
-                                              .setMaxPlayers(2)
-                                              .addPlayer(p1)
-                                              .addPlayer(p2)
-                                              .build(new OGRIDSandbox::ConnectFourTurnManager()));
+                                          .setGameName("ConnectFour")
+                                          .setGameDescription("ConnectFour Game")
+                                          .setGrid(dimensions, dimensions, '.')
+                                          .setMaxPlayers(2)
+                                          .addPlayer(p1)
+                                          .addPlayer(p2)
+                                          .build(new OGRIDSandbox::ConnectFourTurnManager()));
         }
         else if (choice == 2)
         {
@@ -130,25 +131,25 @@ namespace Sandbox
             p2->SetPlayerMoveType(OGRID::MoveType::X);
             gui->SetRandomizeFirstPlayer(false);
             gui->SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                              .setGameName("ConnectFour")
-                                              .setGameDescription("ConnectFour Game")
-                                              .setGrid(dimensions, dimensions, '.')
-                                              .setMaxPlayers(2)
-                                              .addPlayer(p2)
-                                              .addPlayer(p1)
-                                              .build(new OGRIDSandbox::ConnectFourTurnManager()));
+                                          .setGameName("ConnectFour")
+                                          .setGameDescription("ConnectFour Game")
+                                          .setGrid(dimensions, dimensions, '.')
+                                          .setMaxPlayers(2)
+                                          .addPlayer(p2)
+                                          .addPlayer(p1)
+                                          .build(new OGRIDSandbox::ConnectFourTurnManager()));
         }
         else if (choice == 3)
         {
             gui->SetRandomizeFirstPlayer(true);
             gui->SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                              .setGameName("ConnectFour")
-                                              .setGameDescription("ConnectFour Game")
-                                              .setGrid(dimensions, dimensions, '.')
-                                              .setMaxPlayers(2)
-                                              .addPlayer(p1)
-                                              .addPlayer(p2)
-                                              .build(new OGRIDSandbox::ConnectFourTurnManager()));
+                                          .setGameName("ConnectFour")
+                                          .setGameDescription("ConnectFour Game")
+                                          .setGrid(dimensions, dimensions, '.')
+                                          .setMaxPlayers(2)
+                                          .addPlayer(p1)
+                                          .addPlayer(p2)
+                                          .build(new OGRIDSandbox::ConnectFourTurnManager()));
         }
 
         gui->InitializeWindow("Sandbox", 800, 600, 60);

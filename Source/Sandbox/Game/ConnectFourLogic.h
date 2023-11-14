@@ -2,7 +2,6 @@
 
 #include <GameLogic/IGameLogic.h>
 
-
 namespace OGRIDSandbox
 {
     class ConnectFourLogic : public OGRID::IGameLogic

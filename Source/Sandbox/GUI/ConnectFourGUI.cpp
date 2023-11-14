@@ -9,7 +9,8 @@
 #include "Game/ConnectFourInstance.h"
 #include "GUI/ConnectFourGUIInstance.h"
 
-namespace OGRIDSandbox{
+namespace OGRIDSandbox
+{
     ConnectFourGUI *instance = ConnectFourGUIInstance::GetInstance();
     ConnectFourLogic *ConnectFourGUI::i_gameLogic;
     bool ConnectFourGUI::i_randomizeFirstPlayer{true};
@@ -20,7 +21,8 @@ namespace OGRIDSandbox{
         instance->i_gameLogic = ConnectFourInstance::GetInstance();
     }
 
-    ConnectFourGUI::~ConnectFourGUI() {
+    ConnectFourGUI::~ConnectFourGUI()
+    {
         if (instance->i_gameLogic != nullptr)
         {
             instance->i_gameLogic = nullptr;
@@ -28,11 +30,13 @@ namespace OGRIDSandbox{
         }
     }
 
-    ConnectFourLogic *ConnectFourGUI::GetGameLogic() {
+    ConnectFourLogic *ConnectFourGUI::GetGameLogic()
+    {
         return instance->i_gameLogic;
     }
 
-    void ConnectFourGUI::SetGameConfiguration(OGRID::GameConfiguration *gameConfiguration) {
+    void ConnectFourGUI::SetGameConfiguration(OGRID::GameConfiguration *gameConfiguration)
+    {
         DEBUG_ASSERT(instance->i_gameLogic, "TicTacToeLogic instance not initialized.");
 
         instance->i_gameLogic->SetGameConfiguration(gameConfiguration);
@@ -40,11 +44,13 @@ namespace OGRIDSandbox{
         instance->m_gridSize = instance->i_gameLogic->GetGrid()->GetRows();
     }
 
-    void ConnectFourGUI::SetRandomizeFirstPlayer(bool randomizeFirstPlayer) {
+    void ConnectFourGUI::SetRandomizeFirstPlayer(bool randomizeFirstPlayer)
+    {
         instance->i_randomizeFirstPlayer = randomizeFirstPlayer;
     }
 
-    void ConnectFourGUI::DrawGrid() {
+    void ConnectFourGUI::DrawGrid()
+    {
         // Set the desired padding around the grid
         float padding = instance->m_margin;
 
@@ -122,7 +128,8 @@ namespace OGRIDSandbox{
         }
     }
 
-    Vector2 ConnectFourGUI::GetCellFromMouse(Vector2 mousePosition) {
+    Vector2 ConnectFourGUI::GetCellFromMouse(Vector2 mousePosition)
+    {
         // Calculate the starting point of the grid on the screen
         float gridStartX = (instance->m_windowResolution.width - (instance->m_cellSize * instance->m_gridSize)) / 2.0f;
         float gridStartY = (instance->m_windowResolution.height - (instance->m_cellSize * instance->m_gridSize)) / 2.0f;
@@ -149,7 +156,8 @@ namespace OGRIDSandbox{
         return Vector2(static_cast<float>(cellIndexX), static_cast<float>(cellIndexY));
     }
 
-    void ConnectFourGUI::DrawRED(int row, int col) {
+    void ConnectFourGUI::DrawRED(int row, int col)
+    {
         float padding = instance->m_margin; // Use the same margin for consistency
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
@@ -166,10 +174,11 @@ namespace OGRIDSandbox{
         float radius = instance->m_cellSize / 2.0f;
 
         // Draw the filled red circle
-        DrawCircleV(Vector2{ centerX, centerY }, radius, RED);
+        DrawCircleV(Vector2{centerX, centerY}, radius, RED);
     }
 
-    void ConnectFourGUI::DrawBLACK(int row, int col) {
+    void ConnectFourGUI::DrawBLACK(int row, int col)
+    {
         float padding = instance->m_margin; // Use the same margin for consistency
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
@@ -186,10 +195,11 @@ namespace OGRIDSandbox{
         float radius = instance->m_cellSize / 2.0f;
 
         // Draw the filled red circle
-        DrawCircleV(Vector2{ centerX, centerY }, radius, BLACK);
+        DrawCircleV(Vector2{centerX, centerY}, radius, BLACK);
     }
 
-    void ConnectFourGUI::ChangeTurnOrder() {
+    void ConnectFourGUI::ChangeTurnOrder()
+    {
         int choice = 0;
         while (choice == 0)
         {
@@ -243,12 +253,12 @@ namespace OGRIDSandbox{
 
         switch (instance->i_randomizeFirstPlayer)
         {
-            case true:
-                instance->i_gameLogic->SetRandomizeTurnOrder(true);
-                break;
-            case false:
-                instance->i_gameLogic->SetRandomizeTurnOrder(false);
-                break;
+        case true:
+            instance->i_gameLogic->SetRandomizeTurnOrder(true);
+            break;
+        case false:
+            instance->i_gameLogic->SetRandomizeTurnOrder(false);
+            break;
         }
 
         unsigned int dimension = instance->i_gameLogic->GetGrid()->GetRows();
@@ -257,7 +267,8 @@ namespace OGRIDSandbox{
         instance->i_gameLogic->GetGameConfiguration()->grid->ResetGridWithNewSize(dimension, dimension, defaultChar);
     }
 
-    void ConnectFourGUI::InitializeWindow(std::string windowName, int screenWidth, int screenHeight, int targetFPS) {
+    void ConnectFourGUI::InitializeWindow(std::string windowName, int screenWidth, int screenHeight, int targetFPS)
+    {
         instance->m_windowName = windowName;
         instance->m_windowResolution.width = screenWidth;
         instance->m_windowResolution.height = screenHeight;
@@ -276,31 +287,32 @@ namespace OGRIDSandbox{
         SetTargetFPS(m_targetFPS);
     }
 
-    void ConnectFourGUI::BeginMainLoop() {
+    void ConnectFourGUI::BeginMainLoop()
+    {
         DEBUG_ASSERT(instance->i_gameLogic, "ConnectFourLogic instance not initialized.");
 
         switch (instance->i_randomizeFirstPlayer)
         {
-            case true:
-                instance->i_gameLogic->SetRandomizeTurnOrder(true);
-                break;
-            case false:
-                instance->i_gameLogic->SetRandomizeTurnOrder(false);
-                break;
+        case true:
+            instance->i_gameLogic->SetRandomizeTurnOrder(true);
+            break;
+        case false:
+            instance->i_gameLogic->SetRandomizeTurnOrder(false);
+            break;
         }
 
         instance->i_gameLogic->SetupGame();
         instance->i_gameLogic->StartGame();
 
         OGRID::Button restartButton(
-                {static_cast<float>(instance->m_windowResolution.width) / 2 - 100,
-                 static_cast<float>(instance->m_windowResolution.height) / 2 + 30, 200, 40},
-                GRAY, DARKGRAY, LIGHTGRAY, []()
-                {
+            {static_cast<float>(instance->m_windowResolution.width) / 2 - 100,
+             static_cast<float>(instance->m_windowResolution.height) / 2 + 30, 200, 40},
+            GRAY, DARKGRAY, LIGHTGRAY, []()
+            {
                     CLI_TRACE("Restarting game...");
                     instance->i_gameLogic->ResetGame();
                     instance->i_gameLogic->SetGameState(OGRID::GameState::InProgress); },
-                "Restart", false);
+            "Restart", false);
 
         // Button changeTurnOrderButton(
         //     {static_cast<float>(i_instance->m_windowResolution.width) / 2 - 100, static_cast<float>(i_instance->m_windowResolution.height) / 2 + 150, 200, 40},
@@ -360,9 +372,12 @@ namespace OGRIDSandbox{
             if (instance->i_gameLogic->GetGameState() == OGRID::GameState::InProgress)
             {
                 move = OGRID::MoveTypeEnumToString(instance->i_gameLogic->GetGameConfiguration()->turnManager->GetCurrentPlayer().ptr->GetPlayerMoveType());
-                if (move == "X"){   //************************
-                    move = "RED";   //
-                } else {            // X AND O UNTIL BETTER SOLUTION (never)
+                if (move == "X")
+                {                 //************************
+                    move = "RED"; //
+                }
+                else
+                {                   // X AND O UNTIL BETTER SOLUTION (never)
                     move = "BLACK"; //
                 }                   //***********************
 
@@ -380,9 +395,12 @@ namespace OGRIDSandbox{
                 if (instance->i_gameLogic->GetGameOverType() == OGRID::GameOverType::Win)
                 {
                     move = OGRID::MoveTypeEnumToString(instance->i_gameLogic->GetWinner()->GetPlayerMoveType());
-                    if (move == "X"){   //************************
-                        move = "RED";   //
-                    } else {            // X AND O UNTIL BETTER SOLUTION (never)
+                    if (move == "X")
+                    {                 //************************
+                        move = "RED"; //
+                    }
+                    else
+                    {                   // X AND O UNTIL BETTER SOLUTION (never)
                         move = "BLACK"; //
                     }                   //***********************
 
@@ -392,7 +410,8 @@ namespace OGRIDSandbox{
                     winnerText.SetText("Winner: " + instance->i_gameLogic->GetWinner()->GetPlayerName() + " (" + move + ")");
                     gameOverText.Draw();
                     winnerText.Draw();
-                    restartButton.Draw();;
+                    restartButton.Draw();
+                    ;
                     // changeTurnOrderButton.Draw();
                 }
                 else if (instance->i_gameLogic->GetGameOverType() == OGRID::GameOverType::Draw)
@@ -412,7 +431,8 @@ namespace OGRIDSandbox{
         CloseWindow();
     }
 
-    void ConnectFourGUI::DrawREDBlinking(int row, int col) {
+    void ConnectFourGUI::DrawREDBlinking(int row, int col)
+    {
         float padding = instance->m_margin;
         float xOffset = (instance->m_windowResolution.width - (instance->m_cellSize * instance->m_gridSize)) / 2.0f;
         float yOffset = (instance->m_windowResolution.height - (instance->m_cellSize * instance->m_gridSize)) / 2.0f;
@@ -434,10 +454,11 @@ namespace OGRIDSandbox{
         alpha += alphaSpeed;
         alpha = std::clamp(alpha, 0.0f, 1.0f);
 
-        DrawCircleV(Vector2{ centerX, centerY }, radius, Fade(RED, alpha));
+        DrawCircleV(Vector2{centerX, centerY}, radius, Fade(RED, alpha));
     }
 
-    void ConnectFourGUI::DrawBLACKBlinking(int row, int col) {
+    void ConnectFourGUI::DrawBLACKBlinking(int row, int col)
+    {
         float padding = instance->m_margin;
         float xOffset = (instance->m_windowResolution.width - (instance->m_cellSize * instance->m_gridSize)) / 2.0f;
         float yOffset = (instance->m_windowResolution.height - (instance->m_cellSize * instance->m_gridSize)) / 2.0f;
@@ -459,6 +480,6 @@ namespace OGRIDSandbox{
         alpha += alphaSpeed;
         alpha = std::clamp(alpha, 0.0f, 1.0f);
 
-        DrawCircleV(Vector2{ centerX, centerY }, radius, Fade(BLACK, alpha));
+        DrawCircleV(Vector2{centerX, centerY}, radius, Fade(BLACK, alpha));
     }
 }

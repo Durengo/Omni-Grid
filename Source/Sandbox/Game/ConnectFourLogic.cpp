@@ -4,7 +4,8 @@
 #include <durlib.h>
 #include <ogrid.h>
 
-namespace OGRIDSandbox{
+namespace OGRIDSandbox
+{
     bool ConnectFourLogic::m_randomizeTurnOrder{true};
     ConnectFourLogic *instance = ConnectFourInstance::GetInstance();
 
@@ -18,18 +19,20 @@ namespace OGRIDSandbox{
         m_randomizeTurnOrder = randomize;
     }
 
-    void ConnectFourLogic::ResetGrid() {
+    void ConnectFourLogic::ResetGrid()
+    {
         CLI_ASSERT(m_GameConfiguration->grid, "Grid not initialized.");
 
         instance->m_GameConfiguration->grid->ResetGrid();
     }
 
-    void ConnectFourLogic::ResetPlayers() {
+    void ConnectFourLogic::ResetPlayers()
+    {
         CLI_ASSERT(instance->m_GameConfiguration->turnManager, "ConnectFourManager not initialized.");
 
         // HARDCODED
-        std::vector<OGRID::MoveType> moveTypes; //********************************************
-        moveTypes.push_back(OGRID::MoveType::X); //USING X AND O FOR NOW SINCE IT JUST WORKS™
+        std::vector<OGRID::MoveType> moveTypes;  //********************************************
+        moveTypes.push_back(OGRID::MoveType::X); // USING X AND O FOR NOW SINCE IT JUST WORKS™
         moveTypes.push_back(OGRID::MoveType::O); //*******************************************
         // HARDCODED
 
@@ -37,24 +40,25 @@ namespace OGRIDSandbox{
         instance->m_GameConfiguration->turnManager->PrintPlayerMoves();
     }
 
-    void ConnectFourLogic::PrintPlayersTurnOrder() {
+    void ConnectFourLogic::PrintPlayersTurnOrder()
+    {
         std::string players;
         auto playerPairs = instance->m_GameConfiguration->turnManager->GetPlayerPairs();
         for (size_t i = 0; i < playerPairs.size(); ++i)
         {
             std::string move = OGRID::MoveTypeEnumToString(playerPairs[i].ptr->GetPlayerMoveType());
-            if (move == "X")                                                                        //  **************
-            {                                                                                       //      USING
-                move = "RED";                                                                       //     X AND O
-            }                                                                                       //     FOR NOW
-            else                                                                                    //
-            {                                                                                       //     SUE ME
-                move = "BLACK";                                                                     //
-            }                                                                                       //  **************
+            if (move == "X")    //  **************
+            {                   //      USING
+                move = "RED";   //     X AND O
+            }                   //     FOR NOW
+            else                //
+            {                   //     SUE ME
+                move = "BLACK"; //
+            }                   //  **************
             players +=
-                    playerPairs[i].ptr->GetPlayerName() + "\t| " +
-                    OGRID::PlayerTypeEnumToString(playerPairs[i].ptr->GetPlayerType()) + "\t| " +
-                    move;
+                playerPairs[i].ptr->GetPlayerName() + "\t| " +
+                OGRID::PlayerTypeEnumToString(playerPairs[i].ptr->GetPlayerType()) + "\t| " +
+                move;
             // Add the newline character if it's not the last player
             if (i < playerPairs.size() - 1)
             {
@@ -68,13 +72,15 @@ namespace OGRIDSandbox{
         CLI_TRACE("Player Turn Order:\n{}", players);
     }
 
-    void ConnectFourLogic::SetupGame() {
+    void ConnectFourLogic::SetupGame()
+    {
         m_gameState = OGRID::GameState::NotStarted;
         m_gameOverType = OGRID::GameOverType::None;
         ResetGame();
     }
 
-    void ConnectFourLogic::ResetGame() {
+    void ConnectFourLogic::ResetGame()
+    {
         if (ConnectFourInstance::CheckInit())
         {
             m_gameState = OGRID::GameState::NotStarted;
@@ -96,7 +102,8 @@ namespace OGRIDSandbox{
         }
     }
 
-    void ConnectFourLogic::StartGame() {
+    void ConnectFourLogic::StartGame()
+    {
         if (ConnectFourInstance::CheckInit())
         {
             CLI_INFO("Starting game: {}", instance->m_GameConfiguration->gameName);
@@ -110,7 +117,8 @@ namespace OGRIDSandbox{
         }
     }
 
-    void ConnectFourLogic::MakeMove(unsigned char row, unsigned char col) {
+    void ConnectFourLogic::MakeMove(unsigned char row, unsigned char col)
+    {
         if (ConnectFourInstance::CheckInit())
         {
             if (instance->m_GameConfiguration->turnManager->MakeMove(instance->m_GameConfiguration->grid, row, col) && m_gameState == OGRID::GameState::InProgress)
@@ -125,24 +133,24 @@ namespace OGRIDSandbox{
                 CLI_TRACE("{}", *instance->m_GameConfiguration->grid);
                 switch (instance->m_GameConfiguration->turnManager->CheckGameOverState(instance->m_GameConfiguration->grid, row, col))
                 {
-                    case OGRID::GameOverType::None:
-                        m_gameState = OGRID::GameState::InProgress;
-                        // i_instance->m_GameConfiguration->turnManager++;
-                        break;
-                    case OGRID::GameOverType::Win:
-                        m_gameState = OGRID::GameState::GameOver;
-                        m_gameOverType = OGRID::GameOverType::Win;
-                        m_winner = instance->m_GameConfiguration->turnManager->GetCurrentPlayer().ptr;
-                        instance->PrintPlayersTurnOrder();
-                        break;
-                    case OGRID::GameOverType::Draw:
-                        m_gameState = OGRID::GameState::GameOver;
-                        m_gameOverType = OGRID::GameOverType::Draw;
-                        instance->PrintPlayersTurnOrder();
-                        break;
-                    default:
-                        CLI_ERROR("Invalid GameOverType.");
-                        break;
+                case OGRID::GameOverType::None:
+                    m_gameState = OGRID::GameState::InProgress;
+                    // i_instance->m_GameConfiguration->turnManager++;
+                    break;
+                case OGRID::GameOverType::Win:
+                    m_gameState = OGRID::GameState::GameOver;
+                    m_gameOverType = OGRID::GameOverType::Win;
+                    m_winner = instance->m_GameConfiguration->turnManager->GetCurrentPlayer().ptr;
+                    instance->PrintPlayersTurnOrder();
+                    break;
+                case OGRID::GameOverType::Draw:
+                    m_gameState = OGRID::GameState::GameOver;
+                    m_gameOverType = OGRID::GameOverType::Draw;
+                    instance->PrintPlayersTurnOrder();
+                    break;
+                default:
+                    CLI_ERROR("Invalid GameOverType.");
+                    break;
                 }
             }
             else
@@ -152,7 +160,8 @@ namespace OGRIDSandbox{
         }
     }
 
-    void ConnectFourLogic::SwapPlayerPositions() {
+    void ConnectFourLogic::SwapPlayerPositions()
+    {
         if (ConnectFourInstance::CheckInit())
         {
             std::swap(instance->m_GameConfiguration->players[0], instance->m_GameConfiguration->players[1]);
@@ -160,10 +169,13 @@ namespace OGRIDSandbox{
         }
     }
 
-    unsigned char ConnectFourLogic::GetTopMostPiecePositionInColumn(int col) {
+    unsigned char ConnectFourLogic::GetTopMostPiecePositionInColumn(int col)
+    {
         // Go down the column
-        for (unsigned char row = 0; row < instance->m_GameConfiguration->grid->GetRows(); ++row) {
-            if (instance->m_GameConfiguration->grid->GetCharAt(row, col) != instance->m_GameConfiguration->grid->GetDefaultChar()) {
+        for (unsigned char row = 0; row < instance->m_GameConfiguration->grid->GetRows(); ++row)
+        {
+            if (instance->m_GameConfiguration->grid->GetCharAt(row, col) != instance->m_GameConfiguration->grid->GetDefaultChar())
+            {
                 // Found the first piece
                 return row;
             }

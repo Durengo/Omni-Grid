@@ -5,17 +5,19 @@
 
 struct Vector2;
 
-namespace OGRIDSandbox{
+namespace OGRIDSandbox
+{
     class ConnectFourLogic;
 
-    class ConnectFourGUI : OGRID::iGUI{
+    class ConnectFourGUI : OGRID::iGUI
+    {
     private:
         static ConnectFourLogic *i_gameLogic;
         static bool i_randomizeFirstPlayer;
 
         // Variables for alpha of circles
         float alpha = 1.0f;
-        float alphaSpeed = 0.025f;  // Speed of the transition
+        float alphaSpeed = 0.025f; // Speed of the transition
 
     public:
         // Getters & Setters

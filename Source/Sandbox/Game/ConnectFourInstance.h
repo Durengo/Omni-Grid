@@ -3,7 +3,6 @@
 #include <Helpers/Singleton.h>
 #include "ConnectFourLogic.h"
 
-
 namespace OGRIDSandbox
 {
     class ConnectFourInstance : OGRID::Singleton

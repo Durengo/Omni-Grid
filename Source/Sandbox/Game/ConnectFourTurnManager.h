@@ -2,7 +2,8 @@
 
 #include <GameLogic/ITurnManager.h>
 
-namespace OGRIDSandbox{
+namespace OGRIDSandbox
+{
     class ConnectFourTurnManager : public OGRID::ITurnManager
     {
     public:
@@ -27,4 +28,3 @@ namespace OGRIDSandbox{
         bool MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col) override;
     };
 }
-

@@ -2,7 +2,8 @@
 
 #include <durlib.h>
 
-namespace OGRIDSandbox{
+namespace OGRIDSandbox
+{
 
     ConnectFourLogic *ConnectFourInstance::i_instance{nullptr};
 
@@ -16,7 +17,8 @@ namespace OGRIDSandbox{
         return i_instance;
     }
 
-    void ConnectFourInstance::DeleteInstance() {
+    void ConnectFourInstance::DeleteInstance()
+    {
         // std::lock_guard<std::mutex> lock(i_mutex);
         if (i_instance != nullptr)
         {
@@ -25,7 +27,8 @@ namespace OGRIDSandbox{
         }
     }
 
-    bool ConnectFourInstance::CheckInit() {
+    bool ConnectFourInstance::CheckInit()
+    {
         if (i_instance == nullptr)
         {
             CLI_ERROR("TicTacToeLogic instance not initialized.");

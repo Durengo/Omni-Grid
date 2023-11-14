@@ -6,26 +6,31 @@
 #include <durlib.h>
 #include <ogrid.h>
 
-namespace OGRIDSandbox{
+namespace OGRIDSandbox
+{
 
     ConnectFourTurnManager::ConnectFourTurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players) : ITurnManager(
-            players) {
+                                                                                                              players)
+    {
     }
 
     ConnectFourTurnManager::~ConnectFourTurnManager() = default;
 
-    bool ConnectFourTurnManager::IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col) {
+    bool ConnectFourTurnManager::IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    {
         char playerChar = grid->GetCharAt(row, col);
         return grid->CheckForRecurringCharsInRow(playerChar, 4) || grid->CheckForRecurringCharsInCol(playerChar, 4) ||
                grid->CheckForRecurringCharsInDiagonal(playerChar, 4) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 4);
     }
 
-    bool ConnectFourTurnManager::IsWinningCondition(OGRID::Grid *grid, char playerChar) {
+    bool ConnectFourTurnManager::IsWinningCondition(OGRID::Grid *grid, char playerChar)
+    {
         return grid->CheckForRecurringCharsInRow(playerChar, 4) || grid->CheckForRecurringCharsInCol(playerChar, 4) ||
                grid->CheckForRecurringCharsInDiagonal(playerChar, 4) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 4);
     }
 
-    bool ConnectFourTurnManager::IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col) {
+    bool ConnectFourTurnManager::IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    {
         // Check if all spots are filled.
         bool allSpotsFilled = true;
         for (int row = 0; row < grid->GetRows(); ++row)
@@ -47,7 +52,8 @@ namespace OGRIDSandbox{
     }
 
     void ConnectFourTurnManager::SetupPlayers(OGRID::GameConfiguration *gameConfiguration,
-                                              const std::vector<OGRID::MoveType> &moveTypes, bool randomize) {
+                                              const std::vector<OGRID::MoveType> &moveTypes, bool randomize)
+    {
         size_t allowedPlayers = gameConfiguration->maxPlayers;
 
         CLI_ASSERT(m_Players.size() > 1, "Player amount exceeds max player amount.");
@@ -86,9 +92,11 @@ namespace OGRIDSandbox{
         }
     }
 
-    bool ConnectFourTurnManager::MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col) {
+    bool ConnectFourTurnManager::MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    {
         // Check if the column is occupied and find the topmost available spot
-        if (!IsColumnOccupied(grid, col, row)) {
+        if (!IsColumnOccupied(grid, col, row))
+        {
             CLI_WARN("Cannot make move at column {0}, because it is fully occupied", col);
             return false;
         }
@@ -102,10 +110,13 @@ namespace OGRIDSandbox{
         return true;
     }
 
-    bool ConnectFourTurnManager::IsColumnOccupied(OGRID::Grid *grid, unsigned char colToCheck, unsigned char &rowToFill) {
+    bool ConnectFourTurnManager::IsColumnOccupied(OGRID::Grid *grid, unsigned char colToCheck, unsigned char &rowToFill)
+    {
         // Iterate through the column from bottom to top
-        for (int row = grid->GetRows() - 1; row >= 0; --row) {
-            if (grid->GetCharAt(row, colToCheck) == grid->GetDefaultChar()) {
+        for (int row = grid->GetRows() - 1; row >= 0; --row)
+        {
+            if (grid->GetCharAt(row, colToCheck) == grid->GetDefaultChar())
+            {
                 // Found an empty spot in the column
                 rowToFill = static_cast<unsigned char>(row);
                 return true;
