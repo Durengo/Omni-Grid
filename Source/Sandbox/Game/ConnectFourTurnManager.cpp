@@ -1,4 +1,4 @@
-#include "TicTacToeTurnManager.h"
+#include "ConnectFourTurnManager.h"
 
 #include <algorithm>
 #include <random>
@@ -8,29 +8,28 @@
 
 namespace OGRIDSandbox
 {
-    // Constructors & Destructors
-    TicTacToeTurnManager::TicTacToeTurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players)
-        : ITurnManager(players)
+
+    ConnectFourTurnManager::ConnectFourTurnManager(const std::vector<OGRID::PlayerNameAndPtr> &players) : ITurnManager(
+                                                                                                              players)
     {
     }
 
-    TicTacToeTurnManager::~TicTacToeTurnManager() = default;
+    ConnectFourTurnManager::~ConnectFourTurnManager() = default;
 
-    // Private methods
-    bool TicTacToeTurnManager::IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    bool ConnectFourTurnManager::IsWinningCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
         char playerChar = grid->GetCharAt(row, col);
-        return grid->CheckForRecurringCharsInRow(playerChar, 3) || grid->CheckForRecurringCharsInCol(playerChar, 3) ||
-               grid->CheckForRecurringCharsInDiagonal(playerChar, 3) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 3);
+        return grid->CheckForRecurringCharsInRow(playerChar, 4) || grid->CheckForRecurringCharsInCol(playerChar, 4) ||
+               grid->CheckForRecurringCharsInDiagonal(playerChar, 4) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 4);
     }
 
-    bool TicTacToeTurnManager::IsWinningCondition(OGRID::Grid *grid, char playerChar)
+    bool ConnectFourTurnManager::IsWinningCondition(OGRID::Grid *grid, char playerChar)
     {
-        return grid->CheckForRecurringCharsInRow(playerChar, 3) || grid->CheckForRecurringCharsInCol(playerChar, 3) ||
-               grid->CheckForRecurringCharsInDiagonal(playerChar, 3) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 3);
+        return grid->CheckForRecurringCharsInRow(playerChar, 4) || grid->CheckForRecurringCharsInCol(playerChar, 4) ||
+               grid->CheckForRecurringCharsInDiagonal(playerChar, 4) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 4);
     }
 
-    bool TicTacToeTurnManager::IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    bool ConnectFourTurnManager::IsDrawCondition(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
         // Check if all spots are filled.
         bool allSpotsFilled = true;
@@ -52,9 +51,8 @@ namespace OGRIDSandbox
         return allSpotsFilled && !IsWinningCondition(grid, grid->GetLastChangedChar().first, grid->GetLastChangedChar().second);
     }
 
-    // Public methods
-
-    void TicTacToeTurnManager::SetupPlayers(OGRID::GameConfiguration *gameConfiguration, const std::vector<OGRID::MoveType> &moveTypes, bool randomize = true)
+    void ConnectFourTurnManager::SetupPlayers(OGRID::GameConfiguration *gameConfiguration,
+                                              const std::vector<OGRID::MoveType> &moveTypes, bool randomize)
     {
         size_t allowedPlayers = gameConfiguration->maxPlayers;
 
@@ -94,21 +92,38 @@ namespace OGRIDSandbox
         }
     }
 
-    bool TicTacToeTurnManager::MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col)
+    bool ConnectFourTurnManager::MakeMove(OGRID::Grid *grid, unsigned char row, unsigned char col)
     {
-        CLI_TRACE("Player {0} is making a move at ({1}, {2}).", GetCurrentPlayer().name, row, col);
-        char gridChar = grid->GetCharAt(row, col);
-        if (grid->GetCharAt(row, col) != grid->GetDefaultChar())
+        // Check if the column is occupied and find the topmost available spot
+        if (!IsColumnOccupied(grid, col, row))
         {
-            CLI_WARN("Cannot make move at ({0}, {1}) because it is already occupied by {2}.", row, col, gridChar);
+            CLI_WARN("Cannot make move at column {0}, because it is fully occupied", col);
             return false;
         }
 
         OGRID::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
 
+        // Set the player's move in the grid
         grid->SetCharAt(row, col, OGRID::MoveTypeEnumToChar(currentPlayer.ptr->GetPlayerMoveType()));
 
         // this->operator++();
         return true;
+    }
+
+    bool ConnectFourTurnManager::IsColumnOccupied(OGRID::Grid *grid, unsigned char colToCheck, unsigned char &rowToFill)
+    {
+        // Iterate through the column from bottom to top
+        for (int row = grid->GetRows() - 1; row >= 0; --row)
+        {
+            if (grid->GetCharAt(row, colToCheck) == grid->GetDefaultChar())
+            {
+                // Found an empty spot in the column
+                rowToFill = static_cast<unsigned char>(row);
+                return true;
+            }
+        }
+
+        // Column is fully occupied
+        return false;
     }
 }
