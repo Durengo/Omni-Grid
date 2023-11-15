@@ -12,3 +12,4 @@
 #include "GameDefinition/ChessMoveRules.h"
 #include "GameDefinition/MoveRule.h"
 #include "GameDefinition/MoveType.h"
+#include "GameDefinition/Player.h"
