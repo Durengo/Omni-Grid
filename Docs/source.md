@@ -10,6 +10,7 @@
 * *a* [Python 3.11.4](https://www.python.org/downloads/)
 * *b* *c* [MSVC v143 compiler](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 * *d* _(Optional)_ [vcpkg](https://vcpkg.io/en/getting-started)
+* [Doxygen](https://www.doxygen.nl/download.html)
 
 *a* - Make sure to select Windows 64-bit; add python.exe to PATH; also do a custom installation and make sure to select *ALL* the options.
 
