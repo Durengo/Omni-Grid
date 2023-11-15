@@ -5,9 +5,9 @@
 #include <ogrid_gui.h>
 #include <raylib.h>
 
-#include "Game/ConnectFourLogic.h"
-#include "Game/ConnectFourInstance.h"
-#include "GUI/ConnectFourGUIInstance.h"
+#include "GameDefinition/ConnectFourLogic.h"
+#include "GameDefinition/ConnectFourInstance.h"
+#include "GameDefinition/ConnectFourGUIInstance.h"
 
 namespace OGRIDSandbox
 {

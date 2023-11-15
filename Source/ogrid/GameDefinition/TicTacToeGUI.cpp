@@ -5,9 +5,9 @@
 #include <ogrid_gui.h>
 #include <raylib.h>
 
-#include "Game/TicTacToeLogic.h"
-#include "Game/TicTacToeInstance.h"
-#include "GUI/TicTacToeGUIInstance.h"
+#include "GameDefinition/TicTacToeLogic.h"
+#include "GameDefinition/TicTacToeInstance.h"
+#include "GameDefinition/TicTacToeGUIInstance.h"
 
 namespace OGRIDSandbox
 {

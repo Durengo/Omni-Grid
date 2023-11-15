@@ -1,12 +1,12 @@
 #include "GameInitializer.h"
 
 #include <ogrid.h>
-#include <GUI/TicTacToeGUI.h>
-#include <GUI/TicTacToeGUIInstance.h>
-#include <GUI/ConnectFourGUIInstance.h>
-#include <Game/ConnectFourTurnManager.h>
+#include <GameDefinition/TicTacToeGUI.h>
+#include <GameDefinition/TicTacToeGUIInstance.h>
+#include <GameDefinition/ConnectFourGUIInstance.h>
+#include <GameDefinition/ConnectFourTurnManager.h>
 
-#include "Game/TicTacToeTurnManager.h"
+#include "GameDefinition/TicTacToeTurnManager.h"
 
 namespace Sandbox
 {
