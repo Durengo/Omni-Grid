@@ -3,7 +3,8 @@
         "git",
         "cmake",
         "python",
-        "cl"
+        "cl",
+        "doxygen"
     ],
     "using_custom_libraries": true,
     "custom_libraries": [
