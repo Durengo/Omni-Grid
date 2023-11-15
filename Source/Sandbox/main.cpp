@@ -2,6 +2,8 @@
 
 // #include "Core/GameInitializer.h"
 
+#include <ogrid.h>
+
 int main()
 {
     DURLIB::Log::Init();
