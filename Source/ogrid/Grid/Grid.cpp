@@ -91,7 +91,7 @@ namespace OGRID
 
     // Operators
 
-    std::vector<std::string> &Grid::operator[](int index)
+    std::vector<std::string> &Grid::operator[](size_t index)
     {
         if (index < 0 || index >= this->GetRows())
         {
@@ -100,7 +100,7 @@ namespace OGRID
         return grid[index];
     }
 
-    const std::vector<std::string> &Grid::operator[](int index) const
+    const std::vector<std::string> &Grid::operator[](size_t index) const
     {
         return grid[index];
     }

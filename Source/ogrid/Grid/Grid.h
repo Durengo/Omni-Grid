@@ -48,9 +48,9 @@ namespace OGRID
 
         // Overload the [] operator to access the grid.
     public:
-        std::vector<std::string> &operator[](int index);
+        std::vector<std::string> &operator[](size_t index);
 
-        const std::vector<std::string> &operator[](int index) const;
+        const std::vector<std::string> &operator[](size_t index) const;
 
         // Public methods
     public:
