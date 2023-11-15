@@ -59,10 +59,10 @@ namespace OGRID
         void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, const std::string &newString = ".");
         void ResetGridWithNewString(const std::string &newString);
 
-        bool CheckForRecurringStringInRow(const std::string &playerString, int dupCount);
-        bool CheckForRecurringStringInCol(const std::string &playerString, int dupCount);
-        bool CheckForRecurringStringInDiagonal(const std::string &playerString, int dupCount);
-        bool CheckForRecurringStringInAntiDiagonal(const std::string &playerString, int dupCount);
+        bool CheckForRecurringStringInRow(const std::string &playerString, unsigned int dupCount);
+        bool CheckForRecurringStringInCol(const std::string &playerString, unsigned int dupCount);
+        bool CheckForRecurringStringInDiagonal(const std::string &playerString, unsigned int dupCount);
+        bool CheckForRecurringStringInAntiDiagonal(const std::string &playerString, unsigned int dupCount);
 
         // This one is broken and should probably be removed...
         std::string GetCharCenterMostElement() const;

@@ -139,7 +139,7 @@ namespace OGRID
     // Previous methods checked for the occurrence of a character in a row, column, diagonal or anti-diagonal.
     // But it checked the whole row, column, diagonal or anti-diagonal.
     // This is incorrect. Because we need to check for at the very least dupCount occurrences of the character in a row.
-    bool Grid::CheckForRecurringStringInRow(const std::string &playerString, int dupCount)
+    bool Grid::CheckForRecurringStringInRow(const std::string &playerString, unsigned int dupCount)
     {
         for (int row = 0; row < rows; ++row)
         {
@@ -160,7 +160,7 @@ namespace OGRID
         return false;
     }
 
-    bool Grid::CheckForRecurringStringInCol(const std::string &playerString, int dupCount)
+    bool Grid::CheckForRecurringStringInCol(const std::string &playerString, unsigned int dupCount)
     {
         for (int col = 0; col < cols; ++col)
         {
@@ -181,7 +181,7 @@ namespace OGRID
         return false;
     }
 
-    bool Grid::CheckForRecurringStringInDiagonal(const std::string &playerString, int dupCount)
+    bool Grid::CheckForRecurringStringInDiagonal(const std::string &playerString, unsigned int dupCount)
     {
         // Check from top-left to bottom-right
         for (int row = 0; row <= rows - 3; ++row)
@@ -207,7 +207,7 @@ namespace OGRID
         return false;
     }
 
-    bool Grid::CheckForRecurringStringInAntiDiagonal(const std::string &playerString, int dupCount)
+    bool Grid::CheckForRecurringStringInAntiDiagonal(const std::string &playerString, unsigned int dupCount)
     {
         // Check from top-right to bottom-left
         for (int row = 0; row <= rows - 3; ++row)
