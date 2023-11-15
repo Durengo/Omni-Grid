@@ -5,29 +5,16 @@
 namespace OGRID
 {
     // Constructors & Destructors
-    Grid::Grid(unsigned char rows, unsigned char cols, char initialChar) : defaultChar(initialChar)
+    Grid::Grid(unsigned char rows, unsigned char cols, const std::string &initialString) : defaultString(initialString)
     {
         this->rows = rows;
         this->cols = cols;
 
-        // Allocate memory for the grid.
-        grid = new char *[rows];
-        for (unsigned char i = 0; i < rows; ++i)
-        {
-            grid[i] = new char[cols];
-            // Set each character in this row to the initial char.
-            std::fill_n(grid[i], cols, initialChar);
-        }
+        this->grid.resize(rows, std::vector<std::string>(cols, initialString));
     }
 
     Grid::~Grid()
     {
-        // Deallocate memory for the grid.
-        for (int i = 0; i < rows; i++)
-        {
-            delete[] grid[i];
-        }
-        delete[] grid;
     }
 
     // Getters & Setters
@@ -52,32 +39,41 @@ namespace OGRID
         this->cols = cols;
     }
 
-    char **Grid::GetGrid() const
+    const std::vector<std::vector<std::string>> &Grid::GetGrid() const
     {
         return grid;
     }
 
-    void Grid::SetGrid(char **grid)
+    void Grid::SetGrid(const std::vector<std::vector<std::string>> &newGrid)
     {
-        this->grid = grid;
+        // Not sure if this is necessary.
+        if (newGrid.empty() || newGrid[0].empty())
+        {
+            throw std::invalid_argument("New grid cannot be empty");
+        }
+
+        rows = static_cast<unsigned char>(newGrid.size());
+        cols = static_cast<unsigned char>(newGrid[0].size());
+
+        grid = newGrid;
     }
 
-    char Grid::GetDefaultChar() const
+    std::string Grid::GetDefaultString() const
     {
-        return defaultChar;
+        return defaultString;
     }
 
-    void Grid::SetDefaultChar(char defaultChar)
+    void Grid::SetDefaultString(const std::string &defaultString)
     {
-        this->defaultChar = defaultChar;
+        this->defaultString = defaultString;
     }
 
-    char Grid::GetCharAt(unsigned char row, unsigned char col) const
+    std::string Grid::GetStringAt(unsigned char row, unsigned char col) const
     {
         return grid[row][col];
     }
 
-    void Grid::SetCharAt(unsigned char row, unsigned char col, char newChar)
+    void Grid::SetStringAt(unsigned char row, unsigned char col, const std::string &newString)
     {
         if (row < 0 || row >= this->GetRows() || col < 0 || col >= this->GetCols())
         {
@@ -85,7 +81,7 @@ namespace OGRID
         }
         lastChangedChar[0] = row;
         lastChangedChar[1] = col;
-        grid[row][col] = newChar;
+        grid[row][col] = newString;
     }
 
     std::pair<unsigned char, unsigned char> Grid::GetLastChangedChar() const
@@ -95,7 +91,7 @@ namespace OGRID
 
     // Operators
 
-    char *Grid::operator[](int index)
+    std::vector<std::string> &Grid::operator[](int index)
     {
         if (index < 0 || index >= this->GetRows())
         {
@@ -104,63 +100,53 @@ namespace OGRID
         return grid[index];
     }
 
+    const std::vector<std::string> &Grid::operator[](int index) const
+    {
+        return grid[index];
+    }
+
     // Public methods
-    const std::string Grid::GetGridInfo() const
+    const std::string Grid::GetGridSize() const
     {
         return fmt::format("Grid: {0}x{1}", rows, cols);
     }
 
     void Grid::ResetGrid()
     {
-        for (int i = 0; i < rows; i++)
+        for (auto &row : grid)
         {
-            std::fill_n(grid[i], cols, defaultChar);
+            std::fill(row.begin(), row.end(), defaultString);
         }
         lastChangedChar[0] = 0;
         lastChangedChar[1] = 0;
     }
 
-    void Grid::ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, char newChar)
+    void Grid::ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, const std::string &newString)
     {
-        defaultChar = newChar;
+        rows = newRows;
+        cols = newCols;
+        defaultString = newString;
+        grid.resize(rows, std::vector<std::string>(cols, newString));
         ResetGrid();
-
-        // Deallocate memory for the grid.
-        for (int i = 0; i < rows; i++)
-        {
-            delete[] grid[i];
-        }
-        delete[] grid;
-
-        // Allocate memory for the grid.
-        this->rows = newRows;
-        this->cols = newCols;
-        grid = new char *[rows];
-        for (unsigned char i = 0; i < rows; ++i)
-        {
-            grid[i] = new char[cols];
-            // Set each character in this row to the initial char.
-            std::fill_n(grid[i], cols, newChar);
-        }
     }
 
-    void Grid::ResetGridWithNewChar(char newChar)
+    void Grid::ResetGridWithNewString(const std::string &newString)
     {
-        defaultChar = newChar;
+        defaultString = newString;
         ResetGrid();
     }
 
     // Previous methods checked for the occurrence of a character in a row, column, diagonal or anti-diagonal.
     // But it checked the whole row, column, diagonal or anti-diagonal.
     // This is incorrect. Because we need to check for at the very least dupCount occurrences of the character in a row.
-    bool Grid::CheckForRecurringCharsInRow(char playerChar, int dupCount)
+    bool Grid::CheckForRecurringStringInRow(const std::string &playerString, int dupCount)
     {
         for (int row = 0; row < rows; ++row)
         {
             int count = 0;
             for (int col = 0; col < cols; ++col)
             {
-                if (GetCharAt(row, col) == playerChar)
+                if (GetStringAt(row, col) == playerString)
                 {
                     if (++count >= dupCount)
                         return true;
@@ -174,14 +160,14 @@ namespace OGRID
         return false;
     }
 
-    bool Grid::CheckForRecurringCharsInCol(char playerChar, int dupCount)
+    bool Grid::CheckForRecurringStringInCol(const std::string &playerString, int dupCount)
     {
         for (int col = 0; col < cols; ++col)
         {
             int count = 0;
             for (int row = 0; row < rows; ++row)
             {
-                if (GetCharAt(row, col) == playerChar)
+                if (GetStringAt(row, col) == playerString)
                 {
                     if (++count >= dupCount)
                         return true;
@@ -195,7 +181,7 @@ namespace OGRID
         return false;
     }
 
-    bool Grid::CheckForRecurringCharsInDiagonal(char playerChar, int dupCount)
+    bool Grid::CheckForRecurringStringInDiagonal(const std::string &playerString, int dupCount)
     {
         // Check from top-left to bottom-right
         for (int row = 0; row <= rows - 3; ++row)
@@ -205,14 +191,15 @@ namespace OGRID
                 int count = 0;
                 for (int i = 0; i + row < rows && i + col < cols; ++i)
                 {
-                    if (GetCharAt(row + i, col + i) == playerChar)
+                    if (GetStringAt(row + i, col + i) == playerString)
                     {
                         if (++count >= dupCount)
                             return true;
                     }
                     else
                     {
-                        break; // Exit the diagonal check if a different char is found
+                        // Exit the diagonal check if a different string is found
+                        break;
                     }
                 }
             }
@@ -220,7 +207,7 @@ namespace OGRID
         return false;
     }
 
-    bool Grid::CheckForRecurringCharsInAntiDiagonal(char playerChar, int dupCount)
+    bool Grid::CheckForRecurringStringInAntiDiagonal(const std::string &playerString, int dupCount)
     {
         // Check from top-right to bottom-left
         for (int row = 0; row <= rows - 3; ++row)
@@ -230,14 +217,15 @@ namespace OGRID
                 int count = 0;
                 for (int i = 0; i + row < rows && col - i >= 0; ++i)
                 {
-                    if (GetCharAt(row + i, col - i) == playerChar)
+                    if (GetStringAt(row + i, col - i) == playerString)
                     {
                         if (++count >= dupCount)
                             return true;
                     }
                     else
                     {
-                        break; // Exit the anti-diagonal check if a different char is found
+                        // Exit the anti-diagonal check if a different char is found
+                        break;
                     }
                 }
             }
@@ -245,7 +233,7 @@ namespace OGRID
         return false;
     }
 
-    char Grid::GetCharCenterMostElement() const
+    std::string Grid::GetCharCenterMostElement() const
     {
         unsigned char centerRow = rows / 2;
         unsigned char centerCol = cols / 2;
@@ -255,7 +243,7 @@ namespace OGRID
         if (cols % 2 == 0)
             --centerCol;
 
-        return GetCharAt(centerRow, centerCol);
+        return GetStringAt(centerRow, centerCol);
     }
 
     std::pair<unsigned char, unsigned char> Grid::GetCenterMostCoords() const

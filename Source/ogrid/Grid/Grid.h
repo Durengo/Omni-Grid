@@ -2,6 +2,9 @@
 
 #include "fmt/format.h"
 
+#include <string>
+#include <vector>
+
 namespace OGRID
 {
     class Grid
@@ -10,18 +13,18 @@ namespace OGRID
         // Limit grid size to 255x255.
         unsigned char rows;
         unsigned char cols;
-        // Use a 2D array of chars to represent the grid.
-        char **grid;
+        // Use a 2D array of strings to represent the grid.
+        std::vector<std::vector<std::string>> grid;
 
-        // Store default char for resetting the grid.
-        char defaultChar;
+        // Store default string for resetting the grid.
+        std::string defaultString;
 
         // Store which element was last changed.
         unsigned char lastChangedChar[2] = {0, 0};
 
     public:
         // Constructors & Destructors
-        Grid(unsigned char rows, unsigned char cols, char initialChar = '.');
+        Grid(unsigned char rows, unsigned char cols, const std::string &initialString = ".");
         ~Grid();
 
         // Getters & Setters
@@ -32,34 +35,37 @@ namespace OGRID
         unsigned char GetCols() const;
         void SetCols(unsigned char cols);
 
-        char **GetGrid() const;
-        void SetGrid(char **grid);
+        const std::vector<std::vector<std::string>> &GetGrid() const;
+        void SetGrid(const std::vector<std::vector<std::string>> &newGrid);
 
-        char GetDefaultChar() const;
-        void SetDefaultChar(char defaultChar);
+        std::string GetDefaultString() const;
+        void SetDefaultString(const std::string &defaultString);
 
-        char GetCharAt(unsigned char row, unsigned char col) const;
-        void SetCharAt(unsigned char row, unsigned char col, char newChar);
+        std::string GetStringAt(unsigned char row, unsigned char col) const;
+        void SetStringAt(unsigned char row, unsigned char col, const std::string &newString);
 
         std::pair<unsigned char, unsigned char> GetLastChangedChar() const;
 
         // Overload the [] operator to access the grid.
     public:
-        char *operator[](int index);
+        std::vector<std::string> &operator[](int index);
+
+        const std::vector<std::string> &operator[](int index) const;
 
         // Public methods
     public:
-        const std::string GetGridInfo() const;
+        const std::string GetGridSize() const;
         void ResetGrid();
-        void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, char newChar = '.');
-        void ResetGridWithNewChar(char newChar);
+        void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, const std::string &newString = ".");
+        void ResetGridWithNewString(const std::string &newString);
 
-        bool CheckForRecurringCharsInRow(char playerChar, int dupCount);
-        bool CheckForRecurringCharsInCol(char playerChar, int dupCount);
-        bool CheckForRecurringCharsInDiagonal(char playerChar, int dupCount);
-        bool CheckForRecurringCharsInAntiDiagonal(char playerChar, int dupCount);
+        bool CheckForRecurringStringInRow(const std::string &playerString, int dupCount);
+        bool CheckForRecurringStringInCol(const std::string &playerString, int dupCount);
+        bool CheckForRecurringStringInDiagonal(const std::string &playerString, int dupCount);
+        bool CheckForRecurringStringInAntiDiagonal(const std::string &playerString, int dupCount);
 
-        char GetCharCenterMostElement() const;
+        // This one is broken and should probably be removed...
+        std::string GetCharCenterMostElement() const;
         std::pair<unsigned char, unsigned char> GetCenterMostCoords() const;
     };
 }
