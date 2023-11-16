@@ -15,7 +15,7 @@ namespace OGRID
     }
 
     // Constructors & Destructors
-    Player::Player(std::string playerName, PlayerType playerType, std::shared_ptr<MoveType> moveType)
+    Player::Player(std::string playerName, PlayerType playerType, MoveType *moveType)
         : m_PlayerName(playerName), m_PlayerType(playerType), m_MoveType(moveType) {}
 
     Player::~Player() {}
@@ -31,12 +31,12 @@ namespace OGRID
         return m_PlayerType;
     }
 
-    std::shared_ptr<MoveType> Player::GetPlayerMoveType() const
+    MoveType *Player::GetPlayerMoveType() const
     {
         return m_MoveType;
     }
 
-    void Player::SetPlayerMoveType(std::shared_ptr<MoveType> moveType)
+    void Player::SetPlayerMoveType(MoveType *moveType)
     {
         m_MoveType = moveType;
     }

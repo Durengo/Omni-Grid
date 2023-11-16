@@ -27,17 +27,17 @@ namespace OGRID
     private:
         std::string m_PlayerName;
         PlayerType m_PlayerType;
-        std::shared_ptr<MoveType> m_MoveType;
+        MoveType *m_MoveType;
 
     public:
-        Player(std::string playerName = "DefaultName", PlayerType playerType = PlayerType::Human, std::shared_ptr<MoveType> moveType = nullptr);
+        Player(std::string playerName = "DefaultName", PlayerType playerType = PlayerType::Human, MoveType *moveType = nullptr);
         ~Player();
 
         // Getters & Setters
         std::string GetPlayerName() const;
         PlayerType GetPlayerType() const;
-        std::shared_ptr<MoveType> GetPlayerMoveType() const;
-        void SetPlayerMoveType(std::shared_ptr<MoveType> moveType);
+        MoveType *GetPlayerMoveType() const;
+        void SetPlayerMoveType(MoveType *moveType);
     };
 }
 
