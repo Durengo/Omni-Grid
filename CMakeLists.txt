@@ -475,7 +475,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.h"
         )
 
         if(${VERBOSE})
