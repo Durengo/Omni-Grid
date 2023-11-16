@@ -2,9 +2,8 @@
 
 #include <string>
 #include <vector>
-#include <memory>
 
-#include "MoveRule.h"
+#include "MoveRules.h"
 
 namespace OGRID
 {
@@ -17,14 +16,23 @@ namespace OGRID
         std::string m_representation;
 
         // Rules for this move type
-        std::vector<std::unique_ptr<MoveRule>> moveRules;
+        std::vector<MoveRule *> moveRules;
 
     public:
         MoveType(std::string rep) : m_representation(rep) {}
 
-        void AddRule(std::unique_ptr<MoveRule> rule)
+        ~MoveType()
         {
-            moveRules.push_back(std::move(rule));
+            // Delete all MoveRule objects
+            for (auto rule : moveRules)
+            {
+                delete rule;
+            }
+        }
+
+        void AddRule(MoveRule *rule)
+        {
+            moveRules.push_back(rule);
         }
 
         const std::string &GetRepresentation() const
@@ -32,10 +40,10 @@ namespace OGRID
             return m_representation;
         }
 
-        bool ApplyMove(Grid &grid, unsigned char row, unsigned char col)
+        // Method to apply a simple move
+        bool ApplySimpleMove(Grid &grid, unsigned char row, unsigned char col)
         {
-            // Check and apply move rules
-            for (auto &rule : moveRules)
+            for (auto rule : moveRules)
             {
                 if (!rule->IsValidMove(grid, row, col))
                 {
@@ -43,6 +51,21 @@ namespace OGRID
                 }
             }
             grid.SetStringAt(row, col, m_representation);
+            return true;
+        }
+
+        // Method to apply a complex move (involving start and end positions)
+        bool ApplyComplexMove(Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol)
+        {
+            for (auto rule : moveRules)
+            {
+                if (!rule->IsValidMove(grid, startRow, startCol, endRow, endCol))
+                {
+                    return false;
+                }
+            }
+            // Assuming the move is represented at the end position
+            grid.SetStringAt(endRow, endCol, m_representation);
             return true;
         }
     };
