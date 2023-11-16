@@ -1,6 +1,6 @@
 #pragma once
 
-#include "MoveRule.h"
+#include "MoveRules.h"
 
 // Grid representation of the move on the board, e.g.
 /*
@@ -17,7 +17,7 @@
 
 namespace OGRID
 {
-    class PawnMoveRule : public MoveRule
+    class PawnMoveRule : public ComplexMoveRule
     {
     public:
         bool IsValidMove(const Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol) const override
