@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <Grid/Grid.h>
 
 namespace OGRID
 {
@@ -9,7 +10,6 @@ namespace OGRID
     class ConfigurationBuilder;
     class ITurnManager;
     class Player;
-    class Grid;
 
     struct GameConfiguration
     {
@@ -18,8 +18,6 @@ namespace OGRID
         Grid *grid = nullptr;
         size_t maxPlayers = 0;
         std::vector<Player *> players;
-
-        ITurnManager *turnManager = nullptr;
     };
 
     // Builder Interface
@@ -31,7 +29,7 @@ namespace OGRID
         virtual ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, char initialChar = '.') = 0;
         virtual ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) = 0;
         virtual ConfigurationBuilder &addPlayer(Player *player) = 0;
-        virtual GameConfiguration *build(ITurnManager *turnManager) = 0;
+        virtual GameConfiguration *build() = 0;
     };
 
     // Concrete Builder
@@ -42,13 +40,13 @@ namespace OGRID
 
     public:
         GameConfigurationBuilder() = default;
-        ~GameConfigurationBuilder() = default;
+        ~GameConfigurationBuilder() override = default;
 
         ConfigurationBuilder &setGameName(const std::string &gameName) override;
         ConfigurationBuilder &setGameDescription(const std::string &gameDescription) override;
         ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, char initialChar) override;
         ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) override;
         ConfigurationBuilder &addPlayer(Player *player) override;
-        GameConfiguration *build(ITurnManager *turnManager) override;
+        GameConfiguration *build() override;
     };
 }
