@@ -130,14 +130,14 @@ namespace Sandbox
         yOffset = std::max(yOffset, padding);
 
         // Draw vertical lines
-        for (int i = 0; i <= m_Game->m_guiInfo.gridSize; i++)
+        for (int i = 0; i <= m_Game->GetGameConfiguration()->grid->GetRows(); i++)
         {
             float lineX = xOffset + i * m_Game->m_guiInfo.cellSize;
             DrawLine(lineX, yOffset, lineX, yOffset + m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize, GRAY);
         }
 
         // Draw horizontal lines
-        for (int i = 0; i <= m_Game->m_guiInfo.gridSize; i++)
+        for (int i = 0; i <= m_Game->GetGameConfiguration()->grid->GetCols(); i++)
         {
             float lineY = yOffset + i * m_Game->m_guiInfo.cellSize;
             DrawLine(xOffset, lineY, xOffset + m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize, lineY, GRAY);
