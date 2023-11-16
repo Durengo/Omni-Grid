@@ -10,6 +10,7 @@
 
 //TESTING:
 #include "GameDefinition/ChessMoveRules.h"
-#include "GameDefinition/MoveRule.h"
+#include "GameDefinition/MoveRules.h"
 #include "GameDefinition/MoveType.h"
 #include "GameDefinition/Player.h"
+#include "GameDefinition/TicTacToeDefinition.h"
