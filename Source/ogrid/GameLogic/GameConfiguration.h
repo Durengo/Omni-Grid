@@ -11,6 +11,12 @@ namespace OGRID
     class ITurnManager;
     class Player;
 
+    struct PlayerNameAndPtr
+    {
+        std::string name;
+        Player *ptr;
+    };
+
     struct GameConfiguration
     {
         std::string gameName;
@@ -18,6 +24,7 @@ namespace OGRID
         Grid *grid = nullptr;
         size_t maxPlayers = 0;
         std::vector<Player *> players;
+        std::vector<PlayerNameAndPtr> playerPairs;
     };
 
     // Builder Interface

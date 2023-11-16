@@ -49,10 +49,12 @@ namespace OGRID
         CLI_ASSERT(m_GameConfiguration.players.size() <= m_GameConfiguration.maxPlayers, "Player amount exceeds max player amount.");
 
         std::vector<PlayerNameAndPtr> playerPairs;
+        playerPairs.reserve(m_GameConfiguration.players.size());
         for (auto player : m_GameConfiguration.players)
         {
             playerPairs.push_back({player->GetPlayerName(), player});
         }
+        m_GameConfiguration.playerPairs = playerPairs;
         //m_GameConfiguration.turnManager = turnManager;
         //m_GameConfiguration.turnManager->SetPlayerPairs(playerPairs);
         //CLI_INFO("TicTacToeTurnManager initialized.");

@@ -9,7 +9,7 @@ namespace Sandbox
     class GameWindow
     {
     private:
-        T m_Game;
+        T *m_Game;
         bool m_Running = false;
         OGRID::Button *restartButton;
         OGRID::Text *gameOverText;

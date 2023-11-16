@@ -54,7 +54,7 @@ namespace OGRID{
     void TicTacToe::SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) {
         size_t allowedPlayers = GetGameConfiguration()->maxPlayers;
 
-        CLI_ASSERT(m_Players.size() > allowedPlayers, "Player amount exceeds max player amount.")
+        //CLI_ASSERT(m_Players.size() > allowedPlayers, "Player amount exceeds max player amount.");
 
         if (m_randomizeTurnOrder)
         {
@@ -91,9 +91,9 @@ namespace OGRID{
     }
 
     void TicTacToe::OnGUIUpdateGrid() {
-        for (int i = 0; i < GetGameConfiguration()->grid->GetCols(); i++)
+        for (int i = 0; i < GetGameConfiguration()->grid->GetRows(); i++)
         {
-            for (int j = 0; j < GetGameConfiguration()->grid->GetRows(); j++)
+            for (int j = 0; j < GetGameConfiguration()->grid->GetCols(); j++)
             {
                 if (GetGrid()->GetCharAt(i, j) == OGRID::MoveTypeEnumToChar(OGRID::MoveType::X))
                 {
@@ -167,6 +167,7 @@ namespace OGRID{
         m_guiInfo.lineThickness = 2.5f;
         m_guiInfo.margin = 20.0f;
 
+
         auto *p1 = new OGRID::Player("Player1", OGRID::Human);
         auto *p2 = new OGRID::Player("Player2", OGRID::Human);
 
@@ -174,6 +175,8 @@ namespace OGRID{
 
         CLI_TRACE("Input the dimensions of the grid (3-10): ");
         dimensions = static_cast<unsigned char>(DURLIB::GIBI(3, 10));
+
+        m_guiInfo.gridSize = dimensions;
 
         int choice = 0;
         while (choice == 0)

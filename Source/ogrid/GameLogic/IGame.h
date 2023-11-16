@@ -25,12 +25,6 @@ namespace OGRID{
         Draw = 2
     };
 
-    struct PlayerNameAndPtr
-    {
-        std::string name;
-        Player *ptr;
-    };
-
     class IGame{
     public:
         GUIInfo m_guiInfo;

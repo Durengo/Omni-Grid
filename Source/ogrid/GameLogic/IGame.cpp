@@ -9,11 +9,11 @@
 
 namespace OGRID{
     IGame::IGame(const std::vector<OGRID::PlayerNameAndPtr> &players) {
-        m_Players = players;
+        m_GameConfiguration->playerPairs = players;
     }
 
     IGame::~IGame() {
-        for (auto &playerPair : m_Players)
+        for (auto &playerPair : m_GameConfiguration->playerPairs)
         {
             playerPair.ptr = nullptr;
             delete playerPair.ptr;
@@ -21,9 +21,9 @@ namespace OGRID{
     }
 
     void OGRID::IGame::SwapPlayerPositions() {
-        if (m_Players.size() == 2)
+        if (m_GameConfiguration->playerPairs.size() == 2)
         {
-            std::swap(m_Players[0], m_Players[1]);
+            std::swap(m_GameConfiguration->playerPairs[0], m_GameConfiguration->playerPairs[1]);
         }
         else
         {
@@ -139,7 +139,7 @@ namespace OGRID{
 
     OGRID::GameOverType IGame::CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col) {
         OGRID::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
-        // PlayerNameAndPtr previousPlayer = GetPlayerPair((GetCurrentTurn() - 1) % m_Players.size());
+        // PlayerNameAndPtr previousPlayer = GetPlayerPair((GetCurrentTurn() - 1) % m_GameConfiguration->playerPairs.size());
 
         if (IsWinningCondition(row, col))
         {
@@ -205,7 +205,7 @@ namespace OGRID{
     }
 
     OGRID::PlayerNameAndPtr IGame::GetCurrentPlayer() const {
-        return m_Players[m_currentTurn];
+        return m_GameConfiguration->playerPairs[m_currentTurn];
     }
 
     size_t IGame::GetCurrentTurn() const {
@@ -214,8 +214,8 @@ namespace OGRID{
 
     std::vector<std::string> IGame::GetPlayerNames() const {
         std::vector<std::string> playerNames;
-        playerNames.reserve(m_Players.size());
-        for (const auto &playerPair : m_Players)
+        playerNames.reserve(m_GameConfiguration->playerPairs.size());
+        for (const auto &playerPair : m_GameConfiguration->playerPairs)
         {
             playerNames.push_back(playerPair.name);
         }
@@ -224,8 +224,8 @@ namespace OGRID{
 
     std::vector<OGRID::Player *> IGame::GetPlayerPtrs() const {
         std::vector<OGRID::Player *> playerPtrs;
-        playerPtrs.reserve(m_Players.size());
-        for (const auto &playerPair : m_Players)
+        playerPtrs.reserve(m_GameConfiguration->playerPairs.size());
+        for (const auto &playerPair : m_GameConfiguration->playerPairs)
         {
             playerPtrs.push_back(playerPair.ptr);
         }
@@ -233,9 +233,9 @@ namespace OGRID{
     }
 
     OGRID::PlayerNameAndPtr IGame::GetPlayerPair(size_t at) const {
-        if (at < m_Players.size())
+        if (at < m_GameConfiguration->playerPairs.size())
         {
-            return m_Players[at];
+            return m_GameConfiguration->playerPairs[at];
         }
         else
         {
@@ -244,15 +244,15 @@ namespace OGRID{
     }
 
     std::vector<OGRID::PlayerNameAndPtr> IGame::GetPlayerPairs() const {
-        return m_Players;
+        return m_GameConfiguration->playerPairs;
     }
 
     void IGame::SetPlayerPairs(const std::vector<OGRID::PlayerNameAndPtr> &players) {
-        m_Players = players;
+        m_GameConfiguration->playerPairs = players;
     }
 
     void IGame::PrintPlayerMoves() const {
-        for (const auto &playerPair : m_Players)
+        for (const auto &playerPair : m_GameConfiguration->playerPairs)
         {
             std::string move = MoveTypeEnumToString(playerPair.ptr->GetPlayerMoveType());
             CLI_TRACE("{0} | {1}", playerPair.name, move);
