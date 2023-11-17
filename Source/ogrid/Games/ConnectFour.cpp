@@ -100,8 +100,7 @@ namespace OGRID{
         m_guiInfo.height = 600;
         m_guiInfo.targetFPS = 60;
         m_guiInfo.lineThickness = 2.5f;
-        m_guiInfo.margin = 40.0f;
-        m_guiInfo.gridSize = 7;
+        m_guiInfo.margin = 30.0f;
 
         auto *p1 = new OGRID::Player("Player1", OGRID::Human);
         auto *p2 = new OGRID::Player("Player2", OGRID::Human);
@@ -122,7 +121,7 @@ namespace OGRID{
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
             .setGameName("ConnectFour")
             .setGameDescription("ConnectFour Game")
-            .setGrid(7, 6, '.')
+            .setGrid(6, 7, '.')
             .setMaxPlayers(2)
             .addPlayer(p1)
             .addPlayer(p2)
@@ -136,7 +135,7 @@ namespace OGRID{
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
                                          .setGameName("ConnectFour")
                                          .setGameDescription("ConnectFour Game")
-                                         .setGrid(7, 6, '.')
+                                         .setGrid(6, 7, '.')
                                          .setMaxPlayers(2)
                                          .addPlayer(p1)
                                          .addPlayer(p2)
@@ -148,7 +147,7 @@ namespace OGRID{
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
                                          .setGameName("ConnectFour")
                                          .setGameDescription("ConnectFour Game")
-                                         .setGrid(7, 6, '.')
+                                         .setGrid(6, 7, '.')
                                          .setMaxPlayers(2)
                                          .addPlayer(p1)
                                          .addPlayer(p2)
