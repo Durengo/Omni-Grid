@@ -119,28 +119,28 @@ namespace Sandbox
         float padding = m_Game->m_guiInfo.margin;
 
         // Calculate the size of the cells to fit the grid in the window, accounting for padding
-        m_Game->m_guiInfo.cellSize = (std::min(m_Game->m_guiInfo.width, m_Game->m_guiInfo.height) - (2 * padding)) / static_cast<float>(m_Game->m_guiInfo.gridSize);
+        m_Game->m_guiInfo.cellSize = (std::min(m_Game->m_guiInfo.width, m_Game->m_guiInfo.height) - (2 * padding)) / static_cast<float>((m_Game->GetGrid()->GetCols() + m_Game->GetGrid()->GetRows()/20.0f));
 
         // Calculate any necessary offsets if the window is not square
-        float xOffset = (m_Game->m_guiInfo.width - (m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize)) / 2.0f;
-        float yOffset = (m_Game->m_guiInfo.height - (m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize)) / 2.0f;
+        float xOffset = (m_Game->m_guiInfo.width - (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetCols())) / 2.0f;
+        float yOffset = (m_Game->m_guiInfo.height - (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetRows())) / 2.0f;
 
         // Adjust offsets for padding
         xOffset = std::max(xOffset, padding);
         yOffset = std::max(yOffset, padding);
 
         // Draw vertical lines
-        for (int i = 0; i <= m_Game->GetGameConfiguration()->grid->GetRows(); i++)
+        for (int i = 0; i <= m_Game->GetGameConfiguration()->grid->GetCols(); i++)
         {
             float lineX = xOffset + i * m_Game->m_guiInfo.cellSize;
-            DrawLine(lineX, yOffset, lineX, yOffset + m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize, GRAY);
+            DrawLine(lineX, yOffset, lineX, yOffset + m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetRows(), GRAY);
         }
 
         // Draw horizontal lines
-        for (int i = 0; i <= m_Game->GetGameConfiguration()->grid->GetCols(); i++)
+        for (int i = 0; i <= m_Game->GetGameConfiguration()->grid->GetRows(); i++)
         {
             float lineY = yOffset + i * m_Game->m_guiInfo.cellSize;
-            DrawLine(xOffset, lineY, xOffset + m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize, lineY, GRAY);
+            DrawLine(xOffset, lineY, xOffset + m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetCols(), lineY, GRAY);
         }
 
         m_Game->OnGUIUpdateGrid();
@@ -152,17 +152,16 @@ namespace Sandbox
     Vector2 GameWindow<T>::GetCellFromMouse(Vector2 mousePosition)
     {
         // Calculate the starting point of the grid on the screen
-        float gridStartX = (m_Game->m_guiInfo.width - (m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize)) / 2.0f;
+        float gridStartX = (m_Game->m_guiInfo.width - (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetCols())) / 2.0f;
 
-        // TODO: IT WAS m_Game->m_guiInfo.windowResolution.height changed it to m_Game->m_guiInfo.height NOT SURE IF CORRECT
-        float gridStartY = (m_Game->m_guiInfo.height - (m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize)) / 2.0f;
+        float gridStartY = (m_Game->m_guiInfo.height - (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetRows())) / 2.0f;
 
         // Adjust the mouse position by subtracting the starting point of the grid
         float adjustedMouseX = mousePosition.x - gridStartX;
         float adjustedMouseY = mousePosition.y - gridStartY;
 
         // Check if the adjusted mouse position is outside the bounds of the grid
-        if (adjustedMouseX < 0 || adjustedMouseY < 0 || adjustedMouseX >= (m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize) || adjustedMouseY >= (m_Game->m_guiInfo.cellSize * m_Game->m_guiInfo.gridSize))
+        if (adjustedMouseX < 0 || adjustedMouseY < 0 || adjustedMouseX >= (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetCols()) || adjustedMouseY >= (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetRows()))
         {
             // Outside of grid bounds, return an invalid cell position
             return Vector2(-1, -1);

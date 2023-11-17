@@ -119,8 +119,8 @@ namespace OGRID{
         float padding = m_guiInfo.margin; // Use the same margin for consistency
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
-        float xOffset = (m_guiInfo.width - (m_guiInfo.cellSize * m_guiInfo.gridSize)) / 2.0f;
-        float yOffset = (m_guiInfo.height - (m_guiInfo.cellSize * m_guiInfo.gridSize)) / 2.0f;
+        float xOffset = (m_guiInfo.width - (m_guiInfo.cellSize * GetGrid()->GetCols())) / 2.0f;
+        float yOffset = (m_guiInfo.height - (m_guiInfo.cellSize * GetGrid()->GetRows())) / 2.0f;
         xOffset = std::max(xOffset, padding);
         yOffset = std::max(yOffset, padding);
 
@@ -142,8 +142,8 @@ namespace OGRID{
         float padding = m_guiInfo.margin;
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
-        float xOffset = (m_guiInfo.width - (m_guiInfo.cellSize * m_guiInfo.gridSize)) / 2.0f;
-        float yOffset = (m_guiInfo.height - (m_guiInfo.cellSize * m_guiInfo.gridSize)) / 2.0f;
+        float xOffset = (m_guiInfo.width - (m_guiInfo.cellSize * GetGrid()->GetCols())) / 2.0f;
+        float yOffset = (m_guiInfo.height - (m_guiInfo.cellSize * GetGrid()->GetRows())) / 2.0f;
         xOffset = std::max(xOffset, padding);
         yOffset = std::max(yOffset, padding);
 
@@ -176,7 +176,6 @@ namespace OGRID{
         CLI_TRACE("Input the dimensions of the grid (3-10): ");
         dimensions = static_cast<unsigned char>(DURLIB::GIBI(3, 10));
 
-        m_guiInfo.gridSize = dimensions;
 
         int choice = 0;
         while (choice == 0)
