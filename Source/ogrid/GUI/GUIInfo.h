@@ -7,7 +7,6 @@ struct GUIInfo{
     int height;
     std::string windowName;
     int targetFPS;
-    float gridSize;
     float cellSize;
     float lineThickness;
     float margin;
