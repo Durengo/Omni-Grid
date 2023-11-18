@@ -54,7 +54,7 @@ namespace OGRID{
     void TicTacToe::SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) {
         size_t allowedPlayers = GetGameConfiguration()->maxPlayers;
 
-        //CLI_ASSERT(m_Players.size() > allowedPlayers, "Player amount exceeds max player amount.");
+        //CLI_ASSERT(GetGameConfiguration()->playerPairs.size() > allowedPlayers, "Player amount exceeds max player amount.");
 
         if (m_randomizeTurnOrder)
         {
@@ -63,13 +63,13 @@ namespace OGRID{
             auto rng = std::default_random_engine{rd()};
             std::shuffle(shuffledMoveTypes.begin(), shuffledMoveTypes.end(), rng);
 
-            for (int i = 0; i < m_Players.size(); i++)
+            for (int i = 0; i < GetGameConfiguration()->playerPairs.size(); i++)
             {
-                m_Players[i].ptr->SetPlayerMoveType(shuffledMoveTypes[i % shuffledMoveTypes.size()]);
+                GetGameConfiguration()->playerPairs[i].ptr->SetPlayerMoveType(shuffledMoveTypes[i % shuffledMoveTypes.size()]);
             }
 
             // Assuming MoveType::X is the MoveType that goes first.
-            std::stable_sort(m_Players.begin(), m_Players.end(),
+            std::stable_sort(GetGameConfiguration()->playerPairs.begin(), GetGameConfiguration()->playerPairs.end(),
                              [](const OGRID::PlayerNameAndPtr &a, const OGRID::PlayerNameAndPtr &b)
                              {
                                  return a.ptr->GetPlayerMoveType() == OGRID::MoveType::X;
@@ -77,12 +77,12 @@ namespace OGRID{
         }
         else
         {
-            for (int i = 0; i < m_Players.size(); i++)
+            for (int i = 0; i < GetGameConfiguration()->playerPairs.size(); i++)
             {
-                m_Players[i].ptr->SetPlayerMoveType(moveTypes[i % moveTypes.size()]);
+                GetGameConfiguration()->playerPairs[i].ptr->SetPlayerMoveType(moveTypes[i % moveTypes.size()]);
             }
 
-            std::stable_sort(m_Players.begin(), m_Players.end(),
+            std::stable_sort(GetGameConfiguration()->playerPairs.begin(), GetGameConfiguration()->playerPairs.end(),
                              [](const OGRID::PlayerNameAndPtr &a, const OGRID::PlayerNameAndPtr &b)
                              {
                                  return a.ptr->GetPlayerMoveType() == OGRID::MoveType::X;

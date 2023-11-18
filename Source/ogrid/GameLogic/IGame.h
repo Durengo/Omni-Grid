@@ -35,7 +35,6 @@ namespace OGRID{
         Player *m_winner = nullptr;
         size_t m_currentTurn = 0;
         unsigned int m_totalTurns = 0;
-        std::vector<OGRID::PlayerNameAndPtr> m_Players;
 
         GameConfiguration *m_GameConfiguration = nullptr;
 
