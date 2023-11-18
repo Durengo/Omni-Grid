@@ -186,8 +186,6 @@ namespace OGRID{
 
         if (choice == 1)
         {
-            p1->SetPlayerMoveType(OGRID::MoveType::X);
-            p2->SetPlayerMoveType(OGRID::MoveType::O);
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
             .setGameName("TicTacToe")
@@ -200,8 +198,6 @@ namespace OGRID{
         }
         else if (choice == 2)
         {
-            p1->SetPlayerMoveType(OGRID::MoveType::O);
-            p2->SetPlayerMoveType(OGRID::MoveType::X);
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
             .setGameName("TicTacToe")

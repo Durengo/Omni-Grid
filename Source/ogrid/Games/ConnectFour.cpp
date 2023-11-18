@@ -115,8 +115,6 @@ namespace OGRID{
         // I WILL CONTINUE TO USE X AND O https://i.imgur.com/of0oR9s.mp4
         if (choice == 1)
         {
-            p1->SetPlayerMoveType(OGRID::MoveType::X);
-            p2->SetPlayerMoveType(OGRID::MoveType::O);
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
             .setGameName("ConnectFour")
@@ -129,16 +127,14 @@ namespace OGRID{
         }
         else if (choice == 2)
         {
-            p1->SetPlayerMoveType(OGRID::MoveType::O);
-            p2->SetPlayerMoveType(OGRID::MoveType::X);
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
                                          .setGameName("ConnectFour")
                                          .setGameDescription("ConnectFour Game")
                                          .setGrid(6, 7, '.')
                                          .setMaxPlayers(2)
-                                         .addPlayer(p1)
                                          .addPlayer(p2)
+                                         .addPlayer(p1)
                                          .build());
         }
         else if (choice == 3)
