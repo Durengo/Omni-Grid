@@ -6,7 +6,7 @@
 
 #include "Grid/Grid.h"
 #include "Player/Player.h"
-#include "GameLogic/GameConfiguration.h"
+#include "GameLogicImplementation/GameConfiguration.h"
 
 namespace OGRID
 {

@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "MoveRule.h"
+#include "GameLogicInterface/IMoveRule.h"
 #include "Player/Player.h"
 
 namespace OGRID
@@ -15,7 +15,7 @@ namespace OGRID
         std::string m_representation;
 
         // Rules for this move type
-        std::vector<MoveRule *> m_moveRules;
+        std::vector<IMoveRule *> m_moveRules;
 
         // Owner of this piece
         Player *m_owner;
@@ -25,7 +25,7 @@ namespace OGRID
 
         ~Piece();
 
-        void AddMoveRule(MoveRule *rule);
+        void AddMoveRule(IMoveRule *rule);
 
         const std::string &GetRepresentation() const;
 

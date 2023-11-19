@@ -3,10 +3,10 @@
 #include <durlib.h>
 #include <raylib.h>
 
-#include "GameLogic/GameConfiguration.h"
-#include "GameDefinition/Piece.h"
-#include "GameDefinition/TicTacToePieces.h"
-#include "GameDefinition/TicTacToeStateCheck.h"
+#include "GameLogicImplementation/GameConfiguration.h"
+#include "Games/TicTacToe/TicTacToePieces.h"
+#include "Games/TicTacToe/TicTacToeStateCheck.h"
+#include "Player/Piece.h"
 #include "Player/Player.h"
 
 namespace OGRID

@@ -4,7 +4,7 @@
 #include <typeinfo>
 
 #include "Grid/grid.h"
-#include "GameDefinition/Piece.h"
+#include "Player/Piece.h"
 
 /*
 Checking for class type of pieces would look like this:

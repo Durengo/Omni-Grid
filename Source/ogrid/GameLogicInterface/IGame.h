@@ -5,7 +5,7 @@
 #include <raylib.h>
 
 #include "GUI/GUIInfo.h"
-#include "GameDefinition/GameStateChecker.h"
+#include "GameLogicImplementation/GameStateChecker.h"
 
 // TODO: Keep track of the current player.
 

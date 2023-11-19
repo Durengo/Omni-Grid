@@ -14,7 +14,7 @@ namespace OGRID
         // DO NOT DELETE m_owner
     }
 
-    void Piece::AddMoveRule(MoveRule *rule)
+    void Piece::AddMoveRule(IMoveRule *rule)
     {
         m_moveRules.push_back(rule);
     }

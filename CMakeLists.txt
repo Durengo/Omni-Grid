@@ -460,27 +460,42 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # OMNI-GRID .CPP FILES
         file(GLOB_RECURSE OMNI-GRID_CPP
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.cpp"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.cpp"
+
+                # CORE
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogicInterface/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogicImplementation/*.cpp"
+
+                # GUI
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.cpp"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameDefinition/*.cpp"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/CoreDefinitions/*.cpp"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.cpp"
+
+                # GAMES
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.cpp"
         )
 
         # OMNI-GRID .H FILES
         file(GLOB_RECURSE OMNI-GRID_H
+
+                # IMPORT HEADERS
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_gui.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_fmt.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ogrid_games.h"
+
+                # CORE
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogicInterface/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogicImplementation/*.h"
+
+                # GUI
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameDefinition/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/CoreDefinitions/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.h"
+
+                # GAMES
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.h"
         )
 
         if(${VERBOSE})

@@ -5,7 +5,7 @@
 #include <durlib.h>
 
 // #include "Grid/Grid.h"
-#include "IGame.h"
+#include "GameLogicInterface/IGame.h"
 
 namespace OGRID
 {
@@ -45,7 +45,7 @@ namespace OGRID
         CLI_INFO("Game Description: {0}", m_GameConfiguration.gameDescription);
         CLI_INFO("Grid: {0}", m_GameConfiguration.grid->GetGridSize());
         CLI_INFO("Player amount: {0}", m_GameConfiguration.players.size());
-        CLI_ASSERT(m_GameConfiguration.players.size() > 1, "TicTacToeTurnManager cannot be initialized due to lack of players.")
+        CLI_ASSERT(m_GameConfiguration.players.size() > 1, "TicTacToeTurnManager cannot be initialized due to lack of players.");
         CLI_INFO("Players:\n{0}", PlayerVecToString(m_GameConfiguration.players));
         CLI_ASSERT(m_GameConfiguration.players.size() <= m_GameConfiguration.maxPlayers, "Player amount exceeds max player amount.");
 

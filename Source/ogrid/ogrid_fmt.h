@@ -6,7 +6,7 @@
 
 #include "Grid/Grid.h"
 #include "Player/Player.h"
-#include "GameDefinition/Piece.h"
+#include "Player/Piece.h"
 
 // Formatting for fmt library.
 

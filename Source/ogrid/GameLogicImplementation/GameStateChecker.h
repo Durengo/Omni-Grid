@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GameDefinition/IGameState.h"
+#include "GameLogicInterface/IGameState.h"
 
 /*
 How to use:

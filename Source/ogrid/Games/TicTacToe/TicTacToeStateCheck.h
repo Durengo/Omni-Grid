@@ -1,7 +1,7 @@
 #pragma once
 
-#include "IGameState.h"
-#include "GameDefinition/GameStateExtensions.h"
+#include "GameLogicInterface/IGameState.h"
+#include "GameLogicImplementation/GameStateExtensions.h"
 
 namespace OGRID
 {
