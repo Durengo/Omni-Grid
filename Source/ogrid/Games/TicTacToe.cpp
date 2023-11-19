@@ -1,10 +1,7 @@
-//
-// Created by LastWeek on 15/11/2023.
-//
+#include "TicTacToe.h"
 
 #include <durlib.h>
 #include <raylib.h>
-#include "TicTacToe.h"
 
 namespace OGRID
 {
