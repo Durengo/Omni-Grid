@@ -55,10 +55,10 @@ namespace OGRID
             playerPairs.push_back({player->GetPlayerName(), player});
         }
         m_GameConfiguration.playerPairs = playerPairs;
-        //m_GameConfiguration.turnManager = turnManager;
-        //m_GameConfiguration.turnManager->SetPlayerPairs(playerPairs);
-        //CLI_INFO("TicTacToeTurnManager initialized.");
-        //CLI_INFO("Player Pairs:\n{0}", OGRID::PlayerNameAndPtrVecToString(m_GameConfiguration.turnManager->GetPlayerPairs()));
+        // m_GameConfiguration.turnManager = turnManager;
+        // m_GameConfiguration.turnManager->SetPlayerPairs(playerPairs);
+        // CLI_INFO("TicTacToeTurnManager initialized.");
+        // CLI_INFO("Player Pairs:\n{0}", OGRID::PlayerNameAndPtrVecToString(m_GameConfiguration.turnManager->GetPlayerPairs()));
 
         return new GameConfiguration(m_GameConfiguration);
     }
