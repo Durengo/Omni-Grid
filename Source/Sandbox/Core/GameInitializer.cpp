@@ -21,7 +21,7 @@ namespace Sandbox
             GameWindow<OGRID::TicTacToe>().Start();
             break;
         case 2:
-            GameWindow<OGRID::ConnectFour>().Start();
+            // GameWindow<OGRID::ConnectFour>().Start();
             break;
         default:
             CLI_TRACE("Invalid choice");

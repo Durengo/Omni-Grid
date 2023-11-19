@@ -7,7 +7,7 @@
 namespace Sandbox
 {
     template class Sandbox::GameWindow<OGRID::TicTacToe>;
-    template class Sandbox::GameWindow<OGRID::ConnectFour>;
+    // template class Sandbox::GameWindow<OGRID::ConnectFour>;
 
     template <class T>
     GameWindow<T>::~GameWindow()
@@ -216,7 +216,7 @@ namespace Sandbox
             // changeGridButton.isEnabled = true;
             // changeTurnOrderButton.isEnabled = true;
 
-            winnerText->SetText("Winner: " + m_Game->GetWinner()->GetPlayerName() + " (" + OGRID::MoveTypeEnumToString(m_Game->GetWinner()->GetPlayerMoveType()) + ")");
+            winnerText->SetText("Winner: " + m_Game->GetWinner()->GetPlayerName() + " (" + m_Game->GetWinner()->GetPlayerName() + ")");
             gameOverText->Draw();
             winnerText->Draw();
             restartButton->Draw();
@@ -245,7 +245,7 @@ namespace Sandbox
 
         DrawGrid();
         currentPlayerText->SetText("Current Player: " + m_Game->GetCurrentPlayer().ptr->GetPlayerName());
-        turnText->SetText("Turn: " + OGRID::MoveTypeEnumToString(m_Game->GetCurrentPlayer().ptr->GetPlayerMoveType()));
+        turnText->SetText("Turn: " + m_Game->GetCurrentPlayer().ptr->GetPlayerName());
         currentPlayerText->Draw();
         turnText->Draw();
     }

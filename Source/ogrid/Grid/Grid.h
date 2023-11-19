@@ -1,27 +1,39 @@
 #pragma once
 
-#include "fmt/format.h"
+#include <string>
+#include <vector>
 
 namespace OGRID
 {
+    class Piece;
+
+    struct Cell
+    {
+        Piece *m_Piece;
+        unsigned char m_Row;
+        unsigned char m_Col;
+    };
+
     class Grid
     {
     private:
         // Limit grid size to 255x255.
         unsigned char rows;
         unsigned char cols;
-        // Use a 2D array of chars to represent the grid.
-        char **grid;
+        // Use a 2D array of Cell pointers to represent the grid.
+        std::vector<std::vector<Cell *>> grid;
 
-        // Store default char for resetting the grid.
-        char defaultChar;
+        // Store default Piece for resetting the grid.
+        // Important! This will set the whole grid to the same Piece.
+        // Careful when setting this to nullptr.
+        Piece *defaultPiece;
 
         // Store which element was last changed.
         unsigned char lastChangedChar[2] = {0, 0};
 
     public:
         // Constructors & Destructors
-        Grid(unsigned char rows, unsigned char cols, char initialChar = '.');
+        Grid(unsigned char rows, unsigned char cols, Piece *defaultPiece = nullptr);
         ~Grid();
 
         // Getters & Setters
@@ -32,70 +44,43 @@ namespace OGRID
         unsigned char GetCols() const;
         void SetCols(unsigned char cols);
 
-        char **GetGrid() const;
-        void SetGrid(char **grid);
+        const std::vector<std::vector<Cell *>> &GetGrid() const;
+        void SetGrid(const std::vector<std::vector<Cell *>> &newGrid);
 
-        char GetDefaultChar() const;
-        void SetDefaultChar(char defaultChar);
+        Piece *GetDefaultPiece() const;
+        void SetDefaultPiece(Piece *defaultPiece);
 
-        char GetCharAt(unsigned char row, unsigned char col) const;
-        void SetCharAt(unsigned char row, unsigned char col, char newChar);
+        Piece *GetPieceAt(unsigned char row, unsigned char col) const;
+        void SetPieceAt(unsigned char row, unsigned char col, Piece *piece);
+
+        Cell *GetCellAt(unsigned char row, unsigned char col) const;
+        void SetCellAt(unsigned char row, unsigned char col, Cell *cell);
+        void SetCellAt(unsigned char row, unsigned char col, Piece *piece);
 
         std::pair<unsigned char, unsigned char> GetLastChangedChar() const;
 
         // Overload the [] operator to access the grid.
     public:
-        char *operator[](int index);
+        std::vector<Cell *> &operator[](size_t index);
+
+        const std::vector<Cell *> &operator[](size_t index) const;
 
         // Public methods
     public:
-        const std::string GetGridInfo() const;
+        const std::string GetGridSize() const;
         void ResetGrid();
-        void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, char newChar = '.');
-        void ResetGridWithNewChar(char newChar);
+        void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, Piece *defaultPiece = nullptr);
+        void ResetGridWithNewDefaultPiece(Piece *defaultPiece = nullptr);
 
-        bool CheckForRecurringCharsInRow(char playerChar, int dupCount);
-        bool CheckForRecurringCharsInCol(char playerChar, int dupCount);
-        bool CheckForRecurringCharsInDiagonal(char playerChar, int dupCount);
-        bool CheckForRecurringCharsInAntiDiagonal(char playerChar, int dupCount);
+        std::string GetGridAsString();
 
-        char GetCharCenterMostElement() const;
-        std::pair<unsigned char, unsigned char> GetCenterMostCoords() const;
+        // bool CheckForRecurringStringInRow(const std::string &playerString, unsigned int dupCount);
+        // bool CheckForRecurringStringInCol(const std::string &playerString, unsigned int dupCount);
+        // bool CheckForRecurringStringInDiagonal(const std::string &playerString, unsigned int dupCount);
+        // bool CheckForRecurringStringInAntiDiagonal(const std::string &playerString, unsigned int dupCount);
+
+        // // This one is broken and should probably be removed...
+        // std::string GetCharCenterMostElement() const;
+        // std::pair<unsigned char, unsigned char> GetCenterMostCoords() const;
     };
 }
-
-// Formatting for fmt library.
-template <>
-struct fmt::formatter<OGRID::Grid> : fmt::formatter<std::string>
-{
-    // Parses format specifications of the form '[:...]' which you can ignore.
-    constexpr auto parse(format_parse_context &ctx) { return ctx.begin(); }
-
-    // Formats the Grid using provided format specifiers.
-    template <typename FormatContext>
-    auto format(const OGRID::Grid &grid, FormatContext &ctx)
-    {
-        // Use a memory buffer to store the temporary output.
-        fmt::memory_buffer buf;
-
-        fmt::format_to(std::back_inserter(buf), "\n");
-
-        for (int i = 0; i < grid.GetRows(); i++)
-        {
-            for (int j = 0; j < grid.GetCols(); j++)
-            {
-                // Assuming you want a space between characters in a row.
-                if (j > 0)
-                    fmt::format_to(std::back_inserter(buf), " ");
-                // Format each character from the grid.
-                fmt::format_to(std::back_inserter(buf), "{}", grid.GetGrid()[i][j]);
-            }
-            // Add a newline after each row, except the last one.
-            if (i < grid.GetRows() - 1)
-                fmt::format_to(std::back_inserter(buf), "\n");
-        }
-
-        // Output the buffer to the formatting context and return the iterator.
-        return fmt::format_to(ctx.out(), "{}", to_string(buf));
-    }
-};

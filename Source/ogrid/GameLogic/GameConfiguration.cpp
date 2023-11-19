@@ -1,9 +1,10 @@
 #include "GameConfiguration.h"
 
+#include "fmt/format.h"
+
 #include <durlib.h>
 
-#include "Grid/Grid.h"
-#include "Player/Player.h"
+// #include "Grid/Grid.h"
 #include "IGame.h"
 
 namespace OGRID
@@ -20,9 +21,9 @@ namespace OGRID
         return *this;
     }
 
-    ConfigurationBuilder &GameConfigurationBuilder::setGrid(unsigned char rows, unsigned char cols, char initialChar)
+    ConfigurationBuilder &GameConfigurationBuilder::setGrid(unsigned char rows, unsigned char cols, Piece *defaultPiece)
     {
-        m_GameConfiguration.grid = new Grid(rows, cols, initialChar);
+        m_GameConfiguration.grid = new Grid(rows, cols, defaultPiece);
         return *this;
     }
 
@@ -42,7 +43,7 @@ namespace OGRID
     {
         CLI_INFO("Game Name: {0}", m_GameConfiguration.gameName);
         CLI_INFO("Game Description: {0}", m_GameConfiguration.gameDescription);
-        CLI_INFO("Grid: {0}", m_GameConfiguration.grid->GetGridInfo());
+        CLI_INFO("Grid: {0}", m_GameConfiguration.grid->GetGridSize());
         CLI_INFO("Player amount: {0}", m_GameConfiguration.players.size());
         CLI_ASSERT(m_GameConfiguration.players.size() > 1, "TicTacToeTurnManager cannot be initialized due to lack of players.")
         CLI_INFO("Players:\n{0}", PlayerVecToString(m_GameConfiguration.players));
@@ -62,4 +63,33 @@ namespace OGRID
 
         return new GameConfiguration(m_GameConfiguration);
     }
+}
+
+template <>
+struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
+{
+    constexpr auto parse(format_parse_context &ctx) { return ctx.begin(); }
+
+    template <typename FormatContext>
+    auto format(const OGRID::PlayerNameAndPtr &player, FormatContext &ctx)
+    {
+        fmt::memory_buffer buf;
+
+        fmt::format_to(std::back_inserter(buf), "{} [{}]", player.name, static_cast<const void *>(player.ptr));
+
+        // Output the buffer to the formatting context and return the iterator.
+        return fmt::format_to(ctx.out(), "{}", to_string(buf));
+    }
+};
+
+std::string PlayerNameAndPtrVecToString(const std::vector<OGRID::PlayerNameAndPtr> &players)
+{
+    std::ostringstream ss;
+    for (size_t i = 0; i < players.size(); ++i)
+    {
+        if (i > 0)
+            ss << "\n";
+        ss << fmt::format("{}", players[i]);
+    }
+    return ss.str();
 }

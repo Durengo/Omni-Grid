@@ -1,6 +1,10 @@
 #include "Player.h"
 
-#include "Moves.h"
+#include <vector>
+#include <map>
+#include <sstream>
+
+#include "fmt/format.h"
 
 namespace OGRID
 {
@@ -18,7 +22,7 @@ namespace OGRID
 
     // Constructors & Destructors
 
-    Player::Player(std::string playerName, PlayerType playerType) : m_PlayerName(playerName), m_PlayerType(playerType)
+    Player::Player(std::string playerName, PlayerType playerType, int side) : m_PlayerName(playerName), m_PlayerType(playerType), m_Side(side)
     {
     }
 
@@ -37,13 +41,29 @@ namespace OGRID
         return m_PlayerType;
     }
 
-    MoveType Player::GetPlayerMoveType() const
+    int Player::GetSide() const
     {
-        return m_MoveType;
+        return m_Side;
     }
 
-    void Player::SetPlayerMoveType(MoveType moveType)
+    void Player::SetSide(int side)
     {
-        m_MoveType = moveType;
+        if (side < -1)
+            throw std::invalid_argument("Side must be greater than or equal to -1 (no side)");
+
+        m_Side = side;
+    }
+
+    // TODO: Find a way to use fmt for this. Cannot use fmt::format as it would cause a circular dependency, because we would need to include "ogrid_fmt.h".
+    std::string PlayerVecToString(const std::vector<OGRID::Player *> &players)
+    {
+        std::ostringstream ss;
+        for (size_t i = 0; i < players.size(); ++i)
+        {
+            if (i > 0)
+                ss << "\n";
+            ss << "" + players[i]->GetPlayerName() + "|"; // + players[i]->GetPlayerType();
+        }
+        return ss.str();
     }
 }

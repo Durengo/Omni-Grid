@@ -4,10 +4,10 @@ set(CXX_VERSION_NAME "cxx_std_${CMAKE_CXX_STANDARD}")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # TOGGLE TESTING.
-set(MAIN_TEST ON)
+set(MAIN_TEST OFF)
 
 # TOGGLE EXAMPLES.
-set(EXAMPLES ON)
+set(EXAMPLES OFF)
 
 # TOGGLE .DLL IN INSTALLS
 set(INSTALL_DLLS ON)
@@ -464,6 +464,8 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameDefinition/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/CoreDefinitions/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.cpp"
         )
 
@@ -471,10 +473,13 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         file(GLOB_RECURSE OMNI-GRID_H
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_gui.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_fmt.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Grid/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/GameDefinition/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/CoreDefinitions/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.h"
         )
 
@@ -577,14 +582,14 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # Ogrid-Sandbox .CPP FILES
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
-                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
-                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
         )
 
         if(${VERBOSE})
