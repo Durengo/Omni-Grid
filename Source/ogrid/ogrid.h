@@ -7,8 +7,6 @@
 #include "Games/TicTacToe.h"
 #include "Games/ConnectFour.h"
 
-#include "Grid/Grid.h"
-
 // TESTING:
 // #include "GameDefinition/ChessMoveRules.h"
 #include "GameDefinition/IGameState.h"
