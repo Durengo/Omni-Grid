@@ -153,7 +153,7 @@ namespace OGRID
     // Public methods
     const std::string Grid::GetGridSize() const
     {
-        return fmt::format("Grid: {0}x{1}", rows, cols);
+        return fmt::format("{0}x{1}", rows, cols);
     }
 
     void Grid::ResetGrid()
