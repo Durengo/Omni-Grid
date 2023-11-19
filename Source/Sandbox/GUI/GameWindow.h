@@ -1,7 +1,12 @@
 #pragma once
 
 #include <raylib.h>
-#include "ogrid.h"
+
+namespace OGRID
+{
+    class Button;
+    class Text;
+}
 
 namespace Sandbox
 {
