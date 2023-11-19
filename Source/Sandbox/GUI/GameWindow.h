@@ -1,51 +1,51 @@
-#pragma once
+// #pragma once
 
-#include <raylib.h>
+// #include <raylib.h>
 
-namespace OGRID
-{
-    class Button;
-    class Text;
-}
+// namespace OGRID
+// {
+//     class Button;
+//     class Text;
+// }
 
-namespace Sandbox
-{
-    template <class T>
-    class GameWindow
-    {
-    private:
-        T *m_Game;
-        bool m_Running = false;
-        OGRID::Button *restartButton;
-        OGRID::Text *gameOverText;
-        OGRID::Text *winnerText;
-        OGRID::Text *currentPlayerText;
-        OGRID::Text *turnText;
-        OGRID::Text *drawText;
+// namespace Sandbox
+// {
+//     template <class T>
+//     class GameWindow
+//     {
+//     private:
+//         T *m_Game;
+//         bool m_Running = false;
+//         OGRID::Button *restartButton;
+//         OGRID::Text *gameOverText;
+//         OGRID::Text *winnerText;
+//         OGRID::Text *currentPlayerText;
+//         OGRID::Text *turnText;
+//         OGRID::Text *drawText;
 
-    public:
-        GameWindow() = default;
-        ~GameWindow();
+//     public:
+//         GameWindow() = default;
+//         ~GameWindow();
 
-        void Start();
+//         void Start();
 
-    private:
-        void Run();
+//     private:
+//         void Run();
 
-        void PreRun();
+//         void PreRun();
 
-        void OnUpdate();
+//         void OnUpdate();
 
-        void DrawGrid();
+//         void DrawGrid();
 
-        Vector2 GetCellFromMouse(Vector2 mousePosition);
+//         Vector2 GetCellFromMouse(Vector2 mousePosition);
 
-        void UpdateWindowDimensions();
+//         void UpdateWindowDimensions();
 
-        void MouseButtonPress();
+//         void MouseButtonPress();
 
-        void InProgress();
+//         void InProgress();
 
-        void GameOver();
-    };
-}
+//         void GameOver();
+//     };
+// }
