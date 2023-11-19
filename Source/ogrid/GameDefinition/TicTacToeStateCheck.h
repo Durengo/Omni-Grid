@@ -11,6 +11,8 @@ namespace OGRID
 {
     class TicTacToeStateCheck : public IGameState
     {
+    private:
+        GameStateExtensions m_GameStateExtensions = GameStateExtensions();
     public:
         int CheckWin(Grid *grid) const override
         {
@@ -19,28 +21,28 @@ namespace OGRID
             // But this will not work at the moment since we are using only one class to define all pieces.
             // This needs more work as the methods get the base type <Piece> instead of the derived type <XPiece> or <OPiece> from the grid cell.
 
-            // if (GameStateExtensions::CheckForRecurringPieceInRow(grid, typeid(XPiece), 3) || GameStateExtensions::CheckForRecurringPieceInCol(grid, typeid(XPiece), 3) ||
-            //     GameStateExtensions::CheckForRecurringPieceInDiagonal(grid, typeid(XPiece), 3) || GameStateExtensions::CheckForRecurringPieceInAntiDiagonal(grid, typeid(XPiece), 3))
+            // if (m_GameStateExtensions.CheckForRecurringPieceInRow(grid, typeid(XPiece), 3) || m_GameStateExtensions.CheckForRecurringPieceInCol(grid, typeid(XPiece), 3) ||
+            //     m_GameStateExtensions.CheckForRecurringPieceInDiagonal(grid, typeid(XPiece), 3) || m_GameStateExtensions.CheckForRecurringPieceInAntiDiagonal(grid, typeid(XPiece), 3))
             // {
             //     // 'X' wins
             //     return 0;
             // }
-            // if (GameStateExtensions::CheckForRecurringPieceInRow(grid, typeid(OPiece), 3) || GameStateExtensions::CheckForRecurringPieceInCol(grid, typeid(OPiece), 3) ||
-            //     GameStateExtensions::CheckForRecurringPieceInDiagonal(grid, typeid(OPiece), 3) || GameStateExtensions::CheckForRecurringPieceInAntiDiagonal(grid, typeid(OPiece), 3))
+            // if (m_GameStateExtensions.CheckForRecurringPieceInRow(grid, typeid(OPiece), 3) || m_GameStateExtensions.CheckForRecurringPieceInCol(grid, typeid(OPiece), 3) ||
+            //     m_GameStateExtensions.CheckForRecurringPieceInDiagonal(grid, typeid(OPiece), 3) || m_GameStateExtensions.CheckForRecurringPieceInAntiDiagonal(grid, typeid(OPiece), 3))
             // {
             //     // 'O' wins
             //     return 0;
             // }
 
             // If the above doesn't work, fall back to using strings.
-            if (GameStateExtensions::CheckForRecurringStringInRow(grid, "X", 3) || GameStateExtensions::CheckForRecurringStringInCol(grid, "X", 3) ||
-                GameStateExtensions::CheckForRecurringStringInDiagonal(grid, "X", 3) || GameStateExtensions::CheckForRecurringStringInAntiDiagonal(grid, "X", 3))
+            if (m_GameStateExtensions.CheckForRecurringStringInRow(grid, "X", 3) || m_GameStateExtensions.CheckForRecurringStringInCol(grid, "X", 3) ||
+                m_GameStateExtensions.CheckForRecurringStringInDiagonal(grid, "X", 3) || m_GameStateExtensions.CheckForRecurringStringInAntiDiagonal(grid, "X", 3))
             {
                 // 'X' wins
                 return 0;
             }
-            if (GameStateExtensions::CheckForRecurringStringInRow(grid, "O", 3) || GameStateExtensions::CheckForRecurringStringInCol(grid, "O", 3) ||
-                GameStateExtensions::CheckForRecurringStringInDiagonal(grid, "O", 3) || GameStateExtensions::CheckForRecurringStringInAntiDiagonal(grid, "O", 3))
+            if (m_GameStateExtensions.CheckForRecurringStringInRow(grid, "O", 3) || m_GameStateExtensions.CheckForRecurringStringInCol(grid, "O", 3) ||
+                m_GameStateExtensions.CheckForRecurringStringInDiagonal(grid, "O", 3) || m_GameStateExtensions.CheckForRecurringStringInAntiDiagonal(grid, "O", 3))
             {
                 // 'O' wins
                 return 1;
@@ -52,7 +54,7 @@ namespace OGRID
 
         bool IsDraw(Grid *grid) const override
         {
-            return GameStateExtensions::CheckIfAllSpotsFilled(grid);
+            return m_GameStateExtensions.CheckIfAllSpotsFilled(grid);
         }
     };
 }
