@@ -1,24 +1,24 @@
 #include "MoveDefinitions.h"
 
-#include "GameDefinition/MoveType.h"
+#include "GameDefinition/Piece.h"
 #include "GameDefinition/CoreMoveRules.h"
 
 namespace OGRID
 {
-    std::vector<MoveType *> GetTicTacToeMoveTypes()
+    std::vector<Piece *> GetTicTacToePieces()
     {
-        std::vector<MoveType *> moveTypes;
+        std::vector<Piece *> Pieces;
 
-        // Create and add MoveType for X
-        auto moveTypeX = new MoveType("X");
-        moveTypeX->AddRule(new UnoccupiedCellRule());
-        moveTypes.push_back(moveTypeX);
+        // Create and add Piece for X
+        auto PieceX = new Piece("X");
+        PieceX->AddRule(new UnoccupiedCellRule());
+        Pieces.push_back(PieceX);
 
-        // Create and add MoveType for O
-        auto moveTypeO = new MoveType("O");
-        moveTypeO->AddRule(new UnoccupiedCellRule());
-        moveTypes.push_back(moveTypeO);
+        // Create and add Piece for O
+        auto PieceO = new Piece("O");
+        PieceO->AddRule(new UnoccupiedCellRule());
+        Pieces.push_back(PieceO);
 
-        return moveTypes;
+        return Pieces;
     }
 }
