@@ -72,6 +72,8 @@ namespace OGRID
         void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, Piece *defaultPiece = nullptr);
         void ResetGridWithNewDefaultPiece(Piece *defaultPiece = nullptr);
 
+        std::string GetGridAsString();
+
         // bool CheckForRecurringStringInRow(const std::string &playerString, unsigned int dupCount);
         // bool CheckForRecurringStringInCol(const std::string &playerString, unsigned int dupCount);
         // bool CheckForRecurringStringInDiagonal(const std::string &playerString, unsigned int dupCount);

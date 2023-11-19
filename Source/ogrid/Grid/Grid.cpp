@@ -20,12 +20,11 @@ namespace OGRID
             this->grid[i].resize(cols);
             for (unsigned char j = 0; j < cols; ++j)
             {
-                // Allocate a new Cell
-                this->grid[i][j] = new Cell();
-                // Set the default piece
-                this->grid[i][j]->m_Piece = defaultPiece;
-                this->grid[i][j]->m_Row = i;
-                this->grid[i][j]->m_Col = j;
+                Cell *cell = new Cell();
+                cell->m_Piece = defaultPiece;
+                cell->m_Row = i;
+                cell->m_Col = j;
+                this->grid[i][j] = cell;
             }
         }
     }
@@ -201,6 +200,36 @@ namespace OGRID
     {
         defaultPiece = defaultPiece;
         ResetGrid();
+    }
+
+    std::string Grid::GetGridAsString()
+    {
+#include <sstream>
+
+        std::ostringstream ss;
+
+        for (unsigned char i = 0; i < rows; ++i)
+        {
+            for (unsigned char j = 0; j < cols; ++j)
+            {
+                if (j > 0)
+                    ss << "\t";
+                Piece *piece = grid[i][j]->m_Piece;
+                if (piece == nullptr)
+                {
+                    ss << "NULL";
+                }
+                else
+                {
+                    ss << piece->GetRepresentation();
+                }
+                ss << " |";
+            }
+            if (i < rows - 1)
+                ss << "\n";
+        }
+
+        return ss.str();
     }
 
     // Previous methods checked for the occurrence of a character in a row, column, diagonal or anti-diagonal.
