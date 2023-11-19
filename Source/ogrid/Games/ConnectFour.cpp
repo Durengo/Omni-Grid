@@ -1,11 +1,8 @@
-//
-// Created by LastWeek on 16/11/2023.
-//
-
-#include <durlib/Log/Log.h>
-#include <durlib/Input/Input.h>
-#include <random>
 #include "ConnectFour.h"
+
+#include <random>
+
+#include <durlib.h>
 
 namespace OGRID
 {
