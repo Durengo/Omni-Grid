@@ -4,8 +4,7 @@
 
 #include <durlib.h>
 
-#include "Grid/Grid.h"
-#include "Player/Player.h"
+// #include "Grid/Grid.h"
 #include "IGame.h"
 
 namespace OGRID
@@ -82,3 +81,15 @@ struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
         return fmt::format_to(ctx.out(), "{}", to_string(buf));
     }
 };
+
+std::string PlayerNameAndPtrVecToString(const std::vector<OGRID::PlayerNameAndPtr> &players)
+{
+    std::ostringstream ss;
+    for (size_t i = 0; i < players.size(); ++i)
+    {
+        if (i > 0)
+            ss << "\n";
+        ss << fmt::format("{}", players[i]);
+    }
+    return ss.str();
+}
