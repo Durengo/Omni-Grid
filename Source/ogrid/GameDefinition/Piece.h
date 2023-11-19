@@ -16,7 +16,7 @@ namespace OGRID
         std::string m_representation;
 
         // Rules for this move type
-        std::vector<MoveRule *> moveRules;
+        std::vector<BaseMoveRule *> moveRules;
 
     public:
         Piece(std::string rep) : m_representation(rep) {}
@@ -30,7 +30,7 @@ namespace OGRID
             }
         }
 
-        void AddRule(MoveRule *rule)
+        void AddRule(BaseMoveRule *rule)
         {
             moveRules.push_back(rule);
         }
@@ -40,12 +40,19 @@ namespace OGRID
             return m_representation;
         }
 
+        // Use this to create low-level move rules which might use both simple and complex moves
+        bool ApplyBaseMove(Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol)
+        {
+            return false;
+        }
+
         // Method to apply a simple move
         bool ApplySimpleMove(Grid &grid, unsigned char row, unsigned char col)
         {
+            // TODO: Check move rule type. If it's a complex move, skip...
             for (auto rule : moveRules)
             {
-                if (!rule->IsValidMove(grid, row, col))
+                if (!rule->IsValidMoveTo(grid, row, col))
                 {
                     return false;
                 }
@@ -59,7 +66,7 @@ namespace OGRID
         {
             for (auto rule : moveRules)
             {
-                if (!rule->IsValidMove(grid, startRow, startCol, endRow, endCol))
+                if (!rule->IsValidMoveFromTo(grid, startRow, startCol, endRow, endCol))
                 {
                     return false;
                 }

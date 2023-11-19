@@ -2,7 +2,7 @@
 
 namespace OGRID
 {
-    bool UnoccupiedCellRule::IsValidMove(const Grid &grid, unsigned char row, unsigned char col) const
+    bool UnoccupiedCellRule::IsValidMoveTo(const Grid &grid, unsigned char row, unsigned char col) const
     {
         return grid.GetPieceAt(row, col) == nullptr;
     }

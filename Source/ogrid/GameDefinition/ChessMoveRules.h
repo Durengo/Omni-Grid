@@ -20,7 +20,7 @@ namespace OGRID
     class PawnMoveRule : public ComplexMoveRule
     {
     public:
-        bool IsValidMove(const Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol) const override
+        bool IsValidMoveFromTo(const Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol) const override
         {
             // Example: Pawn can move forward one space if unoccupied
             if (startCol == endCol)
