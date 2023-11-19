@@ -21,7 +21,7 @@ namespace OGRID
     public:
         Piece(std::string rep) : m_representation(rep) {}
 
-        virtual ~Piece()
+        ~Piece()
         {
             // Delete all MoveRule objects
             for (auto rule : moveRules)
@@ -30,17 +30,17 @@ namespace OGRID
             }
         }
 
-        virtual void AddMoveRule(MoveRule *rule)
+        void AddMoveRule(MoveRule *rule)
         {
             moveRules.push_back(rule);
         }
 
-        virtual const std::string &GetRepresentation() const
+        const std::string &GetRepresentation() const
         {
             return m_representation;
         }
 
-        virtual bool isValidMove(const Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol) const
+        bool isValidMove(Grid *grid, int startRow, int startCol, int endRow, int endCol) const
         {
             for (const auto &rule : moveRules)
             {
