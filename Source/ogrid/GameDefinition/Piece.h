@@ -9,7 +9,7 @@ namespace OGRID
 {
     // class Grid;
 
-    class MoveType
+    class Piece
     {
     private:
         // String representation of the move (char), like (chess) "K" for king, "Q" for queen, etc.
@@ -19,9 +19,9 @@ namespace OGRID
         std::vector<MoveRule *> moveRules;
 
     public:
-        MoveType(std::string rep) : m_representation(rep) {}
+        Piece(std::string rep) : m_representation(rep) {}
 
-        ~MoveType()
+        ~Piece()
         {
             // Delete all MoveRule objects
             for (auto rule : moveRules)
@@ -50,7 +50,7 @@ namespace OGRID
                     return false;
                 }
             }
-            grid.SetStringAt(row, col, m_representation);
+            grid.SetCellAt(row, col, this);
             return true;
         }
 
@@ -65,7 +65,7 @@ namespace OGRID
                 }
             }
             // Assuming the move is represented at the end position
-            grid.SetStringAt(endRow, endCol, m_representation);
+            grid.SetCellAt(endRow, endCol, this);
             return true;
         }
     };
