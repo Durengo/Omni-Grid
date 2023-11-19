@@ -25,12 +25,12 @@ namespace OGRID
             delete m_GameState;
         }
 
-        bool CheckWin(const Grid &grid) const
+        int CheckWin(Grid *grid) const
         {
             return m_GameState->CheckWin(grid);
         }
 
-        bool IsDraw(const Grid &grid) const
+        bool IsDraw(Grid *grid) const
         {
             return m_GameState->IsDraw(grid);
         }
