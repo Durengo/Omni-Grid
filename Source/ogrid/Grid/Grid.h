@@ -1,12 +1,22 @@
 #pragma once
 
-#include "fmt/format.h"
-
 #include <string>
 #include <vector>
 
+#include "fmt/format.h"
+
+#include "GameDefinition/Piece.h"
+
 namespace OGRID
 {
+    class PieceOnGrid
+    {
+        Piece *m_Piece;
+        unsigned char m_Row;
+        unsigned char m_Col;
+        int m_SideOwner;
+    };
+
     class Grid
     {
     private:
