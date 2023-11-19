@@ -8,7 +8,9 @@ namespace OGRID
     {
         // Variables for alpha of circles
         float alpha = 1.0f;
-        float alphaSpeed = 0.025f; // Speed of the transition
+        // Speed of the transition
+        float alphaSpeed = 0.025f;
+
     public:
         ConnectFour() = default;
         ~ConnectFour() = default;

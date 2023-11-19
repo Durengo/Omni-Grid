@@ -40,7 +40,8 @@ namespace OGRID
             {
                 if (grid->GetCharAt(i, j) == grid->GetDefaultChar())
                 {
-                    allSpotsFilled = false; // Found an empty spot, so not all spots are filled.
+                    // Found an empty spot, so not all spots are filled.
+                    allSpotsFilled = false;
                     break;
                 }
             }
@@ -120,7 +121,8 @@ namespace OGRID
 
     void TicTacToe::DrawX(int row, int col)
     {
-        float padding = m_guiInfo.margin; // Use the same margin for consistency
+        // Use the same margin for consistency
+        float padding = m_guiInfo.margin;
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
         float xOffset = (m_guiInfo.width - (m_guiInfo.cellSize * GetGrid()->GetCols())) / 2.0f;

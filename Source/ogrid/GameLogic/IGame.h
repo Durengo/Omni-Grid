@@ -52,8 +52,10 @@ namespace OGRID
         virtual bool IsDrawCondition(unsigned char row, unsigned char col) = 0;
         virtual void SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) = 0;
         virtual void Initialize() = 0;
-        virtual void OnGUIUpdateGrid() = 0;                  // Game specific GUI Grid stuff drawing (X and O for Tic Tac Toe for example).
-        virtual void OnGUIUpdateGridHover(Vector2 cell) = 0; // On hovering over a grid spot.
+        // Game specific GUI Grid stuff drawing (X and O for Tic Tac Toe for example).
+        virtual void OnGUIUpdateGrid() = 0;
+        // On hovering over a grid spot.
+        virtual void OnGUIUpdateGridHover(Vector2 cell) = 0;
 
         void SwapPlayerPositions();
 

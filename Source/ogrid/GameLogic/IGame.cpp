@@ -71,7 +71,8 @@ namespace OGRID
             }
             else
             {
-                players += " |"; // Do not add newline at the end
+                // Do not add newline at the end
+                players += " |";
             }
         }
         CLI_TRACE("Player Turn Order:\n{}", players);

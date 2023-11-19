@@ -47,7 +47,8 @@ namespace OGRID
             {
                 if (GetGameConfiguration()->grid->GetCharAt(i, j) == GetGameConfiguration()->grid->GetDefaultChar())
                 {
-                    allSpotsFilled = false; // Found an empty spot, so not all spots are filled.
+                    // Found an empty spot, so not all spots are filled.
+                    allSpotsFilled = false;
                     break;
                 }
             }
@@ -174,7 +175,8 @@ namespace OGRID
                 }
                 else if (GetGrid()->GetCharAt(i, j) == GetGrid()->GetDefaultChar())
                 {
-                    continue; // Empty cell, do nothing
+                    // Empty cell, do nothing
+                    continue;
                 }
                 else
                 {
@@ -211,7 +213,8 @@ namespace OGRID
 
     void ConnectFour::DrawCircle(int row, int col, Color color, bool blinking)
     {
-        float padding = m_guiInfo.margin; // Use the same margin for consistency
+        // Use the same margin for consistency
+        float padding = m_guiInfo.margin;
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
         float xOffset = (m_guiInfo.width - (m_guiInfo.cellSize * GetGrid()->GetCols())) / 2.0f;
@@ -230,7 +233,8 @@ namespace OGRID
         {
             if (alpha == 1.0f || alpha == 0.0f)
             {
-                alphaSpeed = -alphaSpeed; // Invert the speed
+                // Invert the speed
+                alphaSpeed = -alphaSpeed;
             }
             alpha += alphaSpeed;
             alpha = std::clamp(alpha, 0.0f, 1.0f);
