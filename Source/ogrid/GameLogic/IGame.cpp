@@ -1,11 +1,11 @@
-//
-// Created by LastWeek on 15/11/2023.
-//
+#include "IGame.h"
 
 #include <durlib.h>
-#include <Player/Moves.h>
-#include "IGame.h"
+
 #include "Grid/Grid.h"
+#include "Player/Moves.h"
+#include "Player/Player.h"
+#include "GameLogic/GameConfiguration.h"
 
 namespace OGRID
 {
