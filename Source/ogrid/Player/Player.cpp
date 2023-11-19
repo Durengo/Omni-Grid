@@ -54,6 +54,7 @@ namespace OGRID
         m_Side = side;
     }
 
+    // TODO: Find a way to use fmt for this. Cannot use fmt::format as it would cause a circular dependency, because we would need to include "ogrid_fmt.h".
     std::string PlayerVecToString(const std::vector<OGRID::Player *> &players)
     {
         std::ostringstream ss;
@@ -61,7 +62,7 @@ namespace OGRID
         {
             if (i > 0)
                 ss << "\n";
-            ss << fmt::format("{}", *players[i]);
+            ss << "" + players[i]->GetPlayerName() + "|"; // + players[i]->GetPlayerType();
         }
         return ss.str();
     }
