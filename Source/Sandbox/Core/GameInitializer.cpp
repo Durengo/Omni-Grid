@@ -1,8 +1,9 @@
 #include "GameInitializer.h"
 
-#include <durlib/Log/Log.h>
-#include <durlib/Input/Input.h>
-#include <GUI/GameWindow.h>
+#include <durlib.h>
+#include <ogrid.h>
+
+#include "GUI/GameWindow.h"
 
 namespace Sandbox
 {

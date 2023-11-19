@@ -1,7 +1,5 @@
 #pragma once
 
-#include <ogrid.h>
-
 namespace Sandbox
 {
     class GameInitializer
