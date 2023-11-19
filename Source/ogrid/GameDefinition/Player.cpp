@@ -1,43 +1,43 @@
-#include "Player.h"
+// #include "Player.h"
 
-namespace OGRID
-{
-    PlayerType PlayerTypeStringToEnum(const std::string &s)
-    {
-        static std::map<std::string, PlayerType> stringToEnum = {{"Human", Human}, {"AI", AI}};
-        return stringToEnum[s];
-    }
+// namespace OGRID
+// {
+//     PlayerType PlayerTypeStringToEnum(const std::string &s)
+//     {
+//         static std::map<std::string, PlayerType> stringToEnum = {{"Human", Human}, {"AI", AI}};
+//         return stringToEnum[s];
+//     }
 
-    std::string PlayerTypeEnumToString(PlayerType playerType)
-    {
-        static std::map<PlayerType, std::string> enumToString = {{Human, "Human"}, {AI, "AI"}};
-        return enumToString[playerType];
-    }
+//     std::string PlayerTypeEnumToString(PlayerType playerType)
+//     {
+//         static std::map<PlayerType, std::string> enumToString = {{Human, "Human"}, {AI, "AI"}};
+//         return enumToString[playerType];
+//     }
 
-    // Constructors & Destructors
-    Player::Player(std::string playerName, PlayerType playerType, MoveType *moveType)
-        : m_PlayerName(playerName), m_PlayerType(playerType), m_MoveType(moveType) {}
+//     // Constructors & Destructors
+//     Player::Player(std::string playerName, PlayerType playerType, MoveType *moveType)
+//         : m_PlayerName(playerName), m_PlayerType(playerType), m_MoveType(moveType) {}
 
-    Player::~Player() {}
+//     Player::~Player() {}
 
-    // Getters & Setters
-    std::string Player::GetPlayerName() const
-    {
-        return m_PlayerName;
-    }
+//     // Getters & Setters
+//     std::string Player::GetPlayerName() const
+//     {
+//         return m_PlayerName;
+//     }
 
-    PlayerType Player::GetPlayerType() const
-    {
-        return m_PlayerType;
-    }
+//     PlayerType Player::GetPlayerType() const
+//     {
+//         return m_PlayerType;
+//     }
 
-    MoveType *Player::GetPlayerMoveType() const
-    {
-        return m_MoveType;
-    }
+//     MoveType *Player::GetPlayerMoveType() const
+//     {
+//         return m_MoveType;
+//     }
 
-    void Player::SetPlayerMoveType(MoveType *moveType)
-    {
-        m_MoveType = moveType;
-    }
-}
+//     void Player::SetPlayerMoveType(MoveType *moveType)
+//     {
+//         m_MoveType = moveType;
+//     }
+// }
