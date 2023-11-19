@@ -582,11 +582,13 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # Ogrid-Sandbox .CPP FILES
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
         )
 
