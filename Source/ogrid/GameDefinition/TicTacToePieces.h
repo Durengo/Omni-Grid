@@ -5,6 +5,8 @@
 #include "GameDefinition/Piece.h"
 #include "Grid/Grid.h"
 
+// TODO: It might be better to define specific exception instead of returning booleans, except for the case of invalid moves.
+
 namespace OGRID
 {
     class XMoveRule : public MoveRule
