@@ -46,4 +46,24 @@ namespace OGRID
             // return true;
         }
     };
+
+    class XPiece : public Piece
+    {
+    public:
+        XPiece()
+            : Piece("X")
+        {
+            this->AddMoveRule(new XMoveRule());
+        }
+    };
+
+    class OPiece : public Piece
+    {
+    public:
+        OPiece()
+            : Piece("O")
+        {
+            this->AddMoveRule(new OMoveRule());
+        }
+    };
 }

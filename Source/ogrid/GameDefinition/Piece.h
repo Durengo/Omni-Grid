@@ -11,7 +11,7 @@ namespace OGRID
 
     class Piece
     {
-    private:
+    protected:
         // String representation of the move (char), like (chess) "K" for king, "Q" for queen, etc.
         std::string m_representation;
 
@@ -21,7 +21,7 @@ namespace OGRID
     public:
         Piece(std::string rep) : m_representation(rep) {}
 
-        ~Piece()
+        virtual ~Piece()
         {
             // Delete all MoveRule objects
             for (auto rule : moveRules)
@@ -30,17 +30,17 @@ namespace OGRID
             }
         }
 
-        void AddMoveRule(MoveRule *rule)
+        virtual void AddMoveRule(MoveRule *rule)
         {
             moveRules.push_back(rule);
         }
 
-        const std::string &GetRepresentation() const
+        virtual const std::string &GetRepresentation() const
         {
             return m_representation;
         }
 
-        bool isValidMove(const Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol) const
+        virtual bool isValidMove(const Grid &grid, unsigned char startRow, unsigned char startCol, unsigned char endRow, unsigned char endCol) const
         {
             for (const auto &rule : moveRules)
             {
