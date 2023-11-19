@@ -464,9 +464,9 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.cpp"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Helpers/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameDefinition/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/CoreDefinitions/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.cpp"
         )
 
         # OMNI-GRID .H FILES
@@ -477,9 +477,9 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameLogic/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GUI/*.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Helpers/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/GameDefinition/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/CoreDefinitions/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/*.h"
         )
 
         if(${VERBOSE})
@@ -581,11 +581,13 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         # ADD SOURCE FILES
         # Ogrid-Sandbox .CPP FILES
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.h"
         )
 

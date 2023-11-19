@@ -4,7 +4,7 @@
 
 #include "Grid/Grid.h"
 #include "Player/Player.h"
-#include "GameLogic/iTurnManager.h"
+#include "IGame.h"
 
 namespace OGRID
 {
@@ -38,7 +38,7 @@ namespace OGRID
         return *this;
     }
 
-    GameConfiguration *GameConfigurationBuilder::build(ITurnManager *turnManager)
+    GameConfiguration *GameConfigurationBuilder::build()
     {
         CLI_INFO("Game Name: {0}", m_GameConfiguration.gameName);
         CLI_INFO("Game Description: {0}", m_GameConfiguration.gameDescription);
@@ -49,14 +49,16 @@ namespace OGRID
         CLI_ASSERT(m_GameConfiguration.players.size() <= m_GameConfiguration.maxPlayers, "Player amount exceeds max player amount.");
 
         std::vector<PlayerNameAndPtr> playerPairs;
+        playerPairs.reserve(m_GameConfiguration.players.size());
         for (auto player : m_GameConfiguration.players)
         {
             playerPairs.push_back({player->GetPlayerName(), player});
         }
-        m_GameConfiguration.turnManager = turnManager;
-        m_GameConfiguration.turnManager->SetPlayerPairs(playerPairs);
-        CLI_INFO("TicTacToeTurnManager initialized.");
-        CLI_INFO("Player Pairs:\n{0}", OGRID::PlayerNameAndPtrVecToString(m_GameConfiguration.turnManager->GetPlayerPairs()));
+        m_GameConfiguration.playerPairs = playerPairs;
+        // m_GameConfiguration.turnManager = turnManager;
+        // m_GameConfiguration.turnManager->SetPlayerPairs(playerPairs);
+        // CLI_INFO("TicTacToeTurnManager initialized.");
+        // CLI_INFO("Player Pairs:\n{0}", OGRID::PlayerNameAndPtrVecToString(m_GameConfiguration.turnManager->GetPlayerPairs()));
 
         return new GameConfiguration(m_GameConfiguration);
     }
