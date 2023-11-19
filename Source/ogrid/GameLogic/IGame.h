@@ -5,6 +5,7 @@
 #include <raylib.h>
 
 #include "GUI/GUIInfo.h"
+#include "GameDefinition/GameStateChecker.h"
 
 // TODO: Keep track of the current player.
 
@@ -39,24 +40,29 @@ namespace OGRID
         bool m_randomizeTurnOrder = true;
 
     protected:
+        GameStateChecker *m_currentGameState;
         GameState m_gameState = GameState::NotStarted;
         GameOverType m_gameOverType = GameOverType::None;
         Player *m_winner = nullptr;
+        Player *m_currentPlayer = nullptr;
         size_t m_currentTurn = 0;
         unsigned int m_totalTurns = 0;
 
         GameConfiguration *m_GameConfiguration = nullptr;
 
         IGame() = default;
-        IGame(const std::vector<OGRID::PlayerNameAndPtr> &players);
+        IGame(IGameState *gameStateStrategy, const std::vector<OGRID::PlayerNameAndPtr> &players);
         ~IGame();
 
     public:
         virtual bool TryMakeMove(unsigned char &row, unsigned char &col) = 0;
-        virtual bool IsWinningCondition(unsigned char row, unsigned char col) = 0;
-        virtual bool IsWinningCondition(char playerChar) = 0;
-        virtual bool IsDrawCondition(unsigned char row, unsigned char col) = 0;
-        virtual void SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) = 0;
+        // virtual bool IsWinningCondition(unsigned char row, unsigned char col) = 0;
+        // virtual bool IsWinningCondition(char playerChar) = 0;
+        // virtual bool IsDrawCondition(unsigned char row, unsigned char col) = 0;
+        virtual bool IsWinningCondition() = 0;
+        virtual bool IsDrawCondition() = 0;
+        // virtual void SetupPlayers(const std::vector<int> &totalValidSides) = 0;
+        virtual void SetupPlayers() = 0;
         virtual void Initialize() = 0;
         // Game specific GUI Grid stuff drawing (X and O for Tic Tac Toe for example).
         virtual void OnGUIUpdateGrid() = 0;

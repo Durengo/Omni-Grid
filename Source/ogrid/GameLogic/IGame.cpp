@@ -10,9 +10,10 @@
 
 namespace OGRID
 {
-    IGame::IGame(const std::vector<OGRID::PlayerNameAndPtr> &players)
+    IGame::IGame(IGameState *gameStateStrategy, const std::vector<OGRID::PlayerNameAndPtr> &players)
     {
         m_GameConfiguration->playerPairs = players;
+        m_currentGameState = new GameStateChecker(gameStateStrategy);
     }
 
     IGame::~IGame()
@@ -51,7 +52,7 @@ namespace OGRID
         // moveTypes.push_back(OGRID::MoveType::O);
         // // HARDCODED
 
-        // SetupPlayers(moveTypes);
+        SetupPlayers();
         PrintPlayerMoves();
     }
 
@@ -121,7 +122,7 @@ namespace OGRID
     {
         if (TryMakeMove(row, col) && m_gameState == OGRID::GameState::InProgress)
         {
-            CLI_TRACE("{}", *m_GameConfiguration->grid);
+            CLI_TRACE("{}", m_GameConfiguration->grid->GetGridAsString());
             switch (CheckGameOverState(m_GameConfiguration->grid, row, col))
             {
             case OGRID::GameOverType::None:
@@ -155,20 +156,26 @@ namespace OGRID
         OGRID::PlayerNameAndPtr currentPlayer = GetCurrentPlayer();
         // PlayerNameAndPtr previousPlayer = GetPlayerPair((GetCurrentTurn() - 1) % m_GameConfiguration->playerPairs.size());
 
-        if (IsWinningCondition(row, col))
+        if (IsWinningCondition())
         {
             CLI_INFO("Player {0} won the game!", currentPlayer.name);
+            // m_gameOverType = GameOverType::Win;
+            // m_winner = m_currentPlayer;
+            // m_gameState = GameState::GameOver;
             return OGRID::GameOverType::Win;
         }
-        if (IsDrawCondition(row, col))
+        if (IsDrawCondition())
         {
             CLI_INFO("The game ended in a draw!");
+            // m_gameOverType = GameOverType::Draw;
+            // m_gameState = GameState::GameOver;
             return OGRID::GameOverType::Draw;
         }
         CLI_TRACE("Player {0} finished his move.", currentPlayer.name);
         m_currentTurn = (m_currentTurn + 1) % m_GameConfiguration->players.size();
         m_totalTurns++;
         CLI_TRACE("Player {0} is now playing.", GetCurrentPlayer().name);
+        m_currentPlayer = GetCurrentPlayer().ptr;
         return OGRID::GameOverType::None;
     }
 
