@@ -3,6 +3,10 @@
 #include <durlib.h>
 #include <raylib.h>
 
+#include "GameLogic/GameConfiguration.h"
+#include "Player/Moves.h"
+#include "Player/Player.h"
+
 namespace OGRID
 {
 

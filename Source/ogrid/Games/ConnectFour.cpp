@@ -4,6 +4,10 @@
 
 #include <durlib.h>
 
+#include "GameLogic/GameConfiguration.h"
+#include "Player/Moves.h"
+#include "Player/Player.h"
+
 namespace OGRID
 {
     bool ConnectFour::TryMakeMove(unsigned char &row, unsigned char &col)
