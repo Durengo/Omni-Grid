@@ -1,6 +1,6 @@
 #pragma once
 
-#include <GameLogic/IGame.h>
+#include "GameLogic/IGame.h"
 
 namespace OGRID
 {
