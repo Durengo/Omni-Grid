@@ -25,7 +25,7 @@ namespace OGRID
             // Example: Pawn can move forward one space if unoccupied
             if (startCol == endCol)
             {
-                if (grid.GetStringAt(endRow, endCol) == grid.GetDefaultString())
+                if (grid.GetPieceAt(endRow, endCol) != nullptr)
                 {
                     // Check if the destination is unoccupied
                     // logic to check if the move is forward by one space
