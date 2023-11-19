@@ -15,24 +15,12 @@ namespace OGRID
         IGameState *m_GameState;
 
     public:
-        GameStateChecker(IGameState *strategy)
-            : m_GameState(strategy)
-        {
-        }
+        GameStateChecker(IGameState *strategy);
 
-        ~GameStateChecker()
-        {
-            delete m_GameState;
-        }
+        ~GameStateChecker();
 
-        int CheckWin(Grid *grid) const
-        {
-            return m_GameState->CheckWin(grid);
-        }
+        int CheckWin(Grid *grid) const;
 
-        bool IsDraw(Grid *grid) const
-        {
-            return m_GameState->IsDraw(grid);
-        }
+        bool IsDraw(Grid *grid) const;
     };
 }
