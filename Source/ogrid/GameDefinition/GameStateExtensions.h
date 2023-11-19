@@ -256,5 +256,27 @@ namespace OGRID
             }
             return false;
         }
+
+        static bool CheckIfAllSpotsFilled(const Grid &grid)
+        {
+            bool allSpotsFilled = true;
+            // Check if all spots are filled.
+            for (int i = 0; i < grid.GetRows(); ++i)
+            {
+                for (int j = 0; j < grid.GetCols(); ++j)
+                {
+                    Piece *piece = grid.GetPieceAt(i, j);
+                    if (piece == nullptr)
+                    {
+                        // Found an empty spot, so not all spots are filled.
+                        allSpotsFilled = false;
+                        break;
+                    }
+                }
+                if (!allSpotsFilled)
+                    break;
+                return false;
+            }
+        }
     };
 }
