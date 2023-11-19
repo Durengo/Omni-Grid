@@ -37,4 +37,6 @@ namespace OGRID
         int GetSide() const;
         void SetSide(int side);
     };
+
+    std::string PlayerVecToString(const std::vector<Player *> &players);
 }
