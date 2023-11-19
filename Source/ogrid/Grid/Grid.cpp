@@ -212,7 +212,8 @@ namespace OGRID
                     }
                     else
                     {
-                        break; // Exit the diagonal check if a different char is found
+                        // Exit the diagonal check if a different char is foundf
+                        break;
                     }
                 }
             }
@@ -237,7 +238,8 @@ namespace OGRID
                     }
                     else
                     {
-                        break; // Exit the anti-diagonal check if a different char is found
+                        // Exit the anti-diagonal check if a different char is found
+                        break;
                     }
                 }
             }
