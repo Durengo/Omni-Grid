@@ -4,10 +4,12 @@
 #include <vector>
 
 #include "MoveRule.h"
+#include "Player/Player.h"
 
 namespace OGRID
 {
     // class Grid;
+    // class Player;
 
     class Piece
     {
@@ -16,23 +18,27 @@ namespace OGRID
         std::string m_representation;
 
         // Rules for this move type
-        std::vector<MoveRule *> moveRules;
+        std::vector<MoveRule *> m_moveRules;
+
+        // Owner of this piece
+        Player *m_owner;
 
     public:
-        Piece(std::string rep) : m_representation(rep) {}
+        Piece(std::string rep, Player *player) : m_representation(rep), m_owner(player) {}
 
         ~Piece()
         {
             // Delete all MoveRule objects
-            for (auto rule : moveRules)
+            for (auto rule : m_moveRules)
             {
                 delete rule;
             }
+            // DO NOT DELETE m_owner
         }
 
         void AddMoveRule(MoveRule *rule)
         {
-            moveRules.push_back(rule);
+            m_moveRules.push_back(rule);
         }
 
         const std::string &GetRepresentation() const
@@ -40,16 +46,22 @@ namespace OGRID
             return m_representation;
         }
 
+        const Player *GetOwner() const
+        {
+            return m_owner;
+        }
+
         bool isValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const
         {
-            for (const auto &rule : moveRules)
+            bool isValid = false;
+
+            // We would have to check all the rules for this piece, but I think this will need more refinement to work in such a manner.
+            for (const auto &rule : m_moveRules)
             {
-                if (rule->IsValidMove(grid, fromX, fromY, toX, toY))
-                {
-                    return true;
-                }
+                isValid = rule->IsValidMove(grid, fromX, fromY, toX, toY);
             }
-            return false;
+
+            return isValid;
         }
     };
 }

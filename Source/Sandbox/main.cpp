@@ -13,6 +13,9 @@ int main()
     // All the games are initialized in this class
     // Sandbox::GameInitializer::Start();
 
+    OGRID::Player *player1 = new OGRID::Player("Player1", OGRID::PlayerType::Human, 0);
+    OGRID::Player *player2 = new OGRID::Player("Player2", OGRID::PlayerType::Human, 1);
+
     // TESTING ABSTRACTIONS
     {
         OGRID::Grid *grid = new OGRID::Grid(3, 3);
@@ -20,8 +23,8 @@ int main()
 
         CLI_TRACE("GRID:\n{}", grid->GetGridAsString());
 
-        OGRID::XPiece *xPiece = new OGRID::XPiece();
-        OGRID::OPiece *oPiece = new OGRID::OPiece();
+        OGRID::XPiece *xPiece = new OGRID::XPiece(player1);
+        OGRID::OPiece *oPiece = new OGRID::OPiece(player2);
         int startRow = 0, startCol = 0, endRow = 0, endCol = 0;
 
         if (xPiece->isValidMove(grid, startRow, startCol, endRow, endCol))
@@ -76,8 +79,8 @@ int main()
 
         CLI_TRACE("GRID:\n{}", grid->GetGridAsString());
 
-        OGRID::XPiece *xPiece = new OGRID::XPiece();
-        OGRID::OPiece *oPiece = new OGRID::OPiece();
+        OGRID::XPiece *xPiece = new OGRID::XPiece(player1);
+        OGRID::OPiece *oPiece = new OGRID::OPiece(player2);
         int startRow = 0, startCol = 0, endRow = 0, endCol = 0;
 
         if (oPiece->isValidMove(grid, startRow, startCol, endRow, endCol))
@@ -138,8 +141,8 @@ int main()
 
         CLI_TRACE("GRID:\n{}", grid->GetGridAsString());
 
-        OGRID::XPiece *xPiece = new OGRID::XPiece();
-        OGRID::OPiece *oPiece = new OGRID::OPiece();
+        OGRID::XPiece *xPiece = new OGRID::XPiece(player1);
+        OGRID::OPiece *oPiece = new OGRID::OPiece(player2);
         int startRow = 0, startCol = 0, endRow = 0, endCol = 0;
 
         if (oPiece->isValidMove(grid, startRow, startCol, endRow, endCol))

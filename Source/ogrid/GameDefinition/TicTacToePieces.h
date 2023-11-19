@@ -50,8 +50,8 @@ namespace OGRID
     class XPiece : public Piece
     {
     public:
-        XPiece()
-            : Piece("X")
+        XPiece(Player *player)
+            : Piece("X", player)
         {
             this->AddMoveRule(new XMoveRule());
         }
@@ -60,8 +60,8 @@ namespace OGRID
     class OPiece : public Piece
     {
     public:
-        OPiece()
-            : Piece("O")
+        OPiece(Player *player)
+            : Piece("O", player)
         {
             this->AddMoveRule(new OMoveRule());
         }
