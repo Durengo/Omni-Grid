@@ -8,9 +8,11 @@
 #include "Games/TicTacToe.h"
 #include "Games/ConnectFour.h"
 
+#include "Grid/Grid.h"
+
 // TESTING:
-#include "GameDefinition/ChessMoveRules.h"
-#include "GameDefinition/MoveRules.h"
+// #include "GameDefinition/ChessMoveRules.h"
+#include "GameDefinition/MoveRule.h"
 #include "GameDefinition/Piece.h"
-#include "GameDefinition/Player.h"
-#include "GameDefinition/TicTacToeDefinition.h"
+#include "GameDefinition/TicTacToePieces.h"
+// #include "GameDefinition/TicTacToeDefinition.h"
