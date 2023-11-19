@@ -20,9 +20,9 @@ namespace OGRID
         return *this;
     }
 
-    ConfigurationBuilder &GameConfigurationBuilder::setGrid(unsigned char rows, unsigned char cols, char initialChar)
+    ConfigurationBuilder &GameConfigurationBuilder::setGrid(unsigned char rows, unsigned char cols, Piece *defaultPiece)
     {
-        m_GameConfiguration.grid = new Grid(rows, cols, initialChar);
+        m_GameConfiguration.grid = new Grid(rows, cols, defaultPiece);
         return *this;
     }
 
@@ -42,7 +42,7 @@ namespace OGRID
     {
         CLI_INFO("Game Name: {0}", m_GameConfiguration.gameName);
         CLI_INFO("Game Description: {0}", m_GameConfiguration.gameDescription);
-        CLI_INFO("Grid: {0}", m_GameConfiguration.grid->GetGridInfo());
+        CLI_INFO("Grid: {0}", m_GameConfiguration.grid->GetGridSize());
         CLI_INFO("Player amount: {0}", m_GameConfiguration.players.size());
         CLI_ASSERT(m_GameConfiguration.players.size() > 1, "TicTacToeTurnManager cannot be initialized due to lack of players.")
         CLI_INFO("Players:\n{0}", PlayerVecToString(m_GameConfiguration.players));

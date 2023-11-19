@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#include "fmt/format.h"
+
 #include "Grid/Grid.h"
 
 namespace OGRID
@@ -34,7 +36,7 @@ namespace OGRID
         virtual ~ConfigurationBuilder() = default;
         virtual ConfigurationBuilder &setGameName(const std::string &gameName) = 0;
         virtual ConfigurationBuilder &setGameDescription(const std::string &gameDescription) = 0;
-        virtual ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, char initialChar = '.') = 0;
+        virtual ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, Piece *defaultPiece) = 0;
         virtual ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) = 0;
         virtual ConfigurationBuilder &addPlayer(Player *player) = 0;
         virtual GameConfiguration *build() = 0;
@@ -52,7 +54,7 @@ namespace OGRID
 
         ConfigurationBuilder &setGameName(const std::string &gameName) override;
         ConfigurationBuilder &setGameDescription(const std::string &gameDescription) override;
-        ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, char initialChar) override;
+        ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, Piece *defaultPiece = nullptr) override;
         ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) override;
         ConfigurationBuilder &addPlayer(Player *player) override;
         GameConfiguration *build() override;
