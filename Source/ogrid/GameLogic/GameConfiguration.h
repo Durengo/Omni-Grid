@@ -2,7 +2,8 @@
 
 #include <string>
 #include <vector>
-#include <Grid/Grid.h>
+
+#include "Grid/Grid.h"
 
 namespace OGRID
 {
@@ -56,4 +57,36 @@ namespace OGRID
         ConfigurationBuilder &addPlayer(Player *player) override;
         GameConfiguration *build() override;
     };
+}
+
+template <>
+struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
+{
+    constexpr auto parse(format_parse_context &ctx) { return ctx.begin(); }
+
+    template <typename FormatContext>
+    auto format(const OGRID::PlayerNameAndPtr &player, FormatContext &ctx)
+    {
+        fmt::memory_buffer buf;
+
+        fmt::format_to(std::back_inserter(buf), "{} [{}]", player.name, static_cast<const void *>(player.ptr));
+
+        // Output the buffer to the formatting context and return the iterator.
+        return fmt::format_to(ctx.out(), "{}", to_string(buf));
+    }
+};
+
+namespace OGRID
+{
+    static std::string PlayerNameAndPtrVecToString(const std::vector<PlayerNameAndPtr> &players)
+    {
+        std::ostringstream ss;
+        for (size_t i = 0; i < players.size(); ++i)
+        {
+            if (i > 0)
+                ss << "\n";
+            ss << fmt::format("{}", players[i]);
+        }
+        return ss.str();
+    }
 }
