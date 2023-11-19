@@ -13,18 +13,18 @@ namespace OGRID
     {
     public:
         // We only need to check if the end cell is unoccupied, as there is no concept of a "start" cell in tic tac toe.
-        bool IsValidMove(Grid *grid, int startRow, int startCol, int endRow, int endCol) const override
+        bool IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const override
         {
-            return grid->GetPieceAt(endRow, endCol) == nullptr;
+            return grid->GetPieceAt(toX, toY) == nullptr;
         }
     };
 
     class OMoveRule : public MoveRule
     {
         // We only need to check if the end cell is unoccupied, as there is no concept of a "start" cell in tic tac toe.
-        bool IsValidMove(Grid *grid, int startRow, int startCol, int endRow, int endCol) const override
+        bool IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const override
         {
-            return grid->GetPieceAt(endRow, endCol) == nullptr;
+            return grid->GetPieceAt(toX, toY) == nullptr;
 
             // Piece *startCellPiece = grid.GetPieceAt(startRow, startCol);
             // Piece *endCellPiece = grid.GetPieceAt(endRow, endCol);

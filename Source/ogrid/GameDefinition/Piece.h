@@ -40,11 +40,11 @@ namespace OGRID
             return m_representation;
         }
 
-        bool isValidMove(Grid *grid, int startRow, int startCol, int endRow, int endCol) const
+        bool isValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const
         {
             for (const auto &rule : moveRules)
             {
-                if (rule->IsValidMove(grid, startRow, startCol, endRow, endCol))
+                if (rule->IsValidMove(grid, fromX, fromY, toX, toY))
                 {
                     return true;
                 }
