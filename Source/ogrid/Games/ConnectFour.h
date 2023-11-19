@@ -2,8 +2,10 @@
 
 #include <GameLogic/IGame.h>
 
-namespace OGRID{
-    class ConnectFour : public IGame{
+namespace OGRID
+{
+    class ConnectFour : public IGame
+    {
         // Variables for alpha of circles
         float alpha = 1.0f;
         float alphaSpeed = 0.025f; // Speed of the transition

@@ -2,8 +2,10 @@
 
 #include "GameLogic/IGame.h"
 
-namespace OGRID{
-    class TicTacToe : public IGame{
+namespace OGRID
+{
+    class TicTacToe : public IGame
+    {
     public:
         TicTacToe() = default;
         ~TicTacToe() = default;

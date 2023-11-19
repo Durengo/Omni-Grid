@@ -7,8 +7,10 @@
 #include <random>
 #include "ConnectFour.h"
 
-namespace OGRID{
-    bool ConnectFour::TryMakeMove(unsigned char &row, unsigned char &col) {
+namespace OGRID
+{
+    bool ConnectFour::TryMakeMove(unsigned char &row, unsigned char &col)
+    {
         // Check if the column is occupied and find the topmost available spot
         if (!IsColumnOccupied(col, row))
         {
@@ -23,17 +25,20 @@ namespace OGRID{
         return true;
     }
 
-    bool ConnectFour::IsWinningCondition(unsigned char row, unsigned char col) {
+    bool ConnectFour::IsWinningCondition(unsigned char row, unsigned char col)
+    {
         char playerChar = GetGameConfiguration()->grid->GetCharAt(row, col);
         return GetGameConfiguration()->grid->CheckForRecurringCharsInRow(playerChar, 4) || GetGameConfiguration()->grid->CheckForRecurringCharsInCol(playerChar, 4) ||
                GetGameConfiguration()->grid->CheckForRecurringCharsInDiagonal(playerChar, 4) || GetGameConfiguration()->grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 4);
     }
 
-    bool ConnectFour::IsWinningCondition(char playerChar) {
+    bool ConnectFour::IsWinningCondition(char playerChar)
+    {
         throw std::runtime_error("bool ConnectFour::IsWinningCondition(char playerChar) is not implemented.");
     }
 
-    bool ConnectFour::IsDrawCondition(unsigned char row, unsigned char col) {
+    bool ConnectFour::IsDrawCondition(unsigned char row, unsigned char col)
+    {
         // Check if all spots are filled.
         bool allSpotsFilled = true;
         for (int i = 0; i < GetGameConfiguration()->grid->GetRows(); ++i)
@@ -54,10 +59,11 @@ namespace OGRID{
         return allSpotsFilled && !IsWinningCondition(GetGameConfiguration()->grid->GetLastChangedChar().first, GetGameConfiguration()->grid->GetLastChangedChar().second);
     }
 
-    void ConnectFour::SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) {
+    void ConnectFour::SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes)
+    {
         size_t allowedPlayers = GetGameConfiguration()->maxPlayers;
 
-        //CLI_ASSERT(GetGameConfiguration()->playerPairs.size() > allowedPlayers, "Player amount exceeds max player amount.");
+        // CLI_ASSERT(GetGameConfiguration()->playerPairs.size() > allowedPlayers, "Player amount exceeds max player amount.");
 
         if (m_randomizeTurnOrder)
         {
@@ -93,7 +99,8 @@ namespace OGRID{
         }
     }
 
-    void ConnectFour::Initialize() {
+    void ConnectFour::Initialize()
+    {
         m_guiInfo = *new GUIInfo();
         m_guiInfo.windowName = "ConnectFour";
         m_guiInfo.width = 800;
@@ -117,41 +124,42 @@ namespace OGRID{
         {
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-            .setGameName("ConnectFour")
-            .setGameDescription("ConnectFour Game")
-            .setGrid(6, 7, '.')
-            .setMaxPlayers(2)
-            .addPlayer(p1)
-            .addPlayer(p2)
-            .build());
+                                     .setGameName("ConnectFour")
+                                     .setGameDescription("ConnectFour Game")
+                                     .setGrid(6, 7, '.')
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p1)
+                                     .addPlayer(p2)
+                                     .build());
         }
         else if (choice == 2)
         {
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                         .setGameName("ConnectFour")
-                                         .setGameDescription("ConnectFour Game")
-                                         .setGrid(6, 7, '.')
-                                         .setMaxPlayers(2)
-                                         .addPlayer(p2)
-                                         .addPlayer(p1)
-                                         .build());
+                                     .setGameName("ConnectFour")
+                                     .setGameDescription("ConnectFour Game")
+                                     .setGrid(6, 7, '.')
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p2)
+                                     .addPlayer(p1)
+                                     .build());
         }
         else if (choice == 3)
         {
             SetRandomizeTurnOrder(true);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                         .setGameName("ConnectFour")
-                                         .setGameDescription("ConnectFour Game")
-                                         .setGrid(6, 7, '.')
-                                         .setMaxPlayers(2)
-                                         .addPlayer(p1)
-                                         .addPlayer(p2)
-                                         .build());
+                                     .setGameName("ConnectFour")
+                                     .setGameDescription("ConnectFour Game")
+                                     .setGrid(6, 7, '.')
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p1)
+                                     .addPlayer(p2)
+                                     .build());
         }
     }
 
-    void ConnectFour::OnGUIUpdateGrid() {
+    void ConnectFour::OnGUIUpdateGrid()
+    {
         for (int i = 0; i < GetGameConfiguration()->grid->GetRows(); i++)
         {
             for (int j = 0; j < GetGameConfiguration()->grid->GetCols(); j++)
@@ -176,7 +184,8 @@ namespace OGRID{
         }
     }
 
-    void ConnectFour::OnGUIUpdateGridHover(Vector2 cell) {
+    void ConnectFour::OnGUIUpdateGridHover(Vector2 cell)
+    {
         if (cell.x != -1 && cell.y != -1)
         {
             int col = static_cast<int>(cell.x);
@@ -200,7 +209,8 @@ namespace OGRID{
         }
     }
 
-    void ConnectFour::DrawCircle(int row, int col, Color color, bool blinking) {
+    void ConnectFour::DrawCircle(int row, int col, Color color, bool blinking)
+    {
         float padding = m_guiInfo.margin; // Use the same margin for consistency
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
@@ -216,7 +226,8 @@ namespace OGRID{
         // Calculate the radius of the circle based on cell size and padding
         float radius = m_guiInfo.cellSize / 2.0f;
 
-        if (blinking){
+        if (blinking)
+        {
             if (alpha == 1.0f || alpha == 0.0f)
             {
                 alphaSpeed = -alphaSpeed; // Invert the speed
@@ -224,9 +235,10 @@ namespace OGRID{
             alpha += alphaSpeed;
             alpha = std::clamp(alpha, 0.0f, 1.0f);
             DrawCircleV(Vector2{centerX, centerY}, radius, Fade(color, alpha));
-        } else {
+        }
+        else
+        {
             DrawCircleV(Vector2{centerX, centerY}, radius, color);
         }
     }
 }
-

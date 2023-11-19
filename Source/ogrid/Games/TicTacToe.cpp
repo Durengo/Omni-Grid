@@ -6,9 +6,11 @@
 #include <raylib.h>
 #include "TicTacToe.h"
 
-namespace OGRID{
+namespace OGRID
+{
 
-    bool TicTacToe::TryMakeMove(unsigned char &row, unsigned char &col) {
+    bool TicTacToe::TryMakeMove(unsigned char &row, unsigned char &col)
+    {
         char gridChar = GetGameConfiguration()->grid->GetCharAt(row, col);
         if (GetGameConfiguration()->grid->GetCharAt(row, col) != GetGameConfiguration()->grid->GetDefaultChar())
         {
@@ -22,14 +24,16 @@ namespace OGRID{
         return true;
     }
 
-    bool TicTacToe::IsWinningCondition(unsigned char row, unsigned char col) {
+    bool TicTacToe::IsWinningCondition(unsigned char row, unsigned char col)
+    {
         Grid *grid = m_GameConfiguration->grid;
         char playerChar = grid->GetCharAt(row, col);
         return grid->CheckForRecurringCharsInRow(playerChar, 3) || grid->CheckForRecurringCharsInCol(playerChar, 3) ||
                grid->CheckForRecurringCharsInDiagonal(playerChar, 3) || grid->CheckForRecurringCharsInAntiDiagonal(playerChar, 3);
     }
 
-    bool TicTacToe::IsDrawCondition(unsigned char row, unsigned char col) {
+    bool TicTacToe::IsDrawCondition(unsigned char row, unsigned char col)
+    {
         // Check if all spots are filled.
         Grid *grid = m_GameConfiguration->grid;
         bool allSpotsFilled = true;
@@ -51,10 +55,11 @@ namespace OGRID{
         return allSpotsFilled && !IsWinningCondition(grid->GetLastChangedChar().first, grid->GetLastChangedChar().second);
     }
 
-    void TicTacToe::SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) {
+    void TicTacToe::SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes)
+    {
         size_t allowedPlayers = GetGameConfiguration()->maxPlayers;
 
-        //CLI_ASSERT(GetGameConfiguration()->playerPairs.size() > allowedPlayers, "Player amount exceeds max player amount.");
+        // CLI_ASSERT(GetGameConfiguration()->playerPairs.size() > allowedPlayers, "Player amount exceeds max player amount.");
 
         if (m_randomizeTurnOrder)
         {
@@ -90,7 +95,8 @@ namespace OGRID{
         }
     }
 
-    void TicTacToe::OnGUIUpdateGrid() {
+    void TicTacToe::OnGUIUpdateGrid()
+    {
         for (int i = 0; i < GetGameConfiguration()->grid->GetRows(); i++)
         {
             for (int j = 0; j < GetGameConfiguration()->grid->GetCols(); j++)
@@ -115,7 +121,8 @@ namespace OGRID{
         }
     }
 
-    void TicTacToe::DrawX(int row, int col) {
+    void TicTacToe::DrawX(int row, int col)
+    {
         float padding = m_guiInfo.margin; // Use the same margin for consistency
 
         // Calculate offsets for non-square windows (same as in DrawGrid)
@@ -137,7 +144,8 @@ namespace OGRID{
         DrawLine(startX, endY, endX, startY, BLACK);
     }
 
-    void TicTacToe::DrawO(int row, int col) {
+    void TicTacToe::DrawO(int row, int col)
+    {
         // Use the same margin for consistency and to make sure 'O' is within the cell bounds
         float padding = m_guiInfo.margin;
 
@@ -158,7 +166,8 @@ namespace OGRID{
         DrawCircleLines(centerX, centerY, radius, BLACK);
     }
 
-    void TicTacToe::Initialize() {
+    void TicTacToe::Initialize()
+    {
         m_guiInfo = *new GUIInfo();
         m_guiInfo.windowName = "TicTacToe";
         m_guiInfo.width = 800;
@@ -167,7 +176,6 @@ namespace OGRID{
         m_guiInfo.lineThickness = 2.5f;
         m_guiInfo.margin = 20.0f;
 
-
         auto *p1 = new OGRID::Player("Player1", OGRID::Human);
         auto *p2 = new OGRID::Player("Player2", OGRID::Human);
 
@@ -175,7 +183,6 @@ namespace OGRID{
 
         CLI_TRACE("Input the dimensions of the grid (3-10): ");
         dimensions = static_cast<unsigned char>(DURLIB::GIBI(3, 10));
-
 
         int choice = 0;
         while (choice == 0)
@@ -188,46 +195,47 @@ namespace OGRID{
         {
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-            .setGameName("TicTacToe")
-            .setGameDescription("TicTacToe Game")
-            .setGrid(dimensions, dimensions, '.')
-            .setMaxPlayers(2)
-            .addPlayer(p1)
-            .addPlayer(p2)
-            .build());
+                                     .setGameName("TicTacToe")
+                                     .setGameDescription("TicTacToe Game")
+                                     .setGrid(dimensions, dimensions, '.')
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p1)
+                                     .addPlayer(p2)
+                                     .build());
         }
         else if (choice == 2)
         {
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-            .setGameName("TicTacToe")
-            .setGameDescription("TicTacToe Game")
-            .setGrid(dimensions, dimensions, '.')
-            .setMaxPlayers(2)
-            .addPlayer(p2)
-            .addPlayer(p1)
-            .build());
+                                     .setGameName("TicTacToe")
+                                     .setGameDescription("TicTacToe Game")
+                                     .setGrid(dimensions, dimensions, '.')
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p2)
+                                     .addPlayer(p1)
+                                     .build());
         }
         else if (choice == 3)
         {
             SetRandomizeTurnOrder(true);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-            .setGameName("TicTacToe")
-            .setGameDescription("TicTacToe Game")
-            .setGrid(dimensions, dimensions, '.')
-            .setMaxPlayers(2)
-            .addPlayer(p1)
-            .addPlayer(p2)
-            .build());
+                                     .setGameName("TicTacToe")
+                                     .setGameDescription("TicTacToe Game")
+                                     .setGrid(dimensions, dimensions, '.')
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p1)
+                                     .addPlayer(p2)
+                                     .build());
         }
     }
 
-
-    bool TicTacToe::IsWinningCondition(char playerChar) {
+    bool TicTacToe::IsWinningCondition(char playerChar)
+    {
         throw std::runtime_error("bool TicTacToe::IsWinningCondition(char playerChar) is not implemented.");
     }
 
-    void TicTacToe::OnGUIUpdateGridHover(Vector2 cell) {
+    void TicTacToe::OnGUIUpdateGridHover(Vector2 cell)
+    {
         // Do nothing
     }
 }

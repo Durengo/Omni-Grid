@@ -70,14 +70,14 @@ namespace Sandbox
         m_Game->StartGame();
 
         restartButton = new OGRID::Button(
-                {static_cast<float>(m_Game->m_guiInfo.width) / 2 - 100,
-                 static_cast<float>(m_Game->m_guiInfo.height) / 2 + 30, 200, 40},
-                GRAY, DARKGRAY, LIGHTGRAY, [this]()
-                {
+            {static_cast<float>(m_Game->m_guiInfo.width) / 2 - 100,
+             static_cast<float>(m_Game->m_guiInfo.height) / 2 + 30, 200, 40},
+            GRAY, DARKGRAY, LIGHTGRAY, [this]()
+            {
                     CLI_TRACE("Restarting game...");
                     m_Game->ResetGame();
                     m_Game->SetGameState(OGRID::GameState::InProgress); },
-                "Restart", false);
+            "Restart", false);
 
         // OGRID::Button changeGridButton(
         //         {static_cast<float>(m_Game.m_guiInfo->width) / 2 - 100,
@@ -119,7 +119,7 @@ namespace Sandbox
         float padding = m_Game->m_guiInfo.margin;
 
         // Calculate the size of the cells to fit the grid in the window, accounting for padding
-        m_Game->m_guiInfo.cellSize = (std::min(m_Game->m_guiInfo.width, m_Game->m_guiInfo.height) - (2 * padding)) / static_cast<float>((m_Game->GetGrid()->GetCols() + m_Game->GetGrid()->GetRows()/20.0f));
+        m_Game->m_guiInfo.cellSize = (std::min(m_Game->m_guiInfo.width, m_Game->m_guiInfo.height) - (2 * padding)) / static_cast<float>((m_Game->GetGrid()->GetCols() + m_Game->GetGrid()->GetRows() / 20.0f));
 
         // Calculate any necessary offsets if the window is not square
         float xOffset = (m_Game->m_guiInfo.width - (m_Game->m_guiInfo.cellSize * m_Game->GetGrid()->GetCols())) / 2.0f;

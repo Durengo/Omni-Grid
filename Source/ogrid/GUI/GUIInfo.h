@@ -2,7 +2,8 @@
 
 #include <string>
 
-struct GUIInfo{
+struct GUIInfo
+{
     int width;
     int height;
     std::string windowName;

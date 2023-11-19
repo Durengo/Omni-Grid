@@ -16,15 +16,15 @@ namespace Sandbox
         }
         switch (choice)
         {
-            case 1:
-                GameWindow<OGRID::TicTacToe>().Start();
-                break;
-            case 2:
-                GameWindow<OGRID::ConnectFour>().Start();
-                break;
-            default:
-                CLI_TRACE("Invalid choice");
-                break;
+        case 1:
+            GameWindow<OGRID::TicTacToe>().Start();
+            break;
+        case 2:
+            GameWindow<OGRID::ConnectFour>().Start();
+            break;
+        default:
+            CLI_TRACE("Invalid choice");
+            break;
         }
     }
 }

@@ -9,7 +9,8 @@
 #include <GUI/GUIInfo.h>
 #include <raylib.h>
 
-namespace OGRID{
+namespace OGRID
+{
     enum GameState
     {
         NotStarted = 0,
@@ -25,10 +26,12 @@ namespace OGRID{
         Draw = 2
     };
 
-    class IGame{
+    class IGame
+    {
     public:
         GUIInfo m_guiInfo;
         bool m_randomizeTurnOrder = true;
+
     protected:
         GameState m_gameState = GameState::NotStarted;
         GameOverType m_gameOverType = GameOverType::None;
@@ -49,7 +52,7 @@ namespace OGRID{
         virtual bool IsDrawCondition(unsigned char row, unsigned char col) = 0;
         virtual void SetupPlayers(const std::vector<OGRID::MoveType> &moveTypes) = 0;
         virtual void Initialize() = 0;
-        virtual void OnGUIUpdateGrid() = 0; // Game specific GUI Grid stuff drawing (X and O for Tic Tac Toe for example).
+        virtual void OnGUIUpdateGrid() = 0;                  // Game specific GUI Grid stuff drawing (X and O for Tic Tac Toe for example).
         virtual void OnGUIUpdateGridHover(Vector2 cell) = 0; // On hovering over a grid spot.
 
         void SwapPlayerPositions();
@@ -78,7 +81,7 @@ namespace OGRID{
 
         unsigned char GetTopMostPiecePositionInColumn(int col);
 
-        //void ChangeGridSize();
+        // void ChangeGridSize();
 
         // Getters and Setters
         GameState GetGameState() const;
