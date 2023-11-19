@@ -6,6 +6,8 @@
 
 #include "GUI/GUIInfo.h"
 
+// TODO: Keep track of the current player.
+
 namespace OGRID
 {
     // Forward declaration
@@ -83,9 +85,9 @@ namespace OGRID
 
         OGRID::GameOverType CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col);
 
-        bool IsColumnOccupied(unsigned char colToCheck, unsigned char &rowToFill) const;
+        // bool IsColumnOccupied(unsigned char colToCheck, unsigned char &rowToFill) const;
 
-        unsigned char GetTopMostPiecePositionInColumn(int col);
+        // unsigned char GetTopMostPiecePositionInColumn(int col);
 
         // void ChangeGridSize();
 

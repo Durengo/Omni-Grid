@@ -2,8 +2,9 @@
 
 #include <durlib.h>
 
+#include "ogrid_fmt.h"
+
 #include "Grid/Grid.h"
-#include "Player/Moves.h"
 #include "Player/Player.h"
 #include "GameLogic/GameConfiguration.h"
 
@@ -45,12 +46,12 @@ namespace OGRID
     void IGame::ResetPlayers()
     {
         // HARDCODED
-        std::vector<OGRID::MoveType> moveTypes;
-        moveTypes.push_back(OGRID::MoveType::X);
-        moveTypes.push_back(OGRID::MoveType::O);
-        // HARDCODED
+        // std::vector<OGRID::MoveType> moveTypes;
+        // moveTypes.push_back(OGRID::MoveType::X);
+        // moveTypes.push_back(OGRID::MoveType::O);
+        // // HARDCODED
 
-        SetupPlayers(moveTypes);
+        // SetupPlayers(moveTypes);
         PrintPlayerMoves();
     }
 
@@ -63,7 +64,7 @@ namespace OGRID
             players +=
                 playerPairs[i].ptr->GetPlayerName() + "\t| " +
                 OGRID::PlayerTypeEnumToString(playerPairs[i].ptr->GetPlayerType()) + "\t| " +
-                OGRID::MoveTypeEnumToString(playerPairs[i].ptr->GetPlayerMoveType());
+                std::to_string(playerPairs[i].ptr->GetSide());
             // Add the newline character if it's not the last player
             if (i < playerPairs.size() - 1)
             {
@@ -285,8 +286,7 @@ namespace OGRID
     {
         for (const auto &playerPair : m_GameConfiguration->playerPairs)
         {
-            std::string move = MoveTypeEnumToString(playerPair.ptr->GetPlayerMoveType());
-            CLI_TRACE("{0} | {1}", playerPair.name, move);
+            CLI_TRACE("{0} | {1}", playerPair.name, playerPair.ptr->GetSide());
         }
     }
 
@@ -306,37 +306,37 @@ namespace OGRID
         return m_guiInfo;
     }
 
-    bool IGame::IsColumnOccupied(unsigned char colToCheck, unsigned char &rowToFill) const
-    {
-        // Iterate through the column from bottom to top
-        for (int row = GetGameConfiguration()->grid->GetRows() - 1; row >= 0; --row)
-        {
-            if (GetGameConfiguration()->grid->GetCharAt(row, colToCheck) == GetGameConfiguration()->grid->GetDefaultChar())
-            {
-                // Found an empty spot in the column
-                rowToFill = static_cast<unsigned char>(row);
-                return true;
-            }
-        }
+    // bool IGame::IsColumnOccupied(unsigned char colToCheck, unsigned char &rowToFill) const
+    // {
+    //     // Iterate through the column from bottom to top
+    //     for (int row = GetGameConfiguration()->grid->GetRows() - 1; row >= 0; --row)
+    //     {
+    //         if (GetGameConfiguration()->grid->GetCharAt(row, colToCheck) == GetGameConfiguration()->grid->GetDefaultChar())
+    //         {
+    //             // Found an empty spot in the column
+    //             rowToFill = static_cast<unsigned char>(row);
+    //             return true;
+    //         }
+    //     }
 
-        // Column is fully occupied
-        return false;
-    }
+    //     // Column is fully occupied
+    //     return false;
+    // }
 
-    unsigned char IGame::GetTopMostPiecePositionInColumn(int col)
-    {
-        // Go down the column
-        for (unsigned char row = 0; row < m_GameConfiguration->grid->GetRows(); ++row)
-        {
-            if (m_GameConfiguration->grid->GetCharAt(row, col) != m_GameConfiguration->grid->GetDefaultChar())
-            {
-                // Found the first piece
-                return row;
-            }
-        }
-        // Column is empty
-        return static_cast<unsigned char>(m_GameConfiguration->grid->GetRows());
-    }
+    // unsigned char IGame::GetTopMostPiecePositionInColumn(int col)
+    // {
+    //     // Go down the column
+    //     for (unsigned char row = 0; row < m_GameConfiguration->grid->GetRows(); ++row)
+    //     {
+    //         if (m_GameConfiguration->grid->GetCharAt(row, col) != m_GameConfiguration->grid->GetDefaultChar())
+    //         {
+    //             // Found the first piece
+    //             return row;
+    //         }
+    //     }
+    //     // Column is empty
+    //     return static_cast<unsigned char>(m_GameConfiguration->grid->GetRows());
+    // }
 
     // void IGame::ChangeGridSize() {
     // CLI_TRACE("Input the dimensions of the grid (3-10): ");
