@@ -5,7 +5,7 @@
 namespace OGRID
 {
     class Player;
-    class MoveType;
+    class Piece;
 
-    std::vector<Player *> GetTicTacToePlayers(std::vector<MoveType *> &moveTypes);
+    // std::vector<Player *> GetTicTacToePlayers(std::vector<Piece *> &pieces);
 }
