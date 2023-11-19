@@ -11,6 +11,6 @@
 // TESTING:
 #include "GameDefinition/ChessMoveRules.h"
 #include "GameDefinition/MoveRules.h"
-#include "GameDefinition/MoveType.h"
+#include "GameDefinition/Piece.h"
 #include "GameDefinition/Player.h"
 #include "GameDefinition/TicTacToeDefinition.h"
