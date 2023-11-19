@@ -8,9 +8,6 @@
 
 namespace OGRID
 {
-    // class Grid;
-    // class Player;
-
     class Piece
     {
     protected:
@@ -24,44 +21,16 @@ namespace OGRID
         Player *m_owner;
 
     public:
-        Piece(std::string rep, Player *player) : m_representation(rep), m_owner(player) {}
+        Piece(std::string rep, Player *player);
 
-        ~Piece()
-        {
-            // Delete all MoveRule objects
-            for (auto rule : m_moveRules)
-            {
-                delete rule;
-            }
-            // DO NOT DELETE m_owner
-        }
+        ~Piece();
 
-        void AddMoveRule(MoveRule *rule)
-        {
-            m_moveRules.push_back(rule);
-        }
+        void AddMoveRule(MoveRule *rule);
 
-        const std::string &GetRepresentation() const
-        {
-            return m_representation;
-        }
+        const std::string &GetRepresentation() const;
 
-        const Player *GetOwner() const
-        {
-            return m_owner;
-        }
+        const Player *GetOwner() const;
 
-        bool isValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const
-        {
-            bool isValid = false;
-
-            // We would have to check all the rules for this piece, but I think this will need more refinement to work in such a manner.
-            for (const auto &rule : m_moveRules)
-            {
-                isValid = rule->IsValidMove(grid, fromX, fromY, toX, toY);
-            }
-
-            return isValid;
-        }
+        bool isValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const;
     };
 }
