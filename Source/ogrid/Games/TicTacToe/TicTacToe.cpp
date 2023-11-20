@@ -63,11 +63,7 @@ namespace OGRID
 
     bool TicTacToe::IsDrawCondition()
     {
-        if (m_currentGameState->IsDraw(GetGameConfiguration()->grid))
-        {
-            return true;
-        }
-        return false;
+        return m_currentGameState->IsDraw(GetGameConfiguration()->grid);
     }
 
     // void TicTacToe::SetupPlayers(const std::vector<int> &totalValidSides)
