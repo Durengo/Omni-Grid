@@ -6,7 +6,8 @@
 
 #include "Grid/Grid.h"
 
-namespace OGRID{
+namespace OGRID
+{
 
     bool SimplePlaceMoveRule::IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const
     {

@@ -1,8 +1,10 @@
 #include "ConnectFourStateCheck.h"
 
-namespace OGRID{
+namespace OGRID
+{
 
-    int ConnectFourStateCheck::CheckWin(Grid *grid) const {
+    int ConnectFourStateCheck::CheckWin(Grid *grid) const
+    {
         if (m_GameStateExtensions.CheckForRecurringStringInRow(grid, "R", 4) || m_GameStateExtensions.CheckForRecurringStringInCol(grid, "R", 4) ||
             m_GameStateExtensions.CheckForRecurringStringInDiagonal(grid, "R", 4) || m_GameStateExtensions.CheckForRecurringStringInAntiDiagonal(grid, "R", 4))
         {
@@ -20,8 +22,8 @@ namespace OGRID{
         return -1;
     }
 
-    bool ConnectFourStateCheck::IsDraw(Grid *grid) const {
+    bool ConnectFourStateCheck::IsDraw(Grid *grid) const
+    {
         return m_GameStateExtensions.CheckIfAllSpotsFilled(grid);
     }
 }
-

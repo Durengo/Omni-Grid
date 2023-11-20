@@ -24,7 +24,8 @@ namespace OGRID
         return m_GameState->IsDraw(grid);
     }
 
-    bool GameStateChecker::IsColumnOccupied(Grid *grid, unsigned char colToCheck, unsigned char &rowToFill) {
+    bool GameStateChecker::IsColumnOccupied(Grid *grid, unsigned char colToCheck, unsigned char &rowToFill)
+    {
         // Iterate through the column from bottom to top
         for (int row = grid->GetRows() - 1; row >= 0; --row)
         {

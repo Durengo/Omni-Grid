@@ -62,8 +62,6 @@ namespace OGRID
     std::string PlayerNameAndPtrVecToString(const std::vector<PlayerNameAndPtr> &players);
 }
 
-
-
 // namespace OGRID
 // {
 //     static std::string PlayerNameAndPtrVecToString(const std::vector<PlayerNameAndPtr> &players)

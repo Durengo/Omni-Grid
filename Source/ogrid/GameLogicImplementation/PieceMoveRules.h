@@ -3,7 +3,8 @@
 #include "GameLogicInterface/IMoveRule.h"
 #include "Player/Piece.h"
 
-namespace OGRID{
+namespace OGRID
+{
 
     class SimplePlaceMoveRule : public IMoveRule
     {
