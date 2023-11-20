@@ -122,7 +122,7 @@ namespace OGRID
     {
         if (TryMakeMove(row, col) && m_gameState == OGRID::GameState::InProgress)
         {
-            CLI_TRACE("{}", m_GameConfiguration->grid->GetGridAsString());
+            CLI_TRACE("\n{}", m_GameConfiguration->grid->GetGridAsString());
             switch (CheckGameOverState(m_GameConfiguration->grid, row, col))
             {
             case OGRID::GameOverType::None:
@@ -312,38 +312,6 @@ namespace OGRID
     {
         return m_guiInfo;
     }
-
-    // bool IGame::IsColumnOccupied(unsigned char colToCheck, unsigned char &rowToFill) const
-    // {
-    //     // Iterate through the column from bottom to top
-    //     for (int row = GetGameConfiguration()->grid->GetRows() - 1; row >= 0; --row)
-    //     {
-    //         if (GetGameConfiguration()->grid->GetCharAt(row, colToCheck) == GetGameConfiguration()->grid->GetDefaultChar())
-    //         {
-    //             // Found an empty spot in the column
-    //             rowToFill = static_cast<unsigned char>(row);
-    //             return true;
-    //         }
-    //     }
-
-    //     // Column is fully occupied
-    //     return false;
-    // }
-
-    // unsigned char IGame::GetTopMostPiecePositionInColumn(int col)
-    // {
-    //     // Go down the column
-    //     for (unsigned char row = 0; row < m_GameConfiguration->grid->GetRows(); ++row)
-    //     {
-    //         if (m_GameConfiguration->grid->GetCharAt(row, col) != m_GameConfiguration->grid->GetDefaultChar())
-    //         {
-    //             // Found the first piece
-    //             return row;
-    //         }
-    //     }
-    //     // Column is empty
-    //     return static_cast<unsigned char>(m_GameConfiguration->grid->GetRows());
-    // }
 
     // void IGame::ChangeGridSize() {
     // CLI_TRACE("Input the dimensions of the grid (3-10): ");

@@ -22,5 +22,9 @@ namespace OGRID
         int CheckWin(Grid *grid) const;
 
         bool IsDraw(Grid *grid) const;
+
+        bool IsColumnOccupied(Grid *grid, unsigned char colToCheck, unsigned char &rowToFill);
+
+        unsigned char GetTopMostPiecePositionInColumn(Grid *grid, int col);
     };
 }
