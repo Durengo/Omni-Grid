@@ -122,7 +122,7 @@ namespace OGRID
     {
         if (TryMakeMove(row, col) && m_gameState == OGRID::GameState::InProgress)
         {
-            CLI_TRACE("{}", m_GameConfiguration->grid->GetGridAsString());
+            CLI_TRACE("\n{}", m_GameConfiguration->grid->GetGridAsString());
             switch (CheckGameOverState(m_GameConfiguration->grid, row, col))
             {
             case OGRID::GameOverType::None:
