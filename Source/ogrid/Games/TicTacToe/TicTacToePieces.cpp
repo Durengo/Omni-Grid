@@ -1,13 +1,8 @@
 #include "TicTacToePieces.h"
-
-#include "Grid/Grid.h"
+#include "GameLogicImplementation/PieceMoveRules.h"
 
 namespace OGRID
 {
-    bool SimplePlaceMoveRule::IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const
-    {
-        return grid->GetPieceAt(toX, toY) == nullptr;
-    }
 
     XPiece::XPiece(Player *player)
         : Piece("X", player)
