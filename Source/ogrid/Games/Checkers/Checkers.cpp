@@ -73,8 +73,6 @@ namespace OGRID
 
         // If every move failed, try to attack
         bool canContinue = false;
-        int deltaX = coords.first < col ? 1 : -1;
-        int deltaY = coords.second < row ? 1 : -1;
         if (m_SelectedPiece->isValidAttack(GetGameConfiguration()->grid, coords.first, coords.second, col, row, canContinue))
         {
             GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece); // Set the piece at the new position
@@ -84,6 +82,9 @@ namespace OGRID
             RemovePieceFromPieceManager(coords); // Remove the old piece from the piece manager
 
             SetPiecePosition(m_SelectedPiece, std::pair<int, int>(col, row)); // Update the piece manager
+
+            int deltaX = coords.first < col ? 1 : -1;
+            int deltaY = coords.second < row ? 1 : -1;
 
             GetGameConfiguration()->grid->SetPieceAt(row - deltaY, col - deltaX, nullptr);
             delete GetGameConfiguration()->grid->GetPieceAt(row - deltaY, col-deltaX);
