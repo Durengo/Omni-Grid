@@ -1,7 +1,7 @@
 #include "ConnectFourPieces.h"
 
 #include "Grid/Grid.h"
-#include "GameLogicImplementation/PieceMoveRules.h"
+#include "GameLogicImplementation/PieceRules.h"
 
 namespace OGRID
 {

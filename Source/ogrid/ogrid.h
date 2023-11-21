@@ -14,7 +14,7 @@
 #include "GameLogicImplementation/GameStateExtensions.h"
 #include "GameLogicImplementation/GameStateChecker.h"
 #include "GameLogicImplementation/GameConfiguration.h"
-#include "GameLogicImplementation/PieceMoveRules.h"
+#include "GameLogicImplementation/PieceRules.h"
 
 // Games
 // Tic Tac Toe
