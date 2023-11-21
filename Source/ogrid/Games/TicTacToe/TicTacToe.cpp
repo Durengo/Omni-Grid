@@ -11,13 +11,6 @@
 
 namespace OGRID
 {
-    // TicTacToe::TicTacToe()
-    // {
-    //     //         OGRID::GameStateChecker gameStateCheckerTicTacToe(new OGRID::TicTacToeStateCheck());
-
-    //     m_currentGameState = new GameStateChecker(new TicTacToeStateCheck());
-    // }
-
     bool TicTacToe::TryMakeMove(unsigned char &row, unsigned char &col)
     {
         Piece *piece = nullptr;
@@ -63,11 +56,7 @@ namespace OGRID
 
     bool TicTacToe::IsDrawCondition()
     {
-        if (m_currentGameState->IsDraw(GetGameConfiguration()->grid))
-        {
-            return true;
-        }
-        return false;
+        return m_currentGameState->IsDraw(GetGameConfiguration()->grid);
     }
 
     // void TicTacToe::SetupPlayers(const std::vector<int> &totalValidSides)

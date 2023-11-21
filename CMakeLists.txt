@@ -482,7 +482,6 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_gui.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/ogrid_fmt.h"
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ogrid_games.h"
 
                 # CORE
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Player/*.h"

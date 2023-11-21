@@ -91,10 +91,6 @@ namespace OGRID
 
         OGRID::GameOverType CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col);
 
-        // bool IsColumnOccupied(unsigned char colToCheck, unsigned char &rowToFill) const;
-
-        // unsigned char GetTopMostPiecePositionInColumn(int col);
-
         // void ChangeGridSize();
 
         // Getters and Setters

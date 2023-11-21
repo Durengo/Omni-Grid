@@ -11,8 +11,8 @@ namespace OGRID
         ~TicTacToe() = default;
 
         bool TryMakeMove(unsigned char &row, unsigned char &col) override;
-        bool IsWinningCondition();
-        bool IsDrawCondition();
+        bool IsWinningCondition() override;
+        bool IsDrawCondition() override;
         // bool IsWinningCondition(unsigned char row, unsigned char col) override;
         // bool IsWinningCondition(char playerChar) override;
         // bool IsDrawCondition(unsigned char row, unsigned char col) override;

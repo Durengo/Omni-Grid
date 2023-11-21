@@ -9,19 +9,6 @@ namespace OGRID
 {
     class Grid;
 
-    class XMoveRule : public IMoveRule
-    {
-    public:
-        // We only need to check if the end cell is unoccupied, as there is no concept of a "start" cell in tic tac toe.
-        bool IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const override;
-    };
-
-    class OMoveRule : public IMoveRule
-    {
-        // We only need to check if the end cell is unoccupied, as there is no concept of a "start" cell in tic tac toe.
-        bool IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const override;
-    };
-
     class XPiece : public Piece
     {
     public:
