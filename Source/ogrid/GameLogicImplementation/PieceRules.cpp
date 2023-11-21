@@ -89,8 +89,6 @@ namespace OGRID
         bool isValid = false;
         if (grid->GetPieceAt(enemyPieceY, enemyPieceX)->GetOwner()->GetSide() != side){
             isValid = true;
-            delete grid->GetPieceAt(enemyPieceY, enemyPieceX);
-            grid->SetPieceAt(enemyPieceY, enemyPieceX, nullptr);
             CLI_INFO("Valid Normal Checkers Attack.");
         } else {
             CLI_WARN("Attempted to jump over an allied piece.");
@@ -194,8 +192,6 @@ namespace OGRID
         bool isValid = false;
         if (grid->GetPieceAt(firstFoundPieceY, firstFoundPieceX)->GetOwner()->GetSide() != side){
             isValid = true;
-            grid->SetPieceAt(firstFoundPieceY, firstFoundPieceX, nullptr);
-            delete grid->GetPieceAt(firstFoundPieceY, firstFoundPieceX);
             CLI_INFO("Valid Super Checkers Attack.");
         } else {
             CLI_WARN("Attempted to jump over an allied piece.");
