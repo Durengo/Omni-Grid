@@ -17,6 +17,11 @@ namespace OGRID
 
     bool NormalCheckersMoveRule::IsValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const
     {
+        if (toX == fromX || toY == fromY) {
+            CLI_WARN("Invalid Attack Move.");
+            return false;
+        }
+
         // -1 = up, 1 = down
         int moveDirection = grid->GetPieceAt(fromY, fromX)->GetOwner()->GetSide() == 0 ? -1 : 1; // If white -> go up, if black -> go down
         if (moveDirection == 1 && toY < fromY) {
@@ -41,6 +46,11 @@ namespace OGRID
     {
         if (grid->GetPieceAt(toY, toX) != nullptr) { // Can't jump onto a cell that's occupied
             CLI_WARN("Attempted to jump onto an occupied cell.");
+            return false;
+        }
+
+        if (toX == fromX || toY == fromY) {
+            CLI_WARN("Invalid Attack Move.");
             return false;
         }
 
@@ -118,10 +128,15 @@ namespace OGRID
             return false;
         }
 
+        if (toX == fromX || toY == fromY) {
+            CLI_WARN("Invalid Attack Move.");
+            return false;
+        }
+
         // Go in between STARTINGPOS and ENDPOS to check if there are any pieces found
         int deltaX = toX > fromX ? 1 : -1;
         int deltaY = toY > fromY ? 1 : -1;
-        for (int x = fromX + deltaX, y = fromY + deltaY; x != toX && y != toY; x += deltaX, y += deltaY) {
+        for (int x = fromX + deltaX, y = fromY + deltaY; x != toX || y != toY; x += deltaX, y += deltaY) {
             if (grid->GetPieceAt(y, x) != nullptr) {
                 CLI_WARN("Attempted to move over a piece.");
                 return false;
@@ -139,6 +154,11 @@ namespace OGRID
             return false;
         }
 
+        if (toX == fromX || toY == fromY) {
+            CLI_WARN("Invalid Attack Move.");
+            return false;
+        }
+
         int deltaX = toX > fromX ? 1 : -1;
         int deltaY = toY > fromY ? 1 : -1;
 
@@ -152,7 +172,7 @@ namespace OGRID
         // Try and find the first piece in the path
         int firstFoundPieceX = -1;
         int firstFoundPieceY = -1;
-        for (int x = fromX + deltaX, y = fromY + deltaY; x != toX && y != toY; x += deltaX, y += deltaY) {
+        for (int x = fromX + deltaX, y = fromY + deltaY; x != toX || y != toY; x += deltaX, y += deltaY) {
             if (grid->GetPieceAt(y, x) != nullptr) {
                 if (firstFoundPieceX == -1) {
                     firstFoundPieceX = x;
