@@ -202,9 +202,9 @@ namespace OGRID
             // First we check left and right going down
             for (deltaY = 1, deltaX = 1; toY + deltaY < grid->GetRows() && toX + deltaX < grid->GetCols() ; deltaY += 1, deltaX += 1){ // Go down and to the right
                 if (grid->GetPieceAt(toY + deltaY, toX + deltaX) == nullptr) { // If jump space is empty
-                    if (grid->GetPieceAt(toY + deltaY - 1, toX + deltaX - 1) != nullptr &&
-                    (toY + deltaY - 1 != fromY && toX + deltaX - 1 != fromX) &&
-                    (toY + deltaY - 1 != firstFoundPieceY && toX + deltaX - 1 != firstFoundPieceX)) { // And there's something to jump over, not including yourself (pre-move)
+                    if (grid->GetPieceAt(toY + deltaY - 1, toX + deltaX - 1) != nullptr && // And there's something to jump over,
+                    (toY + deltaY - 1 != fromY && toX + deltaX - 1 != fromX) && // not including yourself (pre-move)
+                    (toY + deltaY - 1 != firstFoundPieceY && toX + deltaX - 1 != firstFoundPieceX)) { // Or the previously jumped over piece
                         if (grid->GetPieceAt(toY + deltaY - 1, toX + deltaX - 1)->GetOwner()->GetSide() != side) { // And it's an enemy
                             canContinue = true;
                             break;
@@ -214,9 +214,9 @@ namespace OGRID
             }
             for (deltaY = 1, deltaX = -1; toY + deltaY < grid->GetRows() && toX + deltaX >= 0; deltaY += 1, deltaX -= 1){ // Go down and to the left
                 if (grid->GetPieceAt(toY + deltaY, toX + deltaX) == nullptr) { // If jump space is empty
-                    if (grid->GetPieceAt(toY + deltaY - 1, toX + deltaX + 1) != nullptr &&
-                    (toY + deltaY - 1 != fromY && toX + deltaX + 1 != fromX) &&
-                    (toY + deltaY - 1 != firstFoundPieceY && toX + deltaX + 1 != firstFoundPieceX)) { // And there's something to jump over, not including yourself (pre-move)
+                    if (grid->GetPieceAt(toY + deltaY - 1, toX + deltaX + 1) != nullptr && // And there's something to jump over,
+                    (toY + deltaY - 1 != fromY && toX + deltaX + 1 != fromX) && // not including yourself (pre-move)
+                    (toY + deltaY - 1 != firstFoundPieceY && toX + deltaX + 1 != firstFoundPieceX)) { // Or the previously jumped over piece
                         if (grid->GetPieceAt(toY + deltaY - 1, toX + deltaX + 1)->GetOwner()->GetSide() != side) { // And it's an enemy
                             canContinue = true;
                             break;
@@ -227,9 +227,9 @@ namespace OGRID
             // Then left and right going up
             for (deltaY = -1, deltaX = -1; toY + deltaY >= 0 && toX + deltaX >= 0; deltaY -= 1, deltaX -= 1){ // Go up and to the left
                 if (grid->GetPieceAt(toY + deltaY, toX + deltaX) == nullptr) { // If jump space is empty
-                    if (grid->GetPieceAt(toY + deltaY + 1, toX + deltaX + 1) != nullptr &&
-                    (toY + deltaY + 1 != fromY && toX + deltaX + 1 != fromX) &&
-                    (toY + deltaY + 1 != firstFoundPieceY && toX + deltaX + 1 != firstFoundPieceX)) { // And there's something to jump over, not including yourself (pre-move)
+                    if (grid->GetPieceAt(toY + deltaY + 1, toX + deltaX + 1) != nullptr && // And there's something to jump over,
+                    (toY + deltaY + 1 != fromY && toX + deltaX + 1 != fromX) && // not including yourself (pre-move)
+                    (toY + deltaY + 1 != firstFoundPieceY && toX + deltaX + 1 != firstFoundPieceX)) { // Or the previously jumped over piece
                         if (grid->GetPieceAt(toY + deltaY + 1, toX + deltaX + 1)->GetOwner()->GetSide() != side) { // And it's an enemy
                             canContinue = true;
                             break;
@@ -239,9 +239,9 @@ namespace OGRID
             }
             for (deltaY = -1, deltaX = 1; toY + deltaY >= 0 && toX + deltaX < grid->GetCols(); deltaY -= 1, deltaX += 1){ // Go up and to the right
                 if (grid->GetPieceAt(toY + deltaY, toX + deltaX) == nullptr) { // If jump space is empty
-                    if (grid->GetPieceAt(toY + deltaY + 1, toX + deltaX - 1) != nullptr &&
-                    (toY + deltaY + 1 != fromY && toX + deltaX - 1 != fromX) &&
-                    (toY + deltaY + 1 != firstFoundPieceY && toX + deltaX - 1 != firstFoundPieceX)) { // And there's something to jump over, not including yourself (pre-move)
+                    if (grid->GetPieceAt(toY + deltaY + 1, toX + deltaX - 1) != nullptr && // And there's something to jump over,
+                    (toY + deltaY + 1 != fromY && toX + deltaX - 1 != fromX) && // not including yourself (pre-move)
+                    (toY + deltaY + 1 != firstFoundPieceY && toX + deltaX - 1 != firstFoundPieceX)) { // Or the previously jumped over piece
                         if (grid->GetPieceAt(toY + deltaY + 1, toX + deltaX - 1)->GetOwner()->GetSide() != side) { // And it's an enemy
                             canContinue = true;
                             break;
