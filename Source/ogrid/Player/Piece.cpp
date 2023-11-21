@@ -37,6 +37,15 @@ namespace OGRID
         for (const auto &rule : m_moveRules)
         {
             isValid = rule->IsValidMove(grid, fromX, fromY, toX, toY);
+            if (isValid)
+            {
+                break;
+            }
+        }
+
+        return isValid;
+    }
+
     void Piece::AddAttackRule(IAttackRule *rule) {
         m_attackRules.push_back(rule);
     }
