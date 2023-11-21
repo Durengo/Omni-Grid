@@ -12,8 +12,8 @@ namespace Sandbox
         int choice = 0;
         while (choice == 0)
         {
-            CLI_TRACE("\n1. TicTacToe\n2. Connect Four");
-            choice = DURLIB::GIBI(1, 2);
+            CLI_TRACE("\n1. TicTacToe\n2. Connect Four\n3. Checkers");
+            choice = DURLIB::GIBI(1, 3);
         }
         switch (choice)
         {
@@ -22,6 +22,9 @@ namespace Sandbox
             break;
         case 2:
             GameWindow<OGRID::ConnectFour>().Start();
+            break;
+        case 3:
+            GameWindow<OGRID::Checkers>().Start();
             break;
         default:
             CLI_TRACE("Invalid choice");

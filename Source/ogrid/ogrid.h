@@ -25,3 +25,7 @@
 #include "Games/ConnectFour/ConnectFourStateCheck.h"
 #include "Games/ConnectFour/ConnectFourPieces.h"
 #include "Games/ConnectFour/ConnectFour.h"
+// Checkers
+#include "Games/Checkers/CheckersStateCheck.h"
+#include "Games/Checkers/CheckersPieces.h"
+#include "Games/Checkers/Checkers.h"
