@@ -4,6 +4,7 @@
 
 namespace OGRID
 {
+    class Player;
     class Grid;
 
     class WhitePieceCheckers : public Piece

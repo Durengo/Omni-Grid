@@ -46,16 +46,20 @@ namespace OGRID
         return isValid;
     }
 
-    void Piece::AddAttackRule(IAttackRule *rule) {
+    void Piece::AddAttackRule(IAttackRule *rule)
+    {
         m_attackRules.push_back(rule);
     }
 
-    bool Piece::isValidAttack(Grid *grid, int fromX, int fromY, int toX, int toY, bool &canContinue) const {
+    bool Piece::isValidAttack(Grid *grid, int fromX, int fromY, int toX, int toY, bool &canContinue) const
+    {
         bool isValid = false;
 
-        for (const auto &rule : m_attackRules) {
+        for (const auto &rule : m_attackRules)
+        {
             isValid = rule->IsValidAttack(grid, fromX, fromY, toX, toY, canContinue);
-            if(isValid) {
+            if (isValid)
+            {
                 break;
             }
         }

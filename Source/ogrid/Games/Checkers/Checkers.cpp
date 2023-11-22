@@ -26,7 +26,8 @@ namespace OGRID
         Piece *piece = GetGrid()->GetPieceAt(row, col);
         if (piece != nullptr)
         {
-            if (piece->GetOwner() != m_currentPlayer){
+            if (piece->GetOwner() != m_currentPlayer)
+            {
                 CLI_WARN("Not your piece.");
                 return false;
             }
@@ -36,7 +37,8 @@ namespace OGRID
         }
 
         // If there is no piece selected, and you tried to move, return
-        if (m_SelectedPiece == nullptr){
+        if (m_SelectedPiece == nullptr)
+        {
             CLI_WARN("No piece selected.");
             return false;
         }
@@ -51,22 +53,30 @@ namespace OGRID
         // Try to move the piece
         if (m_SelectedPiece->isValidMove(GetGameConfiguration()->grid, coords.first, coords.second, col, row))
         {
-            GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece); // Set the piece at the new position
+            // Set the piece at the new position
+            GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece);
 
-            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr); // Set the old position to nullptr
+            // Set the old position to nullptr
+            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr);
 
-            RemovePieceFromPieceManager(coords); // Remove the old piece from the piece manager
+            // Remove the old piece from the piece manager
+            RemovePieceFromPieceManager(coords);
 
-            SetPiecePosition(m_SelectedPiece, std::pair<int, int>(col, row)); // Update the piece manager
+            // Update the piece manager
+            SetPiecePosition(m_SelectedPiece, std::pair<int, int>(col, row));
 
-            if (!IsSuperPiece(m_SelectedPiece) && // If not a super piece
-                ((row == 0 && m_SelectedPiece->GetOwner()->GetSide() == 0) || // And has reached board end as white
-                 (row == GetGameConfiguration()->grid->GetRows() - 1 && m_SelectedPiece->GetOwner()->GetSide() == 1))) // or black
+            // If not a super piece
+            // And has reached board end as white
+            // or black
+            if (!IsSuperPiece(m_SelectedPiece) &&
+                ((row == 0 && m_SelectedPiece->GetOwner()->GetSide() == 0) ||
+                 (row == GetGameConfiguration()->grid->GetRows() - 1 && m_SelectedPiece->GetOwner()->GetSide() == 1)))
             {
                 AddAsSuperPiece(m_SelectedPiece);
             }
 
-            m_SelectedPiece = nullptr; // Reset the selected piece
+            // Reset the selected piece
+            m_SelectedPiece = nullptr;
 
             return true;
         }
@@ -75,46 +85,63 @@ namespace OGRID
         bool canContinue = false;
         if (m_SelectedPiece->isValidAttack(GetGameConfiguration()->grid, coords.first, coords.second, col, row, canContinue))
         {
-            GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece); // Set the piece at the new position
+            // Set the piece at the new position
+            GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece);
 
-            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr); // Set the old position to nullptr
+            // Set the old position to nullptr
+            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr);
 
-            RemovePieceFromPieceManager(coords); // Remove the old piece from the piece manager
+            // Remove the old piece from the piece manager
+            RemovePieceFromPieceManager(coords);
 
-            SetPiecePosition(m_SelectedPiece, std::pair<int, int>(col, row)); // Update the piece manager
+            // Update the piece manager
+            SetPiecePosition(m_SelectedPiece, std::pair<int, int>(col, row));
 
             int deltaX = coords.first < col ? 1 : -1;
             int deltaY = coords.second < row ? 1 : -1;
 
             GetGameConfiguration()->grid->SetPieceAt(row - deltaY, col - deltaX, nullptr);
-            delete GetGameConfiguration()->grid->GetPieceAt(row - deltaY, col-deltaX);
+            delete GetGameConfiguration()->grid->GetPieceAt(row - deltaY, col - deltaX);
 
-            if (!IsSuperPiece(m_SelectedPiece) && // If not a super piece
-                ((row == 0 && m_SelectedPiece->GetOwner()->GetSide() == 0) || // And has reached board end as white
-                 (row == GetGameConfiguration()->grid->GetRows() - 1 && m_SelectedPiece->GetOwner()->GetSide() == 1))) // or black
+            // If not a super piece
+            // And has reached board end as white
+            // or black
+            if (!IsSuperPiece(m_SelectedPiece) &&
+                ((row == 0 && m_SelectedPiece->GetOwner()->GetSide() == 0) ||
+                 (row == GetGameConfiguration()->grid->GetRows() - 1 && m_SelectedPiece->GetOwner()->GetSide() == 1)))
             {
                 AddAsSuperPiece(m_SelectedPiece);
             }
 
             // Cleanup piece manager and supers
-            for (auto each : m_Pieces){
-                if (each.second == nullptr){
+            for (auto each : m_Pieces)
+            {
+                if (each.second == nullptr)
+                {
                     m_Pieces.erase(each.first);
                 }
             }
-            for (auto each : m_Supers){
-                if (each == nullptr){
+            for (auto each : m_Supers)
+            {
+                if (each == nullptr)
+                {
                     m_Supers.erase(std::remove(m_Supers.begin(), m_Supers.end(), each), m_Supers.end());
                 }
             }
 
-            if(canContinue)
-            { // If you can continue attacking
-                return false; // Don't end turn
-            } else
-            { // If you can't continue attacking
-                m_SelectedPiece = nullptr; // Reset the selected piece
-                return true; // End turn
+            if (canContinue)
+            {
+                // If you can continue attacking
+                // Don't end turn
+                return false;
+            }
+            else
+            {
+                // If you can't continue attacking
+                // Reset the selected piece
+                m_SelectedPiece = nullptr;
+                // End turn
+                return true;
             }
         }
         return false;
@@ -124,10 +151,10 @@ namespace OGRID
     {
         switch (m_currentGameState->CheckWin(GetGameConfiguration()->grid))
         {
-            case -1:
-                return false;
-            default:
-                return true;
+        case -1:
+            return false;
+        default:
+            return true;
         }
     }
 
@@ -204,37 +231,37 @@ namespace OGRID
         {
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                         .setGameName("Checkers")
-                                         .setGameDescription("Checkers Game")
-                                         .setGrid(8, 8)
-                                         .setMaxPlayers(2)
-                                         .addPlayer(p1)
-                                         .addPlayer(p2)
-                                         .build());
+                                     .setGameName("Checkers")
+                                     .setGameDescription("Checkers Game")
+                                     .setGrid(8, 8)
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p1)
+                                     .addPlayer(p2)
+                                     .build());
         }
         else if (choice == 2)
         {
             SetRandomizeTurnOrder(false);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                         .setGameName("Checkers")
-                                         .setGameDescription("Checkers Game")
-                                         .setGrid(8, 8)
-                                         .setMaxPlayers(2)
-                                         .addPlayer(p2)
-                                         .addPlayer(p1)
-                                         .build());
+                                     .setGameName("Checkers")
+                                     .setGameDescription("Checkers Game")
+                                     .setGrid(8, 8)
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p2)
+                                     .addPlayer(p1)
+                                     .build());
         }
         else if (choice == 3)
         {
             SetRandomizeTurnOrder(true);
             SetGameConfiguration(OGRID::GameConfigurationBuilder()
-                                         .setGameName("Checkers")
-                                         .setGameDescription("Checkers Game")
-                                         .setGrid(8, 8)
-                                         .setMaxPlayers(2)
-                                         .addPlayer(p1)
-                                         .addPlayer(p2)
-                                         .build());
+                                     .setGameName("Checkers")
+                                     .setGameDescription("Checkers Game")
+                                     .setGrid(8, 8)
+                                     .setMaxPlayers(2)
+                                     .addPlayer(p1)
+                                     .addPlayer(p2)
+                                     .build());
         }
     }
 
@@ -244,12 +271,17 @@ namespace OGRID
         {
             for (int j = 0; j < GetGameConfiguration()->grid->GetCols(); j++)
             {
-                if (i % 2 == 0){
-                    if (j % 2 != 0){
+                if (i % 2 == 0)
+                {
+                    if (j % 2 != 0)
+                    {
                         DrawCell(i, j);
                     }
-                } else {
-                    if (j % 2 == 0){
+                }
+                else
+                {
+                    if (j % 2 == 0)
+                    {
                         DrawCell(i, j);
                     }
                 }
@@ -304,8 +336,10 @@ namespace OGRID
         {
             for (int col = 0; col < GetGameConfiguration()->grid->GetCols(); col++)
             {
-                if (row % 2 == 0){
-                    if (col % 2 != 0){
+                if (row % 2 == 0)
+                {
+                    if (col % 2 != 0)
+                    {
                         if (row > 4)
                         {
                             GetGrid()->SetPieceAt(row, col, new WhitePieceCheckers(GetGameConfiguration()->playerPairs[0].ptr));
@@ -317,8 +351,11 @@ namespace OGRID
                             AddPieceToPieceManager(GetGrid()->GetPieceAt(row, col), std::pair<int, int>(col, row));
                         }
                     }
-                } else {
-                    if (col % 2 == 0){
+                }
+                else
+                {
+                    if (col % 2 == 0)
+                    {
                         if (row > 4)
                         {
                             GetGrid()->SetPieceAt(row, col, new WhitePieceCheckers(GetGameConfiguration()->playerPairs[0].ptr));
@@ -353,7 +390,8 @@ namespace OGRID
         return std::find(m_Supers.begin(), m_Supers.end(), piece) != m_Supers.end();
     }
 
-    void Checkers::DrawPiece(int row, int col, Color color, bool blinking = false, bool super = false) {
+    void Checkers::DrawPiece(int row, int col, Color color, bool blinking = false, bool super = false)
+    {
         // Use the same margin for consistency
         float padding = m_guiInfo.margin;
 
@@ -392,7 +430,8 @@ namespace OGRID
         }
     }
 
-    void Checkers::DrawCell(int row, int col) {
+    void Checkers::DrawCell(int row, int col)
+    {
         // Use the same margin for consistency
         float padding = m_guiInfo.margin;
 
