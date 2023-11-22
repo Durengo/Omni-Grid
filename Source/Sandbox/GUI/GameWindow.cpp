@@ -8,6 +8,7 @@ namespace Sandbox
 {
     template class Sandbox::GameWindow<OGRID::TicTacToe>;
     template class Sandbox::GameWindow<OGRID::ConnectFour>;
+    template class Sandbox::GameWindow<OGRID::Checkers>;
 
     template <class T>
     GameWindow<T>::~GameWindow()

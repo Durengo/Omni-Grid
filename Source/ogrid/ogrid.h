@@ -14,7 +14,7 @@
 #include "GameLogicImplementation/GameStateExtensions.h"
 #include "GameLogicImplementation/GameStateChecker.h"
 #include "GameLogicImplementation/GameConfiguration.h"
-#include "GameLogicImplementation/PieceMoveRules.h"
+#include "GameLogicImplementation/PieceRules.h"
 
 // Games
 // Tic Tac Toe
@@ -25,3 +25,7 @@
 #include "Games/ConnectFour/ConnectFourStateCheck.h"
 #include "Games/ConnectFour/ConnectFourPieces.h"
 #include "Games/ConnectFour/ConnectFour.h"
+// Checkers
+#include "Games/Checkers/CheckersStateCheck.h"
+#include "Games/Checkers/CheckersPieces.h"
+#include "Games/Checkers/Checkers.h"

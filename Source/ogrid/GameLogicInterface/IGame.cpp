@@ -147,7 +147,7 @@ namespace OGRID
         }
         else
         {
-            throw std::runtime_error("Invalid move.");
+            CLI_WARN("Turn not complete.");
         }
     }
 

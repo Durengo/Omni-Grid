@@ -473,6 +473,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 # GAMES
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.cpp"
         )
 
         # OMNI-GRID .H FILES
@@ -495,6 +496,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 # GAMES
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.h"
         )
 
         if(${VERBOSE})

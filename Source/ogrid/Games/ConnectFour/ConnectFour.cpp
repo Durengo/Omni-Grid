@@ -41,7 +41,7 @@ namespace OGRID
         }
 
         // Set the player's move in the grid
-        if (piece->isValidMove(GetGameConfiguration()->grid, row, col, row, col))
+        if (piece->isValidMove(GetGameConfiguration()->grid, 0, 0, col, row))
         {
             GetGameConfiguration()->grid->SetPieceAt(row, col, piece);
         }
@@ -180,22 +180,22 @@ namespace OGRID
 
     void ConnectFour::OnGUIUpdateGrid()
     {
-        for (int i = 0; i < GetGameConfiguration()->grid->GetRows(); i++)
+        for (int row = 0; row < GetGameConfiguration()->grid->GetRows(); row++)
         {
-            for (int j = 0; j < GetGameConfiguration()->grid->GetCols(); j++)
+            for (int col = 0; col < GetGameConfiguration()->grid->GetCols(); col++)
             {
-                Piece *piece = GetGrid()->GetPieceAt(i, j);
+                Piece *piece = GetGrid()->GetPieceAt(row, col);
                 if (piece == nullptr)
                 {
                     continue;
                 }
                 if (piece->GetOwner()->GetSide() == 0)
                 {
-                    DrawCircle(i, j, RED, false);
+                    DrawCircle(row, col, RED, false);
                 }
                 else if (piece->GetOwner()->GetSide() == 1)
                 {
-                    DrawCircle(i, j, BLACK, false);
+                    DrawCircle(row, col, BLACK, false);
                 }
                 else
                 {

@@ -35,7 +35,7 @@ namespace OGRID
 
         CLI_ASSERT(piece, "Piece is null.");
 
-        if (piece->isValidMove(GetGameConfiguration()->grid, 0, 0, row, col))
+        if (piece->isValidMove(GetGameConfiguration()->grid, 0, 0, col, row))
         {
             GetGameConfiguration()->grid->SetPieceAt(row, col, piece);
             return true;
@@ -105,11 +105,11 @@ namespace OGRID
 
     void TicTacToe::OnGUIUpdateGrid()
     {
-        for (int i = 0; i < GetGameConfiguration()->grid->GetRows(); i++)
+        for (int row = 0; row < GetGameConfiguration()->grid->GetRows(); row++)
         {
-            for (int j = 0; j < GetGameConfiguration()->grid->GetCols(); j++)
+            for (int col = 0; col < GetGameConfiguration()->grid->GetCols(); col++)
             {
-                Piece *piece = GetGrid()->GetPieceAt(i, j);
+                Piece *piece = GetGrid()->GetPieceAt(row, col);
                 if (piece == nullptr)
                 {
                     continue;
@@ -117,11 +117,11 @@ namespace OGRID
 
                 if (piece->GetOwner()->GetSide() == 0)
                 {
-                    DrawX(i, j);
+                    DrawX(row, col);
                 }
                 else if (piece->GetOwner()->GetSide() == 1)
                 {
-                    DrawO(i, j);
+                    DrawO(row, col);
                 }
             }
         }
