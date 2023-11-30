@@ -107,6 +107,11 @@ namespace OGRID
 
     Cell *Grid::GetCellAt(unsigned char row, unsigned char col) const
     {
+        if (row < 0 || row >= this->GetRows() || col < 0 || col >= this->GetCols())
+        {
+            throw std::out_of_range("Index out of bounds");
+        }
+
         return grid[row][col];
     }
 
