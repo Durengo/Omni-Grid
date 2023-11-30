@@ -51,11 +51,11 @@ namespace OGRID
         void SetDefaultPiece(Piece *defaultPiece);
 
         Piece *GetPieceAt(unsigned char row, unsigned char col) const;
-        void SetPieceAt(unsigned char row, unsigned char col, Piece *piece);
+        void SetPieceAt(unsigned char row, unsigned char col, Piece *piece, bool force_null = false);
 
         Cell *GetCellAt(unsigned char row, unsigned char col) const;
-        void SetCellAt(unsigned char row, unsigned char col, Cell *cell);
-        void SetCellAt(unsigned char row, unsigned char col, Piece *piece);
+        void SetCellAt(unsigned char row, unsigned char col, Cell *cell, bool force_null = false);
+        void SetCellAt(unsigned char row, unsigned char col, Piece *piece, bool force_null = false);
 
         std::pair<unsigned char, unsigned char> GetLastChangedChar() const;
 

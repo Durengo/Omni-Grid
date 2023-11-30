@@ -90,10 +90,10 @@ namespace OGRID
         return grid[row][col]->m_Piece;
     }
 
-    void Grid::SetPieceAt(unsigned char row, unsigned char col, Piece *piece)
+    void Grid::SetPieceAt(unsigned char row, unsigned char col, Piece *piece, bool force_null)
     {
-        if (piece == nullptr)
-            throw std::invalid_argument("Cell cannot be null");
+        if (piece == nullptr && !force_null)
+            throw std::invalid_argument("Piece cannot be null");
 
         if (row < 0 || row >= this->GetRows() || col < 0 || col >= this->GetCols())
             throw std::out_of_range("Index out of bounds");
@@ -111,9 +111,9 @@ namespace OGRID
         return grid[row][col];
     }
 
-    void Grid::SetCellAt(unsigned char row, unsigned char col, Cell *cell)
+    void Grid::SetCellAt(unsigned char row, unsigned char col, Cell *cell, bool force_null)
     {
-        if (cell == nullptr)
+        if (cell == nullptr && !force_null)
             throw std::invalid_argument("Cell cannot be null");
 
         if (row < 0 || row >= this->GetRows() || col < 0 || col >= this->GetCols())
@@ -124,9 +124,9 @@ namespace OGRID
         grid[row][col] = cell;
     }
 
-    void Grid::SetCellAt(unsigned char row, unsigned char col, Piece *piece)
+    void Grid::SetCellAt(unsigned char row, unsigned char col, Piece *piece, bool force_null)
     {
-        if (piece == nullptr)
+        if (piece == nullptr && !force_null)
             throw std::invalid_argument("Cell cannot be null");
 
         if (row < 0 || row >= this->GetRows() || col < 0 || col >= this->GetCols())
@@ -230,7 +230,7 @@ namespace OGRID
                     ss << "NULL";
                 else
                     ss << piece->GetRepresentation();
-                    
+
                 ss << " |";
             }
             if (i < rows - 1)
