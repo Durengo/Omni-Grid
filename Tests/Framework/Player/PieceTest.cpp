@@ -6,7 +6,6 @@
 
 namespace OGRID
 {
-    // Test fixture for Piece
     class PieceTest : public ::testing::Test
     {
     protected:
