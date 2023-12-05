@@ -222,8 +222,8 @@ namespace OGRID
         {
             for (unsigned char j = 0; j < cols; ++j)
             {
-                if (j > 0)
-                    ss << "\t";
+                // if (j > 0)
+                //     ss << "\t";
                 Piece *piece = grid[i][j]->m_Piece;
 
                 if (piece == nullptr)
@@ -231,7 +231,8 @@ namespace OGRID
                 else
                     ss << piece->GetRepresentation();
 
-                ss << " |";
+                if (j < cols - 1)
+                    ss << "|";
             }
             if (i < rows - 1)
                 ss << "\n";
