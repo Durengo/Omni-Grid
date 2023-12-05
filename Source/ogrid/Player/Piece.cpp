@@ -1,5 +1,7 @@
 #include "Piece.h"
 
+#include "durlib.h"
+
 namespace OGRID
 {
     Piece::Piece(std::string rep, Player *player) : m_representation(rep), m_owner(player) {}
@@ -27,6 +29,13 @@ namespace OGRID
     const Player *Piece::GetOwner() const
     {
         return m_owner;
+    }
+
+    void Piece::SetOwner(Player *player)
+    {
+        CLI_WARN("This should not be used. It is only here for testing purposes.");
+
+        m_owner = player;
     }
 
     bool Piece::isValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const

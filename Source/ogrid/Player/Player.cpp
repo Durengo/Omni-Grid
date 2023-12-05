@@ -36,9 +36,23 @@ namespace OGRID
         return m_PlayerName;
     }
 
+    void Player::SetPlayerName(std::string playerName)
+    {
+        CLI_WARN("This should not be used. It is only here for testing purposes.");
+
+        m_PlayerName = playerName;
+    }
+
     PlayerType Player::GetPlayerType() const
     {
         return m_PlayerType;
+    }
+
+    void Player::SetPlayerType(PlayerType playerType)
+    {
+        CLI_WARN("This should not be used. It is only here for testing purposes.");
+
+        m_PlayerType = playerType;
     }
 
     int Player::GetSide() const

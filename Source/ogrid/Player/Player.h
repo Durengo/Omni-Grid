@@ -32,7 +32,10 @@ namespace OGRID
         // Getters & Setters
     public:
         std::string GetPlayerName() const;
+        void SetPlayerName(std::string playerName);
+
         PlayerType GetPlayerType() const;
+        void SetPlayerType(PlayerType playerType);
 
         int GetSide() const;
         void SetSide(int side);
