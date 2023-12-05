@@ -1,5 +1,7 @@
 #include "Player.h"
 
+#include "durlib.h"
+
 #include <vector>
 #include <map>
 #include <sstream>
