@@ -92,8 +92,8 @@ namespace OGRID
          */
         unsigned char lastChangedChar[2] = {0, 0};
 
-    public:
         // Constructors & Destructors
+    public:
         /**
          * @brief Construct a new Grid object.
          * @details This constructor will create a grid with the specified number of rows and columns.
