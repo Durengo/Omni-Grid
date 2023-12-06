@@ -21,7 +21,7 @@ namespace OGRID
 
     /**
      * @brief The Cell struct represents a single cell in the grid.
-     * It contains a pointer to a Piece and the row and column of the cell.
+     * @details It contains a pointer to a Piece and the row and column of the cell.
      * The Piece pointer can be nullptr if the cell is empty.
      * The row and column are unsigned chars, which means the grid can be at most 255x255.
      * This is more than enough for our purposes.
@@ -38,8 +38,7 @@ namespace OGRID
 
     /**
      * @brief The Grid class represents a 2D grid of Cells.
-     * @details The Grid class represents a 2D grid of Cells.
-     * It contains the number of rows and columns in the grid, as well as the grid itself.
+     * @details It contains the number of rows and columns in the grid, as well as the grid itself.
      * The grid is a 2D array of Cell pointers.
      * The grid can be at most 255x255, which is more than enough for our purposes.
      * The Grid class also contains a default Piece, which is used to reset the grid.
@@ -47,7 +46,7 @@ namespace OGRID
      * @see Piece
      * @see Cell
      * @see Grid
-    */
+     */
     class Grid
     {
     private:
@@ -58,6 +57,7 @@ namespace OGRID
          * @date 2023-12-06
          */
         unsigned char rows;
+
         /**
          * @brief The number of columns in the grid.
          * @details This is an unsigned char, which means the grid can be at most 255x255.
@@ -65,6 +65,7 @@ namespace OGRID
          * @date 2023-12-06
          */
         unsigned char cols;
+
         /**
          * @brief The grid itself.
          * @details This is a 2D array of Cell pointers.
@@ -101,7 +102,7 @@ namespace OGRID
          * @date 2023-12-06
          * @param rows The number of rows in the grid.
          * @param cols The number of columns in the grid.
-         * @param defaultPiece The default Piece for the grid.
+         * @param defaultPiece The default Piece for the grid. If this is nullptr.
          * @see Piece
          */
         Grid(unsigned char rows, unsigned char cols, Piece *defaultPiece = nullptr);
@@ -123,6 +124,7 @@ namespace OGRID
          * @return The number of rows in the grid.
          */
         unsigned char GetRows() const;
+
         /**
          * @brief Set the number of rows in the grid.
          * @details This is an unsigned char, which means the grid can be at most 255x255.
@@ -140,6 +142,7 @@ namespace OGRID
          * @return The number of columns in the grid.
          */
         unsigned char GetCols() const;
+
         /**
          * @brief Set the number of columns in the grid.
          * @details This is an unsigned char, which means the grid can be at most 255x255.
@@ -157,6 +160,7 @@ namespace OGRID
          * @see Cell
          */
         const std::vector<std::vector<Cell *>> &GetGrid() const;
+
         /**
          * @brief Set the grid itself.
          * @details This is a 2D array of Cell pointers.
@@ -174,27 +178,34 @@ namespace OGRID
          * @see Piece
          */
         Piece *GetDefaultPiece() const;
+
         /**
          * @brief Set the default Piece for the grid.
          * @details This is the Piece that will be used to reset the grid.
          * @date 2023-12-06
          * @param defaultPiece The new default Piece for the grid.
          * @see Piece
+         * @see ResetGrid()
          */
         void SetDefaultPiece(Piece *defaultPiece);
 
         /**
-         * @brief Get the last changed element.
-         * @details This is a pair of unsigned chars that stores the row and column of the last changed element.
+         * @brief Access the Cell at the specified row and column within the grid and return a pointer to the Piece.
          * @date 2023-12-06
-         * @return The last changed element.
+         * @return The specified Piece within the grid.
+         * @param row The row of the cell.
+         * @param col The column of the cell.
+         * @see Piece
          */
         Piece *GetPieceAt(unsigned char row, unsigned char col) const;
+
         /**
-         * @brief Set the last changed element.
-         * @details This is a pair of unsigned chars that stores the row and column of the last changed element.
+         * @brief Replace the specified Piece within the grid with the provided Piece.
          * @date 2023-12-06
-         * @param lastChangedChar The new last changed element.
+         * @param piece The new Piece.
+         * @param row The row of the cell.
+         * @param col The column of the cell.
+         * @param force_null Allows to pass a nullptr.
          * @see Piece
          * @see Cell
          * @see Grid
@@ -202,27 +213,34 @@ namespace OGRID
         void SetPieceAt(unsigned char row, unsigned char col, Piece *piece, bool force_null = false);
 
         /**
-         * @brief Get the last changed element.
-         * @details This is a pair of unsigned chars that stores the row and column of the last changed element.
+         * @brief Get a pointer to the specified Cell within the grid.
          * @date 2023-12-06
-         * @return The last changed element.
+         * @return The specified Cell within the grid.
+         * @param row The row of the cell.
+         * @param col The column of the cell.
          */
         Cell *GetCellAt(unsigned char row, unsigned char col) const;
+
         /**
-         * @brief Set the last changed element.
-         * @details This is a pair of unsigned chars that stores the row and column of the last changed element.
+         * @brief Replace the specified Cell within the grid with the provided Cell.
          * @date 2023-12-06
-         * @param force_null Allows to pass a nullptr to the cell.
+         * @param cell The new Cell.
+         * @param row The row of the cell.
+         * @param col The column of the cell.
+         * @param force_null Allows to pass a nullptr.
          * @see Piece
          * @see Cell
          * @see Grid
          */
         void SetCellAt(unsigned char row, unsigned char col, Cell *cell, bool force_null = false);
+
         /**
-         * @brief Set the last changed element.
-         * @details This is a pair of unsigned chars that stores the row and column of the last changed element.
+         * @brief Accesses the specified Cell within the grid and returns changes the Piece within the Cell with the provided PIece.
          * @date 2023-12-06
-         * @param force_null Allows to pass a nullptr to the cell.
+         * @param piece The new Piece.
+         * @param row The row of the cell.
+         * @param col The column of the cell.
+         * @param force_null Allows to pass a nullptr.
          * @see Piece
          * @see Cell
          */
@@ -236,8 +254,8 @@ namespace OGRID
          */
         std::pair<unsigned char, unsigned char> GetLastChangedChar() const;
 
-        // Overload the [] operator to access the grid.
     public:
+        // Overload the [] operator to access the grid.
         /**
          * @brief Overload the [] operator to access the grid.
          * @details This is a 2D array of Cell pointers.
@@ -260,36 +278,46 @@ namespace OGRID
     public:
         /**
          * @brief Get the grid as a string.
-         * @details This will return a string representation of the grid.
+         * @details This will return the size of the grid as a string. For example, a 3x3 grid will return "3x3".
          * @date 2023-12-06
          * @return The grid as a string.
          */
         const std::string GetGridSize() const;
+
         /**
-         * @brief Get the grid as a string.
-         * @details This will return a string representation of the grid.
+         * @brief Reset the grid.
+         * @details This will reset the grid to the default Piece. Deleting all the Cells (and Pieces if there are any) in the process.
          * @date 2023-12-06
-         * @return The grid as a string.
+         * @see Cell
+         * @see Piece
          */
         void ResetGrid();
+
         /**
-         * @brief Get the grid as a string.
-         * @details This will return a string representation of the grid.
+         * @brief Reset the grid with a new size.
+         * @details This will reset the grid to the default Piece. Deleting all the Cells (and Pieces if there are any) in the process.
          * @date 2023-12-06
-         * @return The grid as a string.
+         * @param newRows The new number of rows in the grid.
+         * @param newCols The new number of columns in the grid.
+         * @param defaultPiece The new default Piece for the grid. Can be nullptr.
+         * @see Cell
+         * @see Piece
          */
         void ResetGridWithNewSize(unsigned char newRows, unsigned char newCols, Piece *defaultPiece = nullptr);
+
         /**
-         * @brief Get the grid as a string.
-         * @details This will return a string representation of the grid.
+         * @brief Reset the grid with a new default Piece.
+         * @details This will reset the grid to the default Piece. Deleting all the Cells (and Pieces if there are any) in the process.
          * @date 2023-12-06
-         * @return The grid as a string.
+         * @param defaultPiece The new default Piece for the grid. Can be nullptr.
+         * @see Cell
+         * @see Piece
          */
         void ResetGridWithNewDefaultPiece(Piece *defaultPiece = nullptr);
 
         /**
          * @brief Get the grid as a string.
-         * @details This will return a string representation of the grid.
+         * @details This will return a string representation of the grid. If the Cell is a nullptr then "NULL" will be printed instead.
          * @date 2023-12-06
          * @return The grid as a string.
          */
