@@ -50,6 +50,7 @@ namespace OGRID
         case -1:
             return false;
         default:
+            m_winner = m_currentPlayer;
             return true;
         }
     }

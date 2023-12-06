@@ -240,9 +240,30 @@ namespace OGRID
         return m_GameConfiguration->playerPairs[m_currentTurn];
     }
 
+    void IGame::SetCurrentPlayer(OGRID::PlayerNameAndPtr player)
+    {
+        CLI_WARN("Setting current player forcefully. This is purely for testing purposes.");
+
+        m_currentPlayer = player.ptr;
+    }
+
     size_t IGame::GetCurrentTurn() const
     {
         return m_currentTurn;
+    }
+
+    GameStateChecker *IGame::GetGameStateChecker() const
+    {
+        CLI_WARN("Getting Game State. This is purely for testing purposes.");
+
+        return m_currentGameState;
+    }
+
+    void IGame::SetGameStateChecker(GameStateChecker *gameStateChecker)
+    {
+        CLI_WARN("Setting Game State. This is purely for testing purposes.");
+
+        m_currentGameState = gameStateChecker;
     }
 
     std::vector<std::string> IGame::GetPlayerNames() const
@@ -301,6 +322,13 @@ namespace OGRID
     {
         m_currentTurn = 0;
         m_totalTurns = 0;
+    }
+
+    void IGame::SwitchPlayer()
+    {
+        CLI_WARN("Switching player turns forcefully. This is purely for testing purposes.");
+        m_currentTurn = (m_currentTurn + 1) % m_GameConfiguration->playerPairs.size();
+        m_currentPlayer = GetCurrentPlayer().ptr;
     }
 
     void IGame::SetGUIInfo(const GUIInfo &guiInfo)

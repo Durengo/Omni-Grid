@@ -1,159 +1,177 @@
 #include <gtest/gtest.h>
-#include <Grid/Grid.h>
 
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+#include <durlib.h>
+
+#include "Grid/Grid.h"
+#include "Player/Piece.h"
 
 namespace OGRID
 {
-    // Test fixture for Grid.
+    // Test fixture for Grid
     class GridTest : public ::testing::Test
     {
     protected:
         Grid *grid;
+        Piece *defaultPiece;
 
         void SetUp() override
         {
-            grid = new Grid(10, 10, '*');
+            defaultPiece = new Piece("X", nullptr);
+            grid = new Grid(3, 3);
         }
 
         void TearDown() override
         {
             delete grid;
+            delete defaultPiece;
         }
     };
 
-    // Test cases.
     TEST_F(GridTest, Constructor)
     {
-        EXPECT_EQ(grid->GetRows(), 10);
-        EXPECT_EQ(grid->GetCols(), 10);
+        EXPECT_EQ(grid->GetRows(), 3);
+        EXPECT_NE(grid->GetRows(), 10);
+        EXPECT_EQ(grid->GetCols(), 3);
+        EXPECT_NE(grid->GetCols(), 10);
 
-        // Check if all elements are initialized to '*'.
-        for (int i = 0; i < grid->GetRows(); ++i)
+        EXPECT_EQ(grid->GetDefaultPiece(), nullptr);
+        EXPECT_NE(grid->GetDefaultPiece(), defaultPiece);
+
+        EXPECT_EQ(grid->GetPieceAt(0, 0), nullptr);
+        EXPECT_NE(grid->GetPieceAt(0, 0), defaultPiece);
+
+        EXPECT_EQ(grid->GetCellAt(0, 0)->m_Piece, nullptr);
+
+        EXPECT_EQ(grid->GetLastChangedChar(), std::make_pair(0, 0));
+    }
+
+    // It is important to segregate exception tests, as they cause other tests to fail.
+    // That doesn't mean that there isn't a design issue here. But it's not a priority.
+
+    TEST_F(GridTest, ExceptionsOOF1)
+    {
+        EXPECT_THROW(grid->GetPieceAt(10, 10), std::out_of_range);
+        EXPECT_THROW(grid->GetCellAt(10, 10), std::out_of_range);
+    }
+
+    TEST_F(GridTest, ExceptionsOOF2)
+    {
+        EXPECT_THROW(grid->SetPieceAt(10, 10, defaultPiece), std::out_of_range);
+        EXPECT_THROW(grid->SetCellAt(10, 10, defaultPiece), std::out_of_range);
+        EXPECT_THROW(grid->SetCellAt(10, 10, grid->GetCellAt(0, 0)), std::out_of_range);
+    }
+
+    TEST_F(GridTest, ExceptionsOOF3)
+    {
+        EXPECT_THROW(grid->SetPieceAt(0, 0, nullptr), std::invalid_argument);
+        EXPECT_THROW(grid->SetCellAt(0, 0, (Piece *)nullptr), std::invalid_argument);
+        EXPECT_THROW(grid->SetCellAt(0, 0, (Cell *)nullptr), std::invalid_argument);
+    }
+
+    TEST_F(GridTest, NoExceptions1)
+    {
+        EXPECT_THROW(grid->SetPieceAt(10, 10, defaultPiece), std::out_of_range);
+        EXPECT_THROW(grid->SetCellAt(10, 10, defaultPiece), std::out_of_range);
+        EXPECT_THROW(grid->SetCellAt(10, 10, grid->GetCellAt(0, 0)), std::out_of_range);
+    }
+
+    TEST_F(GridTest, NoExceptions2)
+    {
+        EXPECT_NO_THROW(grid->SetPieceAt(0, 0, nullptr, true));
+        EXPECT_NO_THROW(grid->SetCellAt(0, 0, (Piece *)nullptr, true));
+        EXPECT_NO_THROW(grid->SetCellAt(0, 0, (Cell *)nullptr, true));
+    }
+    // EXPECT_THROW(grid->SetPieceAt(0, 0, defaultPiece), std::runtime_error);
+    TEST_F(GridTest, NoExceptions3)
+    {
+        EXPECT_NO_THROW(grid->SetPieceAt(0, 0, defaultPiece));
+    }
+
+    TEST_F(GridTest, InitializationWithDefaultPiece)
+    {
+        Piece *initPiece = new Piece("O", nullptr);
+        Grid initGrid(5, 5, initPiece);
+        for (unsigned char i = 0; i < 5; ++i)
         {
-            for (int j = 0; j < grid->GetCols(); ++j)
+            for (unsigned char j = 0; j < 5; ++j)
             {
-                EXPECT_EQ((*grid)[i][j], '*');
+                EXPECT_EQ(initGrid.GetPieceAt(i, j), initPiece);
             }
         }
+        delete initPiece;
     }
 
-    // Test constructor with dimensions.
-    TEST_F(GridTest, ConstructorWithDimensions)
+    TEST_F(GridTest, GridResizing)
     {
-        Grid tempGrid(5, 5);
-        EXPECT_EQ(tempGrid.GetRows(), 5);
-        EXPECT_EQ(tempGrid.GetCols(), 5);
-    }
-
-    // Test constructor with dimensions and initial char.
-    TEST_F(GridTest, ConstructorWithDimensionsAndInitialChar)
-    {
-        char initialChar = '#';
-        Grid tempGrid(5, 5, initialChar);
-
-        // Check if all cells contain the initial char.
-        for (int i = 0; i < tempGrid.GetRows(); ++i)
-        {
-            for (int j = 0; j < tempGrid.GetCols(); ++j)
-            {
-                EXPECT_EQ(tempGrid.GetGrid()[i][j], initialChar);
-            }
-        }
-    }
-
-    // Test index operator for valid index.
-    TEST_F(GridTest, IndexOperatorValid)
-    {
-        grid->GetGrid()[0][0] = 'X';
-        EXPECT_EQ((*grid)[0][0], 'X');
-    }
-
-    // Test index operator for invalid index.
-    TEST_F(GridTest, IndexOperatorInvalid)
-    {
-        EXPECT_THROW((*grid)[grid->GetRows()], std::out_of_range);
-        // EXPECT_ANY_THROW((*grid)[grid->GetRows()]);
-    }
-
-    // Test setters.
-    TEST_F(GridTest, Setters)
-    {
-        grid->SetRows(5);
-        grid->SetCols(5);
-
+        grid->ResetGridWithNewSize(5, 5);
         EXPECT_EQ(grid->GetRows(), 5);
         EXPECT_EQ(grid->GetCols(), 5);
     }
 
-    // Test getters.
-    TEST_F(GridTest, Operator)
+    TEST_F(GridTest, ResetGridFunctionality)
     {
-        (*grid)[0][0] = 'X';
-        (*grid)[1][1] = 'X';
-        (*grid)[2][2] = 'X';
-
-        EXPECT_EQ((*grid)[0][0], 'X');
-        EXPECT_EQ((*grid)[1][1], 'X');
-        EXPECT_EQ((*grid)[2][2], 'X');
+        grid->SetPieceAt(1, 1, defaultPiece);
+        grid->ResetGrid();
+        EXPECT_EQ(grid->GetPieceAt(1, 1), nullptr);
     }
 
-    // Test getters.
-    TEST_F(GridTest, GetGrid)
+    TEST_F(GridTest, SetGridWithDifferentSizes)
     {
-        char **gridArray = grid->GetGrid();
-
-        EXPECT_EQ(gridArray[0][0], '*');
-        EXPECT_EQ(gridArray[1][1], '*');
-        EXPECT_EQ(gridArray[2][2], '*');
+        std::vector<std::vector<Cell *>> newGrid(4, std::vector<Cell *>(4, nullptr));
+        grid->SetGrid(newGrid);
+        EXPECT_EQ(grid->GetRows(), 4);
+        EXPECT_EQ(grid->GetCols(), 4);
     }
 
-    // Test getters.
-    TEST_F(GridTest, GetRows)
+    TEST_F(GridTest, OutOfBoundsAccess)
     {
-        EXPECT_EQ(grid->GetRows(), 10);
+        EXPECT_THROW(grid->SetPieceAt(10, 10, defaultPiece), std::out_of_range);
+        EXPECT_THROW(grid->SetCellAt(10, 10, new Cell()), std::out_of_range);
     }
 
-    // Test getters.
-    TEST_F(GridTest, GetCols)
+    TEST_F(GridTest, GridStringRepresentation)
     {
-        EXPECT_EQ(grid->GetCols(), 10);
+        grid->SetPieceAt(0, 0, defaultPiece);
+        std::string actual = grid->GetGridAsString();
+        std::string expected = "X|NULL|NULL\n"
+                               "NULL|NULL|NULL\n"
+                               "NULL|NULL|NULL";
+        EXPECT_EQ(actual, expected);
     }
 
-    // Test copy constructor.
-    TEST_F(GridTest, CopyConstructor)
+    TEST_F(GridTest, LastChangedCharacterTracking)
     {
-        // Create a new grid with a custom destructor.
-        Grid *grid = new Grid(10, 10, '*');
-
-        // Copy the grid.
-        Grid *gridCopy = new Grid(*grid);
-
-        // Check if the copy is correct.
-        EXPECT_EQ(gridCopy->GetRows(), 10);
-        EXPECT_EQ(gridCopy->GetCols(), 10);
-
-        // Check if all elements are initialized to '*'.
-        for (int i = 0; i < gridCopy->GetRows(); ++i)
-        {
-            for (int j = 0; j < gridCopy->GetCols(); ++j)
-            {
-                EXPECT_EQ((*gridCopy)[i][j], '*');
-            }
-        }
+        grid->SetPieceAt(2, 2, defaultPiece);
+        auto lastChanged = grid->GetLastChangedChar();
+        EXPECT_EQ(lastChanged.first, 2);
+        EXPECT_EQ(lastChanged.second, 2);
     }
 
-    // Test formatting output.
-    TEST_F(GridTest, FormattingOutput)
+    TEST_F(GridTest, OperatorOverloads)
     {
-        // Create a new grid with a custom destructor.
-        Grid *actual = new Grid(3, 3, '*');
-        std::string expectedOutput = "\n* * *\n* * *\n* * *";
-        EXPECT_EQ(fmt::format("{}", *actual), expectedOutput);
+        auto &row = (*grid)[1];
+        row[1]->m_Piece = defaultPiece;
+        EXPECT_EQ(grid->GetPieceAt(1, 1), defaultPiece);
     }
 
+    TEST_F(GridTest, SetGridExceptionHandling)
+    {
+        std::vector<std::vector<Cell *>> emptyGrid;
+        EXPECT_THROW(grid->SetGrid(emptyGrid), std::invalid_argument);
+    }
+
+    TEST_F(GridTest, GridCellUpdate)
+    {
+        grid->SetPieceAt(1, 1, defaultPiece);
+        EXPECT_EQ(grid->GetPieceAt(1, 1), defaultPiece);
+    }
+
+}
+
+int main(int argc, char **argv)
+{
+    DURLIB::Log::Init();
+
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

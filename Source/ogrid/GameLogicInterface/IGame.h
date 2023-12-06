@@ -89,6 +89,9 @@ namespace OGRID
 
         void Reset();
 
+        // Switch player turns forcefully after a move is made. This is added purely for testing purposes.
+        void SwitchPlayer();
+
         OGRID::GameOverType CheckGameOverState(OGRID::Grid *grid, unsigned char row, unsigned char col);
 
         // void ChangeGridSize();
@@ -114,7 +117,14 @@ namespace OGRID
 
         OGRID::PlayerNameAndPtr GetCurrentPlayer() const;
 
+        // This is solely for testing purposes.
+        void SetCurrentPlayer(OGRID::PlayerNameAndPtr player);
+
         size_t GetCurrentTurn() const;
+
+        GameStateChecker *GetGameStateChecker() const;
+
+        void SetGameStateChecker(GameStateChecker *gameStateChecker);
 
         std::vector<std::string> GetPlayerNames() const;
 

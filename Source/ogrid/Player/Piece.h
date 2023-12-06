@@ -37,6 +37,8 @@ namespace OGRID
 
         const Player *GetOwner() const;
 
+        void SetOwner(Player *player);
+
         bool isValidMove(Grid *grid, int fromX, int fromY, int toX, int toY) const;
 
         bool isValidAttack(Grid *grid, int fromX, int fromY, int toX, int toY, bool &canContinue) const;

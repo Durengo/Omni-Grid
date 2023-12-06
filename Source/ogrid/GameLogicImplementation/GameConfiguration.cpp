@@ -5,7 +5,7 @@
 #include <durlib.h>
 
 // #include "Grid/Grid.h"
-#include "GameLogicInterface/IGame.h"
+// #include "GameLogicInterface/IGame.h"
 
 namespace OGRID
 {
@@ -41,9 +41,22 @@ namespace OGRID
 
     GameConfiguration *GameConfigurationBuilder::build()
     {
+        // We should make sure all the values are not null.
+        if (m_GameConfiguration.gameName.empty())
+            throw std::runtime_error("Game name cannot be empty.");
         CLI_INFO("Game Name: {0}", m_GameConfiguration.gameName);
+
+        if (m_GameConfiguration.gameDescription.empty())
+            throw std::runtime_error("Game description cannot be empty.");
         CLI_INFO("Game Description: {0}", m_GameConfiguration.gameDescription);
+
+        if (m_GameConfiguration.grid == nullptr)
+            throw std::runtime_error("Grid cannot be null.");
         CLI_INFO("Grid: {0}", m_GameConfiguration.grid->GetGridSize());
+
+        if (m_GameConfiguration.maxPlayers == 0)
+            throw std::runtime_error("Max players cannot be 0.");
+
         CLI_INFO("Player amount: {0}", m_GameConfiguration.players.size());
         CLI_ASSERT(m_GameConfiguration.players.size() > 1, "TicTacToeTurnManager cannot be initialized due to lack of players.");
         CLI_INFO("Players:\n{0}", PlayerVecToString(m_GameConfiguration.players));
@@ -63,6 +76,18 @@ namespace OGRID
 
         return new GameConfiguration(m_GameConfiguration);
     }
+
+    // std::string PlayerNameAndPtrVecToString(const std::vector<PlayerNameAndPtr> &players)
+    // {
+    //     std::ostringstream ss;
+    //     for (size_t i = 0; i < players.size(); ++i)
+    //     {
+    //         if (i > 0)
+    //             ss << "\n";
+    //         ss << fmt::format("{}", players[i]);
+    //     }
+    //     return ss.str();
+    // }
 }
 
 template <>
@@ -82,7 +107,7 @@ struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
     }
 };
 
-std::string PlayerNameAndPtrVecToString(const std::vector<OGRID::PlayerNameAndPtr> &players)
+std::string OGRID::PlayerNameAndPtrVecToString(const std::vector<OGRID::PlayerNameAndPtr> &players)
 {
     std::ostringstream ss;
     for (size_t i = 0; i < players.size(); ++i)

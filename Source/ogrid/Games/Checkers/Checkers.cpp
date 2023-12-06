@@ -57,7 +57,7 @@ namespace OGRID
             GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece);
 
             // Set the old position to nullptr
-            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr);
+            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr, true);
 
             // Remove the old piece from the piece manager
             RemovePieceFromPieceManager(coords);
@@ -89,7 +89,7 @@ namespace OGRID
             GetGameConfiguration()->grid->SetPieceAt(row, col, m_SelectedPiece);
 
             // Set the old position to nullptr
-            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr);
+            GetGameConfiguration()->grid->SetPieceAt(coords.second, coords.first, nullptr, true);
 
             // Remove the old piece from the piece manager
             RemovePieceFromPieceManager(coords);
@@ -100,7 +100,7 @@ namespace OGRID
             int deltaX = coords.first < col ? 1 : -1;
             int deltaY = coords.second < row ? 1 : -1;
 
-            GetGameConfiguration()->grid->SetPieceAt(row - deltaY, col - deltaX, nullptr);
+            GetGameConfiguration()->grid->SetPieceAt(row - deltaY, col - deltaX, nullptr, true);
             delete GetGameConfiguration()->grid->GetPieceAt(row - deltaY, col - deltaX);
 
             // If not a super piece
