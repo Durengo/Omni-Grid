@@ -1,0 +1,270 @@
+\doxysection{OGRID\+::Game\+State\+Extensions Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_game_state_extensions}{}\label{class_o_g_r_i_d_1_1_game_state_extensions}\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_game_state_extensions}{Game\+State\+Extensions} class. Used to extend the \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} class.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Extensions.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_ae1bbbb53f2e9be9b9ad8157367242f5a}{Check\+For\+Recurring\+String\+In\+Row}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::string \&piece\+Representation, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in a row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a25a779426de42088e0256b98314827c3}{Check\+For\+Recurring\+Piece\+In\+Row}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::type\+\_\+info \&piece\+Type, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in a row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a89f68f2f876ae89a463a459b6b03848a}{Check\+For\+Recurring\+String\+In\+Col}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::string \&piece\+Representation, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in a column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_aa499f5706108f7e54b825a1edfc5fd85}{Check\+For\+Recurring\+Piece\+In\+Col}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::type\+\_\+info \&piece\+Type, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in a column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_aa6c253b0ca3db0b0084eeb129be6b2df}{Check\+For\+Recurring\+String\+In\+Diagonal}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::string \&piece\+Representation, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in a diagonal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_aa4371fb03064cd7e674bbe0395571cc9}{Check\+For\+Recurring\+Piece\+In\+Diagonal}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::type\+\_\+info \&piece\+Type, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in a diagonal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a75a5f16f62c6ffd83607374a568912c8}{Check\+For\+Recurring\+String\+In\+Anti\+Diagonal}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::string \&piece\+Representation, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in an anti-\/diagonal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a39255f2c2e770ccf68480c6bedbd6a02}{Check\+For\+Recurring\+Piece\+In\+Anti\+Diagonal}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, const std\+::type\+\_\+info \&piece\+Type, unsigned char dupe\+Count) const
+\begin{DoxyCompactList}\small\item\em Check the exact amount of duplicate pieces in an anti-\/diagonal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a9b6adae1fa2b425bbfdfa9313a09dda4}{Check\+If\+All\+Spots\+Filled}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const
+\begin{DoxyCompactList}\small\item\em Check if all the spots in the grid are filled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_game_state_extensions}{Game\+State\+Extensions} class. Used to extend the \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} class. 
+
+It contains the extension methods for the \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} class. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_a39255f2c2e770ccf68480c6bedbd6a02}\label{class_o_g_r_i_d_1_1_game_state_extensions_a39255f2c2e770ccf68480c6bedbd6a02} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringPieceInAntiDiagonal@{CheckForRecurringPieceInAntiDiagonal}}
+\index{CheckForRecurringPieceInAntiDiagonal@{CheckForRecurringPieceInAntiDiagonal}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringPieceInAntiDiagonal()}{CheckForRecurringPieceInAntiDiagonal()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+Piece\+In\+Anti\+Diagonal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::type\+\_\+info \&}]{piece\+Type,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in an anti-\/diagonal. 
+
+This should be used like this\+: Check\+For\+Recurring\+Piece\+In\+Anti\+Diagonal(typeid(\+XPiece), 3)) \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Type} & The type of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_aa499f5706108f7e54b825a1edfc5fd85}\label{class_o_g_r_i_d_1_1_game_state_extensions_aa499f5706108f7e54b825a1edfc5fd85} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringPieceInCol@{CheckForRecurringPieceInCol}}
+\index{CheckForRecurringPieceInCol@{CheckForRecurringPieceInCol}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringPieceInCol()}{CheckForRecurringPieceInCol()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+Piece\+In\+Col (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::type\+\_\+info \&}]{piece\+Type,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in a column. 
+
+This should be used like this\+: Check\+For\+Recurring\+Piece\+In\+Col(typeid(\+XPiece), 3)) \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Type} & The type of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_aa4371fb03064cd7e674bbe0395571cc9}\label{class_o_g_r_i_d_1_1_game_state_extensions_aa4371fb03064cd7e674bbe0395571cc9} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringPieceInDiagonal@{CheckForRecurringPieceInDiagonal}}
+\index{CheckForRecurringPieceInDiagonal@{CheckForRecurringPieceInDiagonal}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringPieceInDiagonal()}{CheckForRecurringPieceInDiagonal()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+Piece\+In\+Diagonal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::type\+\_\+info \&}]{piece\+Type,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in a diagonal. 
+
+This should be used like this\+: Check\+For\+Recurring\+Piece\+In\+Diagonal(typeid(\+XPiece), 3)) \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Type} & The type of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_a25a779426de42088e0256b98314827c3}\label{class_o_g_r_i_d_1_1_game_state_extensions_a25a779426de42088e0256b98314827c3} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringPieceInRow@{CheckForRecurringPieceInRow}}
+\index{CheckForRecurringPieceInRow@{CheckForRecurringPieceInRow}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringPieceInRow()}{CheckForRecurringPieceInRow()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+Piece\+In\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::type\+\_\+info \&}]{piece\+Type,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in a row. 
+
+This should be used like this\+: Check\+For\+Recurring\+Piece\+In\+Row(typeid(\+XPiece), 3)) \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Type} & The type of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_a75a5f16f62c6ffd83607374a568912c8}\label{class_o_g_r_i_d_1_1_game_state_extensions_a75a5f16f62c6ffd83607374a568912c8} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringStringInAntiDiagonal@{CheckForRecurringStringInAntiDiagonal}}
+\index{CheckForRecurringStringInAntiDiagonal@{CheckForRecurringStringInAntiDiagonal}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringStringInAntiDiagonal()}{CheckForRecurringStringInAntiDiagonal()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+String\+In\+Anti\+Diagonal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::string \&}]{piece\+Representation,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in an anti-\/diagonal. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Representation} & The representation of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_a89f68f2f876ae89a463a459b6b03848a}\label{class_o_g_r_i_d_1_1_game_state_extensions_a89f68f2f876ae89a463a459b6b03848a} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringStringInCol@{CheckForRecurringStringInCol}}
+\index{CheckForRecurringStringInCol@{CheckForRecurringStringInCol}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringStringInCol()}{CheckForRecurringStringInCol()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+String\+In\+Col (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::string \&}]{piece\+Representation,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in a column. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Representation} & The representation of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_aa6c253b0ca3db0b0084eeb129be6b2df}\label{class_o_g_r_i_d_1_1_game_state_extensions_aa6c253b0ca3db0b0084eeb129be6b2df} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringStringInDiagonal@{CheckForRecurringStringInDiagonal}}
+\index{CheckForRecurringStringInDiagonal@{CheckForRecurringStringInDiagonal}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringStringInDiagonal()}{CheckForRecurringStringInDiagonal()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+String\+In\+Diagonal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::string \&}]{piece\+Representation,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in a diagonal. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Representation} & The representation of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_ae1bbbb53f2e9be9b9ad8157367242f5a}\label{class_o_g_r_i_d_1_1_game_state_extensions_ae1bbbb53f2e9be9b9ad8157367242f5a} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckForRecurringStringInRow@{CheckForRecurringStringInRow}}
+\index{CheckForRecurringStringInRow@{CheckForRecurringStringInRow}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckForRecurringStringInRow()}{CheckForRecurringStringInRow()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+For\+Recurring\+String\+In\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{const std\+::string \&}]{piece\+Representation,  }\item[{unsigned char}]{dupe\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Check the exact amount of duplicate pieces in a row. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em piece\+Representation} & The representation of the piece to be counted. \\
+\hline
+{\em dupe\+Count} & The exact number of duplicate pieces to be counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exact amount of duplicate pieces are found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_extensions_a9b6adae1fa2b425bbfdfa9313a09dda4}\label{class_o_g_r_i_d_1_1_game_state_extensions_a9b6adae1fa2b425bbfdfa9313a09dda4} 
+\index{OGRID::GameStateExtensions@{OGRID::GameStateExtensions}!CheckIfAllSpotsFilled@{CheckIfAllSpotsFilled}}
+\index{CheckIfAllSpotsFilled@{CheckIfAllSpotsFilled}!OGRID::GameStateExtensions@{OGRID::GameStateExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckIfAllSpotsFilled()}{CheckIfAllSpotsFilled()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Extensions\+::\+Check\+If\+All\+Spots\+Filled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const}
+
+
+
+Check if all the spots in the grid are filled. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if all the spots in the grid are filled, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_state_extensions_8h}{Game\+State\+Extensions.\+h}}\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_state_extensions_8cpp}{Game\+State\+Extensions.\+cpp}}\end{DoxyCompactItemize}

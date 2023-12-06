@@ -1,0 +1,59 @@
+\doxysection{Source/ogrid/\+Game\+Logic\+Interface/\+IGame.h File Reference}
+\hypertarget{_i_game_8h}{}\label{_i_game_8h}\index{Source/ogrid/GameLogicInterface/IGame.h@{Source/ogrid/GameLogicInterface/IGame.h}}
+
+
+Contains the IGame class.  
+
+
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$raylib.\+h$>$}\newline
+{\ttfamily \#include "{}GUI/\+GUIInfo.\+h"{}}\newline
+{\ttfamily \#include "{}Game\+Logic\+Implementation/\+Game\+State\+Checker.\+h"{}}\newline
+Include dependency graph for IGame.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{OGRID\+::\+IGame}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_o_g_r_i_d_1_1_i_game}{IGame} class. Used to represent a game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{OGRID\+::\+Game\+State}} \{ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3af595cc685945e110cbdad08e3caf45e7}{OGRID\+::\+Not\+Started}} = 0
+, \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3a799d4a9d2dd2658103da91f008392dbf}{OGRID\+::\+In\+Progress}} = 1
+, \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3a10278d6b076619c57c13f9a4776987d7}{OGRID\+::\+Paused}} = 2
+, \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3ae2eb8edde36d3b2d35f4257494e23cb1}{OGRID\+::\+Game\+Over}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em The IGame class. Used to represent a game. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{OGRID\+::\+Game\+Over\+Type}} \{ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32aa244146c048a352330efbc3f637918dd}{OGRID\+::\+None}} = 0
+, \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32ab19376214085226069b90a33dc04b783}{OGRID\+::\+Win}} = 1
+, \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32a381f9d4823b00c48faacb26b7c1207ae}{OGRID\+::\+Draw}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em The Game\+Over\+Type enum. Used to represent the type of game over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the IGame class. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}

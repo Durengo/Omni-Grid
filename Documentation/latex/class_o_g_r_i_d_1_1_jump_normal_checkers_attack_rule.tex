@@ -1,0 +1,98 @@
+\doxysection{OGRID\+::Jump\+Normal\+Checkers\+Attack\+Rule Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule}{}\label{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule}\index{OGRID::JumpNormalCheckersAttackRule@{OGRID::JumpNormalCheckersAttackRule}}
+
+
+The Piece\+Rules class. Used to represent the rules of a piece.  
+
+
+
+
+{\ttfamily \#include $<$Piece\+Rules.\+h$>$}
+
+
+
+Inheritance diagram for OGRID\+::Jump\+Normal\+Checkers\+Attack\+Rule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for OGRID\+::Jump\+Normal\+Checkers\+Attack\+Rule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule_af48124a67b82cd579b127d34a1e33831}{Is\+Valid\+Attack}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int fromX, int fromY, int toX, int toY, bool \&can\+Continue) const override
+\begin{DoxyCompactList}\small\item\em Check if the attack is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{OGRID\+::\+IAttack\+Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule_a148ae021d29a6bfac80e3f46804df6ea}{\texorpdfstring{$\sim$}{\string~}\+IAttack\+Rule}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Piece\+Rules class. Used to represent the rules of a piece. 
+
+It contains the move rules of the piece and the attack rules of the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule_af48124a67b82cd579b127d34a1e33831}\label{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule_af48124a67b82cd579b127d34a1e33831} 
+\index{OGRID::JumpNormalCheckersAttackRule@{OGRID::JumpNormalCheckersAttackRule}!IsValidAttack@{IsValidAttack}}
+\index{IsValidAttack@{IsValidAttack}!OGRID::JumpNormalCheckersAttackRule@{OGRID::JumpNormalCheckersAttackRule}}
+\doxysubsubsection{\texorpdfstring{IsValidAttack()}{IsValidAttack()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Jump\+Normal\+Checkers\+Attack\+Rule\+::\+Is\+Valid\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{fromX,  }\item[{int}]{fromY,  }\item[{int}]{toX,  }\item[{int}]{toY,  }\item[{bool \&}]{can\+Continue }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the attack is valid. 
+
+Check if the attack is valid. It is valid if the end cell is unoccupied. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em fromX} & The x coordinate of the start cell. \\
+\hline
+{\em fromY} & The y coordinate of the start cell. \\
+\hline
+{\em toX} & The x coordinate of the end cell. \\
+\hline
+{\em toY} & The y coordinate of the end cell. \\
+\hline
+{\em can\+Continue} & A boolean value that indicates if the attack can continue. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the attack is valid, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This specifically checks the starting cell and the ending cell. 
+
+This is specifically used for \doxylink{class_o_g_r_i_d_1_1_checkers}{Checkers}. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule_a1dbbdcf7a04a68e3f1f593619359d8ef}{OGRID\+::\+IAttack\+Rule}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_piece_rules_8h}{Piece\+Rules.\+h}}\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_piece_rules_8cpp}{Piece\+Rules.\+cpp}}\end{DoxyCompactItemize}

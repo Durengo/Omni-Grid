@@ -1,0 +1,13 @@
+<map id="OGRID::GameConfigurationBuilder" name="OGRID::GameConfigurationBuilder">
+<area shape="rect" id="Node000001" title="The GameConfigurationBuilder class. Used to build a GameConfiguration object." alt="" coords="71,368,251,411"/>
+<area shape="rect" id="Node000002" href="$struct_o_g_r_i_d_1_1_configuration_builder.html" title="The ConfigurationBuilder interface." alt="" coords="5,277,191,304"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,316,149,366,145,369,112,318"/>
+<area shape="rect" id="Node000003" href="$struct_o_g_r_i_d_1_1_game_configuration.html" title="The GameConfiguration class. Used to represent a game configuration." alt="" coords="215,277,395,304"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="275,315,193,370,190,365,272,311"/>
+<area shape="rect" id="Node000004" href="$class_o_g_r_i_d_1_1_grid.html" title="The Grid class represents a 2D grid of Cells." alt="" coords="258,187,352,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="307,229,307,277,302,277,302,229"/>
+<area shape="rect" id="Node000005" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="253,96,356,123"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="307,138,307,186,302,186,302,138"/>
+<area shape="rect" id="Node000006" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="251,5,358,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="307,48,307,95,302,95,302,48"/>
+</map>

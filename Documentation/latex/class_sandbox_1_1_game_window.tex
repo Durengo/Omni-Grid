@@ -1,0 +1,414 @@
+\doxysection{Sandbox\+::Game\+Window\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_sandbox_1_1_game_window}{}\label{class_sandbox_1_1_game_window}\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+
+
+Game window.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Window.\+h$>$}
+
+
+
+Collaboration diagram for Sandbox\+::Game\+Window\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_sandbox_1_1_game_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sandbox_1_1_game_window_a41a83ed6f45813b735951f2aa3548462}{Game\+Window}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_sandbox_1_1_game_window}{Game\+Window} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sandbox_1_1_game_window_a197f5373b8d2664fcb51e9798b177e84}{\texorpdfstring{$\sim$}{\string~}\+Game\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_sandbox_1_1_game_window}{Game\+Window} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a080eb1bcdfdb1747e55da2b07e65bf7e}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a68b47889766384560accbd6cd72b7193}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Run the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a96effbf3d305b88f531e7280227d8407}{Pre\+Run}} ()
+\begin{DoxyCompactList}\small\item\em Run checks before the game starts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a32a3a39aafac91303f6290410e535ce8}{On\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Update the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a26b503b29feeb8b2b6ff41ee0467fd48}{Draw\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Draw the game. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_sandbox_1_1_game_window_a8ff8f141b9c748aab3004234c76beca9}{Get\+Cell\+From\+Mouse}} (Vector2 mouse\+Position)
+\begin{DoxyCompactList}\small\item\em Get the cell from mouse position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a802009c0ca2a6570bb67104e95547a2e}{Update\+Window\+Dimensions}} ()
+\begin{DoxyCompactList}\small\item\em Update the window dimensions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_ac2a90b472d9a2a6f6d459cd0183c6366}{Mouse\+Button\+Press}} ()
+\begin{DoxyCompactList}\small\item\em Called when the mouse button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a582c5cad690c321b79eb1ac0e5c62ef9}{In\+Progress}} ()
+\begin{DoxyCompactList}\small\item\em Turns off logic while the game is in progress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_game_window_a05119709422d6d8d46989851e063c017}{Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Turns on logic while the game is not in progress. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_a2d85215df047108f4b7bd45003b480e6}{m\+\_\+\+Game}}
+\begin{DoxyCompactList}\small\item\em Game logic. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sandbox_1_1_game_window_ad85efbc32807b08dc784c4e7d5478766}{m\+\_\+\+Running}} = false
+\begin{DoxyCompactList}\small\item\em Is the game running. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button}{OGRID\+::\+Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_a7e47ba903f70cc1f6660bb8bd5fba24c}{restart\+Button}}
+\begin{DoxyCompactList}\small\item\em Restart button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_a3327bbdc38f87f41efdffd7eb05e69b0}{game\+Over\+Text}}
+\begin{DoxyCompactList}\small\item\em Game over text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_a32a557704fc37f63afc17a362d0904d8}{winner\+Text}}
+\begin{DoxyCompactList}\small\item\em Winner text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_a43bba5e69e7d700980d544adb71ebc53}{current\+Player\+Text}}
+\begin{DoxyCompactList}\small\item\em Current player text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_ad0a7b8681e8670076ae258dae2f096db}{turn\+Text}}
+\begin{DoxyCompactList}\small\item\em Turn text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window_a150290c0b2c07418f7f5cc437768c864}{draw\+Text}}
+\begin{DoxyCompactList}\small\item\em Draw text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Sandbox\+::\+Game\+Window$<$ T $>$}
+Game window. 
+
+Servers as a wrapper around raylib. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Game logic, must inherit from IGame. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.raylib.com/}{\texttt{ https\+://www.\+raylib.\+com/}} 
+
+IGame 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sandbox_1_1_game_window_a41a83ed6f45813b735951f2aa3548462}\label{class_sandbox_1_1_game_window_a41a83ed6f45813b735951f2aa3548462} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!GameWindow@{GameWindow}}
+\index{GameWindow@{GameWindow}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GameWindow()}{GameWindow()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Game\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \doxylink{class_sandbox_1_1_game_window}{Game\+Window} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a197f5373b8d2664fcb51e9798b177e84}\label{class_sandbox_1_1_game_window_a197f5373b8d2664fcb51e9798b177e84} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!````~GameWindow@{\texorpdfstring{$\sim$}{\string~}GameWindow}}
+\index{````~GameWindow@{\texorpdfstring{$\sim$}{\string~}GameWindow}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameWindow()}{\string~GameWindow()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_sandbox_1_1_game_window}{Game\+Window}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_sandbox_1_1_game_window}{Game\+Window} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sandbox_1_1_game_window_a26b503b29feeb8b2b6ff41ee0467fd48}\label{class_sandbox_1_1_game_window_a26b503b29feeb8b2b6ff41ee0467fd48} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!DrawGrid@{DrawGrid}}
+\index{DrawGrid@{DrawGrid}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DrawGrid()}{DrawGrid()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Draw\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draw the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a05119709422d6d8d46989851e063c017}\label{class_sandbox_1_1_game_window_a05119709422d6d8d46989851e063c017} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GameOver()}{GameOver()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns on logic while the game is not in progress. 
+
+Example\+: Restart button is enabled while the game is not in progress. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a8ff8f141b9c748aab3004234c76beca9}\label{class_sandbox_1_1_game_window_a8ff8f141b9c748aab3004234c76beca9} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!GetCellFromMouse@{GetCellFromMouse}}
+\index{GetCellFromMouse@{GetCellFromMouse}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetCellFromMouse()}{GetCellFromMouse()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+Vector2 \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Get\+Cell\+From\+Mouse (\begin{DoxyParamCaption}\item[{Vector2}]{mouse\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the cell from mouse position. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Position} & Mouse position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2 Cell position 
+\end{DoxyReturn}
+\Hypertarget{class_sandbox_1_1_game_window_a582c5cad690c321b79eb1ac0e5c62ef9}\label{class_sandbox_1_1_game_window_a582c5cad690c321b79eb1ac0e5c62ef9} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!InProgress@{InProgress}}
+\index{InProgress@{InProgress}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InProgress()}{InProgress()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+In\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns off logic while the game is in progress. 
+
+Example\+: Restart button is disabled while the game is in progress. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_ac2a90b472d9a2a6f6d459cd0183c6366}\label{class_sandbox_1_1_game_window_ac2a90b472d9a2a6f6d459cd0183c6366} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!MouseButtonPress@{MouseButtonPress}}
+\index{MouseButtonPress@{MouseButtonPress}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MouseButtonPress()}{MouseButtonPress()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Mouse\+Button\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called when the mouse button is pressed. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a32a3a39aafac91303f6290410e535ce8}\label{class_sandbox_1_1_game_window_a32a3a39aafac91303f6290410e535ce8} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+On\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a96effbf3d305b88f531e7280227d8407}\label{class_sandbox_1_1_game_window_a96effbf3d305b88f531e7280227d8407} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!PreRun@{PreRun}}
+\index{PreRun@{PreRun}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PreRun()}{PreRun()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Pre\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Run checks before the game starts. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a68b47889766384560accbd6cd72b7193}\label{class_sandbox_1_1_game_window_a68b47889766384560accbd6cd72b7193} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!Run@{Run}}
+\index{Run@{Run}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Run the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a080eb1bcdfdb1747e55da2b07e65bf7e}\label{class_sandbox_1_1_game_window_a080eb1bcdfdb1747e55da2b07e65bf7e} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!Start@{Start}}
+\index{Start@{Start}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the game. 
+
+Serves as an entry point for the game. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a802009c0ca2a6570bb67104e95547a2e}\label{class_sandbox_1_1_game_window_a802009c0ca2a6570bb67104e95547a2e} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!UpdateWindowDimensions@{UpdateWindowDimensions}}
+\index{UpdateWindowDimensions@{UpdateWindowDimensions}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UpdateWindowDimensions()}{UpdateWindowDimensions()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::\+Update\+Window\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the window dimensions. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_sandbox_1_1_game_window_a43bba5e69e7d700980d544adb71ebc53}\label{class_sandbox_1_1_game_window_a43bba5e69e7d700980d544adb71ebc53} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!currentPlayerText@{currentPlayerText}}
+\index{currentPlayerText@{currentPlayerText}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{currentPlayerText}{currentPlayerText}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::current\+Player\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current player text. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Text 
+\end{DoxySeeAlso}
+\Hypertarget{class_sandbox_1_1_game_window_a150290c0b2c07418f7f5cc437768c864}\label{class_sandbox_1_1_game_window_a150290c0b2c07418f7f5cc437768c864} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!drawText@{drawText}}
+\index{drawText@{drawText}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{drawText}{drawText}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::draw\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draw text. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Text 
+\end{DoxySeeAlso}
+\Hypertarget{class_sandbox_1_1_game_window_a3327bbdc38f87f41efdffd7eb05e69b0}\label{class_sandbox_1_1_game_window_a3327bbdc38f87f41efdffd7eb05e69b0} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!gameOverText@{gameOverText}}
+\index{gameOverText@{gameOverText}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{gameOverText}{gameOverText}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::game\+Over\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game over text. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Text 
+\end{DoxySeeAlso}
+\Hypertarget{class_sandbox_1_1_game_window_a2d85215df047108f4b7bd45003b480e6}\label{class_sandbox_1_1_game_window_a2d85215df047108f4b7bd45003b480e6} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!m\_Game@{m\_Game}}
+\index{m\_Game@{m\_Game}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_Game}{m\_Game}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::m\+\_\+\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game logic. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+IGame 
+\end{DoxySeeAlso}
+\Hypertarget{class_sandbox_1_1_game_window_ad85efbc32807b08dc784c4e7d5478766}\label{class_sandbox_1_1_game_window_ad85efbc32807b08dc784c4e7d5478766} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!m\_Running@{m\_Running}}
+\index{m\_Running@{m\_Running}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_Running}{m\_Running}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::m\+\_\+\+Running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is the game running. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_game_window_a7e47ba903f70cc1f6660bb8bd5fba24c}\label{class_sandbox_1_1_game_window_a7e47ba903f70cc1f6660bb8bd5fba24c} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!restartButton@{restartButton}}
+\index{restartButton@{restartButton}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{restartButton}{restartButton}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button}{OGRID\+::\+Button}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::restart\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Restart button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Button 
+\end{DoxySeeAlso}
+\Hypertarget{class_sandbox_1_1_game_window_ad0a7b8681e8670076ae258dae2f096db}\label{class_sandbox_1_1_game_window_ad0a7b8681e8670076ae258dae2f096db} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!turnText@{turnText}}
+\index{turnText@{turnText}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{turnText}{turnText}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::turn\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turn text. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Text 
+\end{DoxySeeAlso}
+\Hypertarget{class_sandbox_1_1_game_window_a32a557704fc37f63afc17a362d0904d8}\label{class_sandbox_1_1_game_window_a32a557704fc37f63afc17a362d0904d8} 
+\index{Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}!winnerText@{winnerText}}
+\index{winnerText@{winnerText}!Sandbox::GameWindow$<$ T $>$@{Sandbox::GameWindow$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{winnerText}{winnerText}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_text}{OGRID\+::\+Text}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_game_window}{Sandbox\+::\+Game\+Window}}$<$ T $>$\+::winner\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Winner text. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Text 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Sandbox/\+GUI/\mbox{\hyperlink{_game_window_8h}{Game\+Window.\+h}}\item 
+Source/\+Sandbox/\+GUI/\mbox{\hyperlink{_game_window_8cpp}{Game\+Window.\+cpp}}\end{DoxyCompactItemize}

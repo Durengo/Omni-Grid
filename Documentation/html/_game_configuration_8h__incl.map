@@ -1,0 +1,14 @@
+<map id="Source/ogrid/GameLogicImplementation/GameConfiguration.h" name="Source/ogrid/GameLogicImplementation/GameConfiguration.h">
+<area shape="rect" id="Node000001" title="Contains the GameConfiguration class." alt="" coords="11,5,263,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="50,171,103,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,51,37,70,12,97,9,114,15,130,28,146,44,160,41,164,24,149,10,133,3,114,8,95,34,66,67,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="210,171,266,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,46,230,66,255,95,261,110,261,127,253,158,248,156,256,126,255,111,250,97,227,70,195,51"/>
+<area shape="rect" id="Node000004" href="$_grid_8h.html" title="Contains the Grid class." alt="" coords="156,96,240,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,47,181,82,177,85,150,50"/>
+<area shape="rect" id="Node000005" href="$_player_8h.html" title="Contains the Player class." alt="" coords="22,96,132,123"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="123,50,97,85,93,82,119,47"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="178,126,112,165,110,160,176,121"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="207,122,226,156,221,158,203,125"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="79,123,79,155,74,155,74,123"/>
+</map>

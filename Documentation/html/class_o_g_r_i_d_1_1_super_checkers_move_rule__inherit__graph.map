@@ -1,0 +1,5 @@
+<map id="OGRID::SuperCheckersMoveRule" name="OGRID::SuperCheckersMoveRule">
+<area shape="rect" id="Node000001" title="The PieceRules class. Used to represent the rules of a piece." alt="" coords="5,80,221,107"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_i_move_rule.html" title="The IMoveRule class. Used to check if the move is valid." alt="" coords="48,5,178,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,48,116,80,110,80,110,48"/>
+</map>

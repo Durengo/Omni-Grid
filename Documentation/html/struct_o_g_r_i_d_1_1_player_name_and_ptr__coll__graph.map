@@ -1,0 +1,5 @@
+<map id="OGRID::PlayerNameAndPtr" name="OGRID::PlayerNameAndPtr">
+<area shape="rect" id="Node000001" title="Pair of player name and pointer." alt="" coords="5,96,187,123"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="42,5,150,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,48,99,95,93,95,93,48"/>
+</map>

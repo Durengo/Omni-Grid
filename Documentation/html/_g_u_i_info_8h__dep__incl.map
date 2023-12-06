@@ -1,0 +1,33 @@
+<map id="Source/ogrid/GUI/GUIInfo.h" name="Source/ogrid/GUI/GUIInfo.h">
+<area shape="rect" id="Node000001" title="GUI info." alt="" coords="462,5,639,32"/>
+<area shape="rect" id="Node000002" href="$_i_game_8h.html" title="Contains the IGame class." alt="" coords="348,80,561,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,44,480,82,477,77,522,40"/>
+<area shape="rect" id="Node000014" href="$ogrid__gui_8h.html" title=" " alt="" coords="704,80,831,123"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="599,35,712,77,710,82,597,40"/>
+<area shape="rect" id="Node000003" href="$_i_game_8cpp.html" title=" " alt="" coords="245,171,458,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="421,135,377,172,374,168,417,131"/>
+<area shape="rect" id="Node000004" href="$_checkers_8h.html" title=" " alt="" coords="482,171,632,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="491,131,535,168,531,172,488,135"/>
+<area shape="rect" id="Node000006" href="$ogrid_8h.html" title=" " alt="" coords="299,269,436,296"/>
+<area shape="poly" id="edge15_Node000002_Node000006" title=" " alt="" coords="333,115,305,123,279,135,255,151,235,172,228,192,235,212,251,231,270,246,314,266,312,271,267,250,247,235,231,215,222,192,231,169,251,147,276,131,303,118,332,110"/>
+<area shape="rect" id="Node000010" href="$_connect_four_8h.html" title=" " alt="" coords="656,171,844,213"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="539,125,681,167,680,173,537,130"/>
+<area shape="rect" id="Node000012" href="$_tic_tac_toe_8h.html" title="TicTacToe game logic." alt="" coords="12,171,171,213"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="355,129,172,174,170,169,354,124"/>
+<area shape="rect" id="Node000005" href="$_checkers_8cpp.html" title=" " alt="" coords="460,261,624,304"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="554,229,548,261,543,261,548,228"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="500,223,396,271,394,266,497,218"/>
+<area shape="rect" id="Node000007" href="$_game_initializer_8cpp.html" title=" " alt="" coords="387,352,535,395"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="393,305,441,350,437,354,390,309"/>
+<area shape="rect" id="Node000008" href="$_game_window_8cpp.html" title=" " alt="" coords="641,352,785,395"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="432,298,641,351,640,356,431,303"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html" title="Main entry point." alt="" coords="188,360,363,387"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="345,309,291,361,287,357,341,305"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="642,220,448,264,418,271,416,266,447,259,640,215"/>
+<area shape="rect" id="Node000011" href="$_connect_four_8cpp.html" title=" " alt="" coords="649,261,851,304"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="753,229,753,261,748,261,748,229"/>
+<area shape="poly" id="edge14_Node000012_Node000006" title=" " alt="" coords="171,216,329,266,327,271,170,221"/>
+<area shape="rect" id="Node000013" href="$_tic_tac_toe_8cpp.html" title=" " alt="" coords="5,261,178,304"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="94,229,94,261,89,261,89,229"/>
+<area shape="poly" id="edge17_Node000014_Node000008" title=" " alt="" coords="822,130,843,147,859,169,877,206,885,238,883,270,866,305,850,324,830,340,786,360,784,355,827,335,846,321,861,303,877,269,880,238,872,207,855,172,839,151,819,134"/>
+</map>

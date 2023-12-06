@@ -7,10 +7,20 @@
 #include "Grid/Grid.h"
 #include "Player/Player.h"
 #include "Player/Piece.h"
-
+/**
+ * @file ogrid_fmt.h
+ * @brief This is used for fmt formatting from the OGRID namespace.
+ * @details This is put in one file to avoid circular dependencies.
+ * @date 2023-12-06
+*/
 // Formatting for fmt library.
 
 // Grid formatting
+/**
+ * @brief This is used to format a Grid object into a string using fmt.
+ * @details This should be used like this: fmt::format("{}", grid);
+ * @date 2023-12-06
+*/
 template <>
 struct fmt::formatter<OGRID::Grid> : fmt::formatter<std::string>
 {
@@ -53,6 +63,11 @@ struct fmt::formatter<OGRID::Grid> : fmt::formatter<std::string>
 };
 
 // Player formatting
+/**
+ * @brief This is used to format a PlayerType enum into a string using fmt.
+ * @details This should be used like this: fmt::format("{}", playerType);
+ * @date 2023-12-06
+*/
 template <>
 struct fmt::formatter<OGRID::PlayerType> : formatter<std::string>
 {
@@ -64,6 +79,11 @@ struct fmt::formatter<OGRID::PlayerType> : formatter<std::string>
     }
 };
 
+/**
+ * @brief This is used to format a Player object into a string using fmt.
+ * @details This should be used like this: fmt::format("{}", player);
+ * @date 2023-12-06
+*/
 template <>
 struct fmt::formatter<OGRID::Player> : fmt::formatter<std::string>
 {

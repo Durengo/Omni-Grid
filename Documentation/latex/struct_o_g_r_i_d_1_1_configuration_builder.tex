@@ -1,0 +1,245 @@
+\doxysection{OGRID\+::Configuration\+Builder Struct Reference}
+\hypertarget{struct_o_g_r_i_d_1_1_configuration_builder}{}\label{struct_o_g_r_i_d_1_1_configuration_builder}\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+
+
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} interface.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Configuration.\+h$>$}
+
+
+
+Inheritance diagram for OGRID\+::Configuration\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{struct_o_g_r_i_d_1_1_configuration_builder__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a48a0b0e4ef4ae3c4c52e69b074849b44}{\texorpdfstring{$\sim$}{\string~}\+Configuration\+Builder}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a57d1e8d39b199172503ed178a56a5ec1}{set\+Game\+Name}} (const std\+::string \&game\+Name)=0
+\begin{DoxyCompactList}\small\item\em Set the name of the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a707566a95e7875461949dab4819e23b2}{set\+Game\+Description}} (const std\+::string \&game\+Description)=0
+\begin{DoxyCompactList}\small\item\em Set the description of the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a62144c7899fe85b0156c393c4c6e6ef1}{set\+Grid}} (unsigned char rows, unsigned char cols, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}default\+Piece=nullptr)=0
+\begin{DoxyCompactList}\small\item\em Set the grid of the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_aeed46276d68a9052499c15cc1705b129}{set\+Max\+Players}} (size\+\_\+t max\+Players)=0
+\begin{DoxyCompactList}\small\item\em Set the maximum number of players. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_ab78e8ab2581151f67a4684ffbbd15926}{add\+Player}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*}player)=0
+\begin{DoxyCompactList}\small\item\em Add a player to the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a81e1e8a77a45e4187bf24837aeb62439}{build}} ()=0
+\begin{DoxyCompactList}\small\item\em Build the \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} interface. 
+
+It is used to build a \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_a48a0b0e4ef4ae3c4c52e69b074849b44}\label{struct_o_g_r_i_d_1_1_configuration_builder_a48a0b0e4ef4ae3c4c52e69b074849b44} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!````~ConfigurationBuilder@{\texorpdfstring{$\sim$}{\string~}ConfigurationBuilder}}
+\index{````~ConfigurationBuilder@{\texorpdfstring{$\sim$}{\string~}ConfigurationBuilder}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ConfigurationBuilder()}{\string~ConfigurationBuilder()}}
+{\footnotesize\ttfamily virtual OGRID\+::\+Configuration\+Builder\+::\texorpdfstring{$\sim$}{\string~}\+Configuration\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+
+\doxylink{class_o_g_r_i_d_1_1_game_configuration_builder}{Game\+Configuration\+Builder} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_ab78e8ab2581151f67a4684ffbbd15926}\label{struct_o_g_r_i_d_1_1_configuration_builder_ab78e8ab2581151f67a4684ffbbd15926} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& OGRID\+::\+Configuration\+Builder\+::add\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Add a player to the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a2464db766a949e7f5224ce6dba3847e4}{OGRID\+::\+Game\+Configuration\+Builder}}.
+
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_a81e1e8a77a45e4187bf24837aeb62439}\label{struct_o_g_r_i_d_1_1_configuration_builder_a81e1e8a77a45e4187bf24837aeb62439} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!build@{build}}
+\index{build@{build}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} OGRID\+::\+Configuration\+Builder\+::build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Build the \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a6fbe08fe17861de236e90ab392490a93}{OGRID\+::\+Game\+Configuration\+Builder}}.
+
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_a707566a95e7875461949dab4819e23b2}\label{struct_o_g_r_i_d_1_1_configuration_builder_a707566a95e7875461949dab4819e23b2} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!setGameDescription@{setGameDescription}}
+\index{setGameDescription@{setGameDescription}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{setGameDescription()}{setGameDescription()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& OGRID\+::\+Configuration\+Builder\+::set\+Game\+Description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{game\+Description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the description of the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Description} & The description of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a1c0abd403081ff4cf6c5d9dc0c5f6b93}{OGRID\+::\+Game\+Configuration\+Builder}}.
+
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_a57d1e8d39b199172503ed178a56a5ec1}\label{struct_o_g_r_i_d_1_1_configuration_builder_a57d1e8d39b199172503ed178a56a5ec1} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!setGameName@{setGameName}}
+\index{setGameName@{setGameName}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{setGameName()}{setGameName()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& OGRID\+::\+Configuration\+Builder\+::set\+Game\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{game\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the name of the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Name} & The name of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_ae4f0b45c9d27894bae04c9135059a54d}{OGRID\+::\+Game\+Configuration\+Builder}}.
+
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_a62144c7899fe85b0156c393c4c6e6ef1}\label{struct_o_g_r_i_d_1_1_configuration_builder_a62144c7899fe85b0156c393c4c6e6ef1} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!setGrid@{setGrid}}
+\index{setGrid@{setGrid}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{setGrid()}{setGrid()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& OGRID\+::\+Configuration\+Builder\+::set\+Grid (\begin{DoxyParamCaption}\item[{unsigned char}]{rows,  }\item[{unsigned char}]{cols,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{default\+Piece = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the grid of the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows of the grid. \\
+\hline
+{\em cols} & The number of columns of the grid. \\
+\hline
+{\em default\+Piece} & The default piece of the grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a9c4fb9ea6838e49fab65faf0cf9b3066}{OGRID\+::\+Game\+Configuration\+Builder}}.
+
+\Hypertarget{struct_o_g_r_i_d_1_1_configuration_builder_aeed46276d68a9052499c15cc1705b129}\label{struct_o_g_r_i_d_1_1_configuration_builder_aeed46276d68a9052499c15cc1705b129} 
+\index{OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}!setMaxPlayers@{setMaxPlayers}}
+\index{setMaxPlayers@{setMaxPlayers}!OGRID::ConfigurationBuilder@{OGRID::ConfigurationBuilder}}
+\doxysubsubsection{\texorpdfstring{setMaxPlayers()}{setMaxPlayers()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder}} \& OGRID\+::\+Configuration\+Builder\+::set\+Max\+Players (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{max\+Players }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the maximum number of players. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Players} & The maximum number of players. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_o_g_r_i_d_1_1_configuration_builder}{Configuration\+Builder} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_ad1978c1e6f82bba5a299eae708a73206}{OGRID\+::\+Game\+Configuration\+Builder}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_configuration_8h}{Game\+Configuration.\+h}}\end{DoxyCompactItemize}

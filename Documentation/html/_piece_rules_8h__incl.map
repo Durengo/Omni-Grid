@@ -1,0 +1,17 @@
+<map id="Source/ogrid/GameLogicImplementation/PieceRules.h" name="Source/ogrid/GameLogicImplementation/PieceRules.h">
+<area shape="rect" id="Node000001" title="Contains the PieceRules class." alt="" coords="33,5,285,48"/>
+<area shape="rect" id="Node000002" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="5,171,142,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,50,94,158,89,156,146,47"/>
+<area shape="rect" id="Node000003" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="158,96,264,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,47,197,81,192,84,170,50"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="191,125,123,165,120,160,188,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="319,261,372,288"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="208,124,198,166,198,190,206,212,226,233,251,248,278,259,304,265,303,271,276,264,249,253,223,237,202,215,193,191,192,165,203,123"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="217,179,272,205"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="219,122,236,163,231,165,214,124"/>
+<area shape="rect" id="Node000006" href="$_i_attack_rule_8h.html" title=" " alt="" coords="296,171,432,213"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="236,121,313,161,310,165,234,126"/>
+<area shape="rect" id="Node000007" href="$_player_8h.html" title="Contains the Player class." alt="" coords="457,179,567,205"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="263,121,445,168,456,171,455,176,443,173,261,126"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="487,208,386,257,384,252,485,203"/>
+</map>

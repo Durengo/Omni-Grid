@@ -1,0 +1,36 @@
+\doxysection{Game\+State\+Checker.\+h}
+\hypertarget{_game_state_checker_8h_source}{}\label{_game_state_checker_8h_source}\index{Source/ogrid/GameLogicImplementation/GameStateChecker.h@{Source/ogrid/GameLogicImplementation/GameStateChecker.h}}
+\mbox{\hyperlink{_game_state_checker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_state_8h}{GameLogicInterface/IGameState.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00012\ \textcolor{comment}{How\ to\ use:}}
+\DoxyCodeLine{00013\ \textcolor{comment}{GameStateChecker\ gameStateCheckerTicTacToe(new\ TicTacToeStateCheck());}}
+\DoxyCodeLine{00014\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{GameStateChecker}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGameState}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633}{m\_GameState}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{GameStateChecker}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGameState}}\ *strategy);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2}{\string~GameStateChecker}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e}{CheckWin}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff}{IsDraw}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d}{IsColumnOccupied}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ colToCheck,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&rowToFill);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242}{GetTopMostPiecePositionInColumn}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00074\ \ \ \ \ \};}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}

@@ -1,6 +1,6 @@
 # Omni-Grid
 
-## [Working With Source](Docs/source.md)
+## [Working With Source](Documentation/source.md)
 
 ## Hardware/Software Requirements
 
@@ -15,3 +15,7 @@
 | MSVC  |      GNU      |     CLANG     |
 | :---: | :-----------: | :-----------: |
 | __X__ | NOT SUPPORTED | NOT SUPPORTED |
+
+## Documentation
+
+Documentation is hosted using GitHub pages and can be found [here](https://durengo.github.io/Omni-Grid/Documentation/html/index.html).

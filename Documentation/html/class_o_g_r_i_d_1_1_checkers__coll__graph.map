@@ -1,0 +1,21 @@
+<map id="OGRID::Checkers" name="OGRID::Checkers">
+<area shape="rect" id="Node000001" title=" " alt="" coords="394,449,520,476"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_i_game.html" title="The IGame class. Used to represent a game." alt="" coords="270,373,378,400"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="361,405,436,446,433,451,358,410"/>
+<area shape="rect" id="Node000003" href="$struct_g_u_i_info.html" title="GUI info." alt="" coords="5,283,69,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,318,85,334,110,347,150,361,192,370,270,380,269,386,191,376,149,366,108,352,82,338,60,322"/>
+<area shape="rect" id="Node000004" href="$class_o_g_r_i_d_1_1_game_state_checker.html" title="The GameStateChecker class. Used to check the state of the game." alt="" coords="93,283,277,309"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="176,324,175,337,179,348,192,357,214,365,270,376,269,382,213,370,190,362,175,351,170,338,171,324"/>
+<area shape="rect" id="Node000005" href="$class_o_g_r_i_d_1_1_i_game_state.html" title="The IGameState class. Used to check the state of the game." alt="" coords="115,189,255,216"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,232,188,282,182,282,182,232"/>
+<area shape="rect" id="Node000006" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="291,5,399,32"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="338,47,330,76,326,108,326,297,326,373,321,373,321,297,321,108,325,76,332,46"/>
+<area shape="rect" id="Node000009" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="443,96,546,123"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="381,38,474,93,472,98,378,43"/>
+<area shape="rect" id="Node000007" href="$struct_o_g_r_i_d_1_1_game_configuration.html" title="The GameConfiguration class. Used to represent a game configuration." alt="" coords="362,283,542,309"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="422,321,343,375,340,371,419,316"/>
+<area shape="rect" id="Node000008" href="$class_o_g_r_i_d_1_1_grid.html" title="The Grid class represents a 2D grid of Cells." alt="" coords="447,189,542,216"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="484,231,460,283,455,281,480,229"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="552,128,574,145,590,171,593,201,593,388,587,413,570,431,547,444,521,454,519,449,545,440,566,427,582,410,588,388,588,201,585,172,570,148,549,132"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="497,138,497,189,492,189,492,138"/>
+</map>

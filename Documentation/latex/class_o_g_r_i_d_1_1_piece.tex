@@ -1,0 +1,311 @@
+\doxysection{OGRID\+::Piece Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_piece}{}\label{class_o_g_r_i_d_1_1_piece}\index{OGRID::Piece@{OGRID::Piece}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} class. Used to represent a piece.  
+
+
+
+
+{\ttfamily \#include $<$Piece.\+h$>$}
+
+
+
+Inheritance diagram for OGRID\+::Piece\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_o_g_r_i_d_1_1_piece__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for OGRID\+::Piece\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_o_g_r_i_d_1_1_piece__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a99ed96a5c8a502aa7f6c5b3614b1da34}{Piece}} (std\+::string rep, \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a68805876b2a73ad9bda8cbd08d112a4d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a5cdd60d0b76a22139ce00e7fe0a15c98}{Add\+Move\+Rule}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule}} \texorpdfstring{$\ast$}{*}rule)
+\begin{DoxyCompactList}\small\item\em Add a move rule to the piece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_ad496937d9d22d1d4211f4d1861a95536}{Add\+Attack\+Rule}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttack\+Rule}} \texorpdfstring{$\ast$}{*}rule)
+\begin{DoxyCompactList}\small\item\em Add an attack rule to the piece. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a43e81a2e514731545e78044787df1515}{Get\+Representation}} () const
+\begin{DoxyCompactList}\small\item\em Get the representation of the piece. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_af5d03652f333f2cdc68b3083da5db6b1}{Get\+Owner}} () const
+\begin{DoxyCompactList}\small\item\em Get the owner of the piece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_aa3fd86e0e03c216ef2dc3b2c04a18ce7}{Set\+Owner}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Set the owner of the piece. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a8f263b731e2ace75054baa47b967f8f8}{is\+Valid\+Move}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int fromX, int fromY, int toX, int toY) const
+\begin{DoxyCompactList}\small\item\em Check if the move is valid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a2928cbf17ddf85243a19ea605fc3e9a3}{is\+Valid\+Attack}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int fromX, int fromY, int toX, int toY, bool \&can\+Continue) const
+\begin{DoxyCompactList}\small\item\em Check if the attack is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_aeb260809360b42b8869119953dc45e9c}{m\+\_\+representation}}
+\begin{DoxyCompactList}\small\item\em The representation of the piece. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a94c913f3ba0f211b0c074e33046bd959}{m\+\_\+move\+Rules}}
+\begin{DoxyCompactList}\small\item\em The move rules of the piece. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttack\+Rule}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a21ee6c00f31953e9b033eaa171558fce}{m\+\_\+attack\+Rules}}
+\begin{DoxyCompactList}\small\item\em The attack rules of the piece. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_af0046f2bd6766befb682fcd20596c7d0}{m\+\_\+owner}}
+\begin{DoxyCompactList}\small\item\em The owner of the piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} class. Used to represent a piece. 
+
+It contains the representation of the piece, the move rules of the piece, the attack rules of the piece and the owner of the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a99ed96a5c8a502aa7f6c5b3614b1da34}\label{class_o_g_r_i_d_1_1_piece_a99ed96a5c8a502aa7f6c5b3614b1da34} 
+\index{OGRID::Piece@{OGRID::Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily OGRID\+::\+Piece\+::\+Piece (\begin{DoxyParamCaption}\item[{std\+::string}]{rep,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} object. 
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} object using the representation of the piece and the owner of the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rep} & The representation of the piece. \\
+\hline
+{\em player} & The owner of the piece. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a68805876b2a73ad9bda8cbd08d112a4d}\label{class_o_g_r_i_d_1_1_piece_a68805876b2a73ad9bda8cbd08d112a4d} 
+\index{OGRID::Piece@{OGRID::Piece}!````~Piece@{\texorpdfstring{$\sim$}{\string~}Piece}}
+\index{````~Piece@{\texorpdfstring{$\sim$}{\string~}Piece}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Piece()}{\string~Piece()}}
+{\footnotesize\ttfamily OGRID\+::\+Piece\+::\texorpdfstring{$\sim$}{\string~}\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_ad496937d9d22d1d4211f4d1861a95536}\label{class_o_g_r_i_d_1_1_piece_ad496937d9d22d1d4211f4d1861a95536} 
+\index{OGRID::Piece@{OGRID::Piece}!AddAttackRule@{AddAttackRule}}
+\index{AddAttackRule@{AddAttackRule}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{AddAttackRule()}{AddAttackRule()}}
+{\footnotesize\ttfamily void OGRID\+::\+Piece\+::\+Add\+Attack\+Rule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttack\+Rule}} \texorpdfstring{$\ast$}{*}}]{rule }\end{DoxyParamCaption})}
+
+
+
+Add an attack rule to the piece. 
+
+Add an attack rule to the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rule} & The attack rule to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a5cdd60d0b76a22139ce00e7fe0a15c98}\label{class_o_g_r_i_d_1_1_piece_a5cdd60d0b76a22139ce00e7fe0a15c98} 
+\index{OGRID::Piece@{OGRID::Piece}!AddMoveRule@{AddMoveRule}}
+\index{AddMoveRule@{AddMoveRule}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{AddMoveRule()}{AddMoveRule()}}
+{\footnotesize\ttfamily void OGRID\+::\+Piece\+::\+Add\+Move\+Rule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule}} \texorpdfstring{$\ast$}{*}}]{rule }\end{DoxyParamCaption})}
+
+
+
+Add a move rule to the piece. 
+
+Add a move rule to the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rule} & The move rule to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_af5d03652f333f2cdc68b3083da5db6b1}\label{class_o_g_r_i_d_1_1_piece_af5d03652f333f2cdc68b3083da5db6b1} 
+\index{OGRID::Piece@{OGRID::Piece}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{GetOwner()}{GetOwner()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} OGRID\+::\+Piece\+::\+Get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the owner of the piece. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The owner of the piece. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a43e81a2e514731545e78044787df1515}\label{class_o_g_r_i_d_1_1_piece_a43e81a2e514731545e78044787df1515} 
+\index{OGRID::Piece@{OGRID::Piece}!GetRepresentation@{GetRepresentation}}
+\index{GetRepresentation@{GetRepresentation}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{GetRepresentation()}{GetRepresentation()}}
+{\footnotesize\ttfamily const std\+::string \& OGRID\+::\+Piece\+::\+Get\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the representation of the piece. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The representation of the piece. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a2928cbf17ddf85243a19ea605fc3e9a3}\label{class_o_g_r_i_d_1_1_piece_a2928cbf17ddf85243a19ea605fc3e9a3} 
+\index{OGRID::Piece@{OGRID::Piece}!isValidAttack@{isValidAttack}}
+\index{isValidAttack@{isValidAttack}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{isValidAttack()}{isValidAttack()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Piece\+::is\+Valid\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{fromX,  }\item[{int}]{fromY,  }\item[{int}]{toX,  }\item[{int}]{toY,  }\item[{bool \&}]{can\+Continue }\end{DoxyParamCaption}) const}
+
+
+
+Check if the attack is valid. 
+
+Check if the attack is valid using the attack rules. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em fromX} & The x coordinate of the start cell. \\
+\hline
+{\em fromY} & The y coordinate of the start cell. \\
+\hline
+{\em toX} & The x coordinate of the end cell. \\
+\hline
+{\em toY} & The y coordinate of the end cell. \\
+\hline
+{\em can\+Continue} & True if the attack can continue, false otherwise. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the attack is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a8f263b731e2ace75054baa47b967f8f8}\label{class_o_g_r_i_d_1_1_piece_a8f263b731e2ace75054baa47b967f8f8} 
+\index{OGRID::Piece@{OGRID::Piece}!isValidMove@{isValidMove}}
+\index{isValidMove@{isValidMove}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{isValidMove()}{isValidMove()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Piece\+::is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{fromX,  }\item[{int}]{fromY,  }\item[{int}]{toX,  }\item[{int}]{toY }\end{DoxyParamCaption}) const}
+
+
+
+Check if the move is valid. 
+
+Check if the move is valid using the move rules. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em fromX} & The x coordinate of the start cell. \\
+\hline
+{\em fromY} & The y coordinate of the start cell. \\
+\hline
+{\em toX} & The x coordinate of the end cell. \\
+\hline
+{\em toY} & The y coordinate of the end cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_aa3fd86e0e03c216ef2dc3b2c04a18ce7}\label{class_o_g_r_i_d_1_1_piece_aa3fd86e0e03c216ef2dc3b2c04a18ce7} 
+\index{OGRID::Piece@{OGRID::Piece}!SetOwner@{SetOwner}}
+\index{SetOwner@{SetOwner}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{SetOwner()}{SetOwner()}}
+{\footnotesize\ttfamily void OGRID\+::\+Piece\+::\+Set\+Owner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player }\end{DoxyParamCaption})}
+
+
+
+Set the owner of the piece. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The owner of the piece. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_a21ee6c00f31953e9b033eaa171558fce}\label{class_o_g_r_i_d_1_1_piece_a21ee6c00f31953e9b033eaa171558fce} 
+\index{OGRID::Piece@{OGRID::Piece}!m\_attackRules@{m\_attackRules}}
+\index{m\_attackRules@{m\_attackRules}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{m\_attackRules}{m\_attackRules}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttack\+Rule}} \texorpdfstring{$\ast$}{*}$>$ OGRID\+::\+Piece\+::m\+\_\+attack\+Rules\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The attack rules of the piece. 
+
+It is used to check if the attack is valid. \Hypertarget{class_o_g_r_i_d_1_1_piece_a94c913f3ba0f211b0c074e33046bd959}\label{class_o_g_r_i_d_1_1_piece_a94c913f3ba0f211b0c074e33046bd959} 
+\index{OGRID::Piece@{OGRID::Piece}!m\_moveRules@{m\_moveRules}}
+\index{m\_moveRules@{m\_moveRules}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{m\_moveRules}{m\_moveRules}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule}} \texorpdfstring{$\ast$}{*}$>$ OGRID\+::\+Piece\+::m\+\_\+move\+Rules\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The move rules of the piece. 
+
+It is used to check if the move is valid. \Hypertarget{class_o_g_r_i_d_1_1_piece_af0046f2bd6766befb682fcd20596c7d0}\label{class_o_g_r_i_d_1_1_piece_af0046f2bd6766befb682fcd20596c7d0} 
+\index{OGRID::Piece@{OGRID::Piece}!m\_owner@{m\_owner}}
+\index{m\_owner@{m\_owner}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{m\_owner}{m\_owner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\texorpdfstring{$\ast$}{*} OGRID\+::\+Piece\+::m\+\_\+owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The owner of the piece. 
+
+It is used to identify the owner of the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_piece_aeb260809360b42b8869119953dc45e9c}\label{class_o_g_r_i_d_1_1_piece_aeb260809360b42b8869119953dc45e9c} 
+\index{OGRID::Piece@{OGRID::Piece}!m\_representation@{m\_representation}}
+\index{m\_representation@{m\_representation}!OGRID::Piece@{OGRID::Piece}}
+\doxysubsubsection{\texorpdfstring{m\_representation}{m\_representation}}
+{\footnotesize\ttfamily std\+::string OGRID\+::\+Piece\+::m\+\_\+representation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The representation of the piece. 
+
+The representation of the piece. It is used to identify the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Player/\mbox{\hyperlink{_piece_8h}{Piece.\+h}}\item 
+Source/ogrid/\+Player/\mbox{\hyperlink{_piece_8cpp}{Piece.\+cpp}}\end{DoxyCompactItemize}
