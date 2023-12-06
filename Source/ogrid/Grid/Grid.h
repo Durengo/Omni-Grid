@@ -38,8 +38,8 @@ namespace OGRID
     /**
      * @brief The Grid class represents a 2D grid of Cells.
      * @details It contains the number of rows and columns in the grid, as well as the grid itself.
-     * The grid is a 2D array of Cell pointers.
-     * The grid can be at most 255x255, which is more than enough for our purposes.
+     * The Grid is a 2D array of Cell pointers.
+     * The Grid can be at most 255x255, which is more than enough for our purposes.
      * The Grid class also contains a default Piece, which is used to reset the grid.
      * @date 2023-12-06
      * @see Piece
