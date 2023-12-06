@@ -18,4 +18,4 @@
 
 ## Documentation
 
-Documentation is hosted using GitHub pages and can be found [here](https://durengo.github.io/Omni-Grid/Docs/html/index.html).
+Documentation is hosted using GitHub pages and can be found [here](https://durengo.github.io/Omni-Grid/Documentation/html/index.html).
