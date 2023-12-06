@@ -100,12 +100,67 @@ namespace OGRID
     // Builder Interface
     struct ConfigurationBuilder
     {
+        /**
+         * @brief Destroy the ConfigurationBuilder object.
+         * @date 2023-12-06
+         * @see GameConfiguration
+         * @see GameConfigurationBuilder
+         */
         virtual ~ConfigurationBuilder() = default;
+
+        /**
+         * @brief Set the name of the game.
+         * @date 2023-12-06
+         * @param gameName The name of the game.
+         * @return The ConfigurationBuilder object.
+         * @see GameConfiguration
+         */
         virtual ConfigurationBuilder &setGameName(const std::string &gameName) = 0;
+
+        /**
+         * @brief Set the description of the game.
+         * @date 2023-12-06
+         * @param gameDescription The description of the game.
+         * @return The ConfigurationBuilder object.
+         * @see GameConfiguration
+         */
         virtual ConfigurationBuilder &setGameDescription(const std::string &gameDescription) = 0;
+
+        /**
+         * @brief Set the grid of the game.
+         * @date 2023-12-06
+         * @param rows The number of rows of the grid.
+         * @param cols The number of columns of the grid.
+         * @param defaultPiece The default piece of the grid.
+         * @return The ConfigurationBuilder object.
+         * @see GameConfiguration
+         */
         virtual ConfigurationBuilder &setGrid(unsigned char rows, unsigned char cols, Piece *defaultPiece = nullptr) = 0;
+
+        /**
+         * @brief Set the maximum number of players.
+         * @date 2023-12-06
+         * @param maxPlayers The maximum number of players.
+         * @return The ConfigurationBuilder object.
+         * @see GameConfiguration
+         */
         virtual ConfigurationBuilder &setMaxPlayers(size_t maxPlayers) = 0;
+
+        /**
+         * @brief Add a player to the game.
+         * @date 2023-12-06
+         * @param player The player to be added.
+         * @return The ConfigurationBuilder object.
+         * @see GameConfiguration
+         */
         virtual ConfigurationBuilder &addPlayer(Player *player) = 0;
+
+        /**
+         * @brief Build the GameConfiguration object.
+         * @date 2023-12-06
+         * @return The GameConfiguration object.
+         * @see GameConfiguration
+         */
         virtual GameConfiguration *build() = 0;
     };
 
