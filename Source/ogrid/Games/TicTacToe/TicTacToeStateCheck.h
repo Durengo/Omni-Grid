@@ -11,6 +11,13 @@
 
 namespace OGRID
 {
+    /**
+     * @brief TicTacToe state check
+     * @details Check if the game has a winning condition or a draw condition.
+     * @date 2023-12-06
+     * @see IGameState
+     * @see GameStateExtensions
+     */
     class TicTacToeStateCheck : public IGameState
     {
     private:
