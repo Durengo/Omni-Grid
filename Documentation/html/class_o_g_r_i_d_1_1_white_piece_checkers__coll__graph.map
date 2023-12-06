@@ -1,0 +1,7 @@
+<map id="OGRID::WhitePieceCheckers" name="OGRID::WhitePieceCheckers">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,198,199"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="50,96,153,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,138,104,172,99,172,99,138"/>
+<area shape="rect" id="Node000003" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="48,5,155,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,48,104,95,99,95,99,48"/>
+</map>

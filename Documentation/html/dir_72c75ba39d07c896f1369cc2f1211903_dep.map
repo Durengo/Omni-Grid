@@ -1,0 +1,31 @@
+<map id="Source/ogrid/Games" name="Source/ogrid/Games">
+<area shape="rect" id="node1" href="dir_12a3b0e1c5fb4923d9c88da71af71a20.html" title="GameLogicImplementation" alt="" coords="27,139,202,165"/>
+<area shape="rect" id="node2" href="dir_ecbc072b110de402926454ba9b18fa08.html" title="GameLogicInterface" alt="" coords="227,139,363,165"/>
+<area shape="rect" id="node3" href="dir_b18ac8af645e2c1ad719eedcfa344ab3.html" title="Player" alt="" coords="387,139,445,165"/>
+<area shape="rect" id="node4" href="dir_24521786ca219b5e19d32f49d223876f.html" title="Grid" alt="" coords="469,139,515,165"/>
+<area shape="rect" id="node6" href="dir_4295fe5149258be5325c06911dfe91a0.html" title="Checkers" alt="" coords="115,64,192,91"/>
+<area shape="poly" id="edge1" href="dir_000000_000003.html" alt="" coords="149,92,131,126,126,124,144,90"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000000_000003.html" title="4" alt="" coords="134,118,141,134"/>
+<area shape="poly" id="edge3" href="dir_000000_000004.html" alt="" coords="179,89,258,129,255,134,177,94"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000000_000004.html" title="2" alt="" coords="254,114,261,130"/>
+<area shape="poly" id="edge2" href="dir_000000_000010.html" alt="" coords="180,89,205,99,250,112,286,119,372,136,371,141,285,124,248,117,203,104,178,94"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000000_000010.html" title="3" alt="" coords="367,121,374,137"/>
+<area shape="rect" id="node7" href="dir_cf85a0346f8eb3320e3a833f30362f26.html" title="ConnectFour" alt="" coords="320,64,416,91"/>
+<area shape="poly" id="edge4" href="dir_000001_000003.html" alt="" coords="337,94,309,104,186,137,185,132,307,99,336,89"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000001_000003.html" title="3" alt="" coords="187,134,194,150"/>
+<area shape="poly" id="edge7" href="dir_000001_000004.html" alt="" coords="357,93,320,129,316,126,353,89"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000001_000004.html" title="3" alt="" coords="323,124,330,140"/>
+<area shape="poly" id="edge6" href="dir_000001_000010.html" alt="" coords="379,90,402,124,397,127,374,93"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000001_000010.html" title="3" alt="" coords="401,110,408,126"/>
+<area shape="poly" id="edge5" href="dir_000001_000006.html" alt="" coords="391,89,459,128,456,133,388,94"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000001_000006.html" title="1" alt="" coords="455,114,462,130"/>
+<area shape="rect" id="node8" href="dir_1ddfd6e296f666fe35f808a70fc9407d.html" title="TicTacToe" alt="" coords="216,64,296,91"/>
+<area shape="poly" id="edge8" href="dir_000013_000003.html" alt="" coords="233,94,154,134,152,129,230,89"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000013_000003.html" title="3" alt="" coords="156,129,163,145"/>
+<area shape="poly" id="edge10" href="dir_000013_000004.html" alt="" coords="265,90,283,124,279,126,260,92"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000013_000004.html" title="3" alt="" coords="283,110,290,126"/>
+<area shape="poly" id="edge9" href="dir_000013_000010.html" alt="" coords="285,89,375,129,373,134,283,94"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000013_000010.html" title="3" alt="" coords="371,115,378,131"/>
+<area shape="rect" id="clust2" href="dir_72c75ba39d07c896f1369cc2f1211903.html" alt="" coords="104,53,515,101"/>
+<area shape="rect" id="clust1" href="dir_4c28b097fca596071d32c63bcfff7382.html" title="ogrid" alt="" coords="16,16,525,176"/>
+</map>

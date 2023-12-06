@@ -1,0 +1,23 @@
+<map id="Source/ogrid/GameLogicImplementation/GameStateExtensions.h" name="Source/ogrid/GameLogicImplementation/GameStateExtensions.h">
+<area shape="rect" id="Node000001" title="Contains the GameStateExtensions class." alt="" coords="5,5,258,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="128,261,181,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,51,61,71,41,97,37,109,41,122,58,160,81,194,130,249,126,252,77,198,53,162,36,124,32,109,36,95,58,67,86,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="50,96,117,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,50,101,84,97,81,117,47"/>
+<area shape="rect" id="Node000004" href="$_grid_8h.html" title="Contains the Grid class." alt="" coords="140,96,222,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,47,168,81,163,84,142,50"/>
+<area shape="rect" id="Node000006" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="245,96,351,123"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="176,46,260,87,257,91,173,51"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="161,125,136,145,117,172,112,192,117,212,135,247,131,250,112,214,107,192,112,170,132,141,157,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="127,179,182,205"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="179,124,165,165,160,164,174,122"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="289,125,247,172,177,251,173,248,243,169,285,121"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="277,125,191,173,188,169,274,121"/>
+<area shape="rect" id="Node000007" href="$_i_attack_rule_8h.html" title=" " alt="" coords="257,171,393,213"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="305,122,316,155,311,157,300,124"/>
+<area shape="rect" id="Node000008" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="417,171,553,213"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="328,121,424,162,422,167,326,126"/>
+<area shape="rect" id="Node000009" href="$_player_8h.html" title="Contains the Player class." alt="" coords="578,179,688,205"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="352,119,565,168,578,171,576,176,564,173,351,124"/>
+<area shape="poly" id="edge12_Node000009_Node000002" title=" " alt="" coords="594,208,565,216,462,236,359,252,197,272,196,267,358,247,461,231,564,211,593,203"/>
+</map>

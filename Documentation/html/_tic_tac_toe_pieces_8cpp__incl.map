@@ -1,0 +1,23 @@
+<map id="Source/ogrid/Games/TicTacToe/TicTacToePieces.cpp" name="Source/ogrid/Games/TicTacToe/TicTacToePieces.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="75,5,287,48"/>
+<area shape="rect" id="Node000002" href="$_tic_tac_toe_pieces_8h.html" title="TicTacToe pieces." alt="" coords="205,104,336,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,47,249,91,245,95,200,50"/>
+<area shape="rect" id="Node000009" href="$_piece_rules_8h.html" title="Contains the PieceRules class." alt="" coords="5,96,181,139"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="162,50,126,87,122,83,159,47"/>
+<area shape="rect" id="Node000003" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="25,261,161,304"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="259,133,128,253,124,249,255,129"/>
+<area shape="rect" id="Node000004" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="217,187,324,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="273,131,273,171,268,171,268,131"/>
+<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="244,216,153,257,151,252,242,211"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="260,352,313,379"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="283,212,298,234,310,261,313,281,312,302,301,339,296,337,306,301,308,281,305,262,293,236,279,215"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="371,269,426,296"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="292,212,367,259,364,263,289,216"/>
+<area shape="rect" id="Node000007" href="$_i_attack_rule_8h.html" title=" " alt="" coords="450,261,587,304"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="310,211,441,253,439,259,308,216"/>
+<area shape="rect" id="Node000008" href="$_player_8h.html" title="Contains the Player class." alt="" coords="186,269,296,296"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="268,215,253,256,248,254,263,213"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="250,295,274,337,270,340,246,298"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="96,139,96,246,90,246,90,139"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="140,137,230,178,228,182,138,142"/>
+</map>

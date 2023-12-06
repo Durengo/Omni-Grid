@@ -1,0 +1,9 @@
+<map id="OGRID::IGameState" name="OGRID::IGameState">
+<area shape="rect" id="Node000001" title="The IGameState class. Used to check the state of the game." alt="" coords="259,5,398,32"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_checkers_state_check.html" title=" " alt="" coords="5,80,199,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="276,40,143,82,141,77,274,35"/>
+<area shape="rect" id="Node000003" href="$class_o_g_r_i_d_1_1_connect_four_state_check.html" title=" " alt="" coords="223,80,435,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="331,48,331,80,326,80,326,48"/>
+<area shape="rect" id="Node000004" href="$class_o_g_r_i_d_1_1_tic_tac_toe_state_check.html" title="TicTacToe state check." alt="" coords="459,80,657,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="384,35,519,77,517,82,382,40"/>
+</map>

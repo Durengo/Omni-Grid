@@ -1,0 +1,5 @@
+<map id="OGRID::OPiece" name="OGRID::OPiece">
+<area shape="rect" id="Node000001" title="TicTacToe O piece." alt="" coords="5,80,119,107"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="10,5,114,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,48,65,80,59,80,59,48"/>
+</map>

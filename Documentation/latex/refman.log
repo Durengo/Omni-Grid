@@ -1,0 +1,4287 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.6)  6 DEC 2023 22:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./refman.tex
+(refman.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count186
+\c@chapter=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Rollback for package 'array' requested -> date 2016-10-06.
+         Best approximation is the release introduced on 2016-10-06.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tools\array-2016-10-06.
+sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen141
+\extrarowheight=\dimen142
+\NC@list=\toks17
+\extratabsurround=\skip50
+\backup@length=\skip51
+))
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+package info suppressed
+) (doxygen.sty
+Package: doxygen 
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count195
+\calc@Bcount=\count196
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count197
+\calc@Cskip=\skip54
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count198
+\float@exts=\toks18
+\float@box=\box51
+\@float@everytoks=\toks19
+\@floatcapt=\box52
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read2
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks22
+\minrowclearance=\skip55
+\rownum=\count199
+) (longtable_doxygen.sty
+Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
+ozen version for doxygen
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count266
+\LTcapwidth=\dimen145
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count267
+\LT@rows=\count268
+\c@LT@tables=\count269
+\c@LT@chunks=\count270
+\LT@p@ftn=\toks23
+) (tabu_doxygen.sty
+Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
+rsion for doxygen
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box57
+\sift@deathcycles=\count271
+\@vwid@loff=\dimen146
+\@vwid@roff=\dimen147
+)
+\c@taburow=\count272
+\tabu@nbcols=\count273
+\tabu@cnt=\count274
+\tabu@Xcol=\count275
+\tabu@alloc=\count276
+\tabu@nested=\count277
+\tabu@target=\dimen148
+\tabu@spreadtarget=\dimen149
+\tabu@naturalX=\dimen150
+\tabucolX=\dimen151
+\tabu@Xsum=\dimen152
+\extrarowdepth=\dimen153
+\abovetabulinesep=\dimen154
+\belowtabulinesep=\dimen155
+\tabustrutrule=\dimen156
+\tabu@thebody=\toks24
+\tabu@footnotes=\toks25
+\tabu@box=\box58
+\tabu@arstrutbox=\box59
+\tabu@hleads=\box60
+\tabu@vleads=\box61
+\tabu@cellskip=\skip60
+) (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2023/11/06 4.5b verbatim text (tvz,hv)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+\FV@CodeLineNo=\count278
+\FV@InFile=\read3
+\FV@TabBox=\box62
+\c@FancyVerbLine=\count279
+\FV@StepNumber=\count280
+\FV@OutFile=\write3
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen157
+\TX@old@table=\dimen158
+\TX@old@col=\dimen159
+\TX@target=\dimen160
+\TX@delta=\dimen161
+\TX@cols=\count281
+\TX@ftn=\toks27
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count282
+\mult@box=\box63
+\multicol@leftmargin=\dimen162
+\c@unbalance=\count283
+\c@collectmore=\count284
+\doublecol@number=\count285
+\multicoltolerance=\count286
+\multicolpretolerance=\count287
+\full@width=\dimen163
+\page@free=\dimen164
+\premulticols=\dimen165
+\postmulticols=\dimen166
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box64
+\last@line=\box65
+\mc@boxedresult=\box66
+\maxbalancingoverflow=\dimen167
+\mult@rightbox=\box67
+\mult@grightbox=\box68
+\mult@firstbox=\box69
+\mult@gfirstbox=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\c@minrows=\count288
+\c@columnbadness=\count289
+\c@finalcolumnbadness=\count290
+\last@try=\dimen168
+\multicolovershoot=\dimen169
+\multicolundershoot=\dimen170
+\mult@nat@firstbox=\box107
+\colbreak@box=\box108
+\mc@col@check@num=\count291
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count292
+\multirow@dima=\skip64
+\bigstrutjot=\dimen171
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hanging\hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip65
+\h@ngfstopwd=\skip66
+\h@ngquotewd=\skip67
+\h@ngdquotewd=\skip68
+\h@ngquerywd=\skip69
+\h@ngexclwd=\skip70
+\h@ngcolonwd=\skip71
+\h@ngscolonwd=\skip72
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count293
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box109
+)
+\tc@llx=\dimen174
+\tc@lly=\dimen175
+\tc@urx=\dimen176
+\tc@ury=\dimen177
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen178
+\adjbox@Height=\dimen179
+\adjbox@Depth=\dimen180
+\adjbox@Totalheight=\dimen181
+\adjbox@pwidth=\dimen182
+\adjbox@pheight=\dimen183
+\adjbox@pdepth=\dimen184
+\adjbox@ptotalheight=\dimen185
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count294
+)) (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks30
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/stackengine\stackengine
+.sty
+Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient 
+ways
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/listofitems\listofitems
+.sty
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/listofitems\listofite
+ms.tex
+\loi_cnt_foreach_nest=\count296
+\loi_nestcnt=\count297
+)
+Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count298
+\@boxshift=\skip73
+\stack@tmplength=\skip74
+\temp@stkl=\skip75
+\@stackedboxwidth=\skip76
+\@addedbox=\box110
+\@anchorbox=\box111
+\@insetbox=\box112
+\se@backgroundbox=\box113
+\stackedbox=\box114
+\@centerbox=\box115
+\c@ROWcellindex@=\count299
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip77
+\enit@outerparindent=\dimen186
+\enit@toks=\toks31
+\enit@inbox=\box116
+\enit@count@id=\count300
+\enitdp@description=\count301
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/alphalph\alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)) (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box117
+\UL@hyphenbox=\box118
+\UL@skip=\skip78
+\UL@hook=\toks32
+\UL@height=\dimen187
+\UL@pe=\count302
+\UL@pixel=\dimen188
+\ULC@box=\box119
+Package: ulem 2019/11/18
+\ULdepth=\dimen189
+)
+\xrefbox=\box120
+\xreflength=\skip79
+\CodeWidthChar=\skip80
+\CodeHeightChar=\skip81
+\DoxyCodeWidth=\skip82
+\c@DoxyEnumeratei=\count303
+\c@DoxyEnumerateii=\count304
+\c@DoxyEnumerateiii=\count305
+\c@DoxyEnumerateiv=\count306
+\c@DoxyEnumeratev=\count307
+\c@DoxyEnumeratevi=\count308
+\c@DoxyEnumeratevii=\count309
+\c@DoxyEnumerateviii=\count310
+\c@DoxyEnumerateix=\count311
+\c@DoxyEnumeratex=\count312
+\c@DoxyEnumeratexi=\count313
+\c@DoxyEnumeratexii=\count314
+\enitdp@DoxyEnumerate=\count315
+\enitdp@DoxyItemize=\count316
+\c@subsubsubsection=\count317
+\c@subsubsubsubsection=\count318
+\c@subsubsubsubsubsection=\count319
+\c@subsubsubsubsubsubsection=\count320
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks33
+\inpenc@posthook=\toks34
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count321
+\Gm@cntv=\count322
+\c@Gm@tempcnt=\count323
+\Gm@bindingoffset=\dimen190
+\Gm@wd@mp=\dimen191
+\Gm@odd@mp=\dimen192
+\Gm@even@mp=\dimen193
+\Gm@layoutwidth=\dimen194
+\Gm@layoutheight=\dimen195
+\Gm@layouthoffset=\dimen196
+\Gm@layoutvoffset=\dimen197
+\Gm@dimlist=\toks35
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count324
+\cp@tempcnt=\count325
+LaTeX Info: Redefining \checkoddpage on input line 59.
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip83
+\f@nch@O@elh=\skip84
+\f@nch@O@erh=\skip85
+\f@nch@O@olh=\skip86
+\f@nch@O@orh=\skip87
+\f@nch@O@elf=\skip88
+\f@nch@O@erf=\skip89
+\f@nch@O@olf=\skip90
+\f@nch@O@orf=\skip91
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip92
+\bibsep=\skip93
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count326
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip94
+\cftbeforetoctitleskip=\skip95
+\cftaftertoctitleskip=\skip96
+\cftbeforepartskip=\skip97
+\cftpartnumwidth=\skip98
+\cftpartindent=\skip99
+\cftbeforechapskip=\skip100
+\cftchapindent=\skip101
+\cftchapnumwidth=\skip102
+\cftbeforesecskip=\skip103
+\cftsecindent=\skip104
+\cftsecnumwidth=\skip105
+\cftbeforesubsecskip=\skip106
+\cftsubsecindent=\skip107
+\cftsubsecnumwidth=\skip108
+\cftbeforesubsubsecskip=\skip109
+\cftsubsubsecindent=\skip110
+\cftsubsubsecnumwidth=\skip111
+\cftbeforeparaskip=\skip112
+\cftparaindent=\skip113
+\cftparanumwidth=\skip114
+\cftbeforesubparaskip=\skip115
+\cftsubparaindent=\skip116
+\cftsubparanumwidth=\skip117
+\cftbeforeloftitleskip=\skip118
+\cftafterloftitleskip=\skip119
+\cftbeforefigskip=\skip120
+\cftfigindent=\skip121
+\cftfignumwidth=\skip122
+\c@lofdepth=\count327
+\c@lotdepth=\count328
+\cftbeforelottitleskip=\skip123
+\cftafterlottitleskip=\skip124
+\cftbeforetabskip=\skip125
+\cfttabindent=\skip126
+\cfttabnumwidth=\skip127
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+
+Writing index file refman.idx
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/newunicodechar\newunico
+dechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count329
+)
+\@linkdim=\dimen198
+\Hy@linkcounter=\count330
+\Hy@pagecounter=\count331
+ (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count332
+ (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing ON on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4448.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
+Package: backref 2023-11-26 v1.44 Bibliographical back referencing
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+))
+\c@Hy@tempcnt=\count333
+ (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen199
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count334
+\Field@Width=\dimen256
+\Fld@charsize=\dimen257
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing ON on input line 6078.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count335
+\c@Item=\count336
+\c@Hfootnote=\count337
+)
+Package hyperref Info: Driver: hpdftex.
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
+\Fld@listcount=\count338
+\c@bookmark@seq@number=\count339
+\Hy@SectionHShift=\skip128
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 161.
+Package hyperref Info: Option `unicode' set `true' on input line 161.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen258
+\captionmargin=\dimen259
+\caption@leftmargin=\dimen260
+\caption@rightmargin=\dimen261
+\caption@width=\dimen262
+\caption@indent=\dimen263
+\caption@parindent=\dimen264
+\caption@hangindent=\dimen265
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count340
+\c@continuedfloat=\count341
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen266
+\caption@adjustwidth@linewidth=\dimen267
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks36
+\c@etoc@tocid=\count342
+\etoc@framed@titlebox=\box121
+\etoc@framed@contentsbox=\box122
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
+3.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 183.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count343
+\l__pdf_internal_box=\box123
+) (refman.aux)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count344
+\scratchdimen=\dimen268
+\scratchbox=\box124
+\nofMPsegments=\count345
+\nofMParguments=\count346
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count347
+\MPscratchDim=\dimen269
+\MPnumerator=\count348
+\makeMPintoPDFobject=\count349
+\everyMPtoPDFconversion=\toks38
+)
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package backref Info: ** backref set up for natbib ** on input line 183.
+Package hyperref Info: Link coloring ON on input line 183.
+(refman.out) (refman.out)
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\Etoc@tf=\read4
+Package hyperref Info: Option `pageanchor' set `false' on input line 191.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 191.
+
+Package hyperref Info: Option `unicode' set `true' on input line 191.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 196.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 198.
+ [1
+
+
+{C:/Users/Sebas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Seba
+s/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2
+
+]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 204.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 204
+.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 204
+.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 20
+4.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 204.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 20
+4.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 204.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 204.
+
+[1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+Package hyperref Info: Option `pageanchor' set `true' on input line 207.
+ (todo.tex
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 1.
+) [1
+
+
+] [2
+
+]
+Chapter 2.
+(namespaces.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+) [3] [4
+
+]
+Chapter 3.
+(hierarchy.tex [5]) [6]
+Chapter 4.
+(annotated.tex [7
+
+]) [8]
+Chapter 5.
+(files.tex [9
+
+]) [10]
+Chapter 6.
+(namespace_o_g_r_i_d.tex
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
+.
+
+(C:\Users\Sebas\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 6.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 19.
+
+[11
+
+]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 111.
+ [12]
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 122.
+
+Underfull \hbox (badness 10000) detected at line 122
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 180
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 234.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 240.
+
+Underfull \hbox (badness 10000) detected at line 246
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 254
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 267
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 275
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 281.
+
+Underfull \hbox (badness 10000) detected at line 294
+[][][]
+ []
+
+[15]
+Underfull \hbox (badness 10000) detected at line 302
+[][][]
+ []
+
+) (namespace_sandbox.tex) [16]
+Chapter 7.
+(class_o_g_r_i_d_1_1_black_piece.tex <./class_o_g_r_i_d_1_1_black_piece__inheri
+t__graph.pdf>
+<class_o_g_r_i_d_1_1_black_piece__inherit__graph.pdf, id=3352, 182.6825pt x 156
+.585pt>
+File: class_o_g_r_i_d_1_1_black_piece__inherit__graph.pdf Graphic file (type pd
+f)
+<use class_o_g_r_i_d_1_1_black_piece__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_black_piece__inherit__graph.pdf  u
+sed on input line 14.
+(pdftex.def)             Requested size: 182.0pt x 156.0064pt.
+ <./class_o_g_r_i_d_1_1_black_piece__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_black_piece__coll__graph.pdf, id=3360, 182.6825pt x 225.84
+375pt>
+File: class_o_g_r_i_d_1_1_black_piece__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_black_piece__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_black_piece__coll__graph.pdf  used
+ on input line 24.
+(pdftex.def)             Requested size: 182.0pt x 225.00922pt.
+ [17
+
+])
+(class_o_g_r_i_d_1_1_black_piece_checkers.tex <./class_o_g_r_i_d_1_1_black_piec
+e_checkers__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_black_piece_checkers__inherit__graph.pdf, id=3407, 224.84p
+t x 156.585pt>
+File: class_o_g_r_i_d_1_1_black_piece_checkers__inherit__graph.pdf Graphic file
+ (type pdf)
+<use class_o_g_r_i_d_1_1_black_piece_checkers__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_black_piece_checkers__inherit__gra
+ph.pdf  used on input line 14.
+(pdftex.def)             Requested size: 224.0pt x 156.0064pt.
+ [18] <./class_o_g_r_i_d_1_1_black_piece_checkers__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_black_piece_checkers__coll__graph.pdf, id=3437, 224.84pt x
+ 225.84375pt>
+File: class_o_g_r_i_d_1_1_black_piece_checkers__coll__graph.pdf Graphic file (t
+ype pdf)
+<use class_o_g_r_i_d_1_1_black_piece_checkers__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_black_piece_checkers__coll__graph.
+pdf  used on input line 24.
+(pdftex.def)             Requested size: 224.0pt x 225.00922pt.
+ [19]) (struct_o_g_r_i_d_1_1_button.tex [20]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+[21]
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+[22]
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 144
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 157
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 170
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+[23]
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 209
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 222
+[][][]
+ []
+
+) (struct_o_g_r_i_d_1_1_cell.tex <./struct_o_g_r_i_d_1_1_cell__coll__graph.pdf>
+<struct_o_g_r_i_d_1_1_cell__coll__graph.pdf, id=3547, 162.6075pt x 236.885pt>
+File: struct_o_g_r_i_d_1_1_cell__coll__graph.pdf Graphic file (type pdf)
+<use struct_o_g_r_i_d_1_1_cell__coll__graph.pdf>
+Package pdftex.def Info: struct_o_g_r_i_d_1_1_cell__coll__graph.pdf  used on in
+put line 19.
+(pdftex.def)             Requested size: 162.0pt x 236.0169pt.
+[24]
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+[25]) (class_o_g_r_i_d_1_1_checkers.tex <./class_o_g_r_i_d_1_1_checkers__inheri
+t__graph.pdf>
+<class_o_g_r_i_d_1_1_checkers__inherit__graph.pdf, id=3580, 174.6525pt x 156.58
+5pt>
+File: class_o_g_r_i_d_1_1_checkers__inherit__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_checkers__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_checkers__inherit__graph.pdf  used
+ on input line 14.
+(pdftex.def)             Requested size: 174.0pt x 156.00879pt.
+ <./class_o_g_r_i_d_1_1_checkers__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_checkers__coll__graph.pdf, id=3588, 600.2425pt x 434.62375
+pt>
+File: class_o_g_r_i_d_1_1_checkers__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_checkers__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_checkers__coll__graph.pdf  used on
+ input line 24.
+(pdftex.def)             Requested size: 350.0pt x 253.43483pt.
+ [26]
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 45.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 45.
+ [27]
+[28] [29] [30]
+Underfull \hbox (badness 10000) detected at line 251
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 271
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 294
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 297
+[][][]
+ []
+
+[31]
+Underfull \hbox (badness 10000) detected at line 314
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 331
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 339
+[][][]
+ []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 386
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 403
+[][][]
+ []
+
+[33]) (class_o_g_r_i_d_1_1_checkers_state_check.tex <./class_o_g_r_i_d_1_1_chec
+kers_state_check__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_checkers_state_check__inherit__graph.pdf, id=3876, 225.843
+75pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_checkers_state_check__inherit__graph.pdf Graphic file
+ (type pdf)
+<use class_o_g_r_i_d_1_1_checkers_state_check__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_checkers_state_check__inherit__gra
+ph.pdf  used on input line 14.
+(pdftex.def)             Requested size: 225.0pt x 156.00879pt.
+ <./class_o_g_r_i_d_1_1_checkers_state_check__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_checkers_state_check__coll__graph.pdf, id=3884, 364.36125p
+t x 168.63pt>
+File: class_o_g_r_i_d_1_1_checkers_state_check__coll__graph.pdf Graphic file (t
+ype pdf)
+<use class_o_g_r_i_d_1_1_checkers_state_check__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_checkers_state_check__coll__graph.
+pdf  used on input line 24.
+(pdftex.def)             Requested size: 350.0pt x 161.98845pt.
+ [34] [35]
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 65
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+[] \T1/pcr/m/n/8 OGRID[]::[]Checkers[]State[]Check[]::m[]_[][]Game[]State[]Exte
+nsions = []()
+ []
+
+[36]) (struct_o_g_r_i_d_1_1_configuration_builder.tex <./struct_o_g_r_i_d_1_1_c
+onfiguration_builder__inherit__graph.pdf>
+<struct_o_g_r_i_d_1_1_configuration_builder__inherit__graph.pdf, id=3939, 219.8
+2124pt x 168.63pt>
+File: struct_o_g_r_i_d_1_1_configuration_builder__inherit__graph.pdf Graphic fi
+le (type pdf)
+<use struct_o_g_r_i_d_1_1_configuration_builder__inherit__graph.pdf>
+Package pdftex.def Info: struct_o_g_r_i_d_1_1_configuration_builder__inherit__g
+raph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 219.0pt x 168.00432pt.
+
+Underfull \hbox (badness 2158) in paragraph at lines 31--32
+[]\T1/phv/m/n/10 virtual [] & [] (un-signed char rows, un-signed char cols, [] 
+$\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 default[]
+ []
+
+[37]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+[38]
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 115
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+[39]
+Underfull \hbox (badness 10000) detected at line 146
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 163
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 171
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+Overfull \vbox (0.77794pt too high) has occurred while \output is active []
+
+
+[40]
+Underfull \hbox (badness 10000) detected at line 203
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 206
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 223
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 234
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_connect_four.tex <./class_o_g_r_i_d_1_1_connect_four__in
+herit__graph.pdf>
+<class_o_g_r_i_d_1_1_connect_four__inherit__graph.pdf, id=4035, 188.705pt x 156
+.585pt>
+File: class_o_g_r_i_d_1_1_connect_four__inherit__graph.pdf Graphic file (type p
+df)
+<use class_o_g_r_i_d_1_1_connect_four__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_connect_four__inherit__graph.pdf  
+used on input line 14.
+(pdftex.def)             Requested size: 188.0pt x 155.99922pt.
+ [41] <./class_o_g_r_i_d_1_1_connect_four__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_connect_four__coll__graph.pdf, id=4050, 499.8675pt x 434.6
+2375pt>
+File: class_o_g_r_i_d_1_1_connect_four__coll__graph.pdf Graphic file (type pdf)
+
+<use class_o_g_r_i_d_1_1_connect_four__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_connect_four__coll__graph.pdf  use
+d on input line 24.
+(pdftex.def)             Requested size: 350.0pt x 304.3274pt.
+
+[42] [43] [44] [45]
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 218
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 221
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 238
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 258
+[][][]
+ []
+
+[46]
+Underfull \hbox (badness 10000) detected at line 275
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 283
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 300
+[][][]
+ []
+
+[47]
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_connect_four_state_check.tex <./class_o_g_r_i_d_1_1_conn
+ect_four_state_check__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_connect_four_state_check__inherit__graph.pdf, id=4229, 239
+.89626pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_connect_four_state_check__inherit__graph.pdf Graphic 
+file (type pdf)
+<use class_o_g_r_i_d_1_1_connect_four_state_check__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_connect_four_state_check__inherit_
+_graph.pdf  used on input line 14.
+(pdftex.def)             Requested size: 239.0pt x 156.00162pt.
+ <./class_o_g_r_i_d_1_1_connect_four_state_check__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_connect_four_state_check__coll__graph.pdf, id=4237, 364.36
+125pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_connect_four_state_check__coll__graph.pdf Graphic fil
+e (type pdf)
+<use class_o_g_r_i_d_1_1_connect_four_state_check__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_connect_four_state_check__coll__gr
+aph.pdf  used on input line 24.
+(pdftex.def)             Requested size: 350.0pt x 161.98845pt.
+ [48]
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+[49]
+Underfull \hbox (badness 10000) detected at line 65
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+) (structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4.tex <./structfmt_1_1form
+atter_3_01_o_g_r_i_d_1_1_grid_01_4__inherit__graph.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__inherit__graph.pdf, id=42
+82, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__inherit__graph.pdf G
+raphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__inherit__graph.pdf>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__i
+nherit__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+ [50] <./structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__coll__graph.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__coll__graph.pdf, id=4296,
+ 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__coll__graph.pdf Grap
+hic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__coll__graph.pdf>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4__c
+oll__graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+[51]) (structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4.tex <./structfmt_1
+_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__inherit__graph.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__inherit__graph.pdf, id=
+4323, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__inherit__graph.pdf
+ Graphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__inherit__graph.pdf>
+
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4_
+_inherit__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+ <./structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__coll__graph.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__coll__graph.pdf, id=433
+1, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__coll__graph.pdf Gr
+aphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4__coll__graph.pdf>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4_
+_coll__graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+ [52]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+) (structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4.tex <./st
+ructfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__inherit__grap
+h.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__inherit__g
+raph.pdf, id=4352, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__inher
+it__graph.pdf Graphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__inheri
+t__graph.pdf>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_
+and_ptr_01_4__inherit__graph.pdf  used on input line 15.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+ [53] <./structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__co
+ll__graph.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__coll__grap
+h.pdf, id=4369, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__coll_
+_graph.pdf Graphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4__coll__
+graph.pdf>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_
+and_ptr_01_4__coll__graph.pdf  used on input line 25.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+[54]) (structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4.tex <./struct
+fmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__inherit__graph.pdf>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__inherit__graph.pdf
+, id=4397, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__inherit__grap
+h.pdf Graphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__inherit__graph
+.pdf>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_
+01_4__inherit__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+ <./structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__coll__graph.pdf
+>
+<structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__coll__graph.pdf, i
+d=4405, 194.7275pt x 180.675pt>
+File: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__coll__graph.p
+df Graphic file (type pdf)
+<use structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4__coll__graph.pd
+f>
+Package pdftex.def Info: structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_
+01_4__coll__graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 194.0pt x 180.00737pt.
+
+[55]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+) (struct_o_g_r_i_d_1_1_game_configuration.tex <./struct_o_g_r_i_d_1_1_game_con
+figuration__coll__graph.pdf>
+<struct_o_g_r_i_d_1_1_game_configuration__coll__graph.pdf, id=4425, 215.80624pt
+ x 305.14pt>
+File: struct_o_g_r_i_d_1_1_game_configuration__coll__graph.pdf Graphic file (ty
+pe pdf)
+<use struct_o_g_r_i_d_1_1_game_configuration__coll__graph.pdf>
+Package pdftex.def Info: struct_o_g_r_i_d_1_1_game_configuration__coll__graph.p
+df  used on input line 19.
+(pdftex.def)             Requested size: 215.0pt x 304.00781pt.
+ [56] [57]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+[58]
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_game_configuration_builder.tex <./class_o_g_r_i_d_1_1_ga
+me_configuration_builder__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_game_configuration_builder__inherit__graph.pdf, id=4476, 2
+19.82124pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_game_configuration_builder__inherit__graph.pdf Graphi
+c file (type pdf)
+<use class_o_g_r_i_d_1_1_game_configuration_builder__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_game_configuration_builder__inheri
+t__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 219.0pt x 168.00432pt.
+ <./class_o_g_r_i_d_1_1_game_configuration_builder__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_game_configuration_builder__coll__graph.pdf, id=4484, 373.
+395pt x 385.44pt>
+File: class_o_g_r_i_d_1_1_game_configuration_builder__coll__graph.pdf Graphic f
+ile (type pdf)
+<use class_o_g_r_i_d_1_1_game_configuration_builder__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_game_configuration_builder__coll__
+graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 350.0pt x 361.30794pt.
+ [59] [60]
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 87
+[][][]
+ []
+
+[61]
+Underfull \hbox (badness 10000) detected at line 100
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+[62]
+Underfull \hbox (badness 10000) detected at line 141
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 144
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 161
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 169
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 186
+[][][]
+ []
+
+[63]
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 211
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 223
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 240
+[][][]
+ []
+
+[64]
+Underfull \hbox (badness 10000) detected at line 248
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+) (class_sandbox_1_1_game_initializer.tex
+Underfull \hbox (badness 10000) detected at line 22
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+[65]) (class_o_g_r_i_d_1_1_game_state_checker.tex <./class_o_g_r_i_d_1_1_game_s
+tate_checker__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_game_state_checker__coll__graph.pdf, id=4601, 218.8175pt x
+ 168.63pt>
+File: class_o_g_r_i_d_1_1_game_state_checker__coll__graph.pdf Graphic file (typ
+e pdf)
+<use class_o_g_r_i_d_1_1_game_state_checker__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_game_state_checker__coll__graph.pd
+f  used on input line 19.
+(pdftex.def)             Requested size: 218.0pt x 168.00174pt.
+ [66]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+[67]
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+[68]
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_game_state_extensions.tex [69]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+[70]
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 104
+[][][]
+ []
+
+[71]
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 141
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 154
+[][][]
+ []
+
+[72]
+Underfull \hbox (badness 10000) detected at line 166
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 204
+[][][]
+ []
+
+[73]
+Underfull \hbox (badness 10000) detected at line 216
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 229
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 254
+[][][]
+ []
+
+[74]
+Underfull \hbox (badness 10000) detected at line 262
+[][][]
+ []
+
+) (class_sandbox_1_1_game_window.tex <./class_sandbox_1_1_game_window__coll__gr
+aph.pdf>
+<class_sandbox_1_1_game_window__coll__graph.pdf, id=4737, 291.0875pt x 216.81pt
+>
+File: class_sandbox_1_1_game_window__coll__graph.pdf Graphic file (type pdf)
+<use class_sandbox_1_1_game_window__coll__graph.pdf>
+Package pdftex.def Info: class_sandbox_1_1_game_window__coll__graph.pdf  used o
+n input line 19.
+(pdftex.def)             Requested size: 290.0pt x 216.01547pt.
+ [75]
+Underfull \hbox (badness 10000) detected at line 78
+[][][]
+ []
+
+[76]
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 119
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 136
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 150
+[][][]
+ []
+
+[77]
+Underfull \hbox (badness 10000) detected at line 164
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 186
+[][][]
+ []
+
+[78]
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 228
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 242
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 256
+[][][]
+ []
+
+[79]
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 287
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 290
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 304
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 307
+[][][]
+ []
+
+[80]
+Underfull \hbox (badness 10000) detected at line 321
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 324
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 338
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 341
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 355
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 369
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 372
+[][][]
+ []
+
+[81]
+Underfull \hbox (badness 10000) detected at line 386
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 389
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 403
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 406
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_grid.tex <./class_o_g_r_i_d_1_1_grid__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_grid__coll__graph.pdf, id=4864, 177.66376pt x 236.885pt>
+File: class_o_g_r_i_d_1_1_grid__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_grid__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_grid__coll__graph.pdf  used on inp
+ut line 19.
+(pdftex.def)             Requested size: 177.0pt x 236.00607pt.
+
+[82] [83]
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+[84]
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+[85]
+Underfull \hbox (badness 10000) detected at line 163
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 176
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 192
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 211
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 217
+[][][]
+ []
+
+[86]
+Underfull \hbox (badness 10000) detected at line 230
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 233
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 246
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 249
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 262
+[][][]
+ []
+
+[87]
+Underfull \hbox (badness 10000) detected at line 265
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 278
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 288
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 291
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 304
+[][][]
+ []
+
+[88]
+Underfull \hbox (badness 10000) detected at line 307
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 320
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 323
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 326
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 339
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 342
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 345
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 358
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 361
+[][][]
+ []
+
+[89]
+Underfull \hbox (badness 10000) detected at line 376
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 384
+[][][]
+ []
+
+[90]
+Underfull \hbox (badness 10000) detected at line 399
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 411
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 426
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 440
+[][][]
+ []
+
+[91]
+Underfull \hbox (badness 10000) detected at line 457
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 471
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 486
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 504
+[][][]
+ []
+
+
+Overfull \vbox (6.79898pt too high) has occurred while \output is active []
+
+
+[92]
+Underfull \hbox (badness 10000) detected at line 512
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 527
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 535
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 548
+[][][]
+ []
+
+[93]
+Underfull \hbox (badness 10000) detected at line 562
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 579
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 600
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 613
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 616
+[][][]
+ []
+
+[94]
+Underfull \hbox (badness 10000) detected at line 629
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 632
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 645
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 658
+[][][]
+ []
+
+) (struct_g_u_i_info.tex [95]
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 37
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+[96]
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 125
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_i_attack_rule.tex [97] <./class_o_g_r_i_d_1_1_i_attack_r
+ule__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_i_attack_rule__inherit__graph.pdf, id=5174, 389.455pt x 16
+8.63pt>
+File: class_o_g_r_i_d_1_1_i_attack_rule__inherit__graph.pdf Graphic file (type 
+pdf)
+<use class_o_g_r_i_d_1_1_i_attack_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_i_attack_rule__inherit__graph.pdf 
+ used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 151.55202pt.
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+[98]
+Underfull \hbox (badness 10000) detected at line 50
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_i_game.tex [99] <./class_o_g_r_i_d_1_1_i_game__inherit__
+graph.pdf>
+<class_o_g_r_i_d_1_1_i_game__inherit__graph.pdf, id=5210, 417.56pt x 156.585pt>
+
+File: class_o_g_r_i_d_1_1_i_game__inherit__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_i_game__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_i_game__inherit__graph.pdf  used o
+n input line 19.
+(pdftex.def)             Requested size: 350.0pt x 131.25812pt.
+ <./class_o_g_r_i_d_1_1_i_game__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_i_game__coll__graph.pdf, id=5218, 499.8675pt x 377.41pt>
+File: class_o_g_r_i_d_1_1_i_game__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_i_game__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_i_game__coll__graph.pdf  used on i
+nput line 29.
+(pdftex.def)             Requested size: 350.0pt x 264.26581pt.
+ [100] [101] [102]
+Underfull \hbox (badness 10000) detected at line 157
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 173
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 186
+[][][]
+ []
+
+[103]
+Underfull \hbox (badness 10000) detected at line 206
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 222
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 225
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 238
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 254
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 257
+[][][]
+ []
+
+[104]
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 273
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 286
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 289
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 302
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 305
+[][][]
+ []
+
+[105]
+Underfull \hbox (badness 10000) detected at line 318
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 321
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 334
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 337
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 350
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 353
+[][][]
+ []
+
+[106]
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 369
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 382
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 385
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 398
+[][][]
+ []
+
+[107]
+Underfull \hbox (badness 10000) detected at line 406
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 419
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 422
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 435
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 438
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 451
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 454
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 467
+[][][]
+ []
+
+[108]
+Underfull \hbox (badness 10000) detected at line 480
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 497
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 500
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 517
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 520
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 537
+[][][]
+ []
+
+[109]
+Underfull \hbox (badness 10000) detected at line 550
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 567
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 575
+[][][]
+ []
+
+[110]
+Underfull \hbox (badness 10000) detected at line 592
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 605
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 628
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 641
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 654
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 667
+[][][]
+ []
+
+[111]
+Underfull \hbox (badness 10000) detected at line 675
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 688
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 706
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 724
+[][][]
+ []
+
+[112]
+Underfull \hbox (badness 10000) detected at line 742
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 760
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 778
+[][][]
+ []
+
+[113]
+Underfull \hbox (badness 10000) detected at line 796
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 809
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 826
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 839
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 852
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 855
+[][][]
+ []
+
+[114]
+Underfull \hbox (badness 10000) detected at line 868
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 895
+[][][]
+ []
+
+[115]
+Underfull \hbox (badness 10000) detected at line 908
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 921
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 934
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 947
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 960
+[][][]
+ []
+
+[116]
+Underfull \hbox (badness 10000) detected at line 971
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 984
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 997
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1000
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1013
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_i_game_state.tex [117] <./class_o_g_r_i_d_1_1_i_game_sta
+te__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_i_game_state__inherit__graph.pdf, id=5528, 571.13374pt x 1
+56.585pt>
+File: class_o_g_r_i_d_1_1_i_game_state__inherit__graph.pdf Graphic file (type p
+df)
+<use class_o_g_r_i_d_1_1_i_game_state__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_i_game_state__inherit__graph.pdf  
+used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 95.95872pt.
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+[118]
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+[119]
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_i_move_rule.tex <./class_o_g_r_i_d_1_1_i_move_rule__inhe
+rit__graph.pdf>
+<class_o_g_r_i_d_1_1_i_move_rule__inherit__graph.pdf, id=5567, 381.425pt x 176.
+66pt>
+File: class_o_g_r_i_d_1_1_i_move_rule__inherit__graph.pdf Graphic file (type pd
+f)
+<use class_o_g_r_i_d_1_1_i_move_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_i_move_rule__inherit__graph.pdf  u
+sed on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 162.11134pt.
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+[120]
+Underfull \hbox (badness 10000) detected at line 50
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Overfull \hbox (38.57199pt too wide) in paragraph at lines 87--88
+[]\T1/phv/m/n/10 Implemented in [], [], and []. 
+ []
+
+) (class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule.tex [121] <./class_o_g_
+r_i_d_1_1_jump_normal_checkers_attack_rule__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__inherit__graph.pdf, id=5
+605, 228.855pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__inherit__graph.pdf 
+Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__
+inherit__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 228.0pt x 168.00688pt.
+ <./class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__coll__graph.pdf, id=5613
+, 228.855pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__coll__graph.pdf Gra
+phic file (type pdf)
+<use class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule__
+coll__graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 228.0pt x 168.00688pt.
+ [122]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 81
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule.tex [123] <./class_o_g_r
+_i_d_1_1_jump_super_checkers_attack_rule__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__inherit__graph.pdf, id=56
+46, 223.83624pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__inherit__graph.pdf G
+raphic file (type pdf)
+<use class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__i
+nherit__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 223.0pt x 168.00432pt.
+ <./class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__coll__graph.pdf, id=5654,
+ 223.83624pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__coll__graph.pdf Grap
+hic file (type pdf)
+<use class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule__c
+oll__graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 223.0pt x 168.00432pt.
+ [124]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 81
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+[125]) (class_o_g_r_i_d_1_1_normal_checkers_move_rule.tex <./class_o_g_r_i_d_1_
+1_normal_checkers_move_rule__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_normal_checkers_move_rule__inherit__graph.pdf, id=5687, 24
+7.92625pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_normal_checkers_move_rule__inherit__graph.pdf Graphic
+ file (type pdf)
+<use class_o_g_r_i_d_1_1_normal_checkers_move_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_normal_checkers_move_rule__inherit
+__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 247.0pt x 156.00162pt.
+ <./class_o_g_r_i_d_1_1_normal_checkers_move_rule__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_normal_checkers_move_rule__coll__graph.pdf, id=5695, 247.9
+2625pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_normal_checkers_move_rule__coll__graph.pdf Graphic fi
+le (type pdf)
+<use class_o_g_r_i_d_1_1_normal_checkers_move_rule__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_normal_checkers_move_rule__coll__g
+raph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 247.0pt x 156.00162pt.
+ [126]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_o_piece.tex [127] <./class_o_g_r_i_d_1_1_o_piece__inheri
+t__graph.pdf>
+<class_o_g_r_i_d_1_1_o_piece__inherit__graph.pdf, id=5728, 165.61874pt x 156.58
+5pt>
+File: class_o_g_r_i_d_1_1_o_piece__inherit__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_o_piece__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_o_piece__inherit__graph.pdf  used 
+on input line 19.
+(pdftex.def)             Requested size: 165.0pt x 156.0064pt.
+ <./class_o_g_r_i_d_1_1_o_piece__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_o_piece__coll__graph.pdf, id=5736, 165.61874pt x 225.84375
+pt>
+File: class_o_g_r_i_d_1_1_o_piece__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_o_piece__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_o_piece__coll__graph.pdf  used on 
+input line 29.
+(pdftex.def)             Requested size: 165.0pt x 225.00922pt.
+ [128]
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_piece.tex [129] <./class_o_g_r_i_d_1_1_piece__inherit__g
+raph.pdf>
+<class_o_g_r_i_d_1_1_piece__inherit__graph.pdf, id=5795, 339.2675pt x 291.0875p
+t>
+File: class_o_g_r_i_d_1_1_piece__inherit__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_piece__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_piece__inherit__graph.pdf  used on
+ input line 19.
+(pdftex.def)             Requested size: 338.0pt x 290.0119pt.
+ <./class_o_g_r_i_d_1_1_piece__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_piece__coll__graph.pdf, id=5803, 162.6075pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_piece__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_piece__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_piece__coll__graph.pdf  used on in
+put line 29.
+(pdftex.def)             Requested size: 162.0pt x 168.01202pt.
+ [130]
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 85
+[][][]
+ []
+
+[131]
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 121
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 139
+[][][]
+ []
+
+[132]
+Underfull \hbox (badness 10000) detected at line 157
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 160
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 173
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 176
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 189
+[][][]
+ []
+
+[133]
+Underfull \hbox (badness 10000) detected at line 207
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 220
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 236
+[][][]
+ []
+
+[134]
+Underfull \hbox (badness 10000) detected at line 249
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 290
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 303
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_player.tex [135]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+[136]
+Underfull \hbox (badness 10000) detected at line 61
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 83
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+[137]
+Underfull \hbox (badness 10000) detected at line 115
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 134
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+[138]
+Underfull \hbox (badness 10000) detected at line 165
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 204
+[][][]
+ []
+
+[139]
+Underfull \hbox (badness 10000) detected at line 217
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 230
+[][][]
+ []
+
+) (struct_o_g_r_i_d_1_1_player_name_and_ptr.tex <./struct_o_g_r_i_d_1_1_player_
+name_and_ptr__coll__graph.pdf>
+<struct_o_g_r_i_d_1_1_player_name_and_ptr__coll__graph.pdf, id=5953, 216.81pt x
+ 168.63pt>
+File: struct_o_g_r_i_d_1_1_player_name_and_ptr__coll__graph.pdf Graphic file (t
+ype pdf)
+<use struct_o_g_r_i_d_1_1_player_name_and_ptr__coll__graph.pdf>
+Package pdftex.def Info: struct_o_g_r_i_d_1_1_player_name_and_ptr__coll__graph.
+pdf  used on input line 19.
+(pdftex.def)             Requested size: 216.0pt x 168.00946pt.
+ [140]
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 50
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_red_piece.tex <./class_o_g_r_i_d_1_1_red_piece__inherit_
+_graph.pdf>
+<class_o_g_r_i_d_1_1_red_piece__inherit__graph.pdf, id=5973, 175.65625pt x 156.
+585pt>
+File: class_o_g_r_i_d_1_1_red_piece__inherit__graph.pdf Graphic file (type pdf)
+
+<use class_o_g_r_i_d_1_1_red_piece__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_red_piece__inherit__graph.pdf  use
+d on input line 14.
+(pdftex.def)             Requested size: 175.0pt x 156.01117pt.
+ [141] <./class_o_g_r_i_d_1_1_red_piece__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_red_piece__coll__graph.pdf, id=5989, 175.65625pt x 225.843
+75pt>
+File: class_o_g_r_i_d_1_1_red_piece__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_red_piece__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_red_piece__coll__graph.pdf  used o
+n input line 24.
+(pdftex.def)             Requested size: 175.0pt x 225.01611pt.
+ [142])
+(class_o_g_r_i_d_1_1_simple_place_move_rule.tex <./class_o_g_r_i_d_1_1_simple_p
+lace_move_rule__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_simple_place_move_rule__inherit__graph.pdf, id=6039, 230.8
+625pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_simple_place_move_rule__inherit__graph.pdf Graphic fi
+le (type pdf)
+<use class_o_g_r_i_d_1_1_simple_place_move_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_simple_place_move_rule__inherit__g
+raph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 230.0pt x 156.00162pt.
+ [143] <./class_o_g_r_i_d_1_1_simple_place_move_rule__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_simple_place_move_rule__coll__graph.pdf, id=6053, 230.8625
+pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_simple_place_move_rule__coll__graph.pdf Graphic file 
+(type pdf)
+<use class_o_g_r_i_d_1_1_simple_place_move_rule__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_simple_place_move_rule__coll__grap
+h.pdf  used on input line 29.
+(pdftex.def)             Requested size: 230.0pt x 156.00162pt.
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+[144]
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_super_checkers_move_rule.tex [145] <./class_o_g_r_i_d_1_
+1_super_checkers_move_rule__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_super_checkers_move_rule__inherit__graph.pdf, id=6084, 242
+.9075pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_super_checkers_move_rule__inherit__graph.pdf Graphic 
+file (type pdf)
+<use class_o_g_r_i_d_1_1_super_checkers_move_rule__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_super_checkers_move_rule__inherit_
+_graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 242.0pt x 155.99922pt.
+ <./class_o_g_r_i_d_1_1_super_checkers_move_rule__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_super_checkers_move_rule__coll__graph.pdf, id=6092, 242.90
+75pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_super_checkers_move_rule__coll__graph.pdf Graphic fil
+e (type pdf)
+<use class_o_g_r_i_d_1_1_super_checkers_move_rule__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_super_checkers_move_rule__coll__gr
+aph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 242.0pt x 155.99922pt.
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+[146]
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+) (struct_o_g_r_i_d_1_1_text.tex [147]
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+[148]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 103
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+[149]
+Underfull \hbox (badness 10000) detected at line 134
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 154
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 175
+[][][]
+ []
+
+[150]
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 227
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 240
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 253
+[][][]
+ []
+
+[151]
+Underfull \hbox (badness 10000) detected at line 266
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_tic_tac_toe.tex <./class_o_g_r_i_d_1_1_tic_tac_toe__inhe
+rit__graph.pdf>
+<class_o_g_r_i_d_1_1_tic_tac_toe__inherit__graph.pdf, id=6206, 177.66376pt x 15
+6.585pt>
+File: class_o_g_r_i_d_1_1_tic_tac_toe__inherit__graph.pdf Graphic file (type pd
+f)
+<use class_o_g_r_i_d_1_1_tic_tac_toe__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_tic_tac_toe__inherit__graph.pdf  u
+sed on input line 19.
+(pdftex.def)             Requested size: 177.0pt x 156.004pt.
+ <./class_o_g_r_i_d_1_1_tic_tac_toe__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_tic_tac_toe__coll__graph.pdf, id=6214, 499.8675pt x 434.62
+375pt>
+File: class_o_g_r_i_d_1_1_tic_tac_toe__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_tic_tac_toe__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_tic_tac_toe__coll__graph.pdf  used
+ on input line 29.
+(pdftex.def)             Requested size: 350.0pt x 304.3274pt.
+ [152]
+[153] [154] [155]
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+[156]
+Underfull \hbox (badness 10000) detected at line 217
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 237
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 257
+[][][]
+ []
+
+[157]
+Underfull \hbox (badness 10000) detected at line 274
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 277
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 294
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 297
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 314
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 331
+[][][]
+ []
+
+[158]
+Underfull \hbox (badness 10000) detected at line 353
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 370
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 380
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_tic_tac_toe_state_check.tex <./class_o_g_r_i_d_1_1_tic_t
+ac_toe_state_check__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_tic_tac_toe_state_check__inherit__graph.pdf, id=6392, 228.
+855pt x 156.585pt>
+File: class_o_g_r_i_d_1_1_tic_tac_toe_state_check__inherit__graph.pdf Graphic f
+ile (type pdf)
+<use class_o_g_r_i_d_1_1_tic_tac_toe_state_check__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_tic_tac_toe_state_check__inherit__
+graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 228.0pt x 156.0064pt.
+ [159] <./class_o_g_r_i_d_1_1_tic_tac_toe_state_check__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_tic_tac_toe_state_check__coll__graph.pdf, id=6407, 364.361
+25pt x 168.63pt>
+File: class_o_g_r_i_d_1_1_tic_tac_toe_state_check__coll__graph.pdf Graphic file
+ (type pdf)
+<use class_o_g_r_i_d_1_1_tic_tac_toe_state_check__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_tic_tac_toe_state_check__coll__gra
+ph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 350.0pt x 161.98845pt.
+ [160]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 83
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+[161]
+Underfull \hbox (badness 10000) detected at line 103
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 111
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+[] \T1/pcr/m/n/8 OGRID[]::[]Tic[]Tac[]Toe[]State[]Check[]::m[]_[][]Game[]State[
+]Extensions = []()
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+) (class_o_g_r_i_d_1_1_white_piece_checkers.tex <./class_o_g_r_i_d_1_1_white_pi
+ece_checkers__inherit__graph.pdf>
+<class_o_g_r_i_d_1_1_white_piece_checkers__inherit__graph.pdf, id=6461, 224.84p
+t x 156.585pt>
+File: class_o_g_r_i_d_1_1_white_piece_checkers__inherit__graph.pdf Graphic file
+ (type pdf)
+<use class_o_g_r_i_d_1_1_white_piece_checkers__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_white_piece_checkers__inherit__gra
+ph.pdf  used on input line 14.
+(pdftex.def)             Requested size: 224.0pt x 156.0064pt.
+ [162] <./class_o_g_r_i_d_1_1_white_piece_checkers__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_white_piece_checkers__coll__graph.pdf, id=6474, 224.84pt x
+ 225.84375pt>
+File: class_o_g_r_i_d_1_1_white_piece_checkers__coll__graph.pdf Graphic file (t
+ype pdf)
+<use class_o_g_r_i_d_1_1_white_piece_checkers__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_white_piece_checkers__coll__graph.
+pdf  used on input line 24.
+(pdftex.def)             Requested size: 224.0pt x 225.00922pt.
+ [163]) (class_o_g_r_i_d_1_1_x_piece.tex <./class_o_g_r_i_d_1_1_x_piece__inheri
+t__graph.pdf>
+<class_o_g_r_i_d_1_1_x_piece__inherit__graph.pdf, id=6525, 163.61125pt x 156.58
+5pt>
+File: class_o_g_r_i_d_1_1_x_piece__inherit__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_x_piece__inherit__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_x_piece__inherit__graph.pdf  used 
+on input line 19.
+(pdftex.def)             Requested size: 163.0pt x 155.99922pt.
+ [164] <./class_o_g_r_i_d_1_1_x_piece__coll__graph.pdf>
+<class_o_g_r_i_d_1_1_x_piece__coll__graph.pdf, id=6539, 163.61125pt x 225.84375
+pt>
+File: class_o_g_r_i_d_1_1_x_piece__coll__graph.pdf Graphic file (type pdf)
+<use class_o_g_r_i_d_1_1_x_piece__coll__graph.pdf>
+Package pdftex.def Info: class_o_g_r_i_d_1_1_x_piece__coll__graph.pdf  used on 
+input line 29.
+(pdftex.def)             Requested size: 163.0pt x 224.99889pt.
+ [165]
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+) [166]
+Chapter 8.
+(_game_configuration_8cpp.tex <./_game_configuration_8cpp__incl.pdf>
+<_game_configuration_8cpp__incl.pdf, id=6597, 385.44pt x 281.05pt>
+File: _game_configuration_8cpp__incl.pdf Graphic file (type pdf)
+<use _game_configuration_8cpp__incl.pdf>
+Package pdftex.def Info: _game_configuration_8cpp__incl.pdf  used on input line
+ 11.
+(pdftex.def)             Requested size: 350.0pt x 255.20695pt.
+)
+(_game_configuration_8h.tex [167
+
+] <./_game_configuration_8h__incl.pdf>
+<_game_configuration_8h__incl.pdf, id=6614, 276.03125pt x 224.84pt>
+File: _game_configuration_8h__incl.pdf Graphic file (type pdf)
+<use _game_configuration_8h__incl.pdf>
+Package pdftex.def Info: _game_configuration_8h__incl.pdf  used on input line 1
+7.
+(pdftex.def)             Requested size: 275.0pt x 224.02292pt.
+ <./_game_configuration_8h__dep__incl.pdf>
+<_game_configuration_8h__dep__incl.pdf, id=6622, 1183.42125pt x 248.93pt>
+File: _game_configuration_8h__dep__incl.pdf Graphic file (type pdf)
+<use _game_configuration_8h__dep__incl.pdf>
+Package pdftex.def Info: _game_configuration_8h__dep__incl.pdf  used on input l
+ine 25.
+(pdftex.def)             Requested size: 350.0pt x 73.61983pt.
+ [168]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+) (_game_configuration_8h_source.tex [169]) (_game_state_checker_8cpp.tex <./_g
+ame_state_checker_8cpp__incl.pdf>
+<_game_state_checker_8cpp__incl.pdf, id=6710, 313.17pt x 236.885pt>
+File: _game_state_checker_8cpp__incl.pdf Graphic file (type pdf)
+<use _game_state_checker_8cpp__incl.pdf>
+Package pdftex.def Info: _game_state_checker_8cpp__incl.pdf  used on input line
+ 10.
+(pdftex.def)             Requested size: 312.0pt x 236.00967pt.
+ [170]) (_game_state_checker_8h.tex <./_game_state_checker_8h__incl.pdf>
+<_game_state_checker_8h__incl.pdf, id=6723, 270.00874pt x 180.675pt>
+File: _game_state_checker_8h__incl.pdf Graphic file (type pdf)
+<use _game_state_checker_8h__incl.pdf>
+Package pdftex.def Info: _game_state_checker_8h__incl.pdf  used on input line 1
+4.
+(pdftex.def)             Requested size: 269.0pt x 180.00462pt.
+ <./_game_state_checker_8h__dep__incl.pdf>
+<_game_state_checker_8h__dep__incl.pdf, id=6731, 963.6pt x 385.44pt>
+File: _game_state_checker_8h__dep__incl.pdf Graphic file (type pdf)
+<use _game_state_checker_8h__dep__incl.pdf>
+Package pdftex.def Info: _game_state_checker_8h__dep__incl.pdf  used on input l
+ine 22.
+(pdftex.def)             Requested size: 350.0pt x 139.99925pt.
+ [171]
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+) (_game_state_checker_8h_source.tex) (_game_state_extensions_8cpp.tex <./_game
+_state_extensions_8cpp__incl.pdf>
+<_game_state_extensions_8cpp__incl.pdf, id=6768, 594.22pt x 349.305pt>
+File: _game_state_extensions_8cpp__incl.pdf Graphic file (type pdf)
+<use _game_state_extensions_8cpp__incl.pdf>
+Package pdftex.def Info: _game_state_extensions_8cpp__incl.pdf  used on input l
+ine 9.
+(pdftex.def)             Requested size: 350.0pt x 205.75237pt.
+ [172]) (_game_state_extensions_8h.tex <./_game_state_extensions_8h__incl.pdf>
+<_game_state_extensions_8h__incl.pdf, id=6786, 594.22pt x 293.095pt>
+File: _game_state_extensions_8h__incl.pdf Graphic file (type pdf)
+<use _game_state_extensions_8h__incl.pdf>
+Package pdftex.def Info: _game_state_extensions_8h__incl.pdf  used on input lin
+e 17.
+(pdftex.def)             Requested size: 350.0pt x 172.64279pt.
+ <./_game_state_extensions_8h__dep__incl.pdf>
+<_game_state_extensions_8h__dep__incl.pdf, id=6794, 1215.54124pt x 341.275pt>
+File: _game_state_extensions_8h__dep__incl.pdf Graphic file (type pdf)
+<use _game_state_extensions_8h__dep__incl.pdf>
+Package pdftex.def Info: _game_state_extensions_8h__dep__incl.pdf  used on inpu
+t line 25.
+(pdftex.def)             Requested size: 350.0pt x 98.2642pt.
+
+[173]
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+) (_game_state_extensions_8h_source.tex [174]) (_piece_rules_8cpp.tex <./_piece
+_rules_8cpp__incl.pdf>
+<_piece_rules_8cpp__incl.pdf, id=6846, 516.93124pt x 349.305pt>
+File: _piece_rules_8cpp__incl.pdf Graphic file (type pdf)
+<use _piece_rules_8cpp__incl.pdf>
+Package pdftex.def Info: _piece_rules_8cpp__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 350.0pt x 236.51155pt.
+) (_piece_rules_8h.tex <./_piece_rules_8h__incl.pdf>
+<_piece_rules_8h__incl.pdf, id=6855, 503.8825pt x 293.095pt>
+File: _piece_rules_8h__incl.pdf Graphic file (type pdf)
+<use _piece_rules_8h__incl.pdf>
+Package pdftex.def Info: _piece_rules_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 203.58638pt.
+
+[175] <./_piece_rules_8h__dep__incl.pdf>
+<_piece_rules_8h__dep__incl.pdf, id=6870, 1235.61626pt x 248.93pt>
+File: _piece_rules_8h__dep__incl.pdf Graphic file (type pdf)
+<use _piece_rules_8h__dep__incl.pdf>
+Package pdftex.def Info: _piece_rules_8h__dep__incl.pdf  used on input line 23.
+
+(pdftex.def)             Requested size: 350.0pt x 70.51277pt.
+
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+) (_piece_rules_8h_source.tex [176]) (_i_attack_rule_8h.tex <./_i_attack_rule_8
+h__dep__incl.pdf>
+<_i_attack_rule_8h__dep__incl.pdf, id=6917, 2081.7775pt x 477.785pt>
+File: _i_attack_rule_8h__dep__incl.pdf Graphic file (type pdf)
+<use _i_attack_rule_8h__dep__incl.pdf>
+Package pdftex.def Info: _i_attack_rule_8h__dep__incl.pdf  used on input line 8
+.
+(pdftex.def)             Requested size: 350.0pt x 80.32565pt.
+ [177]) (_i_attack_rule_8h_source.tex) (_i_game_8cpp.tex <./_i_game_8cpp__incl.
+pdf>
+<_i_game_8cpp__incl.pdf, id=6942, 936.49875pt x 373.395pt>
+File: _i_game_8cpp__incl.pdf Graphic file (type pdf)
+<use _i_game_8cpp__incl.pdf>
+Package pdftex.def Info: _i_game_8cpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 139.54988pt.
+) (_i_game_8h.tex <./_i_game_8h__incl.pdf>
+<_i_game_8h__incl.pdf, id=6951, 439.6425pt x 248.93pt>
+File: _i_game_8h__incl.pdf Graphic file (type pdf)
+<use _i_game_8h__incl.pdf>
+Package pdftex.def Info: _i_game_8h__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 198.17947pt.
+ [178] <./_i_game_8h__dep__incl.pdf>
+<_i_game_8h__dep__incl.pdf, id=6969, 769.87625pt x 317.185pt>
+File: _i_game_8h__dep__incl.pdf Graphic file (type pdf)
+<use _i_game_8h__dep__incl.pdf>
+Package pdftex.def Info: _i_game_8h__dep__incl.pdf  used on input line 25.
+(pdftex.def)             Requested size: 350.0pt x 144.20323pt.
+ [179]
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+) (_i_game_8h_source.tex [180] [181]) (_i_game_state_8h.tex <./_i_game_state_8h
+__dep__incl.pdf>
+<_i_game_state_8h__dep__incl.pdf, id=7102, 1473.505pt x 477.785pt>
+File: _i_game_state_8h__dep__incl.pdf Graphic file (type pdf)
+<use _i_game_state_8h__dep__incl.pdf>
+Package pdftex.def Info: _i_game_state_8h__dep__incl.pdf  used on input line 13
+.
+(pdftex.def)             Requested size: 350.0pt x 113.4824pt.
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+) (_i_game_state_8h_source.tex [182]) (_i_move_rule_8h.tex <./_i_move_rule_8h__
+dep__incl.pdf>
+<_i_move_rule_8h__dep__incl.pdf, id=7129, 2023.56pt x 477.785pt>
+File: _i_move_rule_8h__dep__incl.pdf Graphic file (type pdf)
+<use _i_move_rule_8h__dep__incl.pdf>
+Package pdftex.def Info: _i_move_rule_8h__dep__incl.pdf  used on input line 13.
+
+(pdftex.def)             Requested size: 350.0pt x 82.6367pt.
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+) (_i_move_rule_8h_source.tex [183]) (_checkers_8cpp.tex <./_checkers_8cpp__inc
+l.pdf>
+<_checkers_8cpp__incl.pdf, id=7156, 1148.29pt x 441.65pt>
+File: _checkers_8cpp__incl.pdf Graphic file (type pdf)
+<use _checkers_8cpp__incl.pdf>
+Package pdftex.def Info: _checkers_8cpp__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 134.61206pt.
+) (_checkers_8h.tex <./_checkers_8h__incl.pdf>
+<_checkers_8h__incl.pdf, id=7165, 439.6425pt x 317.185pt>
+File: _checkers_8h__incl.pdf Graphic file (type pdf)
+<use _checkers_8h__incl.pdf>
+Package pdftex.def Info: _checkers_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 252.519pt.
+ [184] <./_checkers_8h__dep__incl.pdf>
+<_checkers_8h__dep__incl.pdf, id=7181, 476.78125pt x 248.93pt>
+File: _checkers_8h__dep__incl.pdf Graphic file (type pdf)
+<use _checkers_8h__dep__incl.pdf>
+Package pdftex.def Info: _checkers_8h__dep__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 182.74673pt.
+) (_checkers_8h_source.tex [185]) (_checkers_pieces_8cpp.tex <./_checkers_piece
+s_8cpp__incl.pdf>
+<_checkers_pieces_8cpp__incl.pdf, id=7239, 480.79625pt x 361.35pt>
+File: _checkers_pieces_8cpp__incl.pdf Graphic file (type pdf)
+<use _checkers_pieces_8cpp__incl.pdf>
+Package pdftex.def Info: _checkers_pieces_8cpp__incl.pdf  used on input line 10
+.
+(pdftex.def)             Requested size: 350.0pt x 263.0555pt.
+ [186]) (_checkers_pieces_8h.tex <./_checkers_pieces_8h__incl.pdf>
+<_checkers_pieces_8h__incl.pdf, id=7253, 480.79625pt x 293.095pt>
+File: _checkers_pieces_8h__incl.pdf Graphic file (type pdf)
+<use _checkers_pieces_8h__incl.pdf>
+Package pdftex.def Info: _checkers_pieces_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 213.36722pt.
+ <./_checkers_pieces_8h__dep__incl.pdf>
+<_checkers_pieces_8h__dep__incl.pdf, id=7261, 648.4225pt x 248.93pt>
+File: _checkers_pieces_8h__dep__incl.pdf Graphic file (type pdf)
+<use _checkers_pieces_8h__dep__incl.pdf>
+Package pdftex.def Info: _checkers_pieces_8h__dep__incl.pdf  used on input line
+ 17.
+(pdftex.def)             Requested size: 350.0pt x 134.367pt.
+ [187])
+(_checkers_pieces_8h_source.tex) (_checkers_state_check_8cpp.tex <./_checkers_s
+tate_check_8cpp__incl.pdf>
+<_checkers_state_check_8cpp__incl.pdf, id=7291, 686.565pt x 417.56pt>
+File: _checkers_state_check_8cpp__incl.pdf Graphic file (type pdf)
+<use _checkers_state_check_8cpp__incl.pdf>
+Package pdftex.def Info: _checkers_state_check_8cpp__incl.pdf  used on input li
+ne 9.
+(pdftex.def)             Requested size: 350.0pt x 212.86357pt.
+ [188]) (_checkers_state_check_8h.tex <./_checkers_state_check_8h__incl.pdf>
+<_checkers_state_check_8h__incl.pdf, id=7309, 686.565pt x 361.35pt>
+File: _checkers_state_check_8h__incl.pdf Graphic file (type pdf)
+<use _checkers_state_check_8h__incl.pdf>
+Package pdftex.def Info: _checkers_state_check_8h__incl.pdf  used on input line
+ 10.
+(pdftex.def)             Requested size: 350.0pt x 184.20886pt.
+ <./_checkers_state_check_8h__dep__incl.pdf>
+<_checkers_state_check_8h__dep__incl.pdf, id=7317, 670.505pt x 248.93pt>
+File: _checkers_state_check_8h__dep__incl.pdf Graphic file (type pdf)
+<use _checkers_state_check_8h__dep__incl.pdf>
+Package pdftex.def Info: _checkers_state_check_8h__dep__incl.pdf  used on input
+ line 18.
+(pdftex.def)             Requested size: 350.0pt x 129.93813pt.
+ [189])
+(_checkers_state_check_8h_source.tex) (_connect_four_8cpp.tex <./_connect_four_
+8cpp__incl.pdf>
+<_connect_four_8cpp__incl.pdf, id=7349, 1075.01625pt x 441.65pt>
+File: _connect_four_8cpp__incl.pdf Graphic file (type pdf)
+<use _connect_four_8cpp__incl.pdf>
+Package pdftex.def Info: _connect_four_8cpp__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 143.79062pt.
+ [190]) (_connect_four_8h.tex <./_connect_four_8h__incl.pdf>
+<_connect_four_8h__incl.pdf, id=7367, 439.6425pt x 317.185pt>
+File: _connect_four_8h__incl.pdf Graphic file (type pdf)
+<use _connect_four_8h__incl.pdf>
+Package pdftex.def Info: _connect_four_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 252.519pt.
+ <./_connect_four_8h__dep__incl.pdf>
+<_connect_four_8h__dep__incl.pdf, id=7375, 504.88625pt x 248.93pt>
+File: _connect_four_8h__dep__incl.pdf Graphic file (type pdf)
+<use _connect_four_8h__dep__incl.pdf>
+Package pdftex.def Info: _connect_four_8h__dep__incl.pdf  used on input line 17
+.
+(pdftex.def)             Requested size: 350.0pt x 172.56712pt.
+ [191]) (_connect_four_8h_source.tex)
+(_connect_four_pieces_8cpp.tex <./_connect_four_pieces_8cpp__incl.pdf>
+<_connect_four_pieces_8cpp__incl.pdf, id=7410, 527.9725pt x 361.35pt>
+File: _connect_four_pieces_8cpp__incl.pdf Graphic file (type pdf)
+<use _connect_four_pieces_8cpp__incl.pdf>
+Package pdftex.def Info: _connect_four_pieces_8cpp__incl.pdf  used on input lin
+e 11.
+(pdftex.def)             Requested size: 350.0pt x 239.53935pt.
+ [192])
+(_connect_four_pieces_8h.tex <./_connect_four_pieces_8h__incl.pdf>
+<_connect_four_pieces_8h__incl.pdf, id=7428, 503.8825pt x 293.095pt>
+File: _connect_four_pieces_8h__incl.pdf Graphic file (type pdf)
+<use _connect_four_pieces_8h__incl.pdf>
+Package pdftex.def Info: _connect_four_pieces_8h__incl.pdf  used on input line 
+10.
+(pdftex.def)             Requested size: 350.0pt x 203.58638pt.
+ [193] <./_connect_four_pieces_8h__dep__incl.pdf>
+<_connect_four_pieces_8h__dep__incl.pdf, id=7443, 705.63625pt x 248.93pt>
+File: _connect_four_pieces_8h__dep__incl.pdf Graphic file (type pdf)
+<use _connect_four_pieces_8h__dep__incl.pdf>
+Package pdftex.def Info: _connect_four_pieces_8h__dep__incl.pdf  used on input 
+line 18.
+(pdftex.def)             Requested size: 350.0pt x 123.46951pt.
+) (_connect_four_pieces_8h_source.tex
+[194]) (_connect_four_state_check_8cpp.tex <./_connect_four_state_check_8cpp__i
+ncl.pdf>
+<_connect_four_state_check_8cpp__incl.pdf, id=7476, 686.565pt x 429.605pt>
+File: _connect_four_state_check_8cpp__incl.pdf Graphic file (type pdf)
+<use _connect_four_state_check_8cpp__incl.pdf>
+Package pdftex.def Info: _connect_four_state_check_8cpp__incl.pdf  used on inpu
+t line 9.
+(pdftex.def)             Requested size: 350.0pt x 219.00388pt.
+) (_connect_four_state_check_8h.tex <./_connect_four_state_check_8h__incl.pdf>
+<_connect_four_state_check_8h__incl.pdf, id=7485, 686.565pt x 373.395pt>
+File: _connect_four_state_check_8h__incl.pdf Graphic file (type pdf)
+<use _connect_four_state_check_8h__incl.pdf>
+Package pdftex.def Info: _connect_four_state_check_8h__incl.pdf  used on input 
+line 10.
+(pdftex.def)             Requested size: 350.0pt x 190.34917pt.
+ [195] <./_connect_four_state_check_8h__dep__incl.pdf>
+<_connect_four_state_check_8h__dep__incl.pdf, id=7501, 680.5425pt x 273.02pt>
+File: _connect_four_state_check_8h__dep__incl.pdf Graphic file (type pdf)
+<use _connect_four_state_check_8h__dep__incl.pdf>
+Package pdftex.def Info: _connect_four_state_check_8h__dep__incl.pdf  used on i
+nput line 18.
+(pdftex.def)             Requested size: 350.0pt x 140.41315pt.
+)
+(_connect_four_state_check_8h_source.tex [196]) (_tic_tac_toe_8cpp.tex <./_tic_
+tac_toe_8cpp__incl.pdf>
+<_tic_tac_toe_8cpp__incl.pdf, id=7534, 1057.9525pt x 441.65pt>
+File: _tic_tac_toe_8cpp__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_8cpp__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_8cpp__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 146.10886pt.
+) (_tic_tac_toe_8h.tex <./_tic_tac_toe_8h__incl.pdf>
+<_tic_tac_toe_8h__incl.pdf, id=7543, 439.6425pt x 317.185pt>
+File: _tic_tac_toe_8h__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_8h__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 252.519pt.
+
+[197] <./_tic_tac_toe_8h__dep__incl.pdf>
+<_tic_tac_toe_8h__dep__incl.pdf, id=7558, 482.80376pt x 248.93pt>
+File: _tic_tac_toe_8h__dep__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_8h__dep__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_8h__dep__incl.pdf  used on input line 22.
+
+(pdftex.def)             Requested size: 350.0pt x 180.46391pt.
+ [198]
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+) (_tic_tac_toe_8h_source.tex) (_tic_tac_toe_pieces_8cpp.tex <./_tic_tac_toe_pi
+eces_8cpp__incl.pdf>
+<_tic_tac_toe_pieces_8cpp__incl.pdf, id=7595, 517.935pt x 361.35pt>
+File: _tic_tac_toe_pieces_8cpp__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_pieces_8cpp__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_pieces_8cpp__incl.pdf  used on input line
+ 10.
+(pdftex.def)             Requested size: 350.0pt x 244.19847pt.
+ [199]) (_tic_tac_toe_pieces_8h.tex <./_tic_tac_toe_pieces_8h__incl.pdf>
+<_tic_tac_toe_pieces_8h__incl.pdf, id=7609, 503.8825pt x 293.095pt>
+File: _tic_tac_toe_pieces_8h__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_pieces_8h__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_pieces_8h__incl.pdf  used on input line 1
+5.
+(pdftex.def)             Requested size: 350.0pt x 203.58638pt.
+ <./_tic_tac_toe_pieces_8h__dep__incl.pdf>
+<_tic_tac_toe_pieces_8h__dep__incl.pdf, id=7617, 660.4675pt x 248.93pt>
+File: _tic_tac_toe_pieces_8h__dep__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_pieces_8h__dep__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_pieces_8h__dep__incl.pdf  used on input l
+ine 23.
+(pdftex.def)             Requested size: 350.0pt x 131.91707pt.
+ [200]
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+) (_tic_tac_toe_pieces_8h_source.tex) (_tic_tac_toe_state_check_8cpp.tex <./_ti
+c_tac_toe_state_check_8cpp__incl.pdf>
+<_tic_tac_toe_state_check_8cpp__incl.pdf, id=7650, 606.265pt x 417.56pt>
+File: _tic_tac_toe_state_check_8cpp__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_state_check_8cpp__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_state_check_8cpp__incl.pdf  used on input
+ line 10.
+(pdftex.def)             Requested size: 350.0pt x 241.06358pt.
+ [201]) (_tic_tac_toe_state_check_8h.tex <./_tic_tac_toe_state_check_8h__incl.p
+df>
+<_tic_tac_toe_state_check_8h__incl.pdf, id=7669, 686.565pt x 361.35pt>
+File: _tic_tac_toe_state_check_8h__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_state_check_8h__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_state_check_8h__incl.pdf  used on input l
+ine 15.
+(pdftex.def)             Requested size: 350.0pt x 184.20886pt.
+ [202] <./_tic_tac_toe_state_check_8h__dep__incl.pdf>
+<_tic_tac_toe_state_check_8h__dep__incl.pdf, id=7684, 682.55pt x 248.93pt>
+File: _tic_tac_toe_state_check_8h__dep__incl.pdf Graphic file (type pdf)
+<use _tic_tac_toe_state_check_8h__dep__incl.pdf>
+Package pdftex.def Info: _tic_tac_toe_state_check_8h__dep__incl.pdf  used on in
+put line 23.
+(pdftex.def)             Requested size: 350.0pt x 127.6477pt.
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+) (_tic_tac_toe_state_check_8h_source.tex [203]) (_grid_8cpp.tex <./_grid_8cpp_
+_incl.pdf>
+<_grid_8cpp__incl.pdf, id=7717, 568.1225pt x 281.05pt>
+File: _grid_8cpp__incl.pdf Graphic file (type pdf)
+<use _grid_8cpp__incl.pdf>
+Package pdftex.def Info: _grid_8cpp__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 350.0pt x 173.15134pt.
+) (_grid_8h.tex <./_grid_8h__incl.pdf>
+<_grid_8h__incl.pdf, id=7726, 201.75375pt x 156.585pt>
+File: _grid_8h__incl.pdf Graphic file (type pdf)
+<use _grid_8h__incl.pdf>
+Package pdftex.def Info: _grid_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 201.0pt x 156.00162pt.
+ [204] <./_grid_8h__dep__incl.pdf>
+<_grid_8h__dep__incl.pdf, id=7742, 2127.95pt x 397.485pt>
+File: _grid_8h__dep__incl.pdf Graphic file (type pdf)
+<use _grid_8h__dep__incl.pdf>
+Package pdftex.def Info: _grid_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 350.0pt x 65.37598pt.
+
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+) (_grid_8h_source.tex [205] [206]) (_button_8h.tex <./_button_8h__incl.pdf>
+<_button_8h__incl.pdf, id=7824, 261.97874pt x 156.585pt>
+File: _button_8h__incl.pdf Graphic file (type pdf)
+<use _button_8h__incl.pdf>
+Package pdftex.def Info: _button_8h__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 261.0pt x 156.004pt.
+ <./_button_8h__dep__incl.pdf>
+<_button_8h__dep__incl.pdf, id=7832, 210.7875pt x 236.885pt>
+File: _button_8h__dep__incl.pdf Graphic file (type pdf)
+<use _button_8h__dep__incl.pdf>
+Package pdftex.def Info: _button_8h__dep__incl.pdf  used on input line 24.
+(pdftex.def)             Requested size: 210.0pt x 236.00607pt.
+ [207]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+) (_button_8h_source.tex [208] [209]) (_g_u_i_info_8h.tex <./_g_u_i_info_8h__in
+cl.pdf>
+<_g_u_i_info_8h__incl.pdf, id=7907, 213.79875pt x 156.585pt>
+File: _g_u_i_info_8h__incl.pdf Graphic file (type pdf)
+<use _g_u_i_info_8h__incl.pdf>
+Package pdftex.def Info: _g_u_i_info_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 213.0pt x 155.99922pt.
+ <./_g_u_i_info_8h__dep__incl.pdf>
+<_g_u_i_info_8h__dep__incl.pdf, id=7915, 741.77126pt x 373.395pt>
+File: _g_u_i_info_8h__dep__incl.pdf Graphic file (type pdf)
+<use _g_u_i_info_8h__dep__incl.pdf>
+Package pdftex.def Info: _g_u_i_info_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 350.0pt x 176.18507pt.
+
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+) (_g_u_i_info_8h_source.tex [210]) (_text_8h.tex <./_text_8h__incl.pdf>
+<_text_8h__incl.pdf, id=7941, 200.75pt x 156.585pt>
+File: _text_8h__incl.pdf Graphic file (type pdf)
+<use _text_8h__incl.pdf>
+Package pdftex.def Info: _text_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 200.0pt x 156.01117pt.
+ <./_text_8h__dep__incl.pdf>
+<_text_8h__dep__incl.pdf, id=7949, 200.75pt x 236.885pt>
+File: _text_8h__dep__incl.pdf Graphic file (type pdf)
+<use _text_8h__dep__incl.pdf>
+Package pdftex.def Info: _text_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 200.0pt x 236.0169pt.
+ [211]
+Overfull \hbox (29.13112pt too wide) in paragraph at lines 39--44
+[]\T1/phv/m/n/10 enum class [] { [] , [] , [] , []
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 50
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 53
+[][][]
+ []
+
+) (_text_8h_source.tex [212] [213]) (ogrid_8h.tex <./ogrid_8h__incl.pdf>
+<ogrid_8h__incl.pdf, id=8061, 2104.86375pt x 429.605pt>
+File: ogrid_8h__incl.pdf Graphic file (type pdf)
+<use ogrid_8h__incl.pdf>
+Package pdftex.def Info: ogrid_8h__incl.pdf  used on input line 27.
+(pdftex.def)             Requested size: 350.0pt x 71.4324pt.
+ <./ogrid_8h__dep__incl.pdf>
+<ogrid_8h__dep__incl.pdf, id=8069, 466.74374pt x 168.63pt>
+File: ogrid_8h__dep__incl.pdf Graphic file (type pdf)
+<use ogrid_8h__dep__incl.pdf>
+Package pdftex.def Info: ogrid_8h__dep__incl.pdf  used on input line 35.
+(pdftex.def)             Requested size: 350.0pt x 126.45674pt.
+) (ogrid_8h_source.tex [214]) (ogrid__fmt_8h.tex <./ogrid__fmt_8h__incl.pdf>
+<ogrid__fmt_8h__incl.pdf, id=8106, 579.16376pt x 293.095pt>
+File: ogrid__fmt_8h__incl.pdf Graphic file (type pdf)
+<use ogrid__fmt_8h__incl.pdf>
+Package pdftex.def Info: ogrid__fmt_8h__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 177.124pt.
+ <./ogrid__fmt_8h__dep__incl.pdf>
+<ogrid__fmt_8h__dep__incl.pdf, id=8114, 240.9pt x 180.675pt>
+File: ogrid__fmt_8h__dep__incl.pdf Graphic file (type pdf)
+<use ogrid__fmt_8h__dep__incl.pdf>
+Package pdftex.def Info: ogrid__fmt_8h__dep__incl.pdf  used on input line 26.
+(pdftex.def)             Requested size: 240.0pt x 180.00462pt.
+ [215]
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+) (ogrid__fmt_8h_source.tex [216]) (ogrid__gui_8h.tex <./ogrid__gui_8h__incl.pd
+f>
+<ogrid__gui_8h__incl.pdf, id=8166, 342.27875pt x 224.84pt>
+File: ogrid__gui_8h__incl.pdf Graphic file (type pdf)
+<use ogrid__gui_8h__incl.pdf>
+Package pdftex.def Info: ogrid__gui_8h__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 341.0pt x 224.01605pt.
+ [217] <./ogrid__gui_8h__dep__incl.pdf>
+<ogrid__gui_8h__dep__incl.pdf, id=8178, 188.705pt x 180.675pt>
+File: ogrid__gui_8h__dep__incl.pdf Graphic file (type pdf)
+<use ogrid__gui_8h__dep__incl.pdf>
+Package pdftex.def Info: ogrid__gui_8h__dep__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 188.0pt x 179.9991pt.
+) (ogrid__gui_8h_source.tex)
+(_p_c_h_8h.tex <./_p_c_h_8h__incl.pdf>
+<_p_c_h_8h__incl.pdf, id=8190, 1320.935pt x 156.585pt>
+File: _p_c_h_8h__incl.pdf Graphic file (type pdf)
+<use _p_c_h_8h__incl.pdf>
+Package pdftex.def Info: _p_c_h_8h__incl.pdf  used on input line 27.
+(pdftex.def)             Requested size: 350.0pt x 41.49004pt.
+ [218]) (_p_c_h_8h_source.tex)
+(_piece_8cpp.tex <./_piece_8cpp__incl.pdf>
+<_piece_8cpp__incl.pdf, id=8207, 480.79625pt x 293.095pt>
+File: _piece_8cpp__incl.pdf Graphic file (type pdf)
+<use _piece_8cpp__incl.pdf>
+Package pdftex.def Info: _piece_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 350.0pt x 213.36722pt.
+ [219]) (_piece_8h.tex <./_piece_8h__incl.pdf>
+<_piece_8h__incl.pdf, id=8224, 480.79625pt x 236.885pt>
+File: _piece_8h__incl.pdf Graphic file (type pdf)
+<use _piece_8h__incl.pdf>
+Package pdftex.def Info: _piece_8h__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 172.44748pt.
+ <./_piece_8h__dep__incl.pdf>
+<_piece_8h__dep__incl.pdf, id=8232, 2081.7775pt x 409.53pt>
+File: _piece_8h__dep__incl.pdf Graphic file (type pdf)
+<use _piece_8h__dep__incl.pdf>
+Package pdftex.def Info: _piece_8h__dep__incl.pdf  used on input line 26.
+(pdftex.def)             Requested size: 350.0pt x 68.85056pt.
+ [220]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+) (_piece_8h_source.tex [221]) (_player_8cpp.tex <./_player_8cpp__incl.pdf>
+<_player_8cpp__incl.pdf, id=8287, 467.7475pt x 224.84pt>
+File: _player_8cpp__incl.pdf Graphic file (type pdf)
+<use _player_8cpp__incl.pdf>
+Package pdftex.def Info: _player_8cpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 168.24876pt.
+)
+(_player_8h.tex <./_player_8h__incl.pdf>
+<_player_8h__incl.pdf, id=8302, 182.6825pt x 168.63pt>
+File: _player_8h__incl.pdf Graphic file (type pdf)
+<use _player_8h__incl.pdf>
+Package pdftex.def Info: _player_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 182.0pt x 168.00688pt.
+ [222] <./_player_8h__dep__incl.pdf>
+<_player_8h__dep__incl.pdf, id=8318, 2418.03375pt x 477.785pt>
+File: _player_8h__dep__incl.pdf Graphic file (type pdf)
+<use _player_8h__dep__incl.pdf>
+Package pdftex.def Info: _player_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 350.0pt x 69.15675pt.
+
+[223]
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+) (_player_8h_source.tex) (_game_initializer_8cpp.tex <./_game_initializer_8cpp
+__incl.pdf>
+<_game_initializer_8cpp__incl.pdf, id=8376, 1890.06125pt x 497.86pt>
+File: _game_initializer_8cpp__incl.pdf Graphic file (type pdf)
+<use _game_initializer_8cpp__incl.pdf>
+Package pdftex.def Info: _game_initializer_8cpp__incl.pdf  used on input line 1
+2.
+(pdftex.def)             Requested size: 350.0pt x 92.19382pt.
+ [224]) (_game_initializer_8h.tex <./_game_initializer_8h__dep__incl.pdf>
+<_game_initializer_8h__dep__incl.pdf, id=8390, 341.275pt x 180.675pt>
+File: _game_initializer_8h__dep__incl.pdf Graphic file (type pdf)
+<use _game_initializer_8h__dep__incl.pdf>
+Package pdftex.def Info: _game_initializer_8h__dep__incl.pdf  used on input lin
+e 13.
+(pdftex.def)             Requested size: 340.0pt x 180.01013pt.
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+) (_game_initializer_8h_source.tex [225]) (_game_window_8cpp.tex <./_game_windo
+w_8cpp__incl.pdf>
+<_game_window_8cpp__incl.pdf, id=8415, 2117.9125pt x 497.86pt>
+File: _game_window_8cpp__incl.pdf Graphic file (type pdf)
+<use _game_window_8cpp__incl.pdf>
+Package pdftex.def Info: _game_window_8cpp__incl.pdf  used on input line 12.
+(pdftex.def)             Requested size: 350.0pt x 82.27249pt.
+) (_game_window_8h.tex <./_game_window_8h__incl.pdf>
+<_game_window_8h__incl.pdf, id=8424, 188.705pt x 168.63pt>
+File: _game_window_8h__incl.pdf Graphic file (type pdf)
+<use _game_window_8h__incl.pdf>
+Package pdftex.def Info: _game_window_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 188.0pt x 167.99916pt.
+ [226] <./_game_window_8h__dep__incl.pdf>
+<_game_window_8h__dep__incl.pdf, id=8440, 317.185pt x 180.675pt>
+File: _game_window_8h__dep__incl.pdf Graphic file (type pdf)
+<use _game_window_8h__dep__incl.pdf>
+Package pdftex.def Info: _game_window_8h__dep__incl.pdf  used on input line 22.
+
+(pdftex.def)             Requested size: 316.0pt x 180.01564pt.
+
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+[227]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+) (_game_window_8h_source.tex) (main_8cpp.tex <./main_8cpp__incl.pdf>
+<main_8cpp__incl.pdf, id=8491, 2104.86375pt x 485.815pt>
+File: main_8cpp__incl.pdf Graphic file (type pdf)
+<use main_8cpp__incl.pdf>
+Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 80.7787pt.
+ [228]
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+) [229] [230
+
+]
+No file refman.ind.
+(refman.aux)
+ ***********
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+ ***********
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: 692608D5AA08EDF14299B788C3233311;122400.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 22587 strings out of 474587
+ 457801 string characters out of 5745702
+ 1953558 words of memory out of 5000000
+ 42546 multiletter control sequences out of 15000+600000
+ 616200 words of font info for 114 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 101i,16n,117p,1528b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Sebas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb><C:/Users/Sebas/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><C:/Users/Sebas/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/Sebas/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Sebas/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Sebas/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Sebas/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Sebas/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Sebas/
+AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Seba
+s/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/S
+ebas/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/User
+s/Sebas/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/
+Users/Sebas/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><
+C:/Users/Sebas/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.p
+fb>
+Output written on refman.pdf (246 pages, 4087639 bytes).
+PDF statistics:
+ 8913 PDF objects out of 10688 (max. 8388607)
+ 1615 named destinations out of 1728 (max. 500000)
+ 5056 words of extra memory for PDF output out of 10000 (max. 10000000)
+
