@@ -90,6 +90,13 @@ namespace OGRID
     // }
 }
 
+/**
+ * @brief This is used to format a PlayerType enum into a string using fmt.
+ * @details This should be used like this: fmt::format("{}", playerType);
+ * The reason this is here and not in ogrid_fmt.h is because it needs to be declared before the Player class.
+ * @date 2023-12-06
+ * @todo Try to move this to ogrid_fmt.h at some point.
+*/
 template <>
 struct fmt::formatter<OGRID::PlayerNameAndPtr> : fmt::formatter<std::string>
 {
