@@ -1,0 +1,24 @@
+\doxysection{Tic\+Tac\+Toe\+State\+Check.\+h}
+\hypertarget{_tic_tac_toe_state_check_8h_source}{}\label{_tic_tac_toe_state_check_8h_source}\index{Source/ogrid/Games/TicTacToe/TicTacToeStateCheck.h@{Source/ogrid/Games/TicTacToe/TicTacToeStateCheck.h}}
+\mbox{\hyperlink{_tic_tac_toe_state_check_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_state_8h}{GameLogicInterface/IGameState.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_state_extensions_8h}{GameLogicImplementation/GameStateExtensions.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check}{TicTacToeStateCheck}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGameState}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{GameStateExtensions}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a7bc832eef9a74c9d21eec43642587769}{m\_GameStateExtensions}}\ =\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{GameStateExtensions}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a4c1c92b56ab4852701602b9317e40eb4}{CheckWin}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a98f148253b4dad579ed6e04c47277a6b}{IsDraw}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}

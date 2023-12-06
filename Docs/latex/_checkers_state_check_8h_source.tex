@@ -1,0 +1,24 @@
+\doxysection{Checkers\+State\+Check.\+h}
+\hypertarget{_checkers_state_check_8h_source}{}\label{_checkers_state_check_8h_source}\index{Source/ogrid/Games/Checkers/CheckersStateCheck.h@{Source/ogrid/Games/Checkers/CheckersStateCheck.h}}
+\mbox{\hyperlink{_checkers_state_check_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_state_8h}{GameLogicInterface/IGameState.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_state_extensions_8h}{GameLogicImplementation/GameStateExtensions.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check}{CheckersStateCheck}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGameState}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{GameStateExtensions}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a92e98f1d139bca06d861965d2f301d5c}{m\_GameStateExtensions}}\ =\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{GameStateExtensions}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a48c0714e978c116eaccfa69b998a1cd8}{CheckWin}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a8d70dc3f8e06bbd432efa768c9190420}{IsDraw}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}

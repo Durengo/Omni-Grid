@@ -1,0 +1,499 @@
+\doxysection{OGRID\+::IGame Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_i_game}{}\label{class_o_g_r_i_d_1_1_i_game}\index{OGRID::IGame@{OGRID::IGame}}
+
+
+{\ttfamily \#include $<$IGame.\+h$>$}
+
+Inheritance diagram for OGRID\+::IGame\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_g_r_i_d_1_1_i_game}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a280802193908fb45304ddfdd64bd37f2}{Try\+Make\+Move}} (unsigned char \&row, unsigned char \&col)=0
+\item 
+virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab70fb5ae1606d585c94f9e825252e94f}{Is\+Winning\+Condition}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4}{Is\+Draw\+Condition}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4971fe78b8b2ebba20643942bb340ce4}{Setup\+Players}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602}{Initialize}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0458b9fbf987ce4367e1ae36ce12bcc6}{On\+GUIUpdate\+Grid}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a817ed0e9a5f884931208c6508fe3a276}{On\+GUIUpdate\+Grid\+Hover}} (Vector2 cell)=0
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a9402d0e80b99c4d614dd7f693fe432b2}{Swap\+Player\+Positions}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a00907d3b2e135d3567c5d37d07877313}{Reset\+Grid}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a31bf54d15aa4175a0e648316eea77fe0}{Reset\+Players}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a28fe1d05d297b2a4441fa328c24d729c}{Print\+Players\+Turn\+Order}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a2fcacf697b5a0fa35aa28fcb00acd9c9}{Setup\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a5657abc82d07dd9a6a32af9a91148cf4}{Reset\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a957000789a699a27e320b29f49d0b3ae}{Start\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aaa36d718518f12c33ac396276e7a7082}{Print\+Player\+Moves}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab97de6370e0c550ece9262fa8598997e}{Make\+Move}} (unsigned char row, unsigned char col)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0baa75d429221d772030d3f33ad3c685}{Reset}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a42dbceed56cdbba541093cbc2db1b2fa}{Switch\+Player}} ()
+\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{OGRID\+::\+Game\+Over\+Type}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a77bf28e364e0e18d36ff6a41161092e5}{Check\+Game\+Over\+State}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{OGRID\+::\+Grid}} \texorpdfstring{$\ast$}{*}grid, unsigned char row, unsigned char col)
+\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a163bfa855a3e1a84543161b240f3da89}{Get\+Game\+State}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a62eca02f475c251c51f0f1baddea24d0}{Set\+Game\+State}} (\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} game\+State)
+\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{Game\+Over\+Type}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aca9c8ddfb70924a2e357e728c45b0cd7}{Get\+Game\+Over\+Type}} () const
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab6c822d75b328f6b8183d9794efe4fc7}{Get\+Winner}} () const
+\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8cc65a67aa83ac1a934505f9a6a77331}{Get\+Game\+Configuration}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a80020005a89074227d7f628bc26f9c6a}{Set\+Game\+Configuration}} (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*}game\+Configuration)
+\item 
+std\+::string \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24a8dbd4667a1ba2a0298ce35ac591b7}{Get\+Game\+Name}} () const
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a126a74b45e75e95a609c86fa7656b826}{Get\+Grid}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acc4e167e84db66fb567402b752764d12}{Get\+Players}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a983ce3cdfb332d10e21e2ad8dee7e34d}{Set\+Randomize\+Turn\+Order}} (bool randomize)
+\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a489056207a234d30d352fdffa1fc16fc}{Get\+Current\+Player}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4069fe73a90862afe70f3af6b11d8d3d}{Set\+Current\+Player}} (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} player)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acfc2f1a8640f6509dffd1dea271d81e3}{Get\+Current\+Turn}} () const
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a02bb9282b3db4264aa1eedd9d2805092}{Get\+Game\+State\+Checker}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a94a7ed72a96be86937fe025cdf1e3102}{Set\+Game\+State\+Checker}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*}game\+State\+Checker)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae025b3fd0dc22e76a0bfe3f8f567d09c}{Get\+Player\+Names}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{OGRID\+::\+Player}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ac133e7c86762be0dcf212f5d630ed53f}{Get\+Player\+Ptrs}} () const
+\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a6bbecc67bf0f70b27d60632a6f54d479}{Get\+Player\+Pair}} (size\+\_\+t at) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8e3b6647e39c0c41f021068fe7d638fa}{Get\+Player\+Pairs}} () const
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ac0e2d2a32f09bc04264edc46085fb7df}{Set\+Player\+Pairs}} (const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \&players)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acf06334379c16547c5064f7bad6d9b17}{Set\+GUIInfo}} (const \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \&gui\+Info)
+\item 
+\mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_afe299a1c025372547eb36f30daa01003}{Get\+GUIInfo}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aaac0b0d2bd9dd6b5fb52ff8f87433ca8}{m\+\_\+gui\+Info}}
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aa21339f8546f0a8636488dd95663edee}{m\+\_\+randomize\+Turn\+Order}} = true
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae996c3460111f4c51a6c7e473ecf10ad}{IGame}} ()=default
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a380d8f14000f5aad4a7e86ff7986799f}{IGame}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}game\+State\+Strategy, const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \&players)
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_af4a29c0847eab5d72d9279349385223d}{\texorpdfstring{$\sim$}{\string~}\+IGame}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4c671da5dabf6f5c6b5d05771cf7d420}{m\+\_\+current\+Game\+State}}
+\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a283d9fadb7ec021bdabf4f187bc1ec26}{m\+\_\+game\+State}} = \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3af595cc685945e110cbdad08e3caf45e7}{Game\+State\+::\+Not\+Started}}
+\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{Game\+Over\+Type}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ad26a9d1d6d993def13ce5874e516ad80}{m\+\_\+game\+Over\+Type}} = \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32aa244146c048a352330efbc3f637918dd}{Game\+Over\+Type\+::\+None}}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec}{m\+\_\+winner}} = nullptr
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a5e1a46cd6837aa1beff0bb745fae5a8b}{m\+\_\+current\+Player}} = nullptr
+\item 
+size\+\_\+t \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229edaf9c340}{m\+\_\+current\+Turn}} = 0
+\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea}{m\+\_\+total\+Turns}} = 0
+\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc}{m\+\_\+\+Game\+Configuration}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ae996c3460111f4c51a6c7e473ecf10ad}\label{class_o_g_r_i_d_1_1_i_game_ae996c3460111f4c51a6c7e473ecf10ad} 
+\index{OGRID::IGame@{OGRID::IGame}!IGame@{IGame}}
+\index{IGame@{IGame}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{IGame()}{IGame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily OGRID\+::\+IGame\+::\+IGame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a380d8f14000f5aad4a7e86ff7986799f}\label{class_o_g_r_i_d_1_1_i_game_a380d8f14000f5aad4a7e86ff7986799f} 
+\index{OGRID::IGame@{OGRID::IGame}!IGame@{IGame}}
+\index{IGame@{IGame}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{IGame()}{IGame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily OGRID\+::\+IGame\+::\+IGame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}}]{game\+State\+Strategy,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \&}]{players }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_af4a29c0847eab5d72d9279349385223d}\label{class_o_g_r_i_d_1_1_i_game_af4a29c0847eab5d72d9279349385223d} 
+\index{OGRID::IGame@{OGRID::IGame}!````~IGame@{\texorpdfstring{$\sim$}{\string~}IGame}}
+\index{````~IGame@{\texorpdfstring{$\sim$}{\string~}IGame}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IGame()}{\string~IGame()}}
+{\footnotesize\ttfamily OGRID\+::\+IGame\+::\texorpdfstring{$\sim$}{\string~}\+IGame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a77bf28e364e0e18d36ff6a41161092e5}\label{class_o_g_r_i_d_1_1_i_game_a77bf28e364e0e18d36ff6a41161092e5} 
+\index{OGRID::IGame@{OGRID::IGame}!CheckGameOverState@{CheckGameOverState}}
+\index{CheckGameOverState@{CheckGameOverState}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{CheckGameOverState()}{CheckGameOverState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{OGRID\+::\+Game\+Over\+Type}} OGRID\+::\+IGame\+::\+Check\+Game\+Over\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{OGRID\+::\+Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{unsigned char}]{row,  }\item[{unsigned char}]{col }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a489056207a234d30d352fdffa1fc16fc}\label{class_o_g_r_i_d_1_1_i_game_a489056207a234d30d352fdffa1fc16fc} 
+\index{OGRID::IGame@{OGRID::IGame}!GetCurrentPlayer@{GetCurrentPlayer}}
+\index{GetCurrentPlayer@{GetCurrentPlayer}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPlayer()}{GetCurrentPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} OGRID\+::\+IGame\+::\+Get\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_acfc2f1a8640f6509dffd1dea271d81e3}\label{class_o_g_r_i_d_1_1_i_game_acfc2f1a8640f6509dffd1dea271d81e3} 
+\index{OGRID::IGame@{OGRID::IGame}!GetCurrentTurn@{GetCurrentTurn}}
+\index{GetCurrentTurn@{GetCurrentTurn}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetCurrentTurn()}{GetCurrentTurn()}}
+{\footnotesize\ttfamily size\+\_\+t OGRID\+::\+IGame\+::\+Get\+Current\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a8cc65a67aa83ac1a934505f9a6a77331}\label{class_o_g_r_i_d_1_1_i_game_a8cc65a67aa83ac1a934505f9a6a77331} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGameConfiguration@{GetGameConfiguration}}
+\index{GetGameConfiguration@{GetGameConfiguration}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGameConfiguration()}{GetGameConfiguration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::\+Get\+Game\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a24a8dbd4667a1ba2a0298ce35ac591b7}\label{class_o_g_r_i_d_1_1_i_game_a24a8dbd4667a1ba2a0298ce35ac591b7} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGameName@{GetGameName}}
+\index{GetGameName@{GetGameName}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGameName()}{GetGameName()}}
+{\footnotesize\ttfamily std\+::string OGRID\+::\+IGame\+::\+Get\+Game\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_aca9c8ddfb70924a2e357e728c45b0cd7}\label{class_o_g_r_i_d_1_1_i_game_aca9c8ddfb70924a2e357e728c45b0cd7} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGameOverType@{GetGameOverType}}
+\index{GetGameOverType@{GetGameOverType}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGameOverType()}{GetGameOverType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{Game\+Over\+Type}} OGRID\+::\+IGame\+::\+Get\+Game\+Over\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a163bfa855a3e1a84543161b240f3da89}\label{class_o_g_r_i_d_1_1_i_game_a163bfa855a3e1a84543161b240f3da89} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGameState@{GetGameState}}
+\index{GetGameState@{GetGameState}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGameState()}{GetGameState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} OGRID\+::\+IGame\+::\+Get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a02bb9282b3db4264aa1eedd9d2805092}\label{class_o_g_r_i_d_1_1_i_game_a02bb9282b3db4264aa1eedd9d2805092} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGameStateChecker@{GetGameStateChecker}}
+\index{GetGameStateChecker@{GetGameStateChecker}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGameStateChecker()}{GetGameStateChecker()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::\+Get\+Game\+State\+Checker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a126a74b45e75e95a609c86fa7656b826}\label{class_o_g_r_i_d_1_1_i_game_a126a74b45e75e95a609c86fa7656b826} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGrid@{GetGrid}}
+\index{GetGrid@{GetGrid}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGrid()}{GetGrid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::\+Get\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_afe299a1c025372547eb36f30daa01003}\label{class_o_g_r_i_d_1_1_i_game_afe299a1c025372547eb36f30daa01003} 
+\index{OGRID::IGame@{OGRID::IGame}!GetGUIInfo@{GetGUIInfo}}
+\index{GetGUIInfo@{GetGUIInfo}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetGUIInfo()}{GetGUIInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} OGRID\+::\+IGame\+::\+Get\+GUIInfo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ae025b3fd0dc22e76a0bfe3f8f567d09c}\label{class_o_g_r_i_d_1_1_i_game_ae025b3fd0dc22e76a0bfe3f8f567d09c} 
+\index{OGRID::IGame@{OGRID::IGame}!GetPlayerNames@{GetPlayerNames}}
+\index{GetPlayerNames@{GetPlayerNames}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetPlayerNames()}{GetPlayerNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ OGRID\+::\+IGame\+::\+Get\+Player\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a6bbecc67bf0f70b27d60632a6f54d479}\label{class_o_g_r_i_d_1_1_i_game_a6bbecc67bf0f70b27d60632a6f54d479} 
+\index{OGRID::IGame@{OGRID::IGame}!GetPlayerPair@{GetPlayerPair}}
+\index{GetPlayerPair@{GetPlayerPair}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetPlayerPair()}{GetPlayerPair()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} OGRID\+::\+IGame\+::\+Get\+Player\+Pair (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{at }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a8e3b6647e39c0c41f021068fe7d638fa}\label{class_o_g_r_i_d_1_1_i_game_a8e3b6647e39c0c41f021068fe7d638fa} 
+\index{OGRID::IGame@{OGRID::IGame}!GetPlayerPairs@{GetPlayerPairs}}
+\index{GetPlayerPairs@{GetPlayerPairs}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetPlayerPairs()}{GetPlayerPairs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ OGRID\+::\+IGame\+::\+Get\+Player\+Pairs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ac133e7c86762be0dcf212f5d630ed53f}\label{class_o_g_r_i_d_1_1_i_game_ac133e7c86762be0dcf212f5d630ed53f} 
+\index{OGRID::IGame@{OGRID::IGame}!GetPlayerPtrs@{GetPlayerPtrs}}
+\index{GetPlayerPtrs@{GetPlayerPtrs}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetPlayerPtrs()}{GetPlayerPtrs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{OGRID\+::\+Player}} \texorpdfstring{$\ast$}{*} $>$ OGRID\+::\+IGame\+::\+Get\+Player\+Ptrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_acc4e167e84db66fb567402b752764d12}\label{class_o_g_r_i_d_1_1_i_game_acc4e167e84db66fb567402b752764d12} 
+\index{OGRID::IGame@{OGRID::IGame}!GetPlayers@{GetPlayers}}
+\index{GetPlayers@{GetPlayers}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetPlayers()}{GetPlayers()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} $>$ OGRID\+::\+IGame\+::\+Get\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ab6c822d75b328f6b8183d9794efe4fc7}\label{class_o_g_r_i_d_1_1_i_game_ab6c822d75b328f6b8183d9794efe4fc7} 
+\index{OGRID::IGame@{OGRID::IGame}!GetWinner@{GetWinner}}
+\index{GetWinner@{GetWinner}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{GetWinner()}{GetWinner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::\+Get\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602}\label{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602} 
+\index{OGRID::IGame@{OGRID::IGame}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void OGRID\+::\+IGame\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ad42257c45b758ef937f1df535a6b19b6}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a3d413f3f2fdd0f4fb631a1423925d352}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_ac5ce7d5d428af91eba08f5f7212d889e}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4}\label{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4} 
+\index{OGRID::IGame@{OGRID::IGame}!IsDrawCondition@{IsDrawCondition}}
+\index{IsDrawCondition@{IsDrawCondition}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{IsDrawCondition()}{IsDrawCondition()}}
+{\footnotesize\ttfamily virtual bool OGRID\+::\+IGame\+::\+Is\+Draw\+Condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a24ec7090abf404c95fc81b512ef3aeda}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a678f87aca17ff31042e4712abf9ffe49}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_ac3fa5cdc6c577db3dd73e8c7edba868c}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ab70fb5ae1606d585c94f9e825252e94f}\label{class_o_g_r_i_d_1_1_i_game_ab70fb5ae1606d585c94f9e825252e94f} 
+\index{OGRID::IGame@{OGRID::IGame}!IsWinningCondition@{IsWinningCondition}}
+\index{IsWinningCondition@{IsWinningCondition}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{IsWinningCondition()}{IsWinningCondition()}}
+{\footnotesize\ttfamily virtual bool OGRID\+::\+IGame\+::\+Is\+Winning\+Condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a21bd82ff9e31c444c203d0d79139e063}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a390786657091f9af58f0e9f71b99e6a5}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a68ad9300ff652d99fbfe370b1a69c5f3}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ab97de6370e0c550ece9262fa8598997e}\label{class_o_g_r_i_d_1_1_i_game_ab97de6370e0c550ece9262fa8598997e} 
+\index{OGRID::IGame@{OGRID::IGame}!MakeMove@{MakeMove}}
+\index{MakeMove@{MakeMove}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{MakeMove()}{MakeMove()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Make\+Move (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a0458b9fbf987ce4367e1ae36ce12bcc6}\label{class_o_g_r_i_d_1_1_i_game_a0458b9fbf987ce4367e1ae36ce12bcc6} 
+\index{OGRID::IGame@{OGRID::IGame}!OnGUIUpdateGrid@{OnGUIUpdateGrid}}
+\index{OnGUIUpdateGrid@{OnGUIUpdateGrid}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{OnGUIUpdateGrid()}{OnGUIUpdateGrid()}}
+{\footnotesize\ttfamily virtual void OGRID\+::\+IGame\+::\+On\+GUIUpdate\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_acba9d0f7859a33a6d50492859275f69e}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a3db9c070fbad52a269cf9b84918e42d2}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_abedf9b91ae45b251654c607ed6a24365}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a817ed0e9a5f884931208c6508fe3a276}\label{class_o_g_r_i_d_1_1_i_game_a817ed0e9a5f884931208c6508fe3a276} 
+\index{OGRID::IGame@{OGRID::IGame}!OnGUIUpdateGridHover@{OnGUIUpdateGridHover}}
+\index{OnGUIUpdateGridHover@{OnGUIUpdateGridHover}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{OnGUIUpdateGridHover()}{OnGUIUpdateGridHover()}}
+{\footnotesize\ttfamily virtual void OGRID\+::\+IGame\+::\+On\+GUIUpdate\+Grid\+Hover (\begin{DoxyParamCaption}\item[{Vector2}]{cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a657164d309d360c8196575c567ab76be}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a22e848798f7af8237276e854b611286a}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a6f5f7e080a93316ea7d4f87de29bffa8}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_aaa36d718518f12c33ac396276e7a7082}\label{class_o_g_r_i_d_1_1_i_game_aaa36d718518f12c33ac396276e7a7082} 
+\index{OGRID::IGame@{OGRID::IGame}!PrintPlayerMoves@{PrintPlayerMoves}}
+\index{PrintPlayerMoves@{PrintPlayerMoves}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{PrintPlayerMoves()}{PrintPlayerMoves()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Print\+Player\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a28fe1d05d297b2a4441fa328c24d729c}\label{class_o_g_r_i_d_1_1_i_game_a28fe1d05d297b2a4441fa328c24d729c} 
+\index{OGRID::IGame@{OGRID::IGame}!PrintPlayersTurnOrder@{PrintPlayersTurnOrder}}
+\index{PrintPlayersTurnOrder@{PrintPlayersTurnOrder}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{PrintPlayersTurnOrder()}{PrintPlayersTurnOrder()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Print\+Players\+Turn\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a0baa75d429221d772030d3f33ad3c685}\label{class_o_g_r_i_d_1_1_i_game_a0baa75d429221d772030d3f33ad3c685} 
+\index{OGRID::IGame@{OGRID::IGame}!Reset@{Reset}}
+\index{Reset@{Reset}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a5657abc82d07dd9a6a32af9a91148cf4}\label{class_o_g_r_i_d_1_1_i_game_a5657abc82d07dd9a6a32af9a91148cf4} 
+\index{OGRID::IGame@{OGRID::IGame}!ResetGame@{ResetGame}}
+\index{ResetGame@{ResetGame}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{ResetGame()}{ResetGame()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Reset\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a00907d3b2e135d3567c5d37d07877313}\label{class_o_g_r_i_d_1_1_i_game_a00907d3b2e135d3567c5d37d07877313} 
+\index{OGRID::IGame@{OGRID::IGame}!ResetGrid@{ResetGrid}}
+\index{ResetGrid@{ResetGrid}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{ResetGrid()}{ResetGrid()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Reset\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a31bf54d15aa4175a0e648316eea77fe0}\label{class_o_g_r_i_d_1_1_i_game_a31bf54d15aa4175a0e648316eea77fe0} 
+\index{OGRID::IGame@{OGRID::IGame}!ResetPlayers@{ResetPlayers}}
+\index{ResetPlayers@{ResetPlayers}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{ResetPlayers()}{ResetPlayers()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Reset\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a4069fe73a90862afe70f3af6b11d8d3d}\label{class_o_g_r_i_d_1_1_i_game_a4069fe73a90862afe70f3af6b11d8d3d} 
+\index{OGRID::IGame@{OGRID::IGame}!SetCurrentPlayer@{SetCurrentPlayer}}
+\index{SetCurrentPlayer@{SetCurrentPlayer}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetCurrentPlayer()}{SetCurrentPlayer()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+Current\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}}}]{player }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a80020005a89074227d7f628bc26f9c6a}\label{class_o_g_r_i_d_1_1_i_game_a80020005a89074227d7f628bc26f9c6a} 
+\index{OGRID::IGame@{OGRID::IGame}!SetGameConfiguration@{SetGameConfiguration}}
+\index{SetGameConfiguration@{SetGameConfiguration}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetGameConfiguration()}{SetGameConfiguration()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+Game\+Configuration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*}}]{game\+Configuration }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a62eca02f475c251c51f0f1baddea24d0}\label{class_o_g_r_i_d_1_1_i_game_a62eca02f475c251c51f0f1baddea24d0} 
+\index{OGRID::IGame@{OGRID::IGame}!SetGameState@{SetGameState}}
+\index{SetGameState@{SetGameState}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetGameState()}{SetGameState()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}}}]{game\+State }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a94a7ed72a96be86937fe025cdf1e3102}\label{class_o_g_r_i_d_1_1_i_game_a94a7ed72a96be86937fe025cdf1e3102} 
+\index{OGRID::IGame@{OGRID::IGame}!SetGameStateChecker@{SetGameStateChecker}}
+\index{SetGameStateChecker@{SetGameStateChecker}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetGameStateChecker()}{SetGameStateChecker()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+Game\+State\+Checker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*}}]{game\+State\+Checker }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_acf06334379c16547c5064f7bad6d9b17}\label{class_o_g_r_i_d_1_1_i_game_acf06334379c16547c5064f7bad6d9b17} 
+\index{OGRID::IGame@{OGRID::IGame}!SetGUIInfo@{SetGUIInfo}}
+\index{SetGUIInfo@{SetGUIInfo}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetGUIInfo()}{SetGUIInfo()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+GUIInfo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \&}]{gui\+Info }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ac0e2d2a32f09bc04264edc46085fb7df}\label{class_o_g_r_i_d_1_1_i_game_ac0e2d2a32f09bc04264edc46085fb7df} 
+\index{OGRID::IGame@{OGRID::IGame}!SetPlayerPairs@{SetPlayerPairs}}
+\index{SetPlayerPairs@{SetPlayerPairs}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetPlayerPairs()}{SetPlayerPairs()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+Player\+Pairs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \&}]{players }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a983ce3cdfb332d10e21e2ad8dee7e34d}\label{class_o_g_r_i_d_1_1_i_game_a983ce3cdfb332d10e21e2ad8dee7e34d} 
+\index{OGRID::IGame@{OGRID::IGame}!SetRandomizeTurnOrder@{SetRandomizeTurnOrder}}
+\index{SetRandomizeTurnOrder@{SetRandomizeTurnOrder}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetRandomizeTurnOrder()}{SetRandomizeTurnOrder()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Set\+Randomize\+Turn\+Order (\begin{DoxyParamCaption}\item[{bool}]{randomize }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a2fcacf697b5a0fa35aa28fcb00acd9c9}\label{class_o_g_r_i_d_1_1_i_game_a2fcacf697b5a0fa35aa28fcb00acd9c9} 
+\index{OGRID::IGame@{OGRID::IGame}!SetupGame@{SetupGame}}
+\index{SetupGame@{SetupGame}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetupGame()}{SetupGame()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Setup\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a4971fe78b8b2ebba20643942bb340ce4}\label{class_o_g_r_i_d_1_1_i_game_a4971fe78b8b2ebba20643942bb340ce4} 
+\index{OGRID::IGame@{OGRID::IGame}!SetupPlayers@{SetupPlayers}}
+\index{SetupPlayers@{SetupPlayers}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SetupPlayers()}{SetupPlayers()}}
+{\footnotesize\ttfamily virtual void OGRID\+::\+IGame\+::\+Setup\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af92cffa9bada5835f69048746c3f620c}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_aaee552e87ce3b956fda482cc42d6addd}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a986597fb31f259e77ec5dd68ae0a66d7}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a957000789a699a27e320b29f49d0b3ae}\label{class_o_g_r_i_d_1_1_i_game_a957000789a699a27e320b29f49d0b3ae} 
+\index{OGRID::IGame@{OGRID::IGame}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a9402d0e80b99c4d614dd7f693fe432b2}\label{class_o_g_r_i_d_1_1_i_game_a9402d0e80b99c4d614dd7f693fe432b2} 
+\index{OGRID::IGame@{OGRID::IGame}!SwapPlayerPositions@{SwapPlayerPositions}}
+\index{SwapPlayerPositions@{SwapPlayerPositions}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SwapPlayerPositions()}{SwapPlayerPositions()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Swap\+Player\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a42dbceed56cdbba541093cbc2db1b2fa}\label{class_o_g_r_i_d_1_1_i_game_a42dbceed56cdbba541093cbc2db1b2fa} 
+\index{OGRID::IGame@{OGRID::IGame}!SwitchPlayer@{SwitchPlayer}}
+\index{SwitchPlayer@{SwitchPlayer}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{SwitchPlayer()}{SwitchPlayer()}}
+{\footnotesize\ttfamily void OGRID\+::\+IGame\+::\+Switch\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a280802193908fb45304ddfdd64bd37f2}\label{class_o_g_r_i_d_1_1_i_game_a280802193908fb45304ddfdd64bd37f2} 
+\index{OGRID::IGame@{OGRID::IGame}!TryMakeMove@{TryMakeMove}}
+\index{TryMakeMove@{TryMakeMove}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{TryMakeMove()}{TryMakeMove()}}
+{\footnotesize\ttfamily virtual bool OGRID\+::\+IGame\+::\+Try\+Make\+Move (\begin{DoxyParamCaption}\item[{unsigned char \&}]{row,  }\item[{unsigned char \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_aced6fca13556b768fb105deaaf745fea}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_ac8b02b1291e6516c732cc91e72f88259}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_acc534cc4d0f508a80e91f0935d4fbd36}{OGRID\+::\+Tic\+Tac\+Toe}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a4c671da5dabf6f5c6b5d05771cf7d420}\label{class_o_g_r_i_d_1_1_i_game_a4c671da5dabf6f5c6b5d05771cf7d420} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_currentGameState@{m\_currentGameState}}
+\index{m\_currentGameState@{m\_currentGameState}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_currentGameState}{m\_currentGameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}}\texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::m\+\_\+current\+Game\+State\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a5e1a46cd6837aa1beff0bb745fae5a8b}\label{class_o_g_r_i_d_1_1_i_game_a5e1a46cd6837aa1beff0bb745fae5a8b} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_currentPlayer@{m\_currentPlayer}}
+\index{m\_currentPlayer@{m\_currentPlayer}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_currentPlayer}{m\_currentPlayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::m\+\_\+current\+Player = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229edaf9c340}\label{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229edaf9c340} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_currentTurn@{m\_currentTurn}}
+\index{m\_currentTurn@{m\_currentTurn}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_currentTurn}{m\_currentTurn}}
+{\footnotesize\ttfamily size\+\_\+t OGRID\+::\+IGame\+::m\+\_\+current\+Turn = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc}\label{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_GameConfiguration@{m\_GameConfiguration}}
+\index{m\_GameConfiguration@{m\_GameConfiguration}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_GameConfiguration}{m\_GameConfiguration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}}\texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::m\+\_\+\+Game\+Configuration = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_ad26a9d1d6d993def13ce5874e516ad80}\label{class_o_g_r_i_d_1_1_i_game_ad26a9d1d6d993def13ce5874e516ad80} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_gameOverType@{m\_gameOverType}}
+\index{m\_gameOverType@{m\_gameOverType}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_gameOverType}{m\_gameOverType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{Game\+Over\+Type}} OGRID\+::\+IGame\+::m\+\_\+game\+Over\+Type = \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32aa244146c048a352330efbc3f637918dd}{Game\+Over\+Type\+::\+None}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a283d9fadb7ec021bdabf4f187bc1ec26}\label{class_o_g_r_i_d_1_1_i_game_a283d9fadb7ec021bdabf4f187bc1ec26} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_gameState@{m\_gameState}}
+\index{m\_gameState@{m\_gameState}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_gameState}{m\_gameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} OGRID\+::\+IGame\+::m\+\_\+game\+State = \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3af595cc685945e110cbdad08e3caf45e7}{Game\+State\+::\+Not\+Started}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_aaac0b0d2bd9dd6b5fb52ff8f87433ca8}\label{class_o_g_r_i_d_1_1_i_game_aaac0b0d2bd9dd6b5fb52ff8f87433ca8} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_guiInfo@{m\_guiInfo}}
+\index{m\_guiInfo@{m\_guiInfo}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_guiInfo}{m\_guiInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} OGRID\+::\+IGame\+::m\+\_\+gui\+Info}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_aa21339f8546f0a8636488dd95663edee}\label{class_o_g_r_i_d_1_1_i_game_aa21339f8546f0a8636488dd95663edee} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_randomizeTurnOrder@{m\_randomizeTurnOrder}}
+\index{m\_randomizeTurnOrder@{m\_randomizeTurnOrder}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_randomizeTurnOrder}{m\_randomizeTurnOrder}}
+{\footnotesize\ttfamily bool OGRID\+::\+IGame\+::m\+\_\+randomize\+Turn\+Order = true}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea}\label{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_totalTurns@{m\_totalTurns}}
+\index{m\_totalTurns@{m\_totalTurns}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_totalTurns}{m\_totalTurns}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+IGame\+::m\+\_\+total\+Turns = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec}\label{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_winner@{m\_winner}}
+\index{m\_winner@{m\_winner}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_winner}{m\_winner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::m\+\_\+winner = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Interface/\mbox{\hyperlink{_i_game_8h}{IGame.\+h}}\item 
+Source/ogrid/\+Game\+Logic\+Interface/\mbox{\hyperlink{_i_game_8cpp}{IGame.\+cpp}}\end{DoxyCompactItemize}

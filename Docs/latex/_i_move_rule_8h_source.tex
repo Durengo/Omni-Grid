@@ -1,0 +1,20 @@
+\doxysection{IMove\+Rule.\+h}
+\hypertarget{_i_move_rule_8h_source}{}\label{_i_move_rule_8h_source}\index{Source/ogrid/GameLogicInterface/IMoveRule.h@{Source/ogrid/GameLogicInterface/IMoveRule.h}}
+\mbox{\hyperlink{_i_move_rule_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{class\ }Grid;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMoveRule}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule_aa769366b27d8c4668b4ef2fd6069bf07}{\string~IMoveRule}}()\ \{\}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ALL\ MOVES\ REQUIRE\ START\ <from>\ AND\ END\ <to>\ COORDINATES.\ BUT\ MAKE\ SURE\ THAT\ THE\ COORDINATE\ YOU\ WANT\ TO\ PLACE\ YOUR\ PIECE\ AT\ IS\ THE\ END\ <to>\ COORDINATES.}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule_aad9632cc15e5faefdf46c6a802e3ecd9}{IsValidMove}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}

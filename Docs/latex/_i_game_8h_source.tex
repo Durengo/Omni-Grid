@@ -1,0 +1,147 @@
+\doxysection{IGame.\+h}
+\hypertarget{_i_game_8h_source}{}\label{_i_game_8h_source}\index{Source/ogrid/GameLogicInterface/IGame.h@{Source/ogrid/GameLogicInterface/IGame.h}}
+\mbox{\hyperlink{_i_game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <raylib.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_g_u_i_info_8h}{GUI/GUIInfo.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_state_checker_8h}{GameLogicImplementation/GameStateChecker.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ TODO:\ Keep\ track\ of\ the\ current\ player.}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Forward\ declaration}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }GameConfiguration;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }Player;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }Grid;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{enum}\ MoveType;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{struct\ }PlayerNameAndPtr;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{GameState}}}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3af595cc685945e110cbdad08e3caf45e7}{NotStarted}}\ =\ 0,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3a799d4a9d2dd2658103da91f008392dbf}{InProgress}}\ =\ 1,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3a10278d6b076619c57c13f9a4776987d7}{Paused}}\ =\ 2,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3ae2eb8edde36d3b2d35f4257494e23cb1}{GameOver}}\ =\ 3}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{GameOverType}}}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32aa244146c048a352330efbc3f637918dd}{None}}\ =\ 0,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32ab19376214085226069b90a33dc04b783}{Win}}\ =\ 1,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32a381f9d4823b00c48faacb26b7c1207ae}{Draw}}\ =\ 2}
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{IGame}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aaac0b0d2bd9dd6b5fb52ff8f87433ca8}{m\_guiInfo}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aa21339f8546f0a8636488dd95663edee}{m\_randomizeTurnOrder}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{GameStateChecker}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4c671da5dabf6f5c6b5d05771cf7d420}{m\_currentGameState}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{GameState}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a283d9fadb7ec021bdabf4f187bc1ec26}{m\_gameState}}\ =\ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3af595cc685945e110cbdad08e3caf45e7}{GameState::NotStarted}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{GameOverType}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ad26a9d1d6d993def13ce5874e516ad80}{m\_gameOverType}}\ =\ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32aa244146c048a352330efbc3f637918dd}{GameOverType::None}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec}{m\_winner}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a5e1a46cd6837aa1beff0bb745fae5a8b}{m\_currentPlayer}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229edaf9c340}{m\_currentTurn}}\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea}{m\_totalTurns}}\ =\ 0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc}{m\_GameConfiguration}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae996c3460111f4c51a6c7e473ecf10ad}{IGame}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae996c3460111f4c51a6c7e473ecf10ad}{IGame}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGameState}}\ *gameStateStrategy,\ \textcolor{keyword}{const}\ std::vector<OGRID::PlayerNameAndPtr>\ \&players);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_af4a29c0847eab5d72d9279349385223d}{\string~IGame}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a280802193908fb45304ddfdd64bd37f2}{TryMakeMove}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&col)\ =\ 0;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ bool\ IsWinningCondition(unsigned\ char\ row,\ unsigned\ char\ col)\ =\ 0;}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ bool\ IsWinningCondition(char\ playerChar)\ =\ 0;}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ bool\ IsDrawCondition(unsigned\ char\ row,\ unsigned\ char\ col)\ =\ 0;}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab70fb5ae1606d585c94f9e825252e94f}{IsWinningCondition}}()\ =\ 0;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4}{IsDrawCondition}}()\ =\ 0;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ void\ SetupPlayers(const\ std::vector<int>\ \&totalValidSides)\ =\ 0;}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4971fe78b8b2ebba20643942bb340ce4}{SetupPlayers}}()\ =\ 0;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602}{Initialize}}()\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ specific\ GUI\ Grid\ stuff\ drawing\ (X\ and\ O\ for\ Tic\ Tac\ Toe\ for\ example).}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0458b9fbf987ce4367e1ae36ce12bcc6}{OnGUIUpdateGrid}}()\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On\ hovering\ over\ a\ grid\ spot.}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a817ed0e9a5f884931208c6508fe3a276}{OnGUIUpdateGridHover}}(Vector2\ cell)\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a9402d0e80b99c4d614dd7f693fe432b2}{SwapPlayerPositions}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a00907d3b2e135d3567c5d37d07877313}{ResetGrid}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a31bf54d15aa4175a0e648316eea77fe0}{ResetPlayers}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a28fe1d05d297b2a4441fa328c24d729c}{PrintPlayersTurnOrder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a2fcacf697b5a0fa35aa28fcb00acd9c9}{SetupGame}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a5657abc82d07dd9a6a32af9a91148cf4}{ResetGame}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a957000789a699a27e320b29f49d0b3ae}{StartGame}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aaa36d718518f12c33ac396276e7a7082}{PrintPlayerMoves}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab97de6370e0c550ece9262fa8598997e}{MakeMove}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0baa75d429221d772030d3f33ad3c685}{Reset}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Switch\ player\ turns\ forcefully\ after\ a\ move\ is\ made.\ This\ is\ added\ purely\ for\ testing\ purposes.}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a42dbceed56cdbba541093cbc2db1b2fa}{SwitchPlayer}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{OGRID::GameOverType}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a77bf28e364e0e18d36ff6a41161092e5}{CheckGameOverState}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{OGRID::Grid}}\ *grid,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ ChangeGridSize();}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getters\ and\ Setters}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{GameState}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a163bfa855a3e1a84543161b240f3da89}{GetGameState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a62eca02f475c251c51f0f1baddea24d0}{SetGameState}}(\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{GameState}}\ gameState);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{GameOverType}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aca9c8ddfb70924a2e357e728c45b0cd7}{GetGameOverType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab6c822d75b328f6b8183d9794efe4fc7}{GetWinner}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8cc65a67aa83ac1a934505f9a6a77331}{GetGameConfiguration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a80020005a89074227d7f628bc26f9c6a}{SetGameConfiguration}}(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}\ *gameConfiguration);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24a8dbd4667a1ba2a0298ce35ac591b7}{GetGameName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a126a74b45e75e95a609c86fa7656b826}{GetGrid}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ std::vector<Player\ *>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acc4e167e84db66fb567402b752764d12}{GetPlayers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a983ce3cdfb332d10e21e2ad8dee7e34d}{SetRandomizeTurnOrder}}(\textcolor{keywordtype}{bool}\ randomize);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID::PlayerNameAndPtr}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a489056207a234d30d352fdffa1fc16fc}{GetCurrentPlayer}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ solely\ for\ testing\ purposes.}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4069fe73a90862afe70f3af6b11d8d3d}{SetCurrentPlayer}}(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID::PlayerNameAndPtr}}\ player);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acfc2f1a8640f6509dffd1dea271d81e3}{GetCurrentTurn}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{GameStateChecker}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a02bb9282b3db4264aa1eedd9d2805092}{GetGameStateChecker}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a94a7ed72a96be86937fe025cdf1e3102}{SetGameStateChecker}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{GameStateChecker}}\ *gameStateChecker);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae025b3fd0dc22e76a0bfe3f8f567d09c}{GetPlayerNames}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ std::vector<OGRID::Player\ *>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ac133e7c86762be0dcf212f5d630ed53f}{GetPlayerPtrs}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID::PlayerNameAndPtr}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a6bbecc67bf0f70b27d60632a6f54d479}{GetPlayerPair}}(\textcolor{keywordtype}{size\_t}\ at)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ std::vector<OGRID::PlayerNameAndPtr>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8e3b6647e39c0c41f021068fe7d638fa}{GetPlayerPairs}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ac0e2d2a32f09bc04264edc46085fb7df}{SetPlayerPairs}}(\textcolor{keyword}{const}\ std::vector<OGRID::PlayerNameAndPtr>\ \&players);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acf06334379c16547c5064f7bad6d9b17}{SetGUIInfo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}}\ \&guiInfo);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_afe299a1c025372547eb36f30daa01003}{GetGUIInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ \ \ \ \ \};}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}

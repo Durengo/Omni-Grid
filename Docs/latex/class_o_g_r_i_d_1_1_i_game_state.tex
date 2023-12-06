@@ -1,0 +1,58 @@
+\doxysection{OGRID\+::IGame\+State Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_i_game_state}{}\label{class_o_g_r_i_d_1_1_i_game_state}\index{OGRID::IGameState@{OGRID::IGameState}}
+
+
+{\ttfamily \#include $<$IGame\+State.\+h$>$}
+
+Inheritance diagram for OGRID\+::IGame\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.839080cm]{class_o_g_r_i_d_1_1_i_game_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531}{\texorpdfstring{$\sim$}{\string~}\+IGame\+State}} ()
+\item 
+virtual int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd}{Check\+Win}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const =0
+\item 
+virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9}{Is\+Draw}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531}\label{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531} 
+\index{OGRID::IGameState@{OGRID::IGameState}!````~IGameState@{\texorpdfstring{$\sim$}{\string~}IGameState}}
+\index{````~IGameState@{\texorpdfstring{$\sim$}{\string~}IGameState}!OGRID::IGameState@{OGRID::IGameState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IGameState()}{\string~IGameState()}}
+{\footnotesize\ttfamily virtual OGRID\+::\+IGame\+State\+::\texorpdfstring{$\sim$}{\string~}\+IGame\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd}\label{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd} 
+\index{OGRID::IGameState@{OGRID::IGameState}!CheckWin@{CheckWin}}
+\index{CheckWin@{CheckWin}!OGRID::IGameState@{OGRID::IGameState}}
+\doxysubsubsection{\texorpdfstring{CheckWin()}{CheckWin()}}
+{\footnotesize\ttfamily virtual int OGRID\+::\+IGame\+State\+::\+Check\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a48c0714e978c116eaccfa69b998a1cd8}{OGRID\+::\+Checkers\+State\+Check}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_state_check_a7a34ac37eb57c0e6ce6d56241d93db67}{OGRID\+::\+Connect\+Four\+State\+Check}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a4c1c92b56ab4852701602b9317e40eb4}{OGRID\+::\+Tic\+Tac\+Toe\+State\+Check}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9}\label{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9} 
+\index{OGRID::IGameState@{OGRID::IGameState}!IsDraw@{IsDraw}}
+\index{IsDraw@{IsDraw}!OGRID::IGameState@{OGRID::IGameState}}
+\doxysubsubsection{\texorpdfstring{IsDraw()}{IsDraw()}}
+{\footnotesize\ttfamily virtual bool OGRID\+::\+IGame\+State\+::\+Is\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a8d70dc3f8e06bbd432efa768c9190420}{OGRID\+::\+Checkers\+State\+Check}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_state_check_a1d250847169865b5fee1b526c10a8af7}{OGRID\+::\+Connect\+Four\+State\+Check}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a98f148253b4dad579ed6e04c47277a6b}{OGRID\+::\+Tic\+Tac\+Toe\+State\+Check}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Interface/\mbox{\hyperlink{_i_game_state_8h}{IGame\+State.\+h}}\end{DoxyCompactItemize}

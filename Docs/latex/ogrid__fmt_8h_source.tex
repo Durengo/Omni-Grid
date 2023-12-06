@@ -1,0 +1,91 @@
+\doxysection{ogrid\+\_\+fmt.\+h}
+\hypertarget{ogrid__fmt_8h_source}{}\label{ogrid__fmt_8h_source}\index{Source/ogrid/ogrid\_fmt.h@{Source/ogrid/ogrid\_fmt.h}}
+\mbox{\hyperlink{ogrid__fmt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}fmt/format.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_grid_8h}{Grid/Grid.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player/Player.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_piece_8h}{Player/Piece.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Formatting\ for\ fmt\ library.}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Grid\ formatting}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }fmt::formatter<\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}::Grid>\ :\ fmt::formatter<std::string>}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Parses\ format\ specifications\ of\ the\ form\ '[:...]'\ which\ you\ can\ ignore.}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4_af89457e7d78d6db37f451b7f1c53990b}{parse}}(format\_parse\_context\ \&ctx)\ \{\ \textcolor{keywordflow}{return}\ ctx.begin();\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Formats\ the\ Grid\ using\ provided\ format\ specifiers.}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FormatContext>}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4_ab257e9c2015675f05cac4ee6de1d7747}{format}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{OGRID::Grid}}\ \&grid,\ FormatContext\ \&ctx)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ a\ memory\ buffer\ to\ store\ the\ temporary\ output.}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ fmt::memory\_buffer\ buf;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ fmt::format\_to(std::back\_inserter(buf),\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ grid.\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a81d9b578e66af2cfdf570553657a3484}{GetRows}}();\ i++)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ grid.\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a4820695fbd663ecac3269b5c15be20eb}{GetCols}}();\ j++)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{OGRID::Cell}}\ *cell\ =\ grid.\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a26bf0a31927d08bf0ea18ab6557ea0f1}{GetGrid}}()[i][j];}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Assuming\ you\ want\ a\ space\ between\ characters\ in\ a\ row.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ >\ 0)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fmt::format\_to(std::back\_inserter(buf),\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ cell\ pointer\ is\ not\ null\ and\ then\ access\ m\_Piece}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cell\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ cell-\/>\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_ad6dc808ec1cd6f96885cc46418bfb85c}{m\_Piece}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fmt::format\_to(std::back\_inserter(buf),\ \textcolor{stringliteral}{"{}\{\}"{}},\ cell-\/>\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_ad6dc808ec1cd6f96885cc46418bfb85c}{m\_Piece}}-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a43e81a2e514731545e78044787df1515}{GetRepresentation}}());}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fmt::format\_to(std::back\_inserter(buf),\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fmt::format\_to(std::back\_inserter(buf),\ "{}\{\}"{},\ grid.GetGrid()[i][j]);}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ a\ newline\ after\ each\ row,\ except\ the\ last\ one.}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ grid.\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a81d9b578e66af2cfdf570553657a3484}{GetRows}}()\ -\/\ 1)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fmt::format\_to(std::back\_inserter(buf),\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Output\ the\ buffer\ to\ the\ formatting\ context\ and\ return\ the\ iterator.}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fmt::format\_to(ctx.out(),\ \textcolor{stringliteral}{"{}\{\}"{}},\ to\_string(buf));}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ Player\ formatting}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }fmt::formatter<\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}::PlayerType>\ :\ formatter<std::string>}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FormatContext>}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4_af449ecf6196aef758523514ae4b7dbe1}{format}}(\mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{OGRID::PlayerType}}\ p,\ FormatContext\ \&ctx)}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::string\ name\ =\ p\ ==\ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91a3e214b0dc14787792455631f6a0dbcf7}{OGRID::PlayerType::Human}}\ ?\ \textcolor{stringliteral}{"{}Human"{}}\ :\ \textcolor{stringliteral}{"{}AI"{}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ formatter<std::string>::format(name,\ ctx);}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}\ <>}
+\DoxyCodeLine{00068\ \textcolor{keyword}{struct\ }fmt::formatter<\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}::Player>\ :\ fmt::formatter<std::string>}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Parses\ format\ specifications\ of\ the\ form\ '[:...]'\ which\ you\ can\ ignore.}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4_aa3a4b8b4e03f20511c3dc0dd577b3452}{parse}}(format\_parse\_context\ \&ctx)\ \{\ \textcolor{keywordflow}{return}\ ctx.begin();\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ Formats\ the\ Player\ using\ provided\ format\ specifiers.}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ FormatContext>}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4_a492e9d0e0566336a18470ea2c55758ce}{format}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{OGRID::Player}}\ \&player,\ FormatContext\ \&ctx)}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ a\ memory\ buffer\ to\ store\ the\ temporary\ output.}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ fmt::memory\_buffer\ buf;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ fmt::format\_to(std::back\_inserter(buf),\ \textcolor{stringliteral}{"{}\{\}\ |\ \{\}"{}},\ player.\mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a4abbd6213a2e0a739626e154c3e00df3}{GetPlayerName}}(),\ player.\mbox{\hyperlink{class_o_g_r_i_d_1_1_player_ac2c7257ecec539788357853594f5b927}{GetPlayerType}}());}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Output\ the\ buffer\ to\ the\ formatting\ context\ and\ return\ the\ iterator.}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fmt::format\_to(ctx.out(),\ \textcolor{stringliteral}{"{}\{\}"{}},\ to\_string(buf));}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \};}
+
+\end{DoxyCode}

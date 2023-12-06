@@ -1,0 +1,52 @@
+\doxysection{Piece.\+h}
+\hypertarget{_piece_8h_source}{}\label{_piece_8h_source}\index{Source/ogrid/Player/Piece.h@{Source/ogrid/Player/Piece.h}}
+\mbox{\hyperlink{_piece_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_i_attack_rule_8h}{GameLogicInterface/IAttackRule.h}}>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_move_rule_8h}{GameLogicInterface/IMoveRule.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player/Player.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ String\ representation\ of\ the\ move\ (char),\ like\ (chess)\ "{}K"{}\ for\ king,\ "{}Q"{}\ for\ queen,\ etc.}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_aeb260809360b42b8869119953dc45e9c}{m\_representation}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rules\ for\ this\ move\ type}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::vector<IMoveRule\ *>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a94c913f3ba0f211b0c074e33046bd959}{m\_moveRules}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rules\ for\ attacking}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<IAttackRule\ *>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a21ee6c00f31953e9b033eaa171558fce}{m\_attackRules}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Owner\ of\ this\ piece}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_af0046f2bd6766befb682fcd20596c7d0}{m\_owner}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}(std::string\ rep,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *player);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a68805876b2a73ad9bda8cbd08d112a4d}{\string~Piece}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a5cdd60d0b76a22139ce00e7fe0a15c98}{AddMoveRule}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMoveRule}}\ *rule);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_ad496937d9d22d1d4211f4d1861a95536}{AddAttackRule}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttackRule}}\ *rule);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a43e81a2e514731545e78044787df1515}{GetRepresentation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_af5d03652f333f2cdc68b3083da5db6b1}{GetOwner}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_aa3fd86e0e03c216ef2dc3b2c04a18ce7}{SetOwner}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *player);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a8f263b731e2ace75054baa47b967f8f8}{isValidMove}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece_a2928cbf17ddf85243a19ea605fc3e9a3}{isValidAttack}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY,\ \textcolor{keywordtype}{bool}\ \&canContinue)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}

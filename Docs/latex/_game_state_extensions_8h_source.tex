@@ -1,0 +1,42 @@
+\doxysection{Game\+State\+Extensions.\+h}
+\hypertarget{_game_state_extensions_8h_source}{}\label{_game_state_extensions_8h_source}\index{Source/ogrid/GameLogicImplementation/GameStateExtensions.h@{Source/ogrid/GameLogicImplementation/GameStateExtensions.h}}
+\mbox{\hyperlink{_game_state_extensions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <typeinfo>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_grid_8h}{Grid/grid.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_piece_8h}{Player/Piece.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00010\ \textcolor{comment}{Checking\ for\ class\ type\ of\ pieces\ would\ look\ like\ this:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{CheckForRecurringPieceInRow(typeid(XPiece),\ 3))}}
+\DoxyCodeLine{00012\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ class\ Grid;}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ class\ Piece;}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{GameStateExtensions}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_ae1bbbb53f2e9be9b9ad8157367242f5a}{CheckForRecurringStringInRow}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::string\ \&pieceRepresentation,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a25a779426de42088e0256b98314827c3}{CheckForRecurringPieceInRow}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::type\_info\ \&pieceType,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a89f68f2f876ae89a463a459b6b03848a}{CheckForRecurringStringInCol}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::string\ \&pieceRepresentation,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_aa499f5706108f7e54b825a1edfc5fd85}{CheckForRecurringPieceInCol}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::type\_info\ \&pieceType,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_aa6c253b0ca3db0b0084eeb129be6b2df}{CheckForRecurringStringInDiagonal}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::string\ \&pieceRepresentation,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_aa4371fb03064cd7e674bbe0395571cc9}{CheckForRecurringPieceInDiagonal}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::type\_info\ \&pieceType,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a75a5f16f62c6ffd83607374a568912c8}{CheckForRecurringStringInAntiDiagonal}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::string\ \&pieceRepresentation,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a39255f2c2e770ccf68480c6bedbd6a02}{CheckForRecurringPieceInAntiDiagonal}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keyword}{const}\ std::type\_info\ \&pieceType,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dupeCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions_a9b6adae1fa2b425bbfdfa9313a09dda4}{CheckIfAllSpotsFilled}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}

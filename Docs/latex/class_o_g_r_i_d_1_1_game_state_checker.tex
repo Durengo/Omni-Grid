@@ -1,0 +1,83 @@
+\doxysection{OGRID\+::Game\+State\+Checker Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_game_state_checker}{}\label{class_o_g_r_i_d_1_1_game_state_checker}\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+
+
+{\ttfamily \#include $<$Game\+State\+Checker.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_ad7abc9c48da62faafe1e2884349934be}{Game\+State\+Checker}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}strategy)
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2}{\texorpdfstring{$\sim$}{\string~}\+Game\+State\+Checker}} ()
+\item 
+int \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e}{Check\+Win}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff}{Is\+Draw}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d}{Is\+Column\+Occupied}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, unsigned char col\+To\+Check, unsigned char \&row\+To\+Fill)
+\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242}{Get\+Top\+Most\+Piece\+Position\+In\+Column}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int col)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633}{m\+\_\+\+Game\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_ad7abc9c48da62faafe1e2884349934be}\label{class_o_g_r_i_d_1_1_game_state_checker_ad7abc9c48da62faafe1e2884349934be} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!GameStateChecker@{GameStateChecker}}
+\index{GameStateChecker@{GameStateChecker}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{GameStateChecker()}{GameStateChecker()}}
+{\footnotesize\ttfamily OGRID\+::\+Game\+State\+Checker\+::\+Game\+State\+Checker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}}]{strategy }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2}\label{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!````~GameStateChecker@{\texorpdfstring{$\sim$}{\string~}GameStateChecker}}
+\index{````~GameStateChecker@{\texorpdfstring{$\sim$}{\string~}GameStateChecker}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameStateChecker()}{\string~GameStateChecker()}}
+{\footnotesize\ttfamily OGRID\+::\+Game\+State\+Checker\+::\texorpdfstring{$\sim$}{\string~}\+Game\+State\+Checker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e}\label{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!CheckWin@{CheckWin}}
+\index{CheckWin@{CheckWin}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{CheckWin()}{CheckWin()}}
+{\footnotesize\ttfamily int OGRID\+::\+Game\+State\+Checker\+::\+Check\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242}\label{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!GetTopMostPiecePositionInColumn@{GetTopMostPiecePositionInColumn}}
+\index{GetTopMostPiecePositionInColumn@{GetTopMostPiecePositionInColumn}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{GetTopMostPiecePositionInColumn()}{GetTopMostPiecePositionInColumn()}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Game\+State\+Checker\+::\+Get\+Top\+Most\+Piece\+Position\+In\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d}\label{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!IsColumnOccupied@{IsColumnOccupied}}
+\index{IsColumnOccupied@{IsColumnOccupied}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{IsColumnOccupied()}{IsColumnOccupied()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Checker\+::\+Is\+Column\+Occupied (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{unsigned char}]{col\+To\+Check,  }\item[{unsigned char \&}]{row\+To\+Fill }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff}\label{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!IsDraw@{IsDraw}}
+\index{IsDraw@{IsDraw}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{IsDraw()}{IsDraw()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Checker\+::\+Is\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633}\label{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!m\_GameState@{m\_GameState}}
+\index{m\_GameState@{m\_GameState}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{m\_GameState}{m\_GameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}}\texorpdfstring{$\ast$}{*} OGRID\+::\+Game\+State\+Checker\+::m\+\_\+\+Game\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_state_checker_8h}{Game\+State\+Checker.\+h}}\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_state_checker_8cpp}{Game\+State\+Checker.\+cpp}}\end{DoxyCompactItemize}

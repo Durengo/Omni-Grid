@@ -1,0 +1,51 @@
+\doxysection{Player.\+h}
+\hypertarget{_player_8h_source}{}\label{_player_8h_source}\index{Source/ogrid/Player/Player.h@{Source/ogrid/Player/Player.h}}
+\mbox{\hyperlink{_player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{enum}\ MoveType;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91a3e214b0dc14787792455631f6a0dbcf7}{Human}}\ =\ 0,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91aa665d69af75fa358d8b79d689ffb8366}{AI}}\ =\ 1}
+\DoxyCodeLine{00014\ \ \ \ \ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}\ \mbox{\hyperlink{namespace_o_g_r_i_d_a03782a2fc7dd284380853344e061d969}{PlayerTypeStringToEnum}}(\textcolor{keyword}{const}\ std::string\ \&s);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{namespace_o_g_r_i_d_a3926ec18cab3a4bd2a3e2961db9ea090}{PlayerTypeEnumToString}}(\mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}\ playerType);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_adfc192c6d9a3b44e23bafdf7946325a7}{m\_PlayerName}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_aab8bb65f425579902bedd12c873c876b}{m\_PlayerType}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ side\ to\ which\ the\ player\ belongs\ to\ -\/>\ -\/1\ is\ no\ side}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a92a4e35494537b6671591dfbdbc73d91}{m\_Side}}\ =\ -\/1;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}(std::string\ playerName\ =\ \textcolor{stringliteral}{"{}GenericName"{}},\ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}\ playerType\ =\ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91a3e214b0dc14787792455631f6a0dbcf7}{PlayerType::Human}},\ \textcolor{keywordtype}{int}\ side\ =\ -\/1);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a517634ce6f887c0f6db0d902e9fa5178}{\string~Player}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getters\ \&\ Setters}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a4abbd6213a2e0a739626e154c3e00df3}{GetPlayerName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a9615a3ca2fa0509c2be4aa0ae180919f}{SetPlayerName}}(std::string\ playerName);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_ac2c7257ecec539788357853594f5b927}{GetPlayerType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a7239230c21e6d7b44d037b68499f8f7b}{SetPlayerType}}(\mbox{\hyperlink{namespace_o_g_r_i_d_a974386026062122a879d1570fba6cb91}{PlayerType}}\ playerType);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_a9de3ccf0496aca606481b3851aa29275}{GetSide}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player_add724647baaf46db57999fee8a16b3af}{SetSide}}(\textcolor{keywordtype}{int}\ side);}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ \mbox{\hyperlink{namespace_o_g_r_i_d_acf75cc2b0b24076acf274a6dba5a7bb1}{PlayerVecToString}}(\textcolor{keyword}{const}\ std::vector<Player\ *>\ \&players);}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}

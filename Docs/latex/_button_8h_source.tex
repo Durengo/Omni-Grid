@@ -1,0 +1,84 @@
+\doxysection{Button.\+h}
+\hypertarget{_button_8h_source}{}\label{_button_8h_source}\index{Source/ogrid/GUI/Button.h@{Source/ogrid/GUI/Button.h}}
+\mbox{\hyperlink{_button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <raylib.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button}{Button}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Position\ and\ dimensions\ of\ the\ button}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ Rectangle\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Color\ of\ the\ button\ when\ not\ interacted\ with}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_abdd3f23d01e55220f48b66528af03d35}{normalColor}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Color\ of\ the\ button\ on\ mouse\ hover}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a33dbac02d4064a8dc5a7f245b83baa31}{hoverColor}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Color\ of\ the\ button\ when\ pressed}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a5c58665c37c98b6d29851c08198ee00c}{pressedColor}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Delegate\ function\ for\ button\ click\ event}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_afd238c3c28e5644edc4320689dd96469}{onClick}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Text\ to\ be\ displayed\ on\ the\ button}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ to\ enable\ or\ disable\ the\ button's\ click\ functionality}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modify\ constructor\ to\ initialize\ isEnabled}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a3142f9995bacdbb61a1c98aa00ff334f}{Button}}(Rectangle\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}},\ Color\ normal,\ Color\ hover,\ Color\ pressed,\ std::function<\textcolor{keywordtype}{void}()>\ clickCallback,\ std::string\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}\ =\ \textcolor{stringliteral}{"{}Button"{}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}}\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_abdd3f23d01e55220f48b66528af03d35}{normalColor}}(normal),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a33dbac02d4064a8dc5a7f245b83baa31}{hoverColor}}(hover),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a5c58665c37c98b6d29851c08198ee00c}{pressedColor}}(pressed),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_afd238c3c28e5644edc4320689dd96469}{onClick}}(clickCallback),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}}(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}})\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ button\ is\ hovered\ or\ clicked}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_abc14ab423e470c35d4ce412b58e89dd7}{Update}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}})}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ mousePoint\ =\ GetMousePosition();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CheckCollisionPointRec(mousePoint,\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}))}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsMouseButtonReleased(MOUSE\_LEFT\_BUTTON))}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Call\ the\ delegate\ function\ if\ the\ button\ is\ enabled}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_afd238c3c28e5644edc4320689dd96469}{onClick}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aea797cd8211b5f83d721b6a9f0d9c784}{Draw}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ currentColor\ =\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}}\ ?\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_abdd3f23d01e55220f48b66528af03d35}{normalColor}}\ :\ GRAY;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CheckCollisionPointRec(GetMousePosition(),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}))}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentColor\ =\ IsMouseButtonDown(MOUSE\_LEFT\_BUTTON)\ ?\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a5c58665c37c98b6d29851c08198ee00c}{pressedColor}}\ :\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a33dbac02d4064a8dc5a7f245b83baa31}{hoverColor}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ DrawRectangleRec(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}},\ currentColor);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Measure\ the\ text\ width\ and\ height}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ fontSize\ =\ 20;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ textSize\ =\ MeasureTextEx(GetFontDefault(),\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}.c\_str(),\ fontSize,\ 1);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ text\ position\ to\ center\ it\ on\ the\ button}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ textX\ =\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}.x\ +\ (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}.width\ -\/\ textSize.x)\ /\ 2;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ textY\ =\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}.y\ +\ (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}.height\ -\/\ textSize.y)\ /\ 2\ -\/\ 10;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adjust\ Y\ position\ to\ align\ text\ vertically\ in\ the\ middle}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ textY\ +=\ (textSize.y\ /\ 2);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ text\ centered}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ DrawText(\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}.c\_str(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(textX),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(textY),\ fontSize,\ WHITE);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a7272f64bd0130c7bb14ecacd197d7a43}{SetEnabled}}(\textcolor{keywordtype}{bool}\ enabled)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{isEnabled}}\ =\ enabled;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
