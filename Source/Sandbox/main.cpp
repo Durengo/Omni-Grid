@@ -3,6 +3,12 @@
 
 #include "Core/GameInitializer.h"
 
+/**
+ * @file main.cpp
+ * @brief Main entry point
+ * @date 2023-12-06
+ */
+
 int main()
 {
     DURLIB::Log::Init();
