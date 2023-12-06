@@ -5,7 +5,6 @@
 
 /**
  * @file Grid.h
- * Test
  * @brief Contains the Grid class.
  * @date 2023-12-06
  */
@@ -192,9 +191,9 @@ namespace OGRID
         /**
          * @brief Access the Cell at the specified row and column within the grid and return a pointer to the Piece.
          * @date 2023-12-06
-         * @return The specified Piece within the grid.
          * @param row The row of the cell.
          * @param col The column of the cell.
+         * @return The specified Piece within the grid.
          * @see Piece
          */
         Piece *GetPieceAt(unsigned char row, unsigned char col) const;
@@ -215,9 +214,9 @@ namespace OGRID
         /**
          * @brief Get a pointer to the specified Cell within the grid.
          * @date 2023-12-06
-         * @return The specified Cell within the grid.
          * @param row The row of the cell.
          * @param col The column of the cell.
+         * @return The specified Cell within the grid.
          */
         Cell *GetCellAt(unsigned char row, unsigned char col) const;
 
