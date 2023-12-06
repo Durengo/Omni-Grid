@@ -1,0 +1,97 @@
+\doxysection{OGRID\+::Checkers\+State\+Check Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_checkers_state_check}{}\label{class_o_g_r_i_d_1_1_checkers_state_check}\index{OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}}
+
+
+{\ttfamily \#include $<$Checkers\+State\+Check.\+h$>$}
+
+Inheritance diagram for OGRID\+::Checkers\+State\+Check\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_g_r_i_d_1_1_checkers_state_check}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a48c0714e978c116eaccfa69b998a1cd8}{Check\+Win}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const override
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a8d70dc3f8e06bbd432efa768c9190420}{Is\+Draw}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const override
+\begin{DoxyCompactList}\small\item\em Check if the game is a draw. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{OGRID\+::\+IGame\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531}{\texorpdfstring{$\sim$}{\string~}\+IGame\+State}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{Game\+State\+Extensions}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a92e98f1d139bca06d861965d2f301d5c}{m\+\_\+\+Game\+State\+Extensions}} = \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{Game\+State\+Extensions}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_state_check_a48c0714e978c116eaccfa69b998a1cd8}\label{class_o_g_r_i_d_1_1_checkers_state_check_a48c0714e978c116eaccfa69b998a1cd8} 
+\index{OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}!CheckWin@{CheckWin}}
+\index{CheckWin@{CheckWin}!OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}}
+\doxysubsubsection{\texorpdfstring{CheckWin()}{CheckWin()}}
+{\footnotesize\ttfamily int OGRID\+::\+Checkers\+State\+Check\+::\+Check\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+Check if the game is over using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the game is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd}{OGRID\+::\+IGame\+State}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_state_check_a8d70dc3f8e06bbd432efa768c9190420}\label{class_o_g_r_i_d_1_1_checkers_state_check_a8d70dc3f8e06bbd432efa768c9190420} 
+\index{OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}!IsDraw@{IsDraw}}
+\index{IsDraw@{IsDraw}!OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}}
+\doxysubsubsection{\texorpdfstring{IsDraw()}{IsDraw()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Checkers\+State\+Check\+::\+Is\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game is a draw. 
+
+Check if the game is a draw using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the game is a draw, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9}{OGRID\+::\+IGame\+State}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_state_check_a92e98f1d139bca06d861965d2f301d5c}\label{class_o_g_r_i_d_1_1_checkers_state_check_a92e98f1d139bca06d861965d2f301d5c} 
+\index{OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}!m\_GameStateExtensions@{m\_GameStateExtensions}}
+\index{m\_GameStateExtensions@{m\_GameStateExtensions}!OGRID::CheckersStateCheck@{OGRID::CheckersStateCheck}}
+\doxysubsubsection{\texorpdfstring{m\_GameStateExtensions}{m\_GameStateExtensions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{Game\+State\+Extensions}} OGRID\+::\+Checkers\+State\+Check\+::m\+\_\+\+Game\+State\+Extensions = \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_extensions}{Game\+State\+Extensions}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Games/\+Checkers/\mbox{\hyperlink{_checkers_state_check_8h}{Checkers\+State\+Check.\+h}}\item 
+Source/ogrid/\+Games/\+Checkers/\mbox{\hyperlink{_checkers_state_check_8cpp}{Checkers\+State\+Check.\+cpp}}\end{DoxyCompactItemize}

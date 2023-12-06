@@ -1,0 +1,43 @@
+\doxysection{Tic\+Tac\+Toe.\+h}
+\hypertarget{_tic_tac_toe_8h_source}{}\label{_tic_tac_toe_8h_source}\index{Source/ogrid/Games/TicTacToe/TicTacToe.h@{Source/ogrid/Games/TicTacToe/TicTacToe.h}}
+\mbox{\hyperlink{_tic_tac_toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_8h}{GameLogicInterface/IGame.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe}{TicTacToe}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{IGame}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a94714945269972860c317ce0470a0d28}{TicTacToe}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a77e1601c89b22b4121d1339483731e2b}{\string~TicTacToe}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_acc534cc4d0f508a80e91f0935d4fbd36}{TryMakeMove}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a68ad9300ff652d99fbfe370b1a69c5f3}{IsWinningCondition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_ac3fa5cdc6c577db3dd73e8c7edba868c}{IsDrawCondition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ IsWinningCondition(unsigned\ char\ row,\ unsigned\ char\ col)\ override;}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ IsWinningCondition(char\ playerChar)\ override;}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ IsDrawCondition(unsigned\ char\ row,\ unsigned\ char\ col)\ override;}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ SetupPlayers(const\ std::vector<int>\ \&totalValidSides)\ override;}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a986597fb31f259e77ec5dd68ae0a66d7}{SetupPlayers}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_ac5ce7d5d428af91eba08f5f7212d889e}{Initialize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_abedf9b91ae45b251654c607ed6a24365}{OnGUIUpdateGrid}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a6f5f7e080a93316ea7d4f87de29bffa8}{OnGUIUpdateGridHover}}(Vector2\ cell)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_adffd124b842040037d4f60a54a9e1342}{DrawX}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_ad492e948aa6e6e3024dec46d6b772847}{DrawO}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00101\ \ \ \ \ \};}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}

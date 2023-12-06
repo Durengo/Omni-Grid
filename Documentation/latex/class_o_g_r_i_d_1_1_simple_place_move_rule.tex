@@ -1,0 +1,80 @@
+\doxysection{OGRID\+::Simple\+Place\+Move\+Rule Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_simple_place_move_rule}{}\label{class_o_g_r_i_d_1_1_simple_place_move_rule}\index{OGRID::SimplePlaceMoveRule@{OGRID::SimplePlaceMoveRule}}
+
+
+The Piece\+Rules class. Used to represent the rules of a piece.  
+
+
+
+
+{\ttfamily \#include $<$Piece\+Rules.\+h$>$}
+
+Inheritance diagram for OGRID\+::Simple\+Place\+Move\+Rule\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_g_r_i_d_1_1_simple_place_move_rule}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_simple_place_move_rule_ad25fa8ffcb88a0c4e63136f0e75b4287}{Is\+Valid\+Move}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int fromX, int fromY, int toX, int toY) const override
+\begin{DoxyCompactList}\small\item\em Check if the move is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{OGRID\+::\+IMove\+Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule_aa769366b27d8c4668b4ef2fd6069bf07}{\texorpdfstring{$\sim$}{\string~}\+IMove\+Rule}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Piece\+Rules class. Used to represent the rules of a piece. 
+
+It contains the move rules of the piece and the attack rules of the piece. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_simple_place_move_rule_ad25fa8ffcb88a0c4e63136f0e75b4287}\label{class_o_g_r_i_d_1_1_simple_place_move_rule_ad25fa8ffcb88a0c4e63136f0e75b4287} 
+\index{OGRID::SimplePlaceMoveRule@{OGRID::SimplePlaceMoveRule}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!OGRID::SimplePlaceMoveRule@{OGRID::SimplePlaceMoveRule}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Simple\+Place\+Move\+Rule\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{fromX,  }\item[{int}]{fromY,  }\item[{int}]{toX,  }\item[{int}]{toY }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the move is valid. 
+
+Check if the move is valid. It is valid if the end cell is unoccupied. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em fromX} & The x coordinate of the start cell. \\
+\hline
+{\em fromY} & The y coordinate of the start cell. \\
+\hline
+{\em toX} & The x coordinate of the end cell. \\
+\hline
+{\em toY} & The y coordinate of the end cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move is valid, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a simple move rule. It is used for games like tic tac toe. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule_aad9632cc15e5faefdf46c6a802e3ecd9}{OGRID\+::\+IMove\+Rule}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_piece_rules_8h}{Piece\+Rules.\+h}}\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_piece_rules_8cpp}{Piece\+Rules.\+cpp}}\end{DoxyCompactItemize}

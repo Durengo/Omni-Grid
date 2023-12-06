@@ -1,0 +1,89 @@
+\doxysection{OGRID\+::IMove\+Rule Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_i_move_rule}{}\label{class_o_g_r_i_d_1_1_i_move_rule}\index{OGRID::IMoveRule@{OGRID::IMoveRule}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule} class. Used to check if the move is valid.  
+
+
+
+
+{\ttfamily \#include $<$IMove\+Rule.\+h$>$}
+
+Inheritance diagram for OGRID\+::IMove\+Rule\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.728395cm]{class_o_g_r_i_d_1_1_i_move_rule}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule_aa769366b27d8c4668b4ef2fd6069bf07}{\texorpdfstring{$\sim$}{\string~}\+IMove\+Rule}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule_aad9632cc15e5faefdf46c6a802e3ecd9}{Is\+Valid\+Move}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int fromX, int fromY, int toX, int toY) const =0
+\begin{DoxyCompactList}\small\item\em Check if the move is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule} class. Used to check if the move is valid. 
+
+It contains the strategy to check if the move is valid. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_move_rule_aa769366b27d8c4668b4ef2fd6069bf07}\label{class_o_g_r_i_d_1_1_i_move_rule_aa769366b27d8c4668b4ef2fd6069bf07} 
+\index{OGRID::IMoveRule@{OGRID::IMoveRule}!````~IMoveRule@{\texorpdfstring{$\sim$}{\string~}IMoveRule}}
+\index{````~IMoveRule@{\texorpdfstring{$\sim$}{\string~}IMoveRule}!OGRID::IMoveRule@{OGRID::IMoveRule}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IMoveRule()}{\string~IMoveRule()}}
+{\footnotesize\ttfamily virtual OGRID\+::\+IMove\+Rule\+::\texorpdfstring{$\sim$}{\string~}\+IMove\+Rule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \doxylink{class_o_g_r_i_d_1_1_i_move_rule}{IMove\+Rule} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_move_rule_aad9632cc15e5faefdf46c6a802e3ecd9}\label{class_o_g_r_i_d_1_1_i_move_rule_aad9632cc15e5faefdf46c6a802e3ecd9} 
+\index{OGRID::IMoveRule@{OGRID::IMoveRule}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!OGRID::IMoveRule@{OGRID::IMoveRule}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily virtual bool OGRID\+::\+IMove\+Rule\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{fromX,  }\item[{int}]{fromY,  }\item[{int}]{toX,  }\item[{int}]{toY }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the move is valid. 
+
+Check if the move is valid using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+{\em fromX} & The x coordinate of the piece. \\
+\hline
+{\em fromY} & The y coordinate of the piece. \\
+\hline
+{\em toX} & The x coordinate of the piece to be attacked. \\
+\hline
+{\em toY} & The y coordinate of the piece to be attacked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_simple_place_move_rule_ad25fa8ffcb88a0c4e63136f0e75b4287}{OGRID\+::\+Simple\+Place\+Move\+Rule}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_normal_checkers_move_rule_adb31f80c5dc06ac7dafc29e956cc29e1}{OGRID\+::\+Normal\+Checkers\+Move\+Rule}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_super_checkers_move_rule_ae29b9f232c6f3f45eded83113a6d337f}{OGRID\+::\+Super\+Checkers\+Move\+Rule}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Interface/\mbox{\hyperlink{_i_move_rule_8h}{IMove\+Rule.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\doxysection{Game\+Configuration.\+h}
+\hypertarget{_game_configuration_8h_source}{}\label{_game_configuration_8h_source}\index{Source/ogrid/GameLogicImplementation/GameConfiguration.h@{Source/ogrid/GameLogicImplementation/GameConfiguration.h}}
+\mbox{\hyperlink{_game_configuration_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_grid_8h}{Grid/Grid.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player/Player.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ class\ ConfigurationBuilder;}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ class\ ITurnManager;}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ class\ Player;}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{PlayerNameAndPtr}}}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr_aa3fdff84db698eb5ae2b80032dc44ba7}{name}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr_a2eb31623aa8cbce0710ebbe333764ef6}{ptr}};}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration_ae20d6677e7bd402d5618c97385a0543e}{gameName}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration_ac9a309adf22ed666a9ec17b38078f0d1}{gameDescription}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration_a5c9dcde7a83c673d035abaa9ec816347}{grid}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration_ac0fd70303a0001c1d0a5622a31af27a0}{maxPlayers}}\ =\ 0;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ std::vector<Player\ *>\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration_a70e699c020beee4b52c34e49b3c610f0}{players}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ std::vector<PlayerNameAndPtr>\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration_a753a57c6c9a2eb05911f5e93c2d457b5}{playerPairs}};}
+\DoxyCodeLine{00092\ \ \ \ \ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ Builder\ Interface}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a48a0b0e4ef4ae3c4c52e69b074849b44}{\string~ConfigurationBuilder}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a57d1e8d39b199172503ed178a56a5ec1}{setGameName}}(\textcolor{keyword}{const}\ std::string\ \&gameName)\ =\ 0;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a707566a95e7875461949dab4819e23b2}{setGameDescription}}(\textcolor{keyword}{const}\ std::string\ \&gameDescription)\ =\ 0;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a62144c7899fe85b0156c393c4c6e6ef1}{setGrid}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ rows,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ cols,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *defaultPiece\ =\ \textcolor{keyword}{nullptr})\ =\ 0;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_aeed46276d68a9052499c15cc1705b129}{setMaxPlayers}}(\textcolor{keywordtype}{size\_t}\ maxPlayers)\ =\ 0;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_ab78e8ab2581151f67a4684ffbbd15926}{addPlayer}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *player)\ =\ 0;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}\ *\mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder_a81e1e8a77a45e4187bf24837aeb62439}{build}}()\ =\ 0;}
+\DoxyCodeLine{00165\ \ \ \ \ \};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ Concrete\ Builder}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder}{GameConfigurationBuilder}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}}
+\DoxyCodeLine{00176\ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_ad62704687bf7d54f84b02dbfa3d3b275}{m\_GameConfiguration}};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_af45d192fdf84af0e223353146d0a16d9}{GameConfigurationBuilder}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_ad0a6587d9da650934fd0fae9a68061db}{\string~GameConfigurationBuilder}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_ae4f0b45c9d27894bae04c9135059a54d}{setGameName}}(\textcolor{keyword}{const}\ std::string\ \&gameName)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a1c0abd403081ff4cf6c5d9dc0c5f6b93}{setGameDescription}}(\textcolor{keyword}{const}\ std::string\ \&gameDescription)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a9c4fb9ea6838e49fab65faf0cf9b3066}{setGrid}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ rows,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ cols,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *defaultPiece\ =\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_ad1978c1e6f82bba5a299eae708a73206}{setMaxPlayers}}(\textcolor{keywordtype}{size\_t}\ maxPlayers)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_configuration_builder}{ConfigurationBuilder}}\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a2464db766a949e7f5224ce6dba3847e4}{addPlayer}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{GameConfiguration}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_configuration_builder_a6fbe08fe17861de236e90ab392490a93}{build}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00246\ \ \ \ \ \};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ std::string\ \mbox{\hyperlink{namespace_o_g_r_i_d_ab5afbe5a1eba8d49708c9e752e084a18}{PlayerNameAndPtrVecToString}}(\textcolor{keyword}{const}\ std::vector<PlayerNameAndPtr>\ \&players);}
+\DoxyCodeLine{00249\ \}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \textcolor{comment}{//\ namespace\ OGRID}}
+\DoxyCodeLine{00252\ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{00253\ \textcolor{comment}{//\ \ \ \ \ static\ std::string\ PlayerNameAndPtrVecToString(const\ std::vector<PlayerNameAndPtr>\ \&players)}}
+\DoxyCodeLine{00254\ \textcolor{comment}{//\ \ \ \ \ \{}}
+\DoxyCodeLine{00255\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ std::ostringstream\ ss;}}
+\DoxyCodeLine{00256\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ for\ (size\_t\ i\ =\ 0;\ i\ <\ players.size();\ ++i)}}
+\DoxyCodeLine{00257\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00258\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ if\ (i\ >\ 0)}}
+\DoxyCodeLine{00259\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00260\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ ss\ <<\ fmt::format("{}\{\}"{},\ players[i]);}}
+\DoxyCodeLine{00261\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00262\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ return\ ss.str();}}
+\DoxyCodeLine{00263\ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{00264\ \textcolor{comment}{//\ \}}}
+
+\end{DoxyCode}

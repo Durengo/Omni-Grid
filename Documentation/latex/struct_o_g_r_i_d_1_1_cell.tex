@@ -1,0 +1,59 @@
+\doxysection{OGRID\+::Cell Struct Reference}
+\hypertarget{struct_o_g_r_i_d_1_1_cell}{}\label{struct_o_g_r_i_d_1_1_cell}\index{OGRID::Cell@{OGRID::Cell}}
+
+
+The \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} struct represents a single cell in the grid.  
+
+
+
+
+{\ttfamily \#include $<$Grid.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_ad6dc808ec1cd6f96885cc46418bfb85c}{m\+\_\+\+Piece}}
+\item 
+unsigned char \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_ab5d043e8000546b8a6c388f8e9d5c894}{m\+\_\+\+Row}}
+\item 
+unsigned char \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_a1167adf329f656ac65955104788a8ab9}{m\+\_\+\+Col}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} struct represents a single cell in the grid. 
+
+It contains a pointer to a \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} and the row and column of the cell. The \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} pointer can be nullptr if the cell is empty. The row and column are unsigned chars, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+
+\doxylink{class_o_g_r_i_d_1_1_grid}{Grid} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_o_g_r_i_d_1_1_cell_a1167adf329f656ac65955104788a8ab9}\label{struct_o_g_r_i_d_1_1_cell_a1167adf329f656ac65955104788a8ab9} 
+\index{OGRID::Cell@{OGRID::Cell}!m\_Col@{m\_Col}}
+\index{m\_Col@{m\_Col}!OGRID::Cell@{OGRID::Cell}}
+\doxysubsubsection{\texorpdfstring{m\_Col}{m\_Col}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Cell\+::m\+\_\+\+Col}
+
+\Hypertarget{struct_o_g_r_i_d_1_1_cell_ad6dc808ec1cd6f96885cc46418bfb85c}\label{struct_o_g_r_i_d_1_1_cell_ad6dc808ec1cd6f96885cc46418bfb85c} 
+\index{OGRID::Cell@{OGRID::Cell}!m\_Piece@{m\_Piece}}
+\index{m\_Piece@{m\_Piece}!OGRID::Cell@{OGRID::Cell}}
+\doxysubsubsection{\texorpdfstring{m\_Piece}{m\_Piece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\texorpdfstring{$\ast$}{*} OGRID\+::\+Cell\+::m\+\_\+\+Piece}
+
+\Hypertarget{struct_o_g_r_i_d_1_1_cell_ab5d043e8000546b8a6c388f8e9d5c894}\label{struct_o_g_r_i_d_1_1_cell_ab5d043e8000546b8a6c388f8e9d5c894} 
+\index{OGRID::Cell@{OGRID::Cell}!m\_Row@{m\_Row}}
+\index{m\_Row@{m\_Row}!OGRID::Cell@{OGRID::Cell}}
+\doxysubsubsection{\texorpdfstring{m\_Row}{m\_Row}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Cell\+::m\+\_\+\+Row}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Grid/\mbox{\hyperlink{_grid_8h}{Grid.\+h}}\end{DoxyCompactItemize}
