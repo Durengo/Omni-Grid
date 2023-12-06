@@ -15,3 +15,7 @@
 | MSVC  |      GNU      |     CLANG     |
 | :---: | :-----------: | :-----------: |
 | __X__ | NOT SUPPORTED | NOT SUPPORTED |
+
+## Documentation
+
+Documentation is hosted using GitHub pages and can be found [here](https://durengo.github.io/Omni-Grid/Docs/html/index.html).
