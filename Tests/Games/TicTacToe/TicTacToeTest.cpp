@@ -16,7 +16,6 @@ namespace OGRID
 
         void SetUp() override
         {
-            grid = new Grid(3, 3);
             playerX = new Player("X", PlayerType::Human, 0);
             playerO = new Player("O", PlayerType::Human, 1);
 

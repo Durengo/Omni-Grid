@@ -32,10 +32,7 @@ namespace OGRID
         void Initialize() override;
         void OnGUIUpdateGrid() override;
         void OnGUIUpdateGridHover(Vector2 cell) override;
-
-    private:
         void SetupBoard();
-
         void AddAsSuperPiece(Piece *piece);
         void RemoveSuperPiece(Piece *piece);
         bool IsSuperPiece(Piece *piece);
@@ -43,6 +40,7 @@ namespace OGRID
         void AddPieceToPieceManager(Piece *piece, std::pair<int, int> position);
         void RemovePieceFromPieceManager(Piece *piece);
         void RemovePieceFromPieceManager(std::pair<int, int> position);
+    private:
         std::pair<int, int> GetPiecePosition(Piece *piece);
         void SetPiecePosition(Piece *piece, std::pair<int, int> position);
 
