@@ -1,0 +1,37 @@
+\doxysection{Connect\+Four.\+h}
+\hypertarget{_connect_four_8h_source}{}\label{_connect_four_8h_source}\index{Source/ogrid/Games/ConnectFour/ConnectFour.h@{Source/ogrid/Games/ConnectFour/ConnectFour.h}}
+\mbox{\hyperlink{_connect_four_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_8h}{GameLogicInterface/IGame.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_user_8h}{User/User.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four}{ConnectFour}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{IGame}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Variables\ for\ alpha\ of\ circles}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a090fdc6782214ee08d9cfd1c1d192e04}{alpha}}\ =\ 1.0f;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Speed\ of\ the\ transition}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a508ec5d2fe9fac44c099edf79b395205}{alphaSpeed}}\ =\ 0.025f;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_ace3c14a54c2c05a0f520eaa7f45ed882}{ConnectFour}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a07adf19fe495b67a5cfb2faf0530aabf}{\string~ConnectFour}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_ac8b02b1291e6516c732cc91e72f88259}{TryMakeMove}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a390786657091f9af58f0e9f71b99e6a5}{IsWinningCondition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a678f87aca17ff31042e4712abf9ffe49}{IsDrawCondition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_aaee552e87ce3b956fda482cc42d6addd}{SetupPlayers}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a1f97865f40d92cdcd869f13be3798338}{Initialize}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}*\ user)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a3db9c070fbad52a269cf9b84918e42d2}{OnGUIUpdateGrid}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a22e848798f7af8237276e854b611286a}{OnGUIUpdateGridHover}}(Vector2\ cell)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_abdf6fa01765f2526e4fa164cd6716529}{DrawCircle}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ Color\ color,\ \textcolor{keywordtype}{bool}\ blinking\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}

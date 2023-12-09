@@ -159,6 +159,7 @@ find_package(fmt CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(raylib CONFIG REQUIRED)
+find_package(unofficial-sqlite3 CONFIG REQUIRED)
 
 if(${VERBOSE})
         message(STATUS "LOOKING FOR DURLIB...")
@@ -244,6 +245,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.cpp"
+
+                # USER
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.cpp"
+
+                # TOOLS
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Tools/Database/*.cpp"
         )
 
         # OMNI-GRID .H FILES
@@ -267,6 +274,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.h"
+
+                # USER
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.h"
+
+                # TOOLS
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Tools/Database/*.h"
         )
 
         if(${VERBOSE})
@@ -288,6 +301,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 OpenGL::GL
                 ${OPENGL_LIBRARIES}
                 ${raylib_LIBRARIES}
+                unofficial::sqlite3::sqlite3
         )
 
         target_precompile_headers(OMNI-GRID PUBLIC
@@ -336,10 +350,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
                         # install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
                         install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
-                        # install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
+
+                # install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
                 elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
                         # install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
                         install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+
                         # install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
                 endif()
         endif()
@@ -352,12 +368,14 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/UserMenu/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/UserMenu/*.h"
         )
 
         if(${VERBOSE})

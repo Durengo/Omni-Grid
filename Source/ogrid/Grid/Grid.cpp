@@ -1,6 +1,7 @@
 #include "Grid.h"
 
 #include <stdexcept>
+#include <sstream>
 
 #include "fmt/format.h"
 
@@ -214,7 +215,6 @@ namespace OGRID
 
     std::string Grid::GetGridAsString()
     {
-#include <sstream>
 
         std::ostringstream ss;
 

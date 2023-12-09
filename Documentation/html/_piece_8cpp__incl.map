@@ -1,0 +1,18 @@
+<map id="Source/ogrid/Player/Piece.cpp" name="Source/ogrid/Player/Piece.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="150,5,285,48"/>
+<area shape="rect" id="Node000002" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="141,96,206,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,50,190,83,186,81,204,47"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="230,96,293,123"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="231,47,250,81,245,83,227,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="208,261,262,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,115,109,120,75,130,42,147,16,172,8,192,16,212,27,221,44,230,90,246,193,265,192,271,89,251,42,235,24,226,12,215,3,192,12,169,39,143,73,125,108,115,140,110"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="26,179,81,205"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="157,125,86,172,83,168,154,121"/>
+<area shape="rect" id="Node000005" href="$_i_attack_rule_8h.html" title=" " alt="" coords="106,171,242,213"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="176,123,176,155,171,155,171,123"/>
+<area shape="rect" id="Node000006" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="266,171,402,213"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="200,121,281,161,278,166,198,126"/>
+<area shape="rect" id="Node000007" href="$_player_8h.html" title="Contains the Player class." alt="" coords="427,179,537,205"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="208,117,218,120,414,168,426,171,425,177,413,173,217,125,206,122"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="444,208,277,262,276,257,442,203"/>
+</map>

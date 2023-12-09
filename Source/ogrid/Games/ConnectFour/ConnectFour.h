@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameLogicInterface/IGame.h"
+#include "User/User.h"
 
 namespace OGRID
 {
@@ -20,7 +21,7 @@ namespace OGRID
         bool IsDrawCondition() override;
         void SetupPlayers() override;
 
-        void Initialize() override;
+        void Initialize(OGRID::User* user) override;
         void OnGUIUpdateGrid() override;
         void OnGUIUpdateGridHover(Vector2 cell) override;
 

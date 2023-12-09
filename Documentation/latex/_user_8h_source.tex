@@ -1,0 +1,80 @@
+\doxysection{User.\+h}
+\hypertarget{_user_8h_source}{}\label{_user_8h_source}\index{Source/ogrid/User/User.h@{Source/ogrid/User/User.h}}
+\mbox{\hyperlink{_user_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_8h}{Player/Player.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Forward\ declaration}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }Score;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{User}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Primary\ key}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a22ea641bf31df42818421a8e2e32c029}{m\_UserId}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a0e1e9e4970203443011b151e1726e550}{m\_UserName}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a2f20708600d7acd2375603c5e0b1e7a2}{m\_UserPassword}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a611be8fadd178dae64d009359a4cb2fb}{m\_UserFirstName}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a90b825764508a01b978d351aac6ceedf}{m\_UserLastName}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_score}{Score}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a1255fcec29d45e15444387bb607d2fa2}{m\_Score}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a1544d53937d00a03128b9fdcd311a342}{m\_Player}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructors\ \&\ Destructors}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_ab506ef7a0281da426fa61b659d5c3f02}{User}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_ab506ef7a0281da426fa61b659d5c3f02}{User}}(\textcolor{keywordtype}{int}\ userId,\ std::string\ userName,\ std::string\ userPassword,\ std::string\ userFirstName\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ userLastName\ =\ \textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_score}{Score}}\ *score\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_ab31b8b9f51d41c565faecdb646b1489d}{\string~User}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getters\ \&\ Setters}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a6ff1d4e9c72682d3b6b97dd988979f12}{GetUserId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a4e3dc06612209faf58e1b889fbf9caf3}{SetUserId}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ userId);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a4037c1a25243f38dca62af04c85b2fdf}{GetUserName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_afd71d59c0ad68b8257105125b0a49a70}{SetUserName}}(\textcolor{keyword}{const}\ std::string\ \&userName);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a080297a0a7fc304c92b709eb6b52107c}{GetUserPassword}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_aef24f62add184444efc1644e9c039d6e}{SetUserPassword}}(\textcolor{keyword}{const}\ std::string\ \&userPassword);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a72913e0ec9425818975ef7e9157cb4b6}{GetUserFirstName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a7f31e8653202ee67529b2c3e9a912242}{SetUserFirstName}}(\textcolor{keyword}{const}\ std::string\ \&userFirstName);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_aa4f80cadb768da0230bf302a00efefcf}{GetUserLastName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a1c7c9dc9e7fd7bfde06c20d94fc047f7}{SetUserLastName}}(\textcolor{keyword}{const}\ std::string\ \&userLastName);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_score}{Score}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a280449413a7efd4279797b19bc221afa}{GetScore}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_ada4fe9d52ad65389af96096aeddd411d}{SetScore}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_score}{Score}}\ *score);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a1ce00a50b083a6ecd1c96ced8a58a306}{GetPlayer}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a13aab0c94e11219808e6d7eb394e35ba}{SetPlayer}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}}\ *player);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Methods}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a45bf3a3ec6fad425f8f2801951b2b24f}{Display}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a5899546000de1d6f2284bb4ae14038a9}{DisplayScore}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00210\ \ \ \ \ \};}
+\DoxyCodeLine{00211\ \}}
+
+\end{DoxyCode}

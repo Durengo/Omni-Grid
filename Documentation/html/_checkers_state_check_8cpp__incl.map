@@ -1,0 +1,29 @@
+<map id="Source/ogrid/Games/Checkers/CheckersStateCheck.cpp" name="Source/ogrid/Games/Checkers/CheckersStateCheck.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,5,279,48"/>
+<area shape="rect" id="Node000002" href="$_checkers_state_check_8h.html" title=" " alt="" coords="85,96,241,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,49,166,80,160,80,160,49"/>
+<area shape="rect" id="Node000003" href="$_i_game_state_8h.html" title="Contains the IGameState class." alt="" coords="5,171,142,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,125,109,162,106,158,147,121"/>
+<area shape="rect" id="Node000004" href="$_game_state_extensions_8h.html" title="Contains the GameStateExtensions class." alt="" coords="166,171,341,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="179,121,221,158,217,162,175,125"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="250,427,303,453"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,216,183,236,163,263,159,274,163,287,180,325,203,360,252,414,248,418,199,363,175,328,158,289,154,274,158,260,180,232,208,212"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="172,261,239,288"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="243,215,223,249,219,246,239,213"/>
+<area shape="rect" id="Node000007" href="$_grid_8h.html" title="Contains the Grid class." alt="" coords="262,261,344,288"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="268,213,290,247,285,249,264,215"/>
+<area shape="rect" id="Node000009" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="367,261,473,288"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="298,212,382,252,379,257,295,216"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="283,291,258,310,239,337,234,357,239,378,257,413,253,415,234,380,229,357,234,335,254,307,279,287"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="249,344,304,371"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="301,289,287,331,282,329,296,288"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="411,290,369,338,299,417,295,413,365,334,407,287"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="399,291,313,339,310,334,396,286"/>
+<area shape="rect" id="Node000010" href="$_i_attack_rule_8h.html" title=" " alt="" coords="379,336,515,379"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="427,288,438,321,433,322,422,289"/>
+<area shape="rect" id="Node000011" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="539,336,675,379"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="450,286,546,327,544,332,448,291"/>
+<area shape="rect" id="Node000012" href="$_player_8h.html" title="Contains the Player class." alt="" coords="700,344,810,371"/>
+<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="474,284,687,333,700,337,698,342,686,339,473,290"/>
+<area shape="poly" id="edge15_Node000012_Node000005" title=" " alt="" coords="716,374,687,381,584,401,481,417,319,437,318,432,480,412,583,396,686,376,715,369"/>
+</map>

@@ -1,0 +1,45 @@
+\doxysection{Piece\+Rules.\+h}
+\hypertarget{_piece_rules_8h_source}{}\label{_piece_rules_8h_source}\index{Source/ogrid/GameLogicImplementation/PieceRules.h@{Source/ogrid/GameLogicImplementation/PieceRules.h}}
+\mbox{\hyperlink{_piece_rules_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_move_rule_8h}{GameLogicInterface/IMoveRule.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_piece_8h}{Player/Piece.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_simple_place_move_rule}{SimplePlaceMoveRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMoveRule}}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ only\ need\ to\ check\ if\ the\ end\ cell\ is\ unoccupied,\ as\ there\ is\ no\ concept\ of\ a\ "{}start"{}\ cell\ in\ tic\ tac\ toe.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_simple_place_move_rule_ad25fa8ffcb88a0c4e63136f0e75b4287}{IsValidMove}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_normal_checkers_move_rule}{NormalCheckersMoveRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMoveRule}}}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_normal_checkers_move_rule_adb31f80c5dc06ac7dafc29e956cc29e1}{IsValidMove}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule}{JumpNormalCheckersAttackRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttackRule}}}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule_af48124a67b82cd579b127d34a1e33831}{IsValidAttack}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY,\ \textcolor{keywordtype}{bool}\ \&canContinue)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00086\ \ \ \ \ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_super_checkers_move_rule}{SuperCheckersMoveRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_move_rule}{IMoveRule}}}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_super_checkers_move_rule_ae29b9f232c6f3f45eded83113a6d337f}{IsValidMove}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00111\ \ \ \ \ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule}{JumpSuperCheckersAttackRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_attack_rule}{IAttackRule}}}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule_ad3e6003bf03969f45ff59b056688e52b}{IsValidAttack}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}\ *grid,\ \textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY,\ \textcolor{keywordtype}{bool}\ \&canContinue)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00137\ \ \ \ \ \};}
+\DoxyCodeLine{00138\ \}}
+
+\end{DoxyCode}

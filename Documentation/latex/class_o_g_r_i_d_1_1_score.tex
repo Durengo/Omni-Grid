@@ -1,0 +1,335 @@
+\doxysection{OGRID\+::Score Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_score}{}\label{class_o_g_r_i_d_1_1_score}\index{OGRID::Score@{OGRID::Score}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_score}{Score} class.  
+
+
+
+
+{\ttfamily \#include $<$Score.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a6c52be49b393803534acd31b2a965a92}{Score}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_o_g_r_i_d_1_1_score}{Score} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a34dd998550311b1be8b6f0a83ec83837}{Score}} (unsigned int score\+Id=0, unsigned int user\+Id=0, unsigned int wins=0, unsigned int losses=0, double win\+Rate=0.\+0)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_o_g_r_i_d_1_1_score}{Score} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_score_ac55d232a23a6c9bcdf0dee497ee90706}{\texorpdfstring{$\sim$}{\string~}\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_score}{Score} object. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a643cd5e0ecc3c29105d1937fc5524a1f}{Get\+Wins}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_o_g_r_i_d_1_1_score}{Score} Id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_ac8b3abc8a428f66cd7e56f2a413cd176}{Set\+Wins}} (unsigned int wins)
+\begin{DoxyCompactList}\small\item\em Set the \doxylink{class_o_g_r_i_d_1_1_score}{Score} Id. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a5d75f8f686419223580827679641fa2d}{Get\+Losses}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_o_g_r_i_d_1_1_user}{User} Id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a40fb2ec9153c915f908c088b1c2640df}{Set\+Losses}} (unsigned int losses)
+\begin{DoxyCompactList}\small\item\em Set the \doxylink{class_o_g_r_i_d_1_1_user}{User} Id. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a2f4e974272a36e932663ba9860fca36e}{Get\+Win\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of wins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_adc8a9e06a2973fc3bf6e87b4a7c10fde}{Set\+Win\+Rate}} (double win\+Rate)
+\begin{DoxyCompactList}\small\item\em Set the number of wins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_ae83c3b17912a879118bb468a50d06bb1}{Add\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Add a win. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_abc4327878f2cbd7f25b9bc588fa9b940}{Add\+Loss}} ()
+\begin{DoxyCompactList}\small\item\em Add a loss. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_ace447abb9ac9e75abe47345d6b4f503e}{Calculate\+Win\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Calculate the win rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a3d3ed981dadd141d6ebdfe49bb6886c3}{m\+\_\+\+Score\+Id}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_o_g_r_i_d_1_1_score}{Score} Id. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_ab02398d334bc09bcaeb4e735261530f1}{m\+\_\+\+User\+Id}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_o_g_r_i_d_1_1_user}{User} Id. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a79071937e95fd144f4105db61234bdf4}{m\+\_\+\+Wins}}
+\begin{DoxyCompactList}\small\item\em The number of wins. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_aefcc699e11f9d217e8dc091ca6d31400}{m\+\_\+\+Losses}}
+\begin{DoxyCompactList}\small\item\em The number of losses. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a32b0efd997202c771f47152949172c3c}{m\+\_\+\+Win\+Rate}}
+\begin{DoxyCompactList}\small\item\em The win rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_score}{Score} class. 
+
+This class is used to manage the score and interact with the database \begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a6c52be49b393803534acd31b2a965a92}\label{class_o_g_r_i_d_1_1_score_a6c52be49b393803534acd31b2a965a92} 
+\index{OGRID::Score@{OGRID::Score}!Score@{Score}}
+\index{Score@{Score}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{Score()}{Score()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily OGRID\+::\+Score\+::\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_score}{Score} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a34dd998550311b1be8b6f0a83ec83837}\label{class_o_g_r_i_d_1_1_score_a34dd998550311b1be8b6f0a83ec83837} 
+\index{OGRID::Score@{OGRID::Score}!Score@{Score}}
+\index{Score@{Score}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{Score()}{Score()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily OGRID\+::\+Score\+::\+Score (\begin{DoxyParamCaption}\item[{unsigned int}]{score\+Id = {\ttfamily 0},  }\item[{unsigned int}]{user\+Id = {\ttfamily 0},  }\item[{unsigned int}]{wins = {\ttfamily 0},  }\item[{unsigned int}]{losses = {\ttfamily 0},  }\item[{double}]{win\+Rate = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_score}{Score} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Id} & The score id \\
+\hline
+{\em user\+Id} & The user id \\
+\hline
+{\em wins} & The number of wins \\
+\hline
+{\em losses} & The number of losses \\
+\hline
+{\em win\+Rate} & The win rate \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_score_ac55d232a23a6c9bcdf0dee497ee90706}\label{class_o_g_r_i_d_1_1_score_ac55d232a23a6c9bcdf0dee497ee90706} 
+\index{OGRID::Score@{OGRID::Score}!````~Score@{\texorpdfstring{$\sim$}{\string~}Score}}
+\index{````~Score@{\texorpdfstring{$\sim$}{\string~}Score}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Score()}{\string~Score()}}
+{\footnotesize\ttfamily OGRID\+::\+Score\+::\texorpdfstring{$\sim$}{\string~}\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_o_g_r_i_d_1_1_score}{Score} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_score_abc4327878f2cbd7f25b9bc588fa9b940}\label{class_o_g_r_i_d_1_1_score_abc4327878f2cbd7f25b9bc588fa9b940} 
+\index{OGRID::Score@{OGRID::Score}!AddLoss@{AddLoss}}
+\index{AddLoss@{AddLoss}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{AddLoss()}{AddLoss()}}
+{\footnotesize\ttfamily void OGRID\+::\+Score\+::\+Add\+Loss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add a loss. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_ae83c3b17912a879118bb468a50d06bb1}\label{class_o_g_r_i_d_1_1_score_ae83c3b17912a879118bb468a50d06bb1} 
+\index{OGRID::Score@{OGRID::Score}!AddWin@{AddWin}}
+\index{AddWin@{AddWin}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{AddWin()}{AddWin()}}
+{\footnotesize\ttfamily void OGRID\+::\+Score\+::\+Add\+Win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add a win. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_ace447abb9ac9e75abe47345d6b4f503e}\label{class_o_g_r_i_d_1_1_score_ace447abb9ac9e75abe47345d6b4f503e} 
+\index{OGRID::Score@{OGRID::Score}!CalculateWinRate@{CalculateWinRate}}
+\index{CalculateWinRate@{CalculateWinRate}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{CalculateWinRate()}{CalculateWinRate()}}
+{\footnotesize\ttfamily void OGRID\+::\+Score\+::\+Calculate\+Win\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculate the win rate. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a5d75f8f686419223580827679641fa2d}\label{class_o_g_r_i_d_1_1_score_a5d75f8f686419223580827679641fa2d} 
+\index{OGRID::Score@{OGRID::Score}!GetLosses@{GetLosses}}
+\index{GetLosses@{GetLosses}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{GetLosses()}{GetLosses()}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+Score\+::\+Get\+Losses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the \doxylink{class_o_g_r_i_d_1_1_user}{User} Id. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The user id 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a2f4e974272a36e932663ba9860fca36e}\label{class_o_g_r_i_d_1_1_score_a2f4e974272a36e932663ba9860fca36e} 
+\index{OGRID::Score@{OGRID::Score}!GetWinRate@{GetWinRate}}
+\index{GetWinRate@{GetWinRate}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{GetWinRate()}{GetWinRate()}}
+{\footnotesize\ttfamily double OGRID\+::\+Score\+::\+Get\+Win\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of wins. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The number of wins 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a643cd5e0ecc3c29105d1937fc5524a1f}\label{class_o_g_r_i_d_1_1_score_a643cd5e0ecc3c29105d1937fc5524a1f} 
+\index{OGRID::Score@{OGRID::Score}!GetWins@{GetWins}}
+\index{GetWins@{GetWins}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{GetWins()}{GetWins()}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+Score\+::\+Get\+Wins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the \doxylink{class_o_g_r_i_d_1_1_score}{Score} Id. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The score id 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a40fb2ec9153c915f908c088b1c2640df}\label{class_o_g_r_i_d_1_1_score_a40fb2ec9153c915f908c088b1c2640df} 
+\index{OGRID::Score@{OGRID::Score}!SetLosses@{SetLosses}}
+\index{SetLosses@{SetLosses}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{SetLosses()}{SetLosses()}}
+{\footnotesize\ttfamily void OGRID\+::\+Score\+::\+Set\+Losses (\begin{DoxyParamCaption}\item[{unsigned int}]{losses }\end{DoxyParamCaption})}
+
+
+
+Set the \doxylink{class_o_g_r_i_d_1_1_user}{User} Id. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The user id \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_score_adc8a9e06a2973fc3bf6e87b4a7c10fde}\label{class_o_g_r_i_d_1_1_score_adc8a9e06a2973fc3bf6e87b4a7c10fde} 
+\index{OGRID::Score@{OGRID::Score}!SetWinRate@{SetWinRate}}
+\index{SetWinRate@{SetWinRate}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{SetWinRate()}{SetWinRate()}}
+{\footnotesize\ttfamily void OGRID\+::\+Score\+::\+Set\+Win\+Rate (\begin{DoxyParamCaption}\item[{double}]{win\+Rate }\end{DoxyParamCaption})}
+
+
+
+Set the number of wins. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em wins} & The number of wins \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_score_ac8b3abc8a428f66cd7e56f2a413cd176}\label{class_o_g_r_i_d_1_1_score_ac8b3abc8a428f66cd7e56f2a413cd176} 
+\index{OGRID::Score@{OGRID::Score}!SetWins@{SetWins}}
+\index{SetWins@{SetWins}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{SetWins()}{SetWins()}}
+{\footnotesize\ttfamily void OGRID\+::\+Score\+::\+Set\+Wins (\begin{DoxyParamCaption}\item[{unsigned int}]{wins }\end{DoxyParamCaption})}
+
+
+
+Set the \doxylink{class_o_g_r_i_d_1_1_score}{Score} Id. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Id} & The score id \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_score_aefcc699e11f9d217e8dc091ca6d31400}\label{class_o_g_r_i_d_1_1_score_aefcc699e11f9d217e8dc091ca6d31400} 
+\index{OGRID::Score@{OGRID::Score}!m\_Losses@{m\_Losses}}
+\index{m\_Losses@{m\_Losses}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{m\_Losses}{m\_Losses}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+Score\+::m\+\_\+\+Losses\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of losses. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a3d3ed981dadd141d6ebdfe49bb6886c3}\label{class_o_g_r_i_d_1_1_score_a3d3ed981dadd141d6ebdfe49bb6886c3} 
+\index{OGRID::Score@{OGRID::Score}!m\_ScoreId@{m\_ScoreId}}
+\index{m\_ScoreId@{m\_ScoreId}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{m\_ScoreId}{m\_ScoreId}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+Score\+::m\+\_\+\+Score\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \doxylink{class_o_g_r_i_d_1_1_score}{Score} Id. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_ab02398d334bc09bcaeb4e735261530f1}\label{class_o_g_r_i_d_1_1_score_ab02398d334bc09bcaeb4e735261530f1} 
+\index{OGRID::Score@{OGRID::Score}!m\_UserId@{m\_UserId}}
+\index{m\_UserId@{m\_UserId}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{m\_UserId}{m\_UserId}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+Score\+::m\+\_\+\+User\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \doxylink{class_o_g_r_i_d_1_1_user}{User} Id. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a32b0efd997202c771f47152949172c3c}\label{class_o_g_r_i_d_1_1_score_a32b0efd997202c771f47152949172c3c} 
+\index{OGRID::Score@{OGRID::Score}!m\_WinRate@{m\_WinRate}}
+\index{m\_WinRate@{m\_WinRate}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{m\_WinRate}{m\_WinRate}}
+{\footnotesize\ttfamily double OGRID\+::\+Score\+::m\+\_\+\+Win\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The win rate. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_score_a79071937e95fd144f4105db61234bdf4}\label{class_o_g_r_i_d_1_1_score_a79071937e95fd144f4105db61234bdf4} 
+\index{OGRID::Score@{OGRID::Score}!m\_Wins@{m\_Wins}}
+\index{m\_Wins@{m\_Wins}!OGRID::Score@{OGRID::Score}}
+\doxysubsubsection{\texorpdfstring{m\_Wins}{m\_Wins}}
+{\footnotesize\ttfamily unsigned int OGRID\+::\+Score\+::m\+\_\+\+Wins\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of wins. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+User/\mbox{\hyperlink{_score_8h}{Score.\+h}}\item 
+Source/ogrid/\+User/\mbox{\hyperlink{_score_8cpp}{Score.\+cpp}}\end{DoxyCompactItemize}

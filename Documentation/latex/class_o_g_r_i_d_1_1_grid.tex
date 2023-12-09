@@ -1,0 +1,665 @@
+\doxysection{OGRID\+::Grid Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_grid}{}\label{class_o_g_r_i_d_1_1_grid}\index{OGRID::Grid@{OGRID::Grid}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} class represents a 2D grid of Cells.  
+
+
+
+
+{\ttfamily \#include $<$Grid.\+h$>$}
+
+
+
+Collaboration diagram for OGRID\+::Grid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_o_g_r_i_d_1_1_grid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a06190291bd0854f75d675d49d1e12894}{Grid}} (unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}{rows}}, unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}{cols}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{default\+Piece}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_acecb27d8070664f2effcf7f6a1476014}{\texorpdfstring{$\sim$}{\string~}\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} object. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a81d9b578e66af2cfdf570553657a3484}{Get\+Rows}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of rows in the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a5d8f3e72de3971cd9dab104d0d9a8e24}{Set\+Rows}} (unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}{rows}})
+\begin{DoxyCompactList}\small\item\em Set the number of rows in the grid. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a4820695fbd663ecac3269b5c15be20eb}{Get\+Cols}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of columns in the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a6d74afc787d70d5d2db31c5590db7408}{Set\+Cols}} (unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}{cols}})
+\begin{DoxyCompactList}\small\item\em Set the number of columns in the grid. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ $>$ \& \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a26bf0a31927d08bf0ea18ab6557ea0f1}{Get\+Grid}} () const
+\begin{DoxyCompactList}\small\item\em Get the grid itself. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a5ef380fdb71fe78da126c627a016211f}{Set\+Grid}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ $>$ \&new\+Grid)
+\begin{DoxyCompactList}\small\item\em Set the grid itself. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a0069c1109d730a6e9193d2c39d51d07f}{Get\+Default\+Piece}} () const
+\begin{DoxyCompactList}\small\item\em Get the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ae31d80653529ca82cf8ada14a8dc3a47}{Set\+Default\+Piece}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{default\+Piece}})
+\begin{DoxyCompactList}\small\item\em Set the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a6ad3d43375a8b6ae854e92e452bf30eb}{Get\+Piece\+At}} (unsigned char row, unsigned char col) const
+\begin{DoxyCompactList}\small\item\em Access the \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} at the specified row and column within the grid and return a pointer to the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a1de71d89ac1458596be8bb1048049b87}{Set\+Piece\+At}} (unsigned char row, unsigned char col, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, bool force\+\_\+null=false)
+\begin{DoxyCompactList}\small\item\em Replace the specified \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} within the grid with the provided \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a6f71457dca1fd0e494a4d1e87d80ca9c}{Get\+Cell\+At}} (unsigned char row, unsigned char col) const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a7d3443e2d457916bddfec38bc3c83f7b}{Set\+Cell\+At}} (unsigned char row, unsigned char col, \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*}cell, bool force\+\_\+null=false)
+\begin{DoxyCompactList}\small\item\em Replace the specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid with the provided \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a0b31bae9a913f79c0b9dc57e4de0389f}{Set\+Cell\+At}} (unsigned char row, unsigned char col, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, bool force\+\_\+null=false)
+\begin{DoxyCompactList}\small\item\em Accesses the specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid and returns changes the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} within the \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} with the provided PIece. \end{DoxyCompactList}\item 
+std\+::pair$<$ unsigned char, unsigned char $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_aa2964932a79d04095a4be6c8a3598e95}{Get\+Last\+Changed\+Char}} () const
+\begin{DoxyCompactList}\small\item\em Get the last changed element. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a2722de4ae7c26b2aae07d3596e04f47d}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Overload the \mbox{[}\mbox{]} operator to access the grid. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a9cf170bf7afaffbb5d9845b540ea675a}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Overload the \mbox{[}\mbox{]} operator to access the grid. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_af6aa89f62eb69cd99cbe91c012736484}{Get\+Grid\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the grid as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a10e65c6241b983e56047e59622c22110}{Reset\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Reset the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ac85dd79e4dd24f68ea75115fbdd7df30}{Reset\+Grid\+With\+New\+Size}} (unsigned char new\+Rows, unsigned char new\+Cols, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{default\+Piece}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Reset the grid with a new size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a69fc66bc11a08c00ec45a437750e1cdd}{Reset\+Grid\+With\+New\+Default\+Piece}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{default\+Piece}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Reset the grid with a new default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a151cec1dcfab5d139ae116f0636babff}{Get\+Grid\+As\+String}} ()
+\begin{DoxyCompactList}\small\item\em Get the grid as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}{rows}}
+\begin{DoxyCompactList}\small\item\em The number of rows in the grid. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}{cols}}
+\begin{DoxyCompactList}\small\item\em The number of columns in the grid. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a243175775e2e43693d96fee79f282ab1}{grid}}
+\begin{DoxyCompactList}\small\item\em The grid itself. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{default\+Piece}}
+\begin{DoxyCompactList}\small\item\em The default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ad16f8deb9b1a58e6b95383d573d1f66e}{last\+Changed\+Char}} \mbox{[}2\mbox{]} = \{0, 0\}
+\begin{DoxyCompactList}\small\item\em The last changed element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} class represents a 2D grid of Cells. 
+
+It contains the number of rows and columns in the grid, as well as the grid itself. The \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} is a 2D array of \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} pointers. The \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} can be at most 255x255, which is more than enough for our purposes. The \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} class also contains a default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}, which is used to reset the grid. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+
+\doxylink{class_o_g_r_i_d_1_1_grid}{Grid} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a06190291bd0854f75d675d49d1e12894}\label{class_o_g_r_i_d_1_1_grid_a06190291bd0854f75d675d49d1e12894} 
+\index{OGRID::Grid@{OGRID::Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{Grid()}{Grid()}}
+{\footnotesize\ttfamily OGRID\+::\+Grid\+::\+Grid (\begin{DoxyParamCaption}\item[{unsigned char}]{rows,  }\item[{unsigned char}]{cols,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{default\+Piece = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} object. 
+
+This constructor will create a grid with the specified number of rows and columns. It will also set the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} to the specified \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows in the grid. \\
+\hline
+{\em cols} & The number of columns in the grid. \\
+\hline
+{\em default\+Piece} & The default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. If this is nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_acecb27d8070664f2effcf7f6a1476014}\label{class_o_g_r_i_d_1_1_grid_acecb27d8070664f2effcf7f6a1476014} 
+\index{OGRID::Grid@{OGRID::Grid}!````~Grid@{\texorpdfstring{$\sim$}{\string~}Grid}}
+\index{````~Grid@{\texorpdfstring{$\sim$}{\string~}Grid}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Grid()}{\string~Grid()}}
+{\footnotesize\ttfamily OGRID\+::\+Grid\+::\texorpdfstring{$\sim$}{\string~}\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} object. 
+
+This destructor will delete all the Cells in the grid. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a6f71457dca1fd0e494a4d1e87d80ca9c}\label{class_o_g_r_i_d_1_1_grid_a6f71457dca1fd0e494a4d1e87d80ca9c} 
+\index{OGRID::Grid@{OGRID::Grid}!GetCellAt@{GetCellAt}}
+\index{GetCellAt@{GetCellAt}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetCellAt()}{GetCellAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} OGRID\+::\+Grid\+::\+Get\+Cell\+At (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row of the cell. \\
+\hline
+{\em col} & The column of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a4820695fbd663ecac3269b5c15be20eb}\label{class_o_g_r_i_d_1_1_grid_a4820695fbd663ecac3269b5c15be20eb} 
+\index{OGRID::Grid@{OGRID::Grid}!GetCols@{GetCols}}
+\index{GetCols@{GetCols}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetCols()}{GetCols()}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Grid\+::\+Get\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of columns in the grid. 
+
+This is an unsigned char, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The number of columns in the grid. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a0069c1109d730a6e9193d2c39d51d07f}\label{class_o_g_r_i_d_1_1_grid_a0069c1109d730a6e9193d2c39d51d07f} 
+\index{OGRID::Grid@{OGRID::Grid}!GetDefaultPiece@{GetDefaultPiece}}
+\index{GetDefaultPiece@{GetDefaultPiece}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetDefaultPiece()}{GetDefaultPiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} OGRID\+::\+Grid\+::\+Get\+Default\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. 
+
+This is the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} that will be used to reset the grid. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a26bf0a31927d08bf0ea18ab6557ea0f1}\label{class_o_g_r_i_d_1_1_grid_a26bf0a31927d08bf0ea18ab6557ea0f1} 
+\index{OGRID::Grid@{OGRID::Grid}!GetGrid@{GetGrid}}
+\index{GetGrid@{GetGrid}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetGrid()}{GetGrid()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ $>$ \& OGRID\+::\+Grid\+::\+Get\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the grid itself. 
+
+This is a 2D array of \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} pointers. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The grid itself. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a151cec1dcfab5d139ae116f0636babff}\label{class_o_g_r_i_d_1_1_grid_a151cec1dcfab5d139ae116f0636babff} 
+\index{OGRID::Grid@{OGRID::Grid}!GetGridAsString@{GetGridAsString}}
+\index{GetGridAsString@{GetGridAsString}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetGridAsString()}{GetGridAsString()}}
+{\footnotesize\ttfamily std\+::string OGRID\+::\+Grid\+::\+Get\+Grid\+As\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the grid as a string. 
+
+This will return a string representation of the grid. If the \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} is a nullptr then "{}\+NULL"{} will be printed instead. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The grid as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_af6aa89f62eb69cd99cbe91c012736484}\label{class_o_g_r_i_d_1_1_grid_af6aa89f62eb69cd99cbe91c012736484} 
+\index{OGRID::Grid@{OGRID::Grid}!GetGridSize@{GetGridSize}}
+\index{GetGridSize@{GetGridSize}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetGridSize()}{GetGridSize()}}
+{\footnotesize\ttfamily const std\+::string OGRID\+::\+Grid\+::\+Get\+Grid\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the grid as a string. 
+
+This will return the size of the grid as a string. For example, a 3x3 grid will return "{}3x3"{}. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The grid as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_aa2964932a79d04095a4be6c8a3598e95}\label{class_o_g_r_i_d_1_1_grid_aa2964932a79d04095a4be6c8a3598e95} 
+\index{OGRID::Grid@{OGRID::Grid}!GetLastChangedChar@{GetLastChangedChar}}
+\index{GetLastChangedChar@{GetLastChangedChar}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetLastChangedChar()}{GetLastChangedChar()}}
+{\footnotesize\ttfamily std\+::pair$<$ unsigned char, unsigned char $>$ OGRID\+::\+Grid\+::\+Get\+Last\+Changed\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the last changed element. 
+
+This is a pair of unsigned chars that stores the row and column of the last changed element. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The last changed element. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a6ad3d43375a8b6ae854e92e452bf30eb}\label{class_o_g_r_i_d_1_1_grid_a6ad3d43375a8b6ae854e92e452bf30eb} 
+\index{OGRID::Grid@{OGRID::Grid}!GetPieceAt@{GetPieceAt}}
+\index{GetPieceAt@{GetPieceAt}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetPieceAt()}{GetPieceAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} OGRID\+::\+Grid\+::\+Get\+Piece\+At (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Access the \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} at the specified row and column within the grid and return a pointer to the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row of the cell. \\
+\hline
+{\em col} & The column of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The specified \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} within the grid. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a81d9b578e66af2cfdf570553657a3484}\label{class_o_g_r_i_d_1_1_grid_a81d9b578e66af2cfdf570553657a3484} 
+\index{OGRID::Grid@{OGRID::Grid}!GetRows@{GetRows}}
+\index{GetRows@{GetRows}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{GetRows()}{GetRows()}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Grid\+::\+Get\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of rows in the grid. 
+
+This is an unsigned char, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The number of rows in the grid. 
+\end{DoxyReturn}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a2722de4ae7c26b2aae07d3596e04f47d}\label{class_o_g_r_i_d_1_1_grid_a2722de4ae7c26b2aae07d3596e04f47d} 
+\index{OGRID::Grid@{OGRID::Grid}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ \& OGRID\+::\+Grid\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Overload the \mbox{[}\mbox{]} operator to access the grid. 
+
+This is a 2D array of \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} pointers. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The grid itself. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a9cf170bf7afaffbb5d9845b540ea675a}\label{class_o_g_r_i_d_1_1_grid_a9cf170bf7afaffbb5d9845b540ea675a} 
+\index{OGRID::Grid@{OGRID::Grid}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ \& OGRID\+::\+Grid\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Overload the \mbox{[}\mbox{]} operator to access the grid. 
+
+This is a 2D array of \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} pointers. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The grid itself. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a10e65c6241b983e56047e59622c22110}\label{class_o_g_r_i_d_1_1_grid_a10e65c6241b983e56047e59622c22110} 
+\index{OGRID::Grid@{OGRID::Grid}!ResetGrid@{ResetGrid}}
+\index{ResetGrid@{ResetGrid}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{ResetGrid()}{ResetGrid()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Reset\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the grid. 
+
+This will reset the grid to the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. Deleting all the Cells (and Pieces if there are any) in the process. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a69fc66bc11a08c00ec45a437750e1cdd}\label{class_o_g_r_i_d_1_1_grid_a69fc66bc11a08c00ec45a437750e1cdd} 
+\index{OGRID::Grid@{OGRID::Grid}!ResetGridWithNewDefaultPiece@{ResetGridWithNewDefaultPiece}}
+\index{ResetGridWithNewDefaultPiece@{ResetGridWithNewDefaultPiece}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{ResetGridWithNewDefaultPiece()}{ResetGridWithNewDefaultPiece()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Reset\+Grid\+With\+New\+Default\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{default\+Piece = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Reset the grid with a new default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. 
+
+This will reset the grid to the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. Deleting all the Cells (and Pieces if there are any) in the process. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em default\+Piece} & The new default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. Can be nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_ac85dd79e4dd24f68ea75115fbdd7df30}\label{class_o_g_r_i_d_1_1_grid_ac85dd79e4dd24f68ea75115fbdd7df30} 
+\index{OGRID::Grid@{OGRID::Grid}!ResetGridWithNewSize@{ResetGridWithNewSize}}
+\index{ResetGridWithNewSize@{ResetGridWithNewSize}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{ResetGridWithNewSize()}{ResetGridWithNewSize()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Reset\+Grid\+With\+New\+Size (\begin{DoxyParamCaption}\item[{unsigned char}]{new\+Rows,  }\item[{unsigned char}]{new\+Cols,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{default\+Piece = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Reset the grid with a new size. 
+
+This will reset the grid to the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. Deleting all the Cells (and Pieces if there are any) in the process. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Rows} & The new number of rows in the grid. \\
+\hline
+{\em new\+Cols} & The new number of columns in the grid. \\
+\hline
+{\em default\+Piece} & The new default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. Can be nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a7d3443e2d457916bddfec38bc3c83f7b}\label{class_o_g_r_i_d_1_1_grid_a7d3443e2d457916bddfec38bc3c83f7b} 
+\index{OGRID::Grid@{OGRID::Grid}!SetCellAt@{SetCellAt}}
+\index{SetCellAt@{SetCellAt}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetCellAt()}{SetCellAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Cell\+At (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col,  }\item[{\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*}}]{cell,  }\item[{bool}]{force\+\_\+null = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Replace the specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid with the provided \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell}. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & The new \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell}. \\
+\hline
+{\em row} & The row of the cell. \\
+\hline
+{\em col} & The column of the cell. \\
+\hline
+{\em force\+\_\+null} & Allows to pass a nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+
+\doxylink{class_o_g_r_i_d_1_1_grid}{Grid} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a0b31bae9a913f79c0b9dc57e4de0389f}\label{class_o_g_r_i_d_1_1_grid_a0b31bae9a913f79c0b9dc57e4de0389f} 
+\index{OGRID::Grid@{OGRID::Grid}!SetCellAt@{SetCellAt}}
+\index{SetCellAt@{SetCellAt}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetCellAt()}{SetCellAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Cell\+At (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece,  }\item[{bool}]{force\+\_\+null = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Accesses the specified \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} within the grid and returns changes the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} within the \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} with the provided PIece. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The new \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. \\
+\hline
+{\em row} & The row of the cell. \\
+\hline
+{\em col} & The column of the cell. \\
+\hline
+{\em force\+\_\+null} & Allows to pass a nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a6d74afc787d70d5d2db31c5590db7408}\label{class_o_g_r_i_d_1_1_grid_a6d74afc787d70d5d2db31c5590db7408} 
+\index{OGRID::Grid@{OGRID::Grid}!SetCols@{SetCols}}
+\index{SetCols@{SetCols}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetCols()}{SetCols()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Cols (\begin{DoxyParamCaption}\item[{unsigned char}]{cols }\end{DoxyParamCaption})}
+
+
+
+Set the number of columns in the grid. 
+
+This is an unsigned char, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cols} & The number of columns in the grid. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_ae31d80653529ca82cf8ada14a8dc3a47}\label{class_o_g_r_i_d_1_1_grid_ae31d80653529ca82cf8ada14a8dc3a47} 
+\index{OGRID::Grid@{OGRID::Grid}!SetDefaultPiece@{SetDefaultPiece}}
+\index{SetDefaultPiece@{SetDefaultPiece}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetDefaultPiece()}{SetDefaultPiece()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Default\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{default\+Piece }\end{DoxyParamCaption})}
+
+
+
+Set the default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. 
+
+This is the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} that will be used to reset the grid. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em default\+Piece} & The new default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+
+\doxylink{class_o_g_r_i_d_1_1_grid_a10e65c6241b983e56047e59622c22110}{Reset\+Grid()} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a5ef380fdb71fe78da126c627a016211f}\label{class_o_g_r_i_d_1_1_grid_a5ef380fdb71fe78da126c627a016211f} 
+\index{OGRID::Grid@{OGRID::Grid}!SetGrid@{SetGrid}}
+\index{SetGrid@{SetGrid}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetGrid()}{SetGrid()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Grid (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ $>$ \&}]{new\+Grid }\end{DoxyParamCaption})}
+
+
+
+Set the grid itself. 
+
+This is a 2D array of \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} pointers. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Grid} & The new grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a1de71d89ac1458596be8bb1048049b87}\label{class_o_g_r_i_d_1_1_grid_a1de71d89ac1458596be8bb1048049b87} 
+\index{OGRID::Grid@{OGRID::Grid}!SetPieceAt@{SetPieceAt}}
+\index{SetPieceAt@{SetPieceAt}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetPieceAt()}{SetPieceAt()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Piece\+At (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece,  }\item[{bool}]{force\+\_\+null = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Replace the specified \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} within the grid with the provided \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The new \doxylink{class_o_g_r_i_d_1_1_piece}{Piece}. \\
+\hline
+{\em row} & The row of the cell. \\
+\hline
+{\em col} & The column of the cell. \\
+\hline
+{\em force\+\_\+null} & Allows to pass a nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+
+\doxylink{class_o_g_r_i_d_1_1_grid}{Grid} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a5d8f3e72de3971cd9dab104d0d9a8e24}\label{class_o_g_r_i_d_1_1_grid_a5d8f3e72de3971cd9dab104d0d9a8e24} 
+\index{OGRID::Grid@{OGRID::Grid}!SetRows@{SetRows}}
+\index{SetRows@{SetRows}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{SetRows()}{SetRows()}}
+{\footnotesize\ttfamily void OGRID\+::\+Grid\+::\+Set\+Rows (\begin{DoxyParamCaption}\item[{unsigned char}]{rows }\end{DoxyParamCaption})}
+
+
+
+Set the number of rows in the grid. 
+
+This is an unsigned char, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows in the grid. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}\label{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919} 
+\index{OGRID::Grid@{OGRID::Grid}!cols@{cols}}
+\index{cols@{cols}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Grid\+::cols\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of columns in the grid. 
+
+This is an unsigned char, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}\label{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d} 
+\index{OGRID::Grid@{OGRID::Grid}!defaultPiece@{defaultPiece}}
+\index{defaultPiece@{defaultPiece}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{defaultPiece}{defaultPiece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\texorpdfstring{$\ast$}{*} OGRID\+::\+Grid\+::default\+Piece\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The default \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} for the grid. 
+
+This is the \doxylink{class_o_g_r_i_d_1_1_piece}{Piece} that will be used to reset the grid. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_o_g_r_i_d_1_1_piece}{Piece} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a243175775e2e43693d96fee79f282ab1}\label{class_o_g_r_i_d_1_1_grid_a243175775e2e43693d96fee79f282ab1} 
+\index{OGRID::Grid@{OGRID::Grid}!grid@{grid}}
+\index{grid@{grid}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*}$>$ $>$ OGRID\+::\+Grid\+::grid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The grid itself. 
+
+This is a 2D array of \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} pointers. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_ad16f8deb9b1a58e6b95383d573d1f66e}\label{class_o_g_r_i_d_1_1_grid_ad16f8deb9b1a58e6b95383d573d1f66e} 
+\index{OGRID::Grid@{OGRID::Grid}!lastChangedChar@{lastChangedChar}}
+\index{lastChangedChar@{lastChangedChar}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{lastChangedChar}{lastChangedChar}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Grid\+::last\+Changed\+Char\mbox{[}2\mbox{]} = \{0, 0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The last changed element. 
+
+This is a pair of unsigned chars that stores the row and column of the last changed element. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}\label{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751} 
+\index{OGRID::Grid@{OGRID::Grid}!rows@{rows}}
+\index{rows@{rows}!OGRID::Grid@{OGRID::Grid}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Grid\+::rows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of rows in the grid. 
+
+This is an unsigned char, which means the grid can be at most 255x255. This is more than enough for our purposes. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Grid/\mbox{\hyperlink{_grid_8h}{Grid.\+h}}\item 
+Source/ogrid/\+Grid/\mbox{\hyperlink{_grid_8cpp}{Grid.\+cpp}}\end{DoxyCompactItemize}

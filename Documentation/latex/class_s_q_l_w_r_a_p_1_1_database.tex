@@ -1,0 +1,324 @@
+\doxysection{SQLWRAP\+::Database Class Reference}
+\hypertarget{class_s_q_l_w_r_a_p_1_1_database}{}\label{class_s_q_l_w_r_a_p_1_1_database}\index{SQLWRAP::Database@{SQLWRAP::Database}}
+
+
+The \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} class.  
+
+
+
+
+{\ttfamily \#include $<$Database.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a24420152212c5942b04a70d5454e3bac}{Database}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_aecfc6a0b4f230251b9ee50e679f7ec2b}{\texorpdfstring{$\sim$}{\string~}\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} object. \end{DoxyCompactList}\item 
+sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{get\+SQLDB}} () const
+\begin{DoxyCompactList}\small\item\em Get the SQLDB object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_aa152ae0cf9dae1a93d81e892fb7d0ab6}{get\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Get the FILEPATH object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_abf81736b50fd9c9945727e01c9c3cd04}{get\+Rows}} (const std\+::string \&table\+Name)
+\begin{DoxyCompactList}\small\item\em Set the FILEPATH object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a866358830769962b19b618a282875fdf}{get\+Columns}} (const std\+::string \&table\+Name)
+\begin{DoxyCompactList}\small\item\em Set the FILEPATH object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}{open}} ()
+\begin{DoxyCompactList}\small\item\em Open a connection to the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}} ()
+\begin{DoxyCompactList}\small\item\em Close the connection to the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a5514f51acd9b31f19a28da5ed54048ba}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Execute a statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ad4b7edde9e17908a9f437b15c85cddb4}{create\+Table\+From\+String}} (const std\+::string \&sql\+Create\+Table)
+\begin{DoxyCompactList}\small\item\em Execute a statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a0342681fea0f7a6ac99d8e2d01404528}{display\+All\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Execute a statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ad51a66fb0ca9e5971bdc69078e2833cd}{callback}} (void \texorpdfstring{$\ast$}{*}context, int column\+Count, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}column\+Values, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}column\+Name)
+\begin{DoxyCompactList}\small\item\em Execute a statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ac68eb92d95cf355700c91fc708ac5ebf}{SQLDB}}
+\begin{DoxyCompactList}\small\item\em The sqlite3 database. \end{DoxyCompactList}\item 
+sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a00bee5551c32963643a4992d36ae739e}{stmt}}
+\begin{DoxyCompactList}\small\item\em The sqlite3 statement. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a53784a18c59f84fe453bb8aaccce0346}{FILEPATH}}
+\begin{DoxyCompactList}\small\item\em The file path. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a514daf075afcf1d697b9d1ffa9a638ae}{fpath}}
+\begin{DoxyCompactList}\small\item\em The file path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} class. 
+
+This class is used to manage the database \begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a24420152212c5942b04a70d5454e3bac}\label{class_s_q_l_w_r_a_p_1_1_database_a24420152212c5942b04a70d5454e3bac} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!Database@{Database}}
+\index{Database@{Database}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{Database()}{Database()}}
+{\footnotesize\ttfamily SQLWRAP\+::\+Database\+::\+Database (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the database \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_aecfc6a0b4f230251b9ee50e679f7ec2b}\label{class_s_q_l_w_r_a_p_1_1_database_aecfc6a0b4f230251b9ee50e679f7ec2b} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!````~Database@{\texorpdfstring{$\sim$}{\string~}Database}}
+\index{````~Database@{\texorpdfstring{$\sim$}{\string~}Database}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Database()}{\string~Database()}}
+{\footnotesize\ttfamily SQLWRAP\+::\+Database\+::\texorpdfstring{$\sim$}{\string~}\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_ad51a66fb0ca9e5971bdc69078e2833cd}\label{class_s_q_l_w_r_a_p_1_1_database_ad51a66fb0ca9e5971bdc69078e2833cd} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!callback@{callback}}
+\index{callback@{callback}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily int SQLWRAP\+::\+Database\+::callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{context,  }\item[{int}]{column\+Count,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{column\+Values,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{column\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Execute a statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & The statement to execute \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a5514f51acd9b31f19a28da5ed54048ba}\label{class_s_q_l_w_r_a_p_1_1_database_a5514f51acd9b31f19a28da5ed54048ba} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!clear@{clear}}
+\index{clear@{clear}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void SQLWRAP\+::\+Database\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Execute a statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & The statement to execute \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}\label{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!close@{close}}
+\index{close@{close}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void SQLWRAP\+::\+Database\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the connection to the database. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_ad4b7edde9e17908a9f437b15c85cddb4}\label{class_s_q_l_w_r_a_p_1_1_database_ad4b7edde9e17908a9f437b15c85cddb4} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!createTableFromString@{createTableFromString}}
+\index{createTableFromString@{createTableFromString}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{createTableFromString()}{createTableFromString()}}
+{\footnotesize\ttfamily void SQLWRAP\+::\+Database\+::create\+Table\+From\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql\+Create\+Table }\end{DoxyParamCaption})}
+
+
+
+Execute a statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & The statement to execute \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a0342681fea0f7a6ac99d8e2d01404528}\label{class_s_q_l_w_r_a_p_1_1_database_a0342681fea0f7a6ac99d8e2d01404528} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!displayAllTables@{displayAllTables}}
+\index{displayAllTables@{displayAllTables}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{displayAllTables()}{displayAllTables()}}
+{\footnotesize\ttfamily void SQLWRAP\+::\+Database\+::display\+All\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Execute a statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & The statement to execute \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a866358830769962b19b618a282875fdf}\label{class_s_q_l_w_r_a_p_1_1_database_a866358830769962b19b618a282875fdf} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!getColumns@{getColumns}}
+\index{getColumns@{getColumns}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{getColumns()}{getColumns()}}
+{\footnotesize\ttfamily int SQLWRAP\+::\+Database\+::get\+Columns (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table\+Name }\end{DoxyParamCaption})}
+
+
+
+Set the FILEPATH object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_aa152ae0cf9dae1a93d81e892fb7d0ab6}\label{class_s_q_l_w_r_a_p_1_1_database_aa152ae0cf9dae1a93d81e892fb7d0ab6} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!getFilePath@{getFilePath}}
+\index{getFilePath@{getFilePath}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{getFilePath()}{getFilePath()}}
+{\footnotesize\ttfamily std\+::string SQLWRAP\+::\+Database\+::get\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the FILEPATH object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+const char\texorpdfstring{$\ast$}{*} The file path 
+\end{DoxyReturn}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_abf81736b50fd9c9945727e01c9c3cd04}\label{class_s_q_l_w_r_a_p_1_1_database_abf81736b50fd9c9945727e01c9c3cd04} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!getRows@{getRows}}
+\index{getRows@{getRows}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{getRows()}{getRows()}}
+{\footnotesize\ttfamily int SQLWRAP\+::\+Database\+::get\+Rows (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table\+Name }\end{DoxyParamCaption})}
+
+
+
+Set the FILEPATH object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}\label{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!getSQLDB@{getSQLDB}}
+\index{getSQLDB@{getSQLDB}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{getSQLDB()}{getSQLDB()}}
+{\footnotesize\ttfamily sqlite3 \texorpdfstring{$\ast$}{*} SQLWRAP\+::\+Database\+::get\+SQLDB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the SQLDB object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+sqlite3\texorpdfstring{$\ast$}{*} The sqlite3 database 
+\end{DoxyReturn}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}\label{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!open@{open}}
+\index{open@{open}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void SQLWRAP\+::\+Database\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Open a connection to the database. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a53784a18c59f84fe453bb8aaccce0346}\label{class_s_q_l_w_r_a_p_1_1_database_a53784a18c59f84fe453bb8aaccce0346} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!FILEPATH@{FILEPATH}}
+\index{FILEPATH@{FILEPATH}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{FILEPATH}{FILEPATH}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} SQLWRAP\+::\+Database\+::\+FILEPATH\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The file path. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a514daf075afcf1d697b9d1ffa9a638ae}\label{class_s_q_l_w_r_a_p_1_1_database_a514daf075afcf1d697b9d1ffa9a638ae} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!fpath@{fpath}}
+\index{fpath@{fpath}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{fpath}{fpath}}
+{\footnotesize\ttfamily std\+::string SQLWRAP\+::\+Database\+::fpath\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The file path. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_ac68eb92d95cf355700c91fc708ac5ebf}\label{class_s_q_l_w_r_a_p_1_1_database_ac68eb92d95cf355700c91fc708ac5ebf} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!SQLDB@{SQLDB}}
+\index{SQLDB@{SQLDB}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{SQLDB}{SQLDB}}
+{\footnotesize\ttfamily sqlite3\texorpdfstring{$\ast$}{*} SQLWRAP\+::\+Database\+::\+SQLDB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The sqlite3 database. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_s_q_l_w_r_a_p_1_1_database_a00bee5551c32963643a4992d36ae739e}\label{class_s_q_l_w_r_a_p_1_1_database_a00bee5551c32963643a4992d36ae739e} 
+\index{SQLWRAP::Database@{SQLWRAP::Database}!stmt@{stmt}}
+\index{stmt@{stmt}!SQLWRAP::Database@{SQLWRAP::Database}}
+\doxysubsubsection{\texorpdfstring{stmt}{stmt}}
+{\footnotesize\ttfamily sqlite3\+\_\+stmt\texorpdfstring{$\ast$}{*} SQLWRAP\+::\+Database\+::stmt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The sqlite3 statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Tools/\+Database/\mbox{\hyperlink{_database_8h}{Database.\+h}}\item 
+Source/ogrid/\+Tools/\+Database/\mbox{\hyperlink{_database_8cpp}{Database.\+cpp}}\end{DoxyCompactItemize}

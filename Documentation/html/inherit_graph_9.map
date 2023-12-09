@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_o_g_r_i_d_1_1_i_attack_rule.html" title="The IGameState class. Used to check the state of the game." alt="" coords="5,47,143,73"/>
+<area shape="rect" id="Node000001" href="$class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule.html" title="The PieceRules class. Used to represent the rules of a piece." alt="" coords="191,5,388,48"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="158,44,190,39,191,45,159,50"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule.html" title="The PieceRules class. Used to represent the rules of a piece." alt="" coords="194,72,385,115"/>
+<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="159,70,194,76,193,81,158,76"/>
+</map>

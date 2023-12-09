@@ -1,0 +1,5 @@
+<map id="OGRID::BlackPieceCheckers" name="OGRID::BlackPieceCheckers">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,197,107"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="49,5,153,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,48,104,80,98,80,98,48"/>
+</map>

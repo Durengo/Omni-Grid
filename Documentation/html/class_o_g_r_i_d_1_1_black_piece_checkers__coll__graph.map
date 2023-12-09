@@ -1,0 +1,7 @@
+<map id="OGRID::BlackPieceCheckers" name="OGRID::BlackPieceCheckers">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,197,199"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="49,96,153,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,138,104,172,98,172,98,138"/>
+<area shape="rect" id="Node000003" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="47,5,155,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,48,104,95,98,95,98,48"/>
+</map>

@@ -1,0 +1,229 @@
+\doxysection{OGRID\+::Button Struct Reference}
+\hypertarget{struct_o_g_r_i_d_1_1_button}{}\label{struct_o_g_r_i_d_1_1_button}\index{OGRID::Button@{OGRID::Button}}
+
+
+\doxylink{struct_o_g_r_i_d_1_1_button}{Button}.  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a3142f9995bacdbb61a1c98aa00ff334f}{Button}} (Rectangle \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}, Color normal, Color hover, Color pressed, std\+::function$<$ void()$>$ click\+Callback, std\+::string \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}="{}Button"{}, bool \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{is\+Enabled}}=true)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{struct_o_g_r_i_d_1_1_button}{Button} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_abc14ab423e470c35d4ce412b58e89dd7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update the button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aea797cd8211b5f83d721b6a9f0d9c784}{Draw}} () const
+\begin{DoxyCompactList}\small\item\em Draw the button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a7272f64bd0130c7bb14ecacd197d7a43}{Set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Set the enabled state of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rectangle \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}{bounds}}
+\begin{DoxyCompactList}\small\item\em Bounds of the button. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_abdd3f23d01e55220f48b66528af03d35}{normal\+Color}}
+\begin{DoxyCompactList}\small\item\em Colors of the button. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a33dbac02d4064a8dc5a7f245b83baa31}{hover\+Color}}
+\begin{DoxyCompactList}\small\item\em Colors of the button on mouse hover. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a5c58665c37c98b6d29851c08198ee00c}{pressed\+Color}}
+\begin{DoxyCompactList}\small\item\em Colors of the button on mouse click. \end{DoxyCompactList}\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_afd238c3c28e5644edc4320689dd96469}{on\+Click}}
+\begin{DoxyCompactList}\small\item\em Delegate function for button click event. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}{text}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_o_g_r_i_d_1_1_text}{Text} to be displayed on the button. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}{is\+Enabled}}
+\begin{DoxyCompactList}\small\item\em Is the button enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_o_g_r_i_d_1_1_button}{Button}. 
+
+This is a warpper around raylib\textquotesingle{}s Rectangle and Color. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.raylib.com/}{\texttt{ https\+://www.\+raylib.\+com/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_a3142f9995bacdbb61a1c98aa00ff334f}\label{struct_o_g_r_i_d_1_1_button_a3142f9995bacdbb61a1c98aa00ff334f} 
+\index{OGRID::Button@{OGRID::Button}!Button@{Button}}
+\index{Button@{Button}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily OGRID\+::\+Button\+::\+Button (\begin{DoxyParamCaption}\item[{Rectangle}]{bounds,  }\item[{Color}]{normal,  }\item[{Color}]{hover,  }\item[{Color}]{pressed,  }\item[{std\+::function$<$ void()$>$}]{click\+Callback,  }\item[{std\+::string}]{text = {\ttfamily "{}Button"{}},  }\item[{bool}]{is\+Enabled = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{struct_o_g_r_i_d_1_1_button}{Button} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & Bounds of the button. \\
+\hline
+{\em normal} & Color of the button when not interacted with. \\
+\hline
+{\em hover} & Color of the button on mouse hover. \\
+\hline
+{\em pressed} & Color of the button when pressed. \\
+\hline
+{\em click\+Callback} & Delegate function for button click event. \\
+\hline
+{\em text} & \doxylink{struct_o_g_r_i_d_1_1_text}{Text} to be displayed on the button. \\
+\hline
+{\em is\+Enabled} & Is the button enabled. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_aea797cd8211b5f83d721b6a9f0d9c784}\label{struct_o_g_r_i_d_1_1_button_aea797cd8211b5f83d721b6a9f0d9c784} 
+\index{OGRID::Button@{OGRID::Button}!Draw@{Draw}}
+\index{Draw@{Draw}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void OGRID\+::\+Button\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw the button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_a7272f64bd0130c7bb14ecacd197d7a43}\label{struct_o_g_r_i_d_1_1_button_a7272f64bd0130c7bb14ecacd197d7a43} 
+\index{OGRID::Button@{OGRID::Button}!SetEnabled@{SetEnabled}}
+\index{SetEnabled@{SetEnabled}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{SetEnabled()}{SetEnabled()}}
+{\footnotesize\ttfamily void OGRID\+::\+Button\+::\+Set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the enabled state of the button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & Is the button enabled. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_abc14ab423e470c35d4ce412b58e89dd7}\label{struct_o_g_r_i_d_1_1_button_abc14ab423e470c35d4ce412b58e89dd7} 
+\index{OGRID::Button@{OGRID::Button}!Update@{Update}}
+\index{Update@{Update}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void OGRID\+::\+Button\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df}\label{struct_o_g_r_i_d_1_1_button_a65e13e5751a8768ac2229f0eea4798df} 
+\index{OGRID::Button@{OGRID::Button}!bounds@{bounds}}
+\index{bounds@{bounds}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{bounds}{bounds}}
+{\footnotesize\ttfamily Rectangle OGRID\+::\+Button\+::bounds}
+
+
+
+Bounds of the button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_a33dbac02d4064a8dc5a7f245b83baa31}\label{struct_o_g_r_i_d_1_1_button_a33dbac02d4064a8dc5a7f245b83baa31} 
+\index{OGRID::Button@{OGRID::Button}!hoverColor@{hoverColor}}
+\index{hoverColor@{hoverColor}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{hoverColor}{hoverColor}}
+{\footnotesize\ttfamily Color OGRID\+::\+Button\+::hover\+Color}
+
+
+
+Colors of the button on mouse hover. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4}\label{struct_o_g_r_i_d_1_1_button_a26fa9c80084443b41b725b199b1002c4} 
+\index{OGRID::Button@{OGRID::Button}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{isEnabled}{isEnabled}}
+{\footnotesize\ttfamily bool OGRID\+::\+Button\+::is\+Enabled}
+
+
+
+Is the button enabled. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_abdd3f23d01e55220f48b66528af03d35}\label{struct_o_g_r_i_d_1_1_button_abdd3f23d01e55220f48b66528af03d35} 
+\index{OGRID::Button@{OGRID::Button}!normalColor@{normalColor}}
+\index{normalColor@{normalColor}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{normalColor}{normalColor}}
+{\footnotesize\ttfamily Color OGRID\+::\+Button\+::normal\+Color}
+
+
+
+Colors of the button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_afd238c3c28e5644edc4320689dd96469}\label{struct_o_g_r_i_d_1_1_button_afd238c3c28e5644edc4320689dd96469} 
+\index{OGRID::Button@{OGRID::Button}!onClick@{onClick}}
+\index{onClick@{onClick}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{onClick}{onClick}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ OGRID\+::\+Button\+::on\+Click}
+
+
+
+Delegate function for button click event. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_a5c58665c37c98b6d29851c08198ee00c}\label{struct_o_g_r_i_d_1_1_button_a5c58665c37c98b6d29851c08198ee00c} 
+\index{OGRID::Button@{OGRID::Button}!pressedColor@{pressedColor}}
+\index{pressedColor@{pressedColor}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{pressedColor}{pressedColor}}
+{\footnotesize\ttfamily Color OGRID\+::\+Button\+::pressed\+Color}
+
+
+
+Colors of the button on mouse click. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3}\label{struct_o_g_r_i_d_1_1_button_aa795a903f48ee5c4661363caf71705a3} 
+\index{OGRID::Button@{OGRID::Button}!text@{text}}
+\index{text@{text}!OGRID::Button@{OGRID::Button}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily std\+::string OGRID\+::\+Button\+::text}
+
+
+
+\doxylink{struct_o_g_r_i_d_1_1_text}{Text} to be displayed on the button. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+GUI/\mbox{\hyperlink{_button_8h}{Button.\+h}}\end{DoxyCompactItemize}

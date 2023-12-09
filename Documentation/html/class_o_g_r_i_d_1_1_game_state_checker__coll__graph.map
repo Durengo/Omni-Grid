@@ -1,0 +1,5 @@
+<map id="OGRID::GameStateChecker" name="OGRID::GameStateChecker">
+<area shape="rect" id="Node000001" title="The GameStateChecker class. Used to check the state of the game." alt="" coords="5,96,190,123"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_i_game_state.html" title="The IGameState class. Used to check the state of the game." alt="" coords="28,5,167,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,48,100,95,95,95,95,48"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="Source/ogrid/Games/Checkers/CheckersPieces.cpp" name="Source/ogrid/Games/Checkers/CheckersPieces.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,5,424,48"/>
+<area shape="rect" id="Node000002" href="$_checkers_pieces_8h.html" title=" " alt="" coords="170,104,297,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,50,259,95,255,91,299,47"/>
+<area shape="rect" id="Node000009" href="$_piece_rules_8h.html" title="Contains the PieceRules class." alt="" coords="322,96,497,139"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="344,47,381,83,377,87,340,50"/>
+<area shape="rect" id="Node000003" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="181,187,287,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,131,236,171,231,171,231,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="128,352,182,379"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,211,83,231,41,246,16,263,8,282,16,303,36,324,60,339,88,349,114,356,113,361,86,355,58,344,32,328,11,305,3,282,12,260,39,241,82,226,180,206"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="26,269,81,296"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="204,216,95,264,93,265,91,260,93,259,202,211"/>
+<area shape="rect" id="Node000006" href="$_i_attack_rule_8h.html" title=" " alt="" coords="106,261,242,304"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="226,215,200,250,196,247,222,212"/>
+<area shape="rect" id="Node000007" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="402,261,538,304"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="271,211,395,253,394,258,270,216"/>
+<area shape="rect" id="Node000008" href="$_player_8h.html" title="Contains the Player class." alt="" coords="267,269,377,296"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="249,212,299,257,295,261,246,216"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="297,299,196,348,193,343,295,294"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="365,142,276,182,274,177,363,137"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="420,138,459,246,454,248,415,140"/>
+</map>

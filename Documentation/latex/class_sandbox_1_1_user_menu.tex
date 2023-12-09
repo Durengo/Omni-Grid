@@ -1,0 +1,208 @@
+\doxysection{Sandbox\+::User\+Menu Class Reference}
+\hypertarget{class_sandbox_1_1_user_menu}{}\label{class_sandbox_1_1_user_menu}\index{Sandbox::UserMenu@{Sandbox::UserMenu}}
+
+
+The \doxylink{class_sandbox_1_1_user_menu}{User\+Menu} class.  
+
+
+
+
+{\ttfamily \#include $<$User\+Menu.\+h$>$}
+
+
+
+Collaboration diagram for Sandbox\+::User\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_sandbox_1_1_user_menu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sandbox_1_1_user_menu_a52f3e42421abfe67dddc131d681323b7}{User\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_sandbox_1_1_user_menu}{User\+Menu} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sandbox_1_1_user_menu_a169093ea5b7845367de9dade32cca1d9}{\texorpdfstring{$\sim$}{\string~}\+User\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_sandbox_1_1_user_menu}{User\+Menu} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_user_menu_ac19271c8271ccd76021ce3bb23750e50}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the user menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sandbox_1_1_user_menu_a54be67e447e81ff565e03dd04a23e556}{First\+Run}} ()
+\begin{DoxyCompactList}\small\item\em Creates the database tables if they don\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_user_menu_a7342135a7064fe1c0bcc39ee50ef30a4}{Pre\+Login\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Displays the pre-\/login menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_user_menu_a6dfdefc78703fae1a940a20855eba4fe}{Login}} ()
+\begin{DoxyCompactList}\small\item\em Displays the post-\/login menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_user_menu_adbf44098b0bf5e571f5f5d70cd990a5b}{Register}} ()
+\begin{DoxyCompactList}\small\item\em Displays the register menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sandbox_1_1_user_menu_ae64bd29c8330e436511e30097fcbdfa6}{Post\+Login\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Displays the post-\/login menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{SQLWRAP\+::\+Database}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_user_menu_a7a286a18e48c13458211619e5019c34a}{m\+\_\+\+Database}}
+\begin{DoxyCompactList}\small\item\em The Database object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sandbox_1_1_user_menu_a67b252567562f2413a24b8c4ba43ef9b}{m\+\_\+\+User}}
+\begin{DoxyCompactList}\small\item\em The User object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_sandbox_1_1_user_menu}{User\+Menu} class. 
+
+This class is used to manage the user menu and interact with the database \begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+User 
+
+Database 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sandbox_1_1_user_menu_a52f3e42421abfe67dddc131d681323b7}\label{class_sandbox_1_1_user_menu_a52f3e42421abfe67dddc131d681323b7} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!UserMenu@{UserMenu}}
+\index{UserMenu@{UserMenu}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{UserMenu()}{UserMenu()}}
+{\footnotesize\ttfamily Sandbox\+::\+User\+Menu\+::\+User\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_sandbox_1_1_user_menu}{User\+Menu} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_a169093ea5b7845367de9dade32cca1d9}\label{class_sandbox_1_1_user_menu_a169093ea5b7845367de9dade32cca1d9} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!````~UserMenu@{\texorpdfstring{$\sim$}{\string~}UserMenu}}
+\index{````~UserMenu@{\texorpdfstring{$\sim$}{\string~}UserMenu}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UserMenu()}{\string~UserMenu()}}
+{\footnotesize\ttfamily Sandbox\+::\+User\+Menu\+::\texorpdfstring{$\sim$}{\string~}\+User\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_sandbox_1_1_user_menu}{User\+Menu} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sandbox_1_1_user_menu_a54be67e447e81ff565e03dd04a23e556}\label{class_sandbox_1_1_user_menu_a54be67e447e81ff565e03dd04a23e556} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!FirstRun@{FirstRun}}
+\index{FirstRun@{FirstRun}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{FirstRun()}{FirstRun()}}
+{\footnotesize\ttfamily void Sandbox\+::\+User\+Menu\+::\+First\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates the database tables if they don\textquotesingle{}t exist. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_a6dfdefc78703fae1a940a20855eba4fe}\label{class_sandbox_1_1_user_menu_a6dfdefc78703fae1a940a20855eba4fe} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!Login@{Login}}
+\index{Login@{Login}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily void Sandbox\+::\+User\+Menu\+::\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Displays the post-\/login menu. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_ae64bd29c8330e436511e30097fcbdfa6}\label{class_sandbox_1_1_user_menu_ae64bd29c8330e436511e30097fcbdfa6} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!PostLoginMenu@{PostLoginMenu}}
+\index{PostLoginMenu@{PostLoginMenu}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{PostLoginMenu()}{PostLoginMenu()}}
+{\footnotesize\ttfamily void Sandbox\+::\+User\+Menu\+::\+Post\+Login\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Displays the post-\/login menu. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_a7342135a7064fe1c0bcc39ee50ef30a4}\label{class_sandbox_1_1_user_menu_a7342135a7064fe1c0bcc39ee50ef30a4} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!PreLoginMenu@{PreLoginMenu}}
+\index{PreLoginMenu@{PreLoginMenu}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{PreLoginMenu()}{PreLoginMenu()}}
+{\footnotesize\ttfamily void Sandbox\+::\+User\+Menu\+::\+Pre\+Login\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Displays the pre-\/login menu. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_adbf44098b0bf5e571f5f5d70cd990a5b}\label{class_sandbox_1_1_user_menu_adbf44098b0bf5e571f5f5d70cd990a5b} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!Register@{Register}}
+\index{Register@{Register}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Sandbox\+::\+User\+Menu\+::\+Register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Displays the register menu. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_ac19271c8271ccd76021ce3bb23750e50}\label{class_sandbox_1_1_user_menu_ac19271c8271ccd76021ce3bb23750e50} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!Start@{Start}}
+\index{Start@{Start}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Sandbox\+::\+User\+Menu\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the user menu. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_sandbox_1_1_user_menu_a7a286a18e48c13458211619e5019c34a}\label{class_sandbox_1_1_user_menu_a7a286a18e48c13458211619e5019c34a} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!m\_Database@{m\_Database}}
+\index{m\_Database@{m\_Database}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{m\_Database}{m\_Database}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{SQLWRAP\+::\+Database}}\texorpdfstring{$\ast$}{*} Sandbox\+::\+User\+Menu\+::m\+\_\+\+Database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Database object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\Hypertarget{class_sandbox_1_1_user_menu_a67b252567562f2413a24b8c4ba43ef9b}\label{class_sandbox_1_1_user_menu_a67b252567562f2413a24b8c4ba43ef9b} 
+\index{Sandbox::UserMenu@{Sandbox::UserMenu}!m\_User@{m\_User}}
+\index{m\_User@{m\_User}!Sandbox::UserMenu@{Sandbox::UserMenu}}
+\doxysubsubsection{\texorpdfstring{m\_User}{m\_User}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}}\texorpdfstring{$\ast$}{*} Sandbox\+::\+User\+Menu\+::m\+\_\+\+User\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The User object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Sandbox/\+User\+Menu/\mbox{\hyperlink{_user_menu_8h}{User\+Menu.\+h}}\item 
+Source/\+Sandbox/\+User\+Menu/\mbox{\hyperlink{_user_menu_8cpp}{User\+Menu.\+cpp}}\end{DoxyCompactItemize}

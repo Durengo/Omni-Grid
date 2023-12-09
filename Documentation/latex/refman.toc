@@ -1,0 +1,551 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Todo List}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Namespace Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}OGRID Namespace Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Enumeration Type Documentation}{13}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}GameOverType}{13}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}GameState}{13}{subsubsection.6.1.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.1.3}Justify}{13}{subsubsection.6.1.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.1.4}PlayerType}{14}{subsubsection.6.1.1.4}%
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{14}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}PlayerNameAndPtrVecToString()}{14}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}PlayerTypeEnumToString()}{14}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}PlayerTypeStringToEnum()}{15}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}PlayerVecToString()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{15}{subsubsection.6.1.2.4}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}PlayerVecToString()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{15}{subsubsection.6.1.2.5}%
+\contentsline {section}{\numberline {6.2}Sandbox Namespace Reference}{16}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Class Documentation}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Black\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece Class Reference}{17}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Constructor \& Destructor Documentation}{18}{subsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}BlackPiece()}{18}{subsubsection.7.1.1.1}%
+\contentsline {section}{\numberline {7.2}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Black\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers Class Reference}{19}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Constructor \& Destructor Documentation}{20}{subsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.1.1}BlackPieceCheckers()}{20}{subsubsection.7.2.1.1}%
+\contentsline {section}{\numberline {7.3}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Button Struct Reference}{20}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{21}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Constructor \& Destructor Documentation}{22}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}Button()}{22}{subsubsection.7.3.2.1}%
+\contentsline {subsection}{\numberline {7.3.3}Member Function Documentation}{22}{subsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.1}Draw()}{22}{subsubsection.7.3.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.3.2}SetEnabled()}{22}{subsubsection.7.3.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3.3}Update()}{23}{subsubsection.7.3.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Member Data Documentation}{23}{subsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.4.1}bounds}{23}{subsubsection.7.3.4.1}%
+\contentsline {subsubsection}{\numberline {7.3.4.2}hoverColor}{23}{subsubsection.7.3.4.2}%
+\contentsline {subsubsection}{\numberline {7.3.4.3}isEnabled}{23}{subsubsection.7.3.4.3}%
+\contentsline {subsubsection}{\numberline {7.3.4.4}normalColor}{24}{subsubsection.7.3.4.4}%
+\contentsline {subsubsection}{\numberline {7.3.4.5}onClick}{24}{subsubsection.7.3.4.5}%
+\contentsline {subsubsection}{\numberline {7.3.4.6}pressedColor}{24}{subsubsection.7.3.4.6}%
+\contentsline {subsubsection}{\numberline {7.3.4.7}text}{24}{subsubsection.7.3.4.7}%
+\contentsline {section}{\numberline {7.4}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Cell Struct Reference}{25}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{25}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Member Data Documentation}{26}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}m\_Col}{26}{subsubsection.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4.2.2}m\_Piece}{26}{subsubsection.7.4.2.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.3}m\_Row}{26}{subsubsection.7.4.2.3}%
+\contentsline {section}{\numberline {7.5}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Checkers Class Reference}{26}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Constructor \& Destructor Documentation}{30}{subsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.1.1}Checkers()}{30}{subsubsection.7.5.1.1}%
+\contentsline {subsubsection}{\numberline {7.5.1.2}$\sim $Checkers()}{30}{subsubsection.7.5.1.2}%
+\contentsline {subsection}{\numberline {7.5.2}Member Function Documentation}{30}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}AddAsSuperPiece()}{30}{subsubsection.7.5.2.1}%
+\contentsline {subsubsection}{\numberline {7.5.2.2}AddPieceToPieceManager()}{30}{subsubsection.7.5.2.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.3}DrawCell()}{30}{subsubsection.7.5.2.3}%
+\contentsline {subsubsection}{\numberline {7.5.2.4}DrawPiece()}{31}{subsubsection.7.5.2.4}%
+\contentsline {subsubsection}{\numberline {7.5.2.5}GetPiecePosition()}{31}{subsubsection.7.5.2.5}%
+\contentsline {subsubsection}{\numberline {7.5.2.6}Initialize()}{31}{subsubsection.7.5.2.6}%
+\contentsline {subsubsection}{\numberline {7.5.2.7}IsDrawCondition()}{31}{subsubsection.7.5.2.7}%
+\contentsline {subsubsection}{\numberline {7.5.2.8}IsSuperPiece()}{31}{subsubsection.7.5.2.8}%
+\contentsline {subsubsection}{\numberline {7.5.2.9}IsWinningCondition()}{32}{subsubsection.7.5.2.9}%
+\contentsline {subsubsection}{\numberline {7.5.2.10}OnGUIUpdateGrid()}{32}{subsubsection.7.5.2.10}%
+\contentsline {subsubsection}{\numberline {7.5.2.11}OnGUIUpdateGridHover()}{32}{subsubsection.7.5.2.11}%
+\contentsline {subsubsection}{\numberline {7.5.2.12}RemovePieceFromPieceManager()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{33}{subsubsection.7.5.2.12}%
+\contentsline {subsubsection}{\numberline {7.5.2.13}RemovePieceFromPieceManager()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{33}{subsubsection.7.5.2.13}%
+\contentsline {subsubsection}{\numberline {7.5.2.14}RemoveSuperPiece()}{33}{subsubsection.7.5.2.14}%
+\contentsline {subsubsection}{\numberline {7.5.2.15}SetPiecePosition()}{33}{subsubsection.7.5.2.15}%
+\contentsline {subsubsection}{\numberline {7.5.2.16}SetupBoard()}{33}{subsubsection.7.5.2.16}%
+\contentsline {subsubsection}{\numberline {7.5.2.17}SetupPlayers()}{33}{subsubsection.7.5.2.17}%
+\contentsline {subsubsection}{\numberline {7.5.2.18}TryMakeMove()}{33}{subsubsection.7.5.2.18}%
+\contentsline {subsection}{\numberline {7.5.3}Member Data Documentation}{34}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}alpha}{34}{subsubsection.7.5.3.1}%
+\contentsline {subsubsection}{\numberline {7.5.3.2}alphaSpeed}{34}{subsubsection.7.5.3.2}%
+\contentsline {subsubsection}{\numberline {7.5.3.3}m\_Pieces}{34}{subsubsection.7.5.3.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.4}m\_SelectedPiece}{34}{subsubsection.7.5.3.4}%
+\contentsline {subsubsection}{\numberline {7.5.3.5}m\_Supers}{34}{subsubsection.7.5.3.5}%
+\contentsline {section}{\numberline {7.6}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check Class Reference}{35}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Member Function Documentation}{36}{subsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.1.1}CheckWin()}{36}{subsubsection.7.6.1.1}%
+\contentsline {subsubsection}{\numberline {7.6.1.2}IsDraw()}{36}{subsubsection.7.6.1.2}%
+\contentsline {subsection}{\numberline {7.6.2}Member Data Documentation}{37}{subsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.2.1}m\_GameStateExtensions}{37}{subsubsection.7.6.2.1}%
+\contentsline {section}{\numberline {7.7}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Configuration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Builder Struct Reference}{37}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{38}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{38}{subsection.7.7.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.1}$\sim $ConfigurationBuilder()}{38}{subsubsection.7.7.2.1}%
+\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{38}{subsection.7.7.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.1}addPlayer()}{38}{subsubsection.7.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.7.3.2}build()}{39}{subsubsection.7.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.7.3.3}setGameDescription()}{39}{subsubsection.7.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.4}setGameName()}{40}{subsubsection.7.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.7.3.5}setGrid()}{40}{subsubsection.7.7.3.5}%
+\contentsline {subsubsection}{\numberline {7.7.3.6}setMaxPlayers()}{41}{subsubsection.7.7.3.6}%
+\contentsline {section}{\numberline {7.8}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four Class Reference}{41}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Constructor \& Destructor Documentation}{45}{subsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.1.1}ConnectFour()}{45}{subsubsection.7.8.1.1}%
+\contentsline {subsubsection}{\numberline {7.8.1.2}$\sim $ConnectFour()}{45}{subsubsection.7.8.1.2}%
+\contentsline {subsection}{\numberline {7.8.2}Member Function Documentation}{45}{subsection.7.8.2}%
+\contentsline {subsubsection}{\numberline {7.8.2.1}DrawCircle()}{45}{subsubsection.7.8.2.1}%
+\contentsline {subsubsection}{\numberline {7.8.2.2}Initialize()}{46}{subsubsection.7.8.2.2}%
+\contentsline {subsubsection}{\numberline {7.8.2.3}IsDrawCondition()}{46}{subsubsection.7.8.2.3}%
+\contentsline {subsubsection}{\numberline {7.8.2.4}IsWinningCondition()}{46}{subsubsection.7.8.2.4}%
+\contentsline {subsubsection}{\numberline {7.8.2.5}OnGUIUpdateGrid()}{47}{subsubsection.7.8.2.5}%
+\contentsline {subsubsection}{\numberline {7.8.2.6}OnGUIUpdateGridHover()}{47}{subsubsection.7.8.2.6}%
+\contentsline {subsubsection}{\numberline {7.8.2.7}SetupPlayers()}{47}{subsubsection.7.8.2.7}%
+\contentsline {subsubsection}{\numberline {7.8.2.8}TryMakeMove()}{48}{subsubsection.7.8.2.8}%
+\contentsline {subsection}{\numberline {7.8.3}Member Data Documentation}{48}{subsection.7.8.3}%
+\contentsline {subsubsection}{\numberline {7.8.3.1}alpha}{48}{subsubsection.7.8.3.1}%
+\contentsline {subsubsection}{\numberline {7.8.3.2}alphaSpeed}{48}{subsubsection.7.8.3.2}%
+\contentsline {section}{\numberline {7.9}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check Class Reference}{48}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Member Function Documentation}{49}{subsection.7.9.1}%
+\contentsline {subsubsection}{\numberline {7.9.1.1}CheckWin()}{49}{subsubsection.7.9.1.1}%
+\contentsline {subsubsection}{\numberline {7.9.1.2}IsDraw()}{50}{subsubsection.7.9.1.2}%
+\contentsline {subsection}{\numberline {7.9.2}Member Data Documentation}{50}{subsection.7.9.2}%
+\contentsline {subsubsection}{\numberline {7.9.2.1}m\_GameStateExtensions}{50}{subsubsection.7.9.2.1}%
+\contentsline {section}{\numberline {7.10}fmt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::formatter$<$ OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Grid $>$ Struct Reference}{51}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{51}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}Member Function Documentation}{52}{subsection.7.10.2}%
+\contentsline {subsubsection}{\numberline {7.10.2.1}format()}{52}{subsubsection.7.10.2.1}%
+\contentsline {subsubsection}{\numberline {7.10.2.2}parse()}{52}{subsubsection.7.10.2.2}%
+\contentsline {section}{\numberline {7.11}fmt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::formatter$<$ OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Player $>$ Struct Reference}{52}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{53}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}Member Function Documentation}{53}{subsection.7.11.2}%
+\contentsline {subsubsection}{\numberline {7.11.2.1}format()}{53}{subsubsection.7.11.2.1}%
+\contentsline {subsubsection}{\numberline {7.11.2.2}parse()}{53}{subsubsection.7.11.2.2}%
+\contentsline {section}{\numberline {7.12}fmt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::formatter$<$ OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Name\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}And\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ptr $>$ Struct Reference}{54}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{54}{subsection.7.12.1}%
+\contentsline {subsection}{\numberline {7.12.2}Member Function Documentation}{55}{subsection.7.12.2}%
+\contentsline {subsubsection}{\numberline {7.12.2.1}format()}{55}{subsubsection.7.12.2.1}%
+\contentsline {subsubsection}{\numberline {7.12.2.2}parse()}{55}{subsubsection.7.12.2.2}%
+\contentsline {section}{\numberline {7.13}fmt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::formatter$<$ OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Struct Reference}{55}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{56}{subsection.7.13.1}%
+\contentsline {subsection}{\numberline {7.13.2}Member Function Documentation}{56}{subsection.7.13.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.1}format()}{56}{subsubsection.7.13.2.1}%
+\contentsline {section}{\numberline {7.14}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration Struct Reference}{57}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{58}{subsection.7.14.1}%
+\contentsline {subsection}{\numberline {7.14.2}Member Data Documentation}{58}{subsection.7.14.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.1}gameDescription}{58}{subsubsection.7.14.2.1}%
+\contentsline {subsubsection}{\numberline {7.14.2.2}gameName}{58}{subsubsection.7.14.2.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.3}grid}{58}{subsubsection.7.14.2.3}%
+\contentsline {subsubsection}{\numberline {7.14.2.4}maxPlayers}{59}{subsubsection.7.14.2.4}%
+\contentsline {subsubsection}{\numberline {7.14.2.5}playerPairs}{59}{subsubsection.7.14.2.5}%
+\contentsline {subsubsection}{\numberline {7.14.2.6}players}{59}{subsubsection.7.14.2.6}%
+\contentsline {section}{\numberline {7.15}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Builder Class Reference}{60}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{61}{subsection.7.15.1}%
+\contentsline {subsection}{\numberline {7.15.2}Constructor \& Destructor Documentation}{62}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}GameConfigurationBuilder()}{62}{subsubsection.7.15.2.1}%
+\contentsline {subsubsection}{\numberline {7.15.2.2}$\sim $GameConfigurationBuilder()}{62}{subsubsection.7.15.2.2}%
+\contentsline {subsection}{\numberline {7.15.3}Member Function Documentation}{62}{subsection.7.15.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.1}addPlayer()}{62}{subsubsection.7.15.3.1}%
+\contentsline {subsubsection}{\numberline {7.15.3.2}build()}{62}{subsubsection.7.15.3.2}%
+\contentsline {subsubsection}{\numberline {7.15.3.3}setGameDescription()}{63}{subsubsection.7.15.3.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.4}setGameName()}{63}{subsubsection.7.15.3.4}%
+\contentsline {subsubsection}{\numberline {7.15.3.5}setGrid()}{64}{subsubsection.7.15.3.5}%
+\contentsline {subsubsection}{\numberline {7.15.3.6}setMaxPlayers()}{64}{subsubsection.7.15.3.6}%
+\contentsline {subsection}{\numberline {7.15.4}Member Data Documentation}{65}{subsection.7.15.4}%
+\contentsline {subsubsection}{\numberline {7.15.4.1}m\_GameConfiguration}{65}{subsubsection.7.15.4.1}%
+\contentsline {section}{\numberline {7.16}Sandbox\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Initializer Class Reference}{65}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{65}{subsection.7.16.1}%
+\contentsline {subsection}{\numberline {7.16.2}Member Function Documentation}{66}{subsection.7.16.2}%
+\contentsline {subsubsection}{\numberline {7.16.2.1}Start()}{66}{subsubsection.7.16.2.1}%
+\contentsline {section}{\numberline {7.17}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checker Class Reference}{66}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{67}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Constructor \& Destructor Documentation}{67}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}GameStateChecker()}{67}{subsubsection.7.17.2.1}%
+\contentsline {subsubsection}{\numberline {7.17.2.2}$\sim $GameStateChecker()}{68}{subsubsection.7.17.2.2}%
+\contentsline {subsection}{\numberline {7.17.3}Member Function Documentation}{68}{subsection.7.17.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.1}CheckWin()}{68}{subsubsection.7.17.3.1}%
+\contentsline {subsubsection}{\numberline {7.17.3.2}GetTopMostPiecePositionInColumn()}{68}{subsubsection.7.17.3.2}%
+\contentsline {subsubsection}{\numberline {7.17.3.3}IsColumnOccupied()}{68}{subsubsection.7.17.3.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.4}IsDraw()}{69}{subsubsection.7.17.3.4}%
+\contentsline {subsection}{\numberline {7.17.4}Member Data Documentation}{69}{subsection.7.17.4}%
+\contentsline {subsubsection}{\numberline {7.17.4.1}m\_GameState}{69}{subsubsection.7.17.4.1}%
+\contentsline {section}{\numberline {7.18}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Extensions Class Reference}{69}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{70}{subsection.7.18.1}%
+\contentsline {subsection}{\numberline {7.18.2}Member Function Documentation}{70}{subsection.7.18.2}%
+\contentsline {subsubsection}{\numberline {7.18.2.1}CheckForRecurringPieceInAntiDiagonal()}{70}{subsubsection.7.18.2.1}%
+\contentsline {subsubsection}{\numberline {7.18.2.2}CheckForRecurringPieceInCol()}{71}{subsubsection.7.18.2.2}%
+\contentsline {subsubsection}{\numberline {7.18.2.3}CheckForRecurringPieceInDiagonal()}{71}{subsubsection.7.18.2.3}%
+\contentsline {subsubsection}{\numberline {7.18.2.4}CheckForRecurringPieceInRow()}{72}{subsubsection.7.18.2.4}%
+\contentsline {subsubsection}{\numberline {7.18.2.5}CheckForRecurringStringInAntiDiagonal()}{72}{subsubsection.7.18.2.5}%
+\contentsline {subsubsection}{\numberline {7.18.2.6}CheckForRecurringStringInCol()}{73}{subsubsection.7.18.2.6}%
+\contentsline {subsubsection}{\numberline {7.18.2.7}CheckForRecurringStringInDiagonal()}{73}{subsubsection.7.18.2.7}%
+\contentsline {subsubsection}{\numberline {7.18.2.8}CheckForRecurringStringInRow()}{74}{subsubsection.7.18.2.8}%
+\contentsline {subsubsection}{\numberline {7.18.2.9}CheckIfAllSpotsFilled()}{74}{subsubsection.7.18.2.9}%
+\contentsline {section}{\numberline {7.19}Sandbox\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window$<$ T $>$ Class Template Reference}{75}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{76}{subsection.7.19.1}%
+\contentsline {subsection}{\numberline {7.19.2}Constructor \& Destructor Documentation}{77}{subsection.7.19.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.1}GameWindow()}{77}{subsubsection.7.19.2.1}%
+\contentsline {subsubsection}{\numberline {7.19.2.2}$\sim $GameWindow()}{77}{subsubsection.7.19.2.2}%
+\contentsline {subsection}{\numberline {7.19.3}Member Function Documentation}{77}{subsection.7.19.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.1}DrawGrid()}{77}{subsubsection.7.19.3.1}%
+\contentsline {subsubsection}{\numberline {7.19.3.2}GameOver()}{78}{subsubsection.7.19.3.2}%
+\contentsline {subsubsection}{\numberline {7.19.3.3}GetCellFromMouse()}{78}{subsubsection.7.19.3.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.4}InProgress()}{78}{subsubsection.7.19.3.4}%
+\contentsline {subsubsection}{\numberline {7.19.3.5}MouseButtonPress()}{79}{subsubsection.7.19.3.5}%
+\contentsline {subsubsection}{\numberline {7.19.3.6}OnUpdate()}{79}{subsubsection.7.19.3.6}%
+\contentsline {subsubsection}{\numberline {7.19.3.7}PreRun()}{79}{subsubsection.7.19.3.7}%
+\contentsline {subsubsection}{\numberline {7.19.3.8}Run()}{79}{subsubsection.7.19.3.8}%
+\contentsline {subsubsection}{\numberline {7.19.3.9}Start()}{80}{subsubsection.7.19.3.9}%
+\contentsline {subsubsection}{\numberline {7.19.3.10}UpdateWindowDimensions()}{80}{subsubsection.7.19.3.10}%
+\contentsline {subsection}{\numberline {7.19.4}Member Data Documentation}{80}{subsection.7.19.4}%
+\contentsline {subsubsection}{\numberline {7.19.4.1}currentPlayerText}{80}{subsubsection.7.19.4.1}%
+\contentsline {subsubsection}{\numberline {7.19.4.2}drawText}{80}{subsubsection.7.19.4.2}%
+\contentsline {subsubsection}{\numberline {7.19.4.3}gameOverText}{81}{subsubsection.7.19.4.3}%
+\contentsline {subsubsection}{\numberline {7.19.4.4}m\_Game}{81}{subsubsection.7.19.4.4}%
+\contentsline {subsubsection}{\numberline {7.19.4.5}m\_Running}{81}{subsubsection.7.19.4.5}%
+\contentsline {subsubsection}{\numberline {7.19.4.6}restartButton}{81}{subsubsection.7.19.4.6}%
+\contentsline {subsubsection}{\numberline {7.19.4.7}turnText}{82}{subsubsection.7.19.4.7}%
+\contentsline {subsubsection}{\numberline {7.19.4.8}winnerText}{82}{subsubsection.7.19.4.8}%
+\contentsline {section}{\numberline {7.20}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Grid Class Reference}{82}{section.7.20}%
+\contentsline {subsection}{\numberline {7.20.1}Detailed Description}{84}{subsection.7.20.1}%
+\contentsline {subsection}{\numberline {7.20.2}Constructor \& Destructor Documentation}{85}{subsection.7.20.2}%
+\contentsline {subsubsection}{\numberline {7.20.2.1}Grid()}{85}{subsubsection.7.20.2.1}%
+\contentsline {subsubsection}{\numberline {7.20.2.2}$\sim $Grid()}{85}{subsubsection.7.20.2.2}%
+\contentsline {subsection}{\numberline {7.20.3}Member Function Documentation}{85}{subsection.7.20.3}%
+\contentsline {subsubsection}{\numberline {7.20.3.1}GetCellAt()}{85}{subsubsection.7.20.3.1}%
+\contentsline {subsubsection}{\numberline {7.20.3.2}GetCols()}{86}{subsubsection.7.20.3.2}%
+\contentsline {subsubsection}{\numberline {7.20.3.3}GetDefaultPiece()}{86}{subsubsection.7.20.3.3}%
+\contentsline {subsubsection}{\numberline {7.20.3.4}GetGrid()}{87}{subsubsection.7.20.3.4}%
+\contentsline {subsubsection}{\numberline {7.20.3.5}GetGridAsString()}{87}{subsubsection.7.20.3.5}%
+\contentsline {subsubsection}{\numberline {7.20.3.6}GetGridSize()}{87}{subsubsection.7.20.3.6}%
+\contentsline {subsubsection}{\numberline {7.20.3.7}GetLastChangedChar()}{88}{subsubsection.7.20.3.7}%
+\contentsline {subsubsection}{\numberline {7.20.3.8}GetPieceAt()}{88}{subsubsection.7.20.3.8}%
+\contentsline {subsubsection}{\numberline {7.20.3.9}GetRows()}{88}{subsubsection.7.20.3.9}%
+\contentsline {subsubsection}{\numberline {7.20.3.10}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{89}{subsubsection.7.20.3.10}%
+\contentsline {subsubsection}{\numberline {7.20.3.11}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{89}{subsubsection.7.20.3.11}%
+\contentsline {subsubsection}{\numberline {7.20.3.12}ResetGrid()}{90}{subsubsection.7.20.3.12}%
+\contentsline {subsubsection}{\numberline {7.20.3.13}ResetGridWithNewDefaultPiece()}{90}{subsubsection.7.20.3.13}%
+\contentsline {subsubsection}{\numberline {7.20.3.14}ResetGridWithNewSize()}{90}{subsubsection.7.20.3.14}%
+\contentsline {subsubsection}{\numberline {7.20.3.15}SetCellAt()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{91}{subsubsection.7.20.3.15}%
+\contentsline {subsubsection}{\numberline {7.20.3.16}SetCellAt()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{91}{subsubsection.7.20.3.16}%
+\contentsline {subsubsection}{\numberline {7.20.3.17}SetCols()}{92}{subsubsection.7.20.3.17}%
+\contentsline {subsubsection}{\numberline {7.20.3.18}SetDefaultPiece()}{92}{subsubsection.7.20.3.18}%
+\contentsline {subsubsection}{\numberline {7.20.3.19}SetGrid()}{93}{subsubsection.7.20.3.19}%
+\contentsline {subsubsection}{\numberline {7.20.3.20}SetPieceAt()}{93}{subsubsection.7.20.3.20}%
+\contentsline {subsubsection}{\numberline {7.20.3.21}SetRows()}{94}{subsubsection.7.20.3.21}%
+\contentsline {subsection}{\numberline {7.20.4}Member Data Documentation}{94}{subsection.7.20.4}%
+\contentsline {subsubsection}{\numberline {7.20.4.1}cols}{94}{subsubsection.7.20.4.1}%
+\contentsline {subsubsection}{\numberline {7.20.4.2}defaultPiece}{94}{subsubsection.7.20.4.2}%
+\contentsline {subsubsection}{\numberline {7.20.4.3}grid}{95}{subsubsection.7.20.4.3}%
+\contentsline {subsubsection}{\numberline {7.20.4.4}lastChangedChar}{95}{subsubsection.7.20.4.4}%
+\contentsline {subsubsection}{\numberline {7.20.4.5}rows}{95}{subsubsection.7.20.4.5}%
+\contentsline {section}{\numberline {7.21}GUIInfo Struct Reference}{95}{section.7.21}%
+\contentsline {subsection}{\numberline {7.21.1}Detailed Description}{96}{subsection.7.21.1}%
+\contentsline {subsection}{\numberline {7.21.2}Member Data Documentation}{96}{subsection.7.21.2}%
+\contentsline {subsubsection}{\numberline {7.21.2.1}cellSize}{96}{subsubsection.7.21.2.1}%
+\contentsline {subsubsection}{\numberline {7.21.2.2}height}{97}{subsubsection.7.21.2.2}%
+\contentsline {subsubsection}{\numberline {7.21.2.3}lineThickness}{97}{subsubsection.7.21.2.3}%
+\contentsline {subsubsection}{\numberline {7.21.2.4}margin}{97}{subsubsection.7.21.2.4}%
+\contentsline {subsubsection}{\numberline {7.21.2.5}targetFPS}{97}{subsubsection.7.21.2.5}%
+\contentsline {subsubsection}{\numberline {7.21.2.6}width}{97}{subsubsection.7.21.2.6}%
+\contentsline {subsubsection}{\numberline {7.21.2.7}windowName}{98}{subsubsection.7.21.2.7}%
+\contentsline {section}{\numberline {7.22}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::IAttack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{98}{section.7.22}%
+\contentsline {subsection}{\numberline {7.22.1}Detailed Description}{98}{subsection.7.22.1}%
+\contentsline {subsection}{\numberline {7.22.2}Constructor \& Destructor Documentation}{99}{subsection.7.22.2}%
+\contentsline {subsubsection}{\numberline {7.22.2.1}$\sim $IAttackRule()}{99}{subsubsection.7.22.2.1}%
+\contentsline {subsection}{\numberline {7.22.3}Member Function Documentation}{99}{subsection.7.22.3}%
+\contentsline {subsubsection}{\numberline {7.22.3.1}IsValidAttack()}{99}{subsubsection.7.22.3.1}%
+\contentsline {section}{\numberline {7.23}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::IGame Class Reference}{100}{section.7.23}%
+\contentsline {subsection}{\numberline {7.23.1}Detailed Description}{103}{subsection.7.23.1}%
+\contentsline {subsection}{\numberline {7.23.2}Constructor \& Destructor Documentation}{103}{subsection.7.23.2}%
+\contentsline {subsubsection}{\numberline {7.23.2.1}IGame()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{103}{subsubsection.7.23.2.1}%
+\contentsline {subsubsection}{\numberline {7.23.2.2}IGame()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{103}{subsubsection.7.23.2.2}%
+\contentsline {subsubsection}{\numberline {7.23.2.3}$\sim $IGame()}{104}{subsubsection.7.23.2.3}%
+\contentsline {subsection}{\numberline {7.23.3}Member Function Documentation}{104}{subsection.7.23.3}%
+\contentsline {subsubsection}{\numberline {7.23.3.1}CheckGameOverState()}{104}{subsubsection.7.23.3.1}%
+\contentsline {subsubsection}{\numberline {7.23.3.2}GetCurrentPlayer()}{104}{subsubsection.7.23.3.2}%
+\contentsline {subsubsection}{\numberline {7.23.3.3}GetCurrentTurn()}{105}{subsubsection.7.23.3.3}%
+\contentsline {subsubsection}{\numberline {7.23.3.4}GetGameConfiguration()}{105}{subsubsection.7.23.3.4}%
+\contentsline {subsubsection}{\numberline {7.23.3.5}GetGameName()}{105}{subsubsection.7.23.3.5}%
+\contentsline {subsubsection}{\numberline {7.23.3.6}GetGameOverType()}{106}{subsubsection.7.23.3.6}%
+\contentsline {subsubsection}{\numberline {7.23.3.7}GetGameState()}{106}{subsubsection.7.23.3.7}%
+\contentsline {subsubsection}{\numberline {7.23.3.8}GetGameStateChecker()}{106}{subsubsection.7.23.3.8}%
+\contentsline {subsubsection}{\numberline {7.23.3.9}GetGrid()}{107}{subsubsection.7.23.3.9}%
+\contentsline {subsubsection}{\numberline {7.23.3.10}GetGUIInfo()}{107}{subsubsection.7.23.3.10}%
+\contentsline {subsubsection}{\numberline {7.23.3.11}GetPlayerNames()}{107}{subsubsection.7.23.3.11}%
+\contentsline {subsubsection}{\numberline {7.23.3.12}GetPlayerPair()}{107}{subsubsection.7.23.3.12}%
+\contentsline {subsubsection}{\numberline {7.23.3.13}GetPlayerPairs()}{108}{subsubsection.7.23.3.13}%
+\contentsline {subsubsection}{\numberline {7.23.3.14}GetPlayerPtrs()}{108}{subsubsection.7.23.3.14}%
+\contentsline {subsubsection}{\numberline {7.23.3.15}GetPlayers()}{108}{subsubsection.7.23.3.15}%
+\contentsline {subsubsection}{\numberline {7.23.3.16}GetWinner()}{109}{subsubsection.7.23.3.16}%
+\contentsline {subsubsection}{\numberline {7.23.3.17}Initialize()}{109}{subsubsection.7.23.3.17}%
+\contentsline {subsubsection}{\numberline {7.23.3.18}IsDrawCondition()}{109}{subsubsection.7.23.3.18}%
+\contentsline {subsubsection}{\numberline {7.23.3.19}IsWinningCondition()}{109}{subsubsection.7.23.3.19}%
+\contentsline {subsubsection}{\numberline {7.23.3.20}MakeMove()}{110}{subsubsection.7.23.3.20}%
+\contentsline {subsubsection}{\numberline {7.23.3.21}OnGUIUpdateGrid()}{110}{subsubsection.7.23.3.21}%
+\contentsline {subsubsection}{\numberline {7.23.3.22}OnGUIUpdateGridHover()}{110}{subsubsection.7.23.3.22}%
+\contentsline {subsubsection}{\numberline {7.23.3.23}PrintPlayerMoves()}{110}{subsubsection.7.23.3.23}%
+\contentsline {subsubsection}{\numberline {7.23.3.24}PrintPlayersTurnOrder()}{111}{subsubsection.7.23.3.24}%
+\contentsline {subsubsection}{\numberline {7.23.3.25}Reset()}{111}{subsubsection.7.23.3.25}%
+\contentsline {subsubsection}{\numberline {7.23.3.26}ResetGame()}{111}{subsubsection.7.23.3.26}%
+\contentsline {subsubsection}{\numberline {7.23.3.27}ResetGrid()}{111}{subsubsection.7.23.3.27}%
+\contentsline {subsubsection}{\numberline {7.23.3.28}ResetPlayers()}{111}{subsubsection.7.23.3.28}%
+\contentsline {subsubsection}{\numberline {7.23.3.29}SetCurrentPlayer()}{111}{subsubsection.7.23.3.29}%
+\contentsline {subsubsection}{\numberline {7.23.3.30}SetGameConfiguration()}{112}{subsubsection.7.23.3.30}%
+\contentsline {subsubsection}{\numberline {7.23.3.31}SetGameState()}{112}{subsubsection.7.23.3.31}%
+\contentsline {subsubsection}{\numberline {7.23.3.32}SetGameStateChecker()}{112}{subsubsection.7.23.3.32}%
+\contentsline {subsubsection}{\numberline {7.23.3.33}SetGUIInfo()}{113}{subsubsection.7.23.3.33}%
+\contentsline {subsubsection}{\numberline {7.23.3.34}SetPlayerPairs()}{113}{subsubsection.7.23.3.34}%
+\contentsline {subsubsection}{\numberline {7.23.3.35}SetRandomizeTurnOrder()}{113}{subsubsection.7.23.3.35}%
+\contentsline {subsubsection}{\numberline {7.23.3.36}SetupGame()}{114}{subsubsection.7.23.3.36}%
+\contentsline {subsubsection}{\numberline {7.23.3.37}SetupPlayers()}{114}{subsubsection.7.23.3.37}%
+\contentsline {subsubsection}{\numberline {7.23.3.38}StartGame()}{114}{subsubsection.7.23.3.38}%
+\contentsline {subsubsection}{\numberline {7.23.3.39}SwapPlayerPositions()}{114}{subsubsection.7.23.3.39}%
+\contentsline {subsubsection}{\numberline {7.23.3.40}SwitchPlayer()}{115}{subsubsection.7.23.3.40}%
+\contentsline {subsubsection}{\numberline {7.23.3.41}TryMakeMove()}{115}{subsubsection.7.23.3.41}%
+\contentsline {subsection}{\numberline {7.23.4}Member Data Documentation}{115}{subsection.7.23.4}%
+\contentsline {subsubsection}{\numberline {7.23.4.1}m\_currentGameState}{115}{subsubsection.7.23.4.1}%
+\contentsline {subsubsection}{\numberline {7.23.4.2}m\_currentPlayer}{116}{subsubsection.7.23.4.2}%
+\contentsline {subsubsection}{\numberline {7.23.4.3}m\_currentTurn}{116}{subsubsection.7.23.4.3}%
+\contentsline {subsubsection}{\numberline {7.23.4.4}m\_GameConfiguration}{116}{subsubsection.7.23.4.4}%
+\contentsline {subsubsection}{\numberline {7.23.4.5}m\_gameOverType}{116}{subsubsection.7.23.4.5}%
+\contentsline {subsubsection}{\numberline {7.23.4.6}m\_gameState}{117}{subsubsection.7.23.4.6}%
+\contentsline {subsubsection}{\numberline {7.23.4.7}m\_guiInfo}{117}{subsubsection.7.23.4.7}%
+\contentsline {subsubsection}{\numberline {7.23.4.8}m\_randomizeTurnOrder}{117}{subsubsection.7.23.4.8}%
+\contentsline {subsubsection}{\numberline {7.23.4.9}m\_totalTurns}{117}{subsubsection.7.23.4.9}%
+\contentsline {subsubsection}{\numberline {7.23.4.10}m\_winner}{118}{subsubsection.7.23.4.10}%
+\contentsline {section}{\numberline {7.24}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::IGame\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Class Reference}{118}{section.7.24}%
+\contentsline {subsection}{\numberline {7.24.1}Detailed Description}{118}{subsection.7.24.1}%
+\contentsline {subsection}{\numberline {7.24.2}Constructor \& Destructor Documentation}{119}{subsection.7.24.2}%
+\contentsline {subsubsection}{\numberline {7.24.2.1}$\sim $IGameState()}{119}{subsubsection.7.24.2.1}%
+\contentsline {subsection}{\numberline {7.24.3}Member Function Documentation}{119}{subsection.7.24.3}%
+\contentsline {subsubsection}{\numberline {7.24.3.1}CheckWin()}{119}{subsubsection.7.24.3.1}%
+\contentsline {subsubsection}{\numberline {7.24.3.2}IsDraw()}{119}{subsubsection.7.24.3.2}%
+\contentsline {section}{\numberline {7.25}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::IMove\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{120}{section.7.25}%
+\contentsline {subsection}{\numberline {7.25.1}Detailed Description}{120}{subsection.7.25.1}%
+\contentsline {subsection}{\numberline {7.25.2}Constructor \& Destructor Documentation}{121}{subsection.7.25.2}%
+\contentsline {subsubsection}{\numberline {7.25.2.1}$\sim $IMoveRule()}{121}{subsubsection.7.25.2.1}%
+\contentsline {subsection}{\numberline {7.25.3}Member Function Documentation}{121}{subsection.7.25.3}%
+\contentsline {subsubsection}{\numberline {7.25.3.1}IsValidMove()}{121}{subsubsection.7.25.3.1}%
+\contentsline {section}{\numberline {7.26}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Jump\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Normal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{122}{section.7.26}%
+\contentsline {subsection}{\numberline {7.26.1}Detailed Description}{123}{subsection.7.26.1}%
+\contentsline {subsection}{\numberline {7.26.2}Member Function Documentation}{123}{subsection.7.26.2}%
+\contentsline {subsubsection}{\numberline {7.26.2.1}IsValidAttack()}{123}{subsubsection.7.26.2.1}%
+\contentsline {section}{\numberline {7.27}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Jump\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Super\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{124}{section.7.27}%
+\contentsline {subsection}{\numberline {7.27.1}Detailed Description}{125}{subsection.7.27.1}%
+\contentsline {subsection}{\numberline {7.27.2}Member Function Documentation}{125}{subsection.7.27.2}%
+\contentsline {subsubsection}{\numberline {7.27.2.1}IsValidAttack()}{125}{subsubsection.7.27.2.1}%
+\contentsline {section}{\numberline {7.28}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Normal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Move\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{126}{section.7.28}%
+\contentsline {subsection}{\numberline {7.28.1}Detailed Description}{127}{subsection.7.28.1}%
+\contentsline {subsection}{\numberline {7.28.2}Member Function Documentation}{127}{subsection.7.28.2}%
+\contentsline {subsubsection}{\numberline {7.28.2.1}IsValidMove()}{127}{subsubsection.7.28.2.1}%
+\contentsline {section}{\numberline {7.29}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::OPiece Class Reference}{128}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Detailed Description}{129}{subsection.7.29.1}%
+\contentsline {subsection}{\numberline {7.29.2}Constructor \& Destructor Documentation}{129}{subsection.7.29.2}%
+\contentsline {subsubsection}{\numberline {7.29.2.1}OPiece()}{129}{subsubsection.7.29.2.1}%
+\contentsline {section}{\numberline {7.30}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Piece Class Reference}{130}{section.7.30}%
+\contentsline {subsection}{\numberline {7.30.1}Detailed Description}{131}{subsection.7.30.1}%
+\contentsline {subsection}{\numberline {7.30.2}Constructor \& Destructor Documentation}{131}{subsection.7.30.2}%
+\contentsline {subsubsection}{\numberline {7.30.2.1}Piece()}{131}{subsubsection.7.30.2.1}%
+\contentsline {subsubsection}{\numberline {7.30.2.2}$\sim $Piece()}{132}{subsubsection.7.30.2.2}%
+\contentsline {subsection}{\numberline {7.30.3}Member Function Documentation}{132}{subsection.7.30.3}%
+\contentsline {subsubsection}{\numberline {7.30.3.1}AddAttackRule()}{132}{subsubsection.7.30.3.1}%
+\contentsline {subsubsection}{\numberline {7.30.3.2}AddMoveRule()}{132}{subsubsection.7.30.3.2}%
+\contentsline {subsubsection}{\numberline {7.30.3.3}GetOwner()}{133}{subsubsection.7.30.3.3}%
+\contentsline {subsubsection}{\numberline {7.30.3.4}GetRepresentation()}{133}{subsubsection.7.30.3.4}%
+\contentsline {subsubsection}{\numberline {7.30.3.5}isValidAttack()}{133}{subsubsection.7.30.3.5}%
+\contentsline {subsubsection}{\numberline {7.30.3.6}isValidMove()}{134}{subsubsection.7.30.3.6}%
+\contentsline {subsubsection}{\numberline {7.30.3.7}SetOwner()}{134}{subsubsection.7.30.3.7}%
+\contentsline {subsection}{\numberline {7.30.4}Member Data Documentation}{135}{subsection.7.30.4}%
+\contentsline {subsubsection}{\numberline {7.30.4.1}m\_attackRules}{135}{subsubsection.7.30.4.1}%
+\contentsline {subsubsection}{\numberline {7.30.4.2}m\_moveRules}{135}{subsubsection.7.30.4.2}%
+\contentsline {subsubsection}{\numberline {7.30.4.3}m\_owner}{135}{subsubsection.7.30.4.3}%
+\contentsline {subsubsection}{\numberline {7.30.4.4}m\_representation}{135}{subsubsection.7.30.4.4}%
+\contentsline {section}{\numberline {7.31}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Player Class Reference}{136}{section.7.31}%
+\contentsline {subsection}{\numberline {7.31.1}Detailed Description}{136}{subsection.7.31.1}%
+\contentsline {subsection}{\numberline {7.31.2}Constructor \& Destructor Documentation}{137}{subsection.7.31.2}%
+\contentsline {subsubsection}{\numberline {7.31.2.1}Player()}{137}{subsubsection.7.31.2.1}%
+\contentsline {subsubsection}{\numberline {7.31.2.2}$\sim $Player()}{137}{subsubsection.7.31.2.2}%
+\contentsline {subsection}{\numberline {7.31.3}Member Function Documentation}{137}{subsection.7.31.3}%
+\contentsline {subsubsection}{\numberline {7.31.3.1}GetPlayerName()}{137}{subsubsection.7.31.3.1}%
+\contentsline {subsubsection}{\numberline {7.31.3.2}GetPlayerType()}{138}{subsubsection.7.31.3.2}%
+\contentsline {subsubsection}{\numberline {7.31.3.3}GetSide()}{138}{subsubsection.7.31.3.3}%
+\contentsline {subsubsection}{\numberline {7.31.3.4}SetPlayerName()}{138}{subsubsection.7.31.3.4}%
+\contentsline {subsubsection}{\numberline {7.31.3.5}SetPlayerType()}{139}{subsubsection.7.31.3.5}%
+\contentsline {subsubsection}{\numberline {7.31.3.6}SetSide()}{139}{subsubsection.7.31.3.6}%
+\contentsline {subsection}{\numberline {7.31.4}Member Data Documentation}{139}{subsection.7.31.4}%
+\contentsline {subsubsection}{\numberline {7.31.4.1}m\_PlayerName}{139}{subsubsection.7.31.4.1}%
+\contentsline {subsubsection}{\numberline {7.31.4.2}m\_PlayerType}{140}{subsubsection.7.31.4.2}%
+\contentsline {subsubsection}{\numberline {7.31.4.3}m\_Side}{140}{subsubsection.7.31.4.3}%
+\contentsline {section}{\numberline {7.32}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Name\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}And\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ptr Struct Reference}{140}{section.7.32}%
+\contentsline {subsection}{\numberline {7.32.1}Detailed Description}{141}{subsection.7.32.1}%
+\contentsline {subsection}{\numberline {7.32.2}Member Data Documentation}{141}{subsection.7.32.2}%
+\contentsline {subsubsection}{\numberline {7.32.2.1}name}{141}{subsubsection.7.32.2.1}%
+\contentsline {subsubsection}{\numberline {7.32.2.2}ptr}{141}{subsubsection.7.32.2.2}%
+\contentsline {section}{\numberline {7.33}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Red\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece Class Reference}{142}{section.7.33}%
+\contentsline {subsection}{\numberline {7.33.1}Constructor \& Destructor Documentation}{143}{subsection.7.33.1}%
+\contentsline {subsubsection}{\numberline {7.33.1.1}RedPiece()}{143}{subsubsection.7.33.1.1}%
+\contentsline {section}{\numberline {7.34}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Place\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Move\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{144}{section.7.34}%
+\contentsline {subsection}{\numberline {7.34.1}Detailed Description}{145}{subsection.7.34.1}%
+\contentsline {subsection}{\numberline {7.34.2}Member Function Documentation}{145}{subsection.7.34.2}%
+\contentsline {subsubsection}{\numberline {7.34.2.1}IsValidMove()}{145}{subsubsection.7.34.2.1}%
+\contentsline {section}{\numberline {7.35}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Super\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Move\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule Class Reference}{146}{section.7.35}%
+\contentsline {subsection}{\numberline {7.35.1}Detailed Description}{147}{subsection.7.35.1}%
+\contentsline {subsection}{\numberline {7.35.2}Member Function Documentation}{147}{subsection.7.35.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.1}IsValidMove()}{147}{subsubsection.7.35.2.1}%
+\contentsline {section}{\numberline {7.36}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Text Struct Reference}{148}{section.7.36}%
+\contentsline {subsection}{\numberline {7.36.1}Detailed Description}{148}{subsection.7.36.1}%
+\contentsline {subsection}{\numberline {7.36.2}Constructor \& Destructor Documentation}{149}{subsection.7.36.2}%
+\contentsline {subsubsection}{\numberline {7.36.2.1}Text()}{149}{subsubsection.7.36.2.1}%
+\contentsline {subsection}{\numberline {7.36.3}Member Function Documentation}{149}{subsection.7.36.3}%
+\contentsline {subsubsection}{\numberline {7.36.3.1}Draw()}{149}{subsubsection.7.36.3.1}%
+\contentsline {subsubsection}{\numberline {7.36.3.2}SetJustification()}{149}{subsubsection.7.36.3.2}%
+\contentsline {subsubsection}{\numberline {7.36.3.3}SetScreenSize()}{150}{subsubsection.7.36.3.3}%
+\contentsline {subsubsection}{\numberline {7.36.3.4}SetText()}{150}{subsubsection.7.36.3.4}%
+\contentsline {subsection}{\numberline {7.36.4}Member Data Documentation}{150}{subsection.7.36.4}%
+\contentsline {subsubsection}{\numberline {7.36.4.1}color}{150}{subsubsection.7.36.4.1}%
+\contentsline {subsubsection}{\numberline {7.36.4.2}fontSize}{151}{subsubsection.7.36.4.2}%
+\contentsline {subsubsection}{\numberline {7.36.4.3}justify}{151}{subsubsection.7.36.4.3}%
+\contentsline {subsubsection}{\numberline {7.36.4.4}screenHeight}{151}{subsubsection.7.36.4.4}%
+\contentsline {subsubsection}{\numberline {7.36.4.5}screenWidth}{151}{subsubsection.7.36.4.5}%
+\contentsline {subsubsection}{\numberline {7.36.4.6}text}{151}{subsubsection.7.36.4.6}%
+\contentsline {subsubsection}{\numberline {7.36.4.7}x}{152}{subsubsection.7.36.4.7}%
+\contentsline {subsubsection}{\numberline {7.36.4.8}y}{152}{subsubsection.7.36.4.8}%
+\contentsline {section}{\numberline {7.37}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe Class Reference}{152}{section.7.37}%
+\contentsline {subsection}{\numberline {7.37.1}Detailed Description}{156}{subsection.7.37.1}%
+\contentsline {subsection}{\numberline {7.37.2}Constructor \& Destructor Documentation}{156}{subsection.7.37.2}%
+\contentsline {subsubsection}{\numberline {7.37.2.1}TicTacToe()}{156}{subsubsection.7.37.2.1}%
+\contentsline {subsubsection}{\numberline {7.37.2.2}$\sim $TicTacToe()}{156}{subsubsection.7.37.2.2}%
+\contentsline {subsection}{\numberline {7.37.3}Member Function Documentation}{157}{subsection.7.37.3}%
+\contentsline {subsubsection}{\numberline {7.37.3.1}DrawO()}{157}{subsubsection.7.37.3.1}%
+\contentsline {subsubsection}{\numberline {7.37.3.2}DrawX()}{157}{subsubsection.7.37.3.2}%
+\contentsline {subsubsection}{\numberline {7.37.3.3}Initialize()}{157}{subsubsection.7.37.3.3}%
+\contentsline {subsubsection}{\numberline {7.37.3.4}IsDrawCondition()}{158}{subsubsection.7.37.3.4}%
+\contentsline {subsubsection}{\numberline {7.37.3.5}IsWinningCondition()}{158}{subsubsection.7.37.3.5}%
+\contentsline {subsubsection}{\numberline {7.37.3.6}OnGUIUpdateGrid()}{158}{subsubsection.7.37.3.6}%
+\contentsline {subsubsection}{\numberline {7.37.3.7}OnGUIUpdateGridHover()}{158}{subsubsection.7.37.3.7}%
+\contentsline {subsubsection}{\numberline {7.37.3.8}SetupPlayers()}{159}{subsubsection.7.37.3.8}%
+\contentsline {subsubsection}{\numberline {7.37.3.9}TryMakeMove()}{159}{subsubsection.7.37.3.9}%
+\contentsline {section}{\numberline {7.38}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check Class Reference}{160}{section.7.38}%
+\contentsline {subsection}{\numberline {7.38.1}Detailed Description}{161}{subsection.7.38.1}%
+\contentsline {subsection}{\numberline {7.38.2}Member Function Documentation}{161}{subsection.7.38.2}%
+\contentsline {subsubsection}{\numberline {7.38.2.1}CheckWin()}{161}{subsubsection.7.38.2.1}%
+\contentsline {subsubsection}{\numberline {7.38.2.2}IsDraw()}{162}{subsubsection.7.38.2.2}%
+\contentsline {subsection}{\numberline {7.38.3}Member Data Documentation}{162}{subsection.7.38.3}%
+\contentsline {subsubsection}{\numberline {7.38.3.1}m\_GameStateExtensions}{162}{subsubsection.7.38.3.1}%
+\contentsline {section}{\numberline {7.39}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::White\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers Class Reference}{163}{section.7.39}%
+\contentsline {subsection}{\numberline {7.39.1}Constructor \& Destructor Documentation}{164}{subsection.7.39.1}%
+\contentsline {subsubsection}{\numberline {7.39.1.1}WhitePieceCheckers()}{164}{subsubsection.7.39.1.1}%
+\contentsline {section}{\numberline {7.40}OGRID\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::XPiece Class Reference}{165}{section.7.40}%
+\contentsline {subsection}{\numberline {7.40.1}Detailed Description}{166}{subsection.7.40.1}%
+\contentsline {subsection}{\numberline {7.40.2}Constructor \& Destructor Documentation}{166}{subsection.7.40.2}%
+\contentsline {subsubsection}{\numberline {7.40.2.1}XPiece()}{166}{subsubsection.7.40.2.1}%
+\contentsline {chapter}{\numberline {8}File Documentation}{167}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.cpp File Reference}{167}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.h File Reference}{168}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{169}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{169}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checker.cpp File Reference}{170}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checker.h File Reference}{171}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{172}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{172}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Extensions.cpp File Reference}{173}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Extensions.h File Reference}{173}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{174}{subsection.8.8.1}%
+\contentsline {section}{\numberline {8.9}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Extensions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{174}{section.8.9}%
+\contentsline {section}{\numberline {8.10}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rules.cpp File Reference}{175}{section.8.10}%
+\contentsline {section}{\numberline {8.11}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Implementation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rules.h File Reference}{175}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Detailed Description}{177}{subsection.8.11.1}%
+\contentsline {section}{\numberline {8.12}Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rules.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{177}{section.8.12}%
+\contentsline {section}{\numberline {8.13}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IAttack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule.h File Reference}{177}{section.8.13}%
+\contentsline {section}{\numberline {8.14}IAttack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{178}{section.8.14}%
+\contentsline {section}{\numberline {8.15}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IGame.cpp File Reference}{178}{section.8.15}%
+\contentsline {section}{\numberline {8.16}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IGame.h File Reference}{179}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Detailed Description}{180}{subsection.8.16.1}%
+\contentsline {section}{\numberline {8.17}IGame.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{180}{section.8.17}%
+\contentsline {section}{\numberline {8.18}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IGame\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.h File Reference}{182}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{182}{subsection.8.18.1}%
+\contentsline {section}{\numberline {8.19}IGame\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{183}{section.8.19}%
+\contentsline {section}{\numberline {8.20}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IMove\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule.h File Reference}{183}{section.8.20}%
+\contentsline {subsection}{\numberline {8.20.1}Detailed Description}{183}{subsection.8.20.1}%
+\contentsline {section}{\numberline {8.21}IMove\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rule.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{184}{section.8.21}%
+\contentsline {section}{\numberline {8.22}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers.cpp File Reference}{184}{section.8.22}%
+\contentsline {section}{\numberline {8.23}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers.h File Reference}{184}{section.8.23}%
+\contentsline {section}{\numberline {8.24}Checkers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{186}{section.8.24}%
+\contentsline {section}{\numberline {8.25}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.cpp File Reference}{186}{section.8.25}%
+\contentsline {section}{\numberline {8.26}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.h File Reference}{187}{section.8.26}%
+\contentsline {section}{\numberline {8.27}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{188}{section.8.27}%
+\contentsline {section}{\numberline {8.28}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.cpp File Reference}{189}{section.8.28}%
+\contentsline {section}{\numberline {8.29}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.h File Reference}{189}{section.8.29}%
+\contentsline {section}{\numberline {8.30}Checkers\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{190}{section.8.30}%
+\contentsline {section}{\numberline {8.31}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four.cpp File Reference}{190}{section.8.31}%
+\contentsline {section}{\numberline {8.32}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four.h File Reference}{191}{section.8.32}%
+\contentsline {section}{\numberline {8.33}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{192}{section.8.33}%
+\contentsline {section}{\numberline {8.34}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.cpp File Reference}{193}{section.8.34}%
+\contentsline {section}{\numberline {8.35}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.h File Reference}{193}{section.8.35}%
+\contentsline {section}{\numberline {8.36}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{194}{section.8.36}%
+\contentsline {section}{\numberline {8.37}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.cpp File Reference}{195}{section.8.37}%
+\contentsline {section}{\numberline {8.38}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.h File Reference}{195}{section.8.38}%
+\contentsline {section}{\numberline {8.39}Connect\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Four\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{196}{section.8.39}%
+\contentsline {section}{\numberline {8.40}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe.cpp File Reference}{197}{section.8.40}%
+\contentsline {section}{\numberline {8.41}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe.h File Reference}{197}{section.8.41}%
+\contentsline {subsection}{\numberline {8.41.1}Detailed Description}{199}{subsection.8.41.1}%
+\contentsline {section}{\numberline {8.42}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{199}{section.8.42}%
+\contentsline {section}{\numberline {8.43}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.cpp File Reference}{199}{section.8.43}%
+\contentsline {section}{\numberline {8.44}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.h File Reference}{200}{section.8.44}%
+\contentsline {subsection}{\numberline {8.44.1}Detailed Description}{201}{subsection.8.44.1}%
+\contentsline {section}{\numberline {8.45}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pieces.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{201}{section.8.45}%
+\contentsline {section}{\numberline {8.46}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.cpp File Reference}{202}{section.8.46}%
+\contentsline {section}{\numberline {8.47}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Games/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.h File Reference}{202}{section.8.47}%
+\contentsline {subsection}{\numberline {8.47.1}Detailed Description}{203}{subsection.8.47.1}%
+\contentsline {section}{\numberline {8.48}Tic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Toe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Check.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{204}{section.8.48}%
+\contentsline {section}{\numberline {8.49}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grid.cpp File Reference}{204}{section.8.49}%
+\contentsline {section}{\numberline {8.50}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grid.h File Reference}{204}{section.8.50}%
+\contentsline {subsection}{\numberline {8.50.1}Detailed Description}{205}{subsection.8.50.1}%
+\contentsline {section}{\numberline {8.51}Grid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{206}{section.8.51}%
+\contentsline {section}{\numberline {8.52}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GUI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button.h File Reference}{207}{section.8.52}%
+\contentsline {subsection}{\numberline {8.52.1}Detailed Description}{208}{subsection.8.52.1}%
+\contentsline {section}{\numberline {8.53}Button.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{209}{section.8.53}%
+\contentsline {section}{\numberline {8.54}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GUI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GUIInfo.h File Reference}{210}{section.8.54}%
+\contentsline {subsection}{\numberline {8.54.1}Detailed Description}{211}{subsection.8.54.1}%
+\contentsline {section}{\numberline {8.55}GUIInfo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{211}{section.8.55}%
+\contentsline {section}{\numberline {8.56}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GUI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text.h File Reference}{211}{section.8.56}%
+\contentsline {subsection}{\numberline {8.56.1}Detailed Description}{212}{subsection.8.56.1}%
+\contentsline {section}{\numberline {8.57}Text.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{213}{section.8.57}%
+\contentsline {section}{\numberline {8.58}Source/ogrid/ogrid.h File Reference}{214}{section.8.58}%
+\contentsline {section}{\numberline {8.59}ogrid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{214}{section.8.59}%
+\contentsline {section}{\numberline {8.60}Source/ogrid/ogrid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fmt.h File Reference}{215}{section.8.60}%
+\contentsline {subsection}{\numberline {8.60.1}Detailed Description}{216}{subsection.8.60.1}%
+\contentsline {section}{\numberline {8.61}ogrid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fmt.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{216}{section.8.61}%
+\contentsline {section}{\numberline {8.62}Source/ogrid/ogrid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gui.h File Reference}{217}{section.8.62}%
+\contentsline {section}{\numberline {8.63}ogrid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gui.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{218}{section.8.63}%
+\contentsline {section}{\numberline {8.64}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCH.h File Reference}{218}{section.8.64}%
+\contentsline {section}{\numberline {8.65}PCH.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{219}{section.8.65}%
+\contentsline {section}{\numberline {8.66}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece.cpp File Reference}{219}{section.8.66}%
+\contentsline {section}{\numberline {8.67}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Piece.h File Reference}{220}{section.8.67}%
+\contentsline {subsection}{\numberline {8.67.1}Detailed Description}{221}{subsection.8.67.1}%
+\contentsline {section}{\numberline {8.68}Piece.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{221}{section.8.68}%
+\contentsline {section}{\numberline {8.69}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player.cpp File Reference}{222}{section.8.69}%
+\contentsline {section}{\numberline {8.70}Source/ogrid/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player.h File Reference}{223}{section.8.70}%
+\contentsline {subsection}{\numberline {8.70.1}Detailed Description}{224}{subsection.8.70.1}%
+\contentsline {section}{\numberline {8.71}Player.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{224}{section.8.71}%
+\contentsline {section}{\numberline {8.72}Source/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sandbox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Initializer.cpp File Reference}{224}{section.8.72}%
+\contentsline {section}{\numberline {8.73}Source/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sandbox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Initializer.h File Reference}{225}{section.8.73}%
+\contentsline {subsection}{\numberline {8.73.1}Detailed Description}{226}{subsection.8.73.1}%
+\contentsline {section}{\numberline {8.74}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Initializer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{226}{section.8.74}%
+\contentsline {section}{\numberline {8.75}Source/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sandbox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GUI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window.cpp File Reference}{226}{section.8.75}%
+\contentsline {section}{\numberline {8.76}Source/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sandbox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GUI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window.h File Reference}{226}{section.8.76}%
+\contentsline {subsection}{\numberline {8.76.1}Detailed Description}{227}{subsection.8.76.1}%
+\contentsline {section}{\numberline {8.77}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{228}{section.8.77}%
+\contentsline {section}{\numberline {8.78}Source/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sandbox/main.cpp File Reference}{228}{section.8.78}%
+\contentsline {subsection}{\numberline {8.78.1}Detailed Description}{229}{subsection.8.78.1}%
+\contentsline {subsection}{\numberline {8.78.2}Function Documentation}{229}{subsection.8.78.2}%
+\contentsline {subsubsection}{\numberline {8.78.2.1}main()}{229}{subsubsection.8.78.2.1}%

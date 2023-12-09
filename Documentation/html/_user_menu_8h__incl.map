@@ -1,0 +1,18 @@
+<map id="Source/Sandbox/UserMenu/UserMenu.h" name="Source/Sandbox/UserMenu/UserMenu.h">
+<area shape="rect" id="Node000001" title="Contains the UserMenu class." alt="" coords="124,5,304,48"/>
+<area shape="rect" id="Node000002" href="$_database_8h.html" title="Contains the database class." alt="" coords="46,96,225,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,50,160,86,156,83,192,47"/>
+<area shape="rect" id="Node000006" href="$_user_8h.html" title="Contains the User class." alt="" coords="249,96,339,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="236,47,273,83,269,87,233,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,171,76,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,125,71,163,67,159,117,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,171,171,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="138,123,138,155,133,155,133,123"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="196,171,251,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="152,121,198,159,195,163,149,125"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="310,245,363,272"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="299,122,319,197,330,230,325,232,314,198,294,124"/>
+<area shape="rect" id="Node000008" href="$_player_8h.html" title="Contains the Player class." alt="" coords="328,171,438,197"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="311,121,358,159,354,163,308,125"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="377,199,355,234,350,231,373,196"/>
+</map>

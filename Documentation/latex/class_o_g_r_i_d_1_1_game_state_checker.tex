@@ -1,0 +1,154 @@
+\doxysection{OGRID\+::Game\+State\+Checker Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_game_state_checker}{}\label{class_o_g_r_i_d_1_1_game_state_checker}\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} class. Used to check the state of the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Checker.\+h$>$}
+
+
+
+Collaboration diagram for OGRID\+::Game\+State\+Checker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_o_g_r_i_d_1_1_game_state_checker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_ad7abc9c48da62faafe1e2884349934be}{Game\+State\+Checker}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}strategy)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2}{\texorpdfstring{$\sim$}{\string~}\+Game\+State\+Checker}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e}{Check\+Win}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const
+\begin{DoxyCompactList}\small\item\em Check the state of the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff}{Is\+Draw}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const
+\begin{DoxyCompactList}\small\item\em Check if the game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d}{Is\+Column\+Occupied}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, unsigned char col\+To\+Check, unsigned char \&row\+To\+Fill)
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242}{Get\+Top\+Most\+Piece\+Position\+In\+Column}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid, int col)
+\begin{DoxyCompactList}\small\item\em Get the top most piece position in a column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633}{m\+\_\+\+Game\+State}}
+\begin{DoxyCompactList}\small\item\em The strategy to check the state of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} class. Used to check the state of the game. 
+
+It contains the strategy to check the state of the game. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_ad7abc9c48da62faafe1e2884349934be}\label{class_o_g_r_i_d_1_1_game_state_checker_ad7abc9c48da62faafe1e2884349934be} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!GameStateChecker@{GameStateChecker}}
+\index{GameStateChecker@{GameStateChecker}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{GameStateChecker()}{GameStateChecker()}}
+{\footnotesize\ttfamily OGRID\+::\+Game\+State\+Checker\+::\+Game\+State\+Checker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}}]{strategy }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} object. 
+
+Construct a new \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} object using the strategy to check the state of the game. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2}\label{class_o_g_r_i_d_1_1_game_state_checker_ada86353230f19910ef4ea8012a3b2dd2} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!````~GameStateChecker@{\texorpdfstring{$\sim$}{\string~}GameStateChecker}}
+\index{````~GameStateChecker@{\texorpdfstring{$\sim$}{\string~}GameStateChecker}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameStateChecker()}{\string~GameStateChecker()}}
+{\footnotesize\ttfamily OGRID\+::\+Game\+State\+Checker\+::\texorpdfstring{$\sim$}{\string~}\+Game\+State\+Checker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e}\label{class_o_g_r_i_d_1_1_game_state_checker_a1af49b69de264cfbd1545957e8f9801e} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!CheckWin@{CheckWin}}
+\index{CheckWin@{CheckWin}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{CheckWin()}{CheckWin()}}
+{\footnotesize\ttfamily int OGRID\+::\+Game\+State\+Checker\+::\+Check\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const}
+
+
+
+Check the state of the game. 
+
+Check the state of the game using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242}\label{class_o_g_r_i_d_1_1_game_state_checker_af9accafabf6065a8f9cab11cc86f0242} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!GetTopMostPiecePositionInColumn@{GetTopMostPiecePositionInColumn}}
+\index{GetTopMostPiecePositionInColumn@{GetTopMostPiecePositionInColumn}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{GetTopMostPiecePositionInColumn()}{GetTopMostPiecePositionInColumn()}}
+{\footnotesize\ttfamily unsigned char OGRID\+::\+Game\+State\+Checker\+::\+Get\+Top\+Most\+Piece\+Position\+In\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Get the top most piece position in a column. 
+
+Get the top most piece position in a column using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d}\label{class_o_g_r_i_d_1_1_game_state_checker_a97275e962f3692000b30de6403e7131d} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!IsColumnOccupied@{IsColumnOccupied}}
+\index{IsColumnOccupied@{IsColumnOccupied}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{IsColumnOccupied()}{IsColumnOccupied()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Checker\+::\+Is\+Column\+Occupied (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{unsigned char}]{col\+To\+Check,  }\item[{unsigned char \&}]{row\+To\+Fill }\end{DoxyParamCaption})}
+
+
+
+Check if the game is over. 
+
+Check if the game is over using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff}\label{class_o_g_r_i_d_1_1_game_state_checker_a8d89133c87d861955238f4e81c774fff} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!IsDraw@{IsDraw}}
+\index{IsDraw@{IsDraw}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{IsDraw()}{IsDraw()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Game\+State\+Checker\+::\+Is\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const}
+
+
+
+Check if the game is a draw. 
+
+Check if the game is a draw using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633}\label{class_o_g_r_i_d_1_1_game_state_checker_abed55023bda47355578a68d28b850633} 
+\index{OGRID::GameStateChecker@{OGRID::GameStateChecker}!m\_GameState@{m\_GameState}}
+\index{m\_GameState@{m\_GameState}!OGRID::GameStateChecker@{OGRID::GameStateChecker}}
+\doxysubsubsection{\texorpdfstring{m\_GameState}{m\_GameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}}\texorpdfstring{$\ast$}{*} OGRID\+::\+Game\+State\+Checker\+::m\+\_\+\+Game\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The strategy to check the state of the game. 
+
+It is used to check the state of the game. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_state_checker_8h}{Game\+State\+Checker.\+h}}\item 
+Source/ogrid/\+Game\+Logic\+Implementation/\mbox{\hyperlink{_game_state_checker_8cpp}{Game\+State\+Checker.\+cpp}}\end{DoxyCompactItemize}

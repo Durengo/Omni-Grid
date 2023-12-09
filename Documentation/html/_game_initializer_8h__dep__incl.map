@@ -1,0 +1,9 @@
+<map id="Source/Sandbox/Core/GameInitializer.h" name="Source/Sandbox/Core/GameInitializer.h">
+<area shape="rect" id="Node000001" title="Game initializer." alt="" coords="193,5,342,48"/>
+<area shape="rect" id="Node000002" href="$_game_initializer_8cpp.html" title=" " alt="" coords="5,96,154,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,57,124,98,122,93,209,53"/>
+<area shape="rect" id="Node000003" href="$_user_menu_8cpp.html" title=" " alt="" coords="177,96,358,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,64,270,96,265,96,265,64"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Main entry point." alt="" coords="382,104,556,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="329,52,441,101,439,106,327,57"/>
+</map>

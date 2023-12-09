@@ -1,0 +1,16 @@
+<map id="Source/ogrid/Games/Checkers" name="Source/ogrid/Games/Checkers">
+<area shape="rect" id="node1" href="dir_4295fe5149258be5325c06911dfe91a0.html" title="Checkers" alt="" coords="295,53,371,80"/>
+<area shape="rect" id="node2" href="dir_12a3b0e1c5fb4923d9c88da71af71a20.html" title="GameLogicImplementation" alt="" coords="5,128,181,155"/>
+<area shape="poly" id="edge1" href="dir_000000_000004.html" alt="" coords="295,82,150,126,149,120,294,77"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000000_000004.html" title="4" alt="" coords="151,122,158,138"/>
+<area shape="rect" id="node3" href="dir_ecbc072b110de402926454ba9b18fa08.html" title="GameLogicInterface" alt="" coords="205,128,341,155"/>
+<area shape="poly" id="edge4" href="dir_000000_000005.html" alt="" coords="325,82,295,118,291,114,321,79"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000000_000005.html" title="2" alt="" coords="298,111,305,127"/>
+<area shape="rect" id="node4" href="dir_b18ac8af645e2c1ad719eedcfa344ab3.html" title="Player" alt="" coords="365,128,424,155"/>
+<area shape="poly" id="edge3" href="dir_000000_000011.html" alt="" coords="346,79,376,114,372,118,342,82"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000000_000011.html" title="3" alt="" coords="375,100,382,116"/>
+<area shape="rect" id="node5" href="dir_63482b51ae0873b98e2fae533724ea10.html" title="User" alt="" coords="448,128,496,155"/>
+<area shape="poly" id="edge2" href="dir_000000_000016.html" alt="" coords="358,78,435,118,433,123,356,83"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000000_000016.html" title="2" alt="" coords="432,104,439,120"/>
+<area shape="rect" id="clust1" href="dir_72c75ba39d07c896f1369cc2f1211903.html" title="Games" alt="" coords="284,16,382,91"/>
+</map>

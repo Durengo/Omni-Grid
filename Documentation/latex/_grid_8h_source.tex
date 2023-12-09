@@ -1,0 +1,103 @@
+\doxysection{Grid.\+h}
+\hypertarget{_grid_8h_source}{}\label{_grid_8h_source}\index{Source/ogrid/Grid/Grid.h@{Source/ogrid/Grid/Grid.h}}
+\mbox{\hyperlink{_grid_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }Piece;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_ad6dc808ec1cd6f96885cc46418bfb85c}{m\_Piece}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_ab5d043e8000546b8a6c388f8e9d5c894}{m\_Row}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell_a1167adf329f656ac65955104788a8ab9}{m\_Col}};}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}{rows}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}{cols}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ std::vector<std::vector<Cell\ *>>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a243175775e2e43693d96fee79f282ab1}{grid}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Store\ default\ Piece\ for\ resetting\ the\ grid.}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Important!\ This\ will\ set\ the\ whole\ grid\ to\ the\ same\ Piece.}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Careful\ when\ setting\ this\ to\ nullptr.}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{defaultPiece}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Store\ which\ element\ was\ last\ changed.}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ad16f8deb9b1a58e6b95383d573d1f66e}{lastChangedChar}}[2]\ =\ \{0,\ 0\};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructors\ \&\ Destructors}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}{rows}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}{cols}},\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{defaultPiece}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_acecb27d8070664f2effcf7f6a1476014}{\string~Grid}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getters\ \&\ Setters}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a81d9b578e66af2cfdf570553657a3484}{GetRows}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a5d8f3e72de3971cd9dab104d0d9a8e24}{SetRows}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a67f265b480520d1ee0bce32e77279751}{rows}});}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a4820695fbd663ecac3269b5c15be20eb}{GetCols}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a6d74afc787d70d5d2db31c5590db7408}{SetCols}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab840db89891f1314e2e2e401ee554919}{cols}});}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::vector<Cell\ *>>\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a26bf0a31927d08bf0ea18ab6557ea0f1}{GetGrid}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a5ef380fdb71fe78da126c627a016211f}{SetGrid}}(\textcolor{keyword}{const}\ std::vector<std::vector<Cell\ *>>\ \&newGrid);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a0069c1109d730a6e9193d2c39d51d07f}{GetDefaultPiece}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ae31d80653529ca82cf8ada14a8dc3a47}{SetDefaultPiece}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{defaultPiece}});}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a6ad3d43375a8b6ae854e92e452bf30eb}{GetPieceAt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a1de71d89ac1458596be8bb1048049b87}{SetPieceAt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece,\ \textcolor{keywordtype}{bool}\ force\_null\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a6f71457dca1fd0e494a4d1e87d80ca9c}{GetCellAt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a7d3443e2d457916bddfec38bc3c83f7b}{SetCellAt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col,\ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_cell}{Cell}}\ *cell,\ \textcolor{keywordtype}{bool}\ force\_null\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a7d3443e2d457916bddfec38bc3c83f7b}{SetCellAt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ col,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece,\ \textcolor{keywordtype}{bool}\ force\_null\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ std::pair<unsigned\ char,\ unsigned\ char>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_aa2964932a79d04095a4be6c8a3598e95}{GetLastChangedChar}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Overload\ the\ []\ operator\ to\ access\ the\ grid.}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ std::vector<Cell\ *>\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a2722de4ae7c26b2aae07d3596e04f47d}{operator[]}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Cell\ *>\ \&\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a2722de4ae7c26b2aae07d3596e04f47d}{operator[]}}(\textcolor{keywordtype}{size\_t}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Public\ methods}}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_af6aa89f62eb69cd99cbe91c012736484}{GetGridSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a10e65c6241b983e56047e59622c22110}{ResetGrid}}();}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ac85dd79e4dd24f68ea75115fbdd7df30}{ResetGridWithNewSize}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ newRows,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ newCols,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{defaultPiece}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a69fc66bc11a08c00ec45a437750e1cdd}{ResetGridWithNewDefaultPiece}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_ab42f6e7a45e42b9697c35fa42e12ae8d}{defaultPiece}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_grid_a151cec1dcfab5d139ae116f0636babff}{GetGridAsString}}();}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ CheckForRecurringStringInRow(const\ std::string\ \&playerString,\ unsigned\ int\ dupCount);}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ CheckForRecurringStringInCol(const\ std::string\ \&playerString,\ unsigned\ int\ dupCount);}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ CheckForRecurringStringInDiagonal(const\ std::string\ \&playerString,\ unsigned\ int\ dupCount);}}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ CheckForRecurringStringInAntiDiagonal(const\ std::string\ \&playerString,\ unsigned\ int\ dupCount);}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ //\ This\ one\ is\ broken\ and\ should\ probably\ be\ removed...}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::string\ GetCharCenterMostElement()\ const;}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::pair<unsigned\ char,\ unsigned\ char>\ GetCenterMostCoords()\ const;}}
+\DoxyCodeLine{00333\ \ \ \ \ \};}
+\DoxyCodeLine{00334\ \}}
+
+\end{DoxyCode}

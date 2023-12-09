@@ -1,0 +1,111 @@
+\doxysection{OGRID\+::IGame\+State Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_i_game_state}{}\label{class_o_g_r_i_d_1_1_i_game_state}\index{OGRID::IGameState@{OGRID::IGameState}}
+
+
+The \doxylink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State} class. Used to check the state of the game.  
+
+
+
+
+{\ttfamily \#include $<$IGame\+State.\+h$>$}
+
+
+
+Inheritance diagram for OGRID\+::IGame\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_o_g_r_i_d_1_1_i_game_state__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531}{\texorpdfstring{$\sim$}{\string~}\+IGame\+State}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State} object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd}{Check\+Win}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const =0
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9}{Is\+Draw}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}grid) const =0
+\begin{DoxyCompactList}\small\item\em Check if the game is a draw. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State} class. Used to check the state of the game. 
+
+It contains the strategy to check the state of the game. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531}\label{class_o_g_r_i_d_1_1_i_game_state_a20a73922447474a3029e46a5228a4531} 
+\index{OGRID::IGameState@{OGRID::IGameState}!````~IGameState@{\texorpdfstring{$\sim$}{\string~}IGameState}}
+\index{````~IGameState@{\texorpdfstring{$\sim$}{\string~}IGameState}!OGRID::IGameState@{OGRID::IGameState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IGameState()}{\string~IGameState()}}
+{\footnotesize\ttfamily virtual OGRID\+::\+IGame\+State\+::\texorpdfstring{$\sim$}{\string~}\+IGame\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \doxylink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State} object. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd}\label{class_o_g_r_i_d_1_1_i_game_state_a70a658e0200eccf3d4b03f2fe93a44cd} 
+\index{OGRID::IGameState@{OGRID::IGameState}!CheckWin@{CheckWin}}
+\index{CheckWin@{CheckWin}!OGRID::IGameState@{OGRID::IGameState}}
+\doxysubsubsection{\texorpdfstring{CheckWin()}{CheckWin()}}
+{\footnotesize\ttfamily virtual int OGRID\+::\+IGame\+State\+::\+Check\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the game is over. 
+
+Check if the game is over using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the game is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a48c0714e978c116eaccfa69b998a1cd8}{OGRID\+::\+Checkers\+State\+Check}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_state_check_a7a34ac37eb57c0e6ce6d56241d93db67}{OGRID\+::\+Connect\+Four\+State\+Check}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a4c1c92b56ab4852701602b9317e40eb4}{OGRID\+::\+Tic\+Tac\+Toe\+State\+Check}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9}\label{class_o_g_r_i_d_1_1_i_game_state_a099f39ac2cca022990d2ccfe896371c9} 
+\index{OGRID::IGameState@{OGRID::IGameState}!IsDraw@{IsDraw}}
+\index{IsDraw@{IsDraw}!OGRID::IGameState@{OGRID::IGameState}}
+\doxysubsubsection{\texorpdfstring{IsDraw()}{IsDraw()}}
+{\footnotesize\ttfamily virtual bool OGRID\+::\+IGame\+State\+::\+Is\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the game is a draw. 
+
+Check if the game is a draw using the strategy. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & The grid of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the game is a draw, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_state_check_a8d70dc3f8e06bbd432efa768c9190420}{OGRID\+::\+Checkers\+State\+Check}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_state_check_a1d250847169865b5fee1b526c10a8af7}{OGRID\+::\+Connect\+Four\+State\+Check}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_state_check_a98f148253b4dad579ed6e04c47277a6b}{OGRID\+::\+Tic\+Tac\+Toe\+State\+Check}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Game\+Logic\+Interface/\mbox{\hyperlink{_i_game_state_8h}{IGame\+State.\+h}}\end{DoxyCompactItemize}

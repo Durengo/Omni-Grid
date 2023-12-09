@@ -1,0 +1,456 @@
+\doxysection{OGRID\+::Checkers Class Reference}
+\hypertarget{class_o_g_r_i_d_1_1_checkers}{}\label{class_o_g_r_i_d_1_1_checkers}\index{OGRID::Checkers@{OGRID::Checkers}}
+
+
+{\ttfamily \#include $<$Checkers.\+h$>$}
+
+
+
+Inheritance diagram for OGRID\+::Checkers\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_o_g_r_i_d_1_1_checkers__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for OGRID\+::Checkers\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_o_g_r_i_d_1_1_checkers__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ac652cbcaf3e67fb645ba3b80f5fde9a5}{Checkers}} ()=default
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a16df49ad33c08b93321bf59e8ddfdbb8}{\texorpdfstring{$\sim$}{\string~}\+Checkers}} ()=default
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_aced6fca13556b768fb105deaaf745fea}{Try\+Make\+Move}} (unsigned char \&row, unsigned char \&col) override
+\begin{DoxyCompactList}\small\item\em Try making a move with the current player. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a21bd82ff9e31c444c203d0d79139e063}{Is\+Winning\+Condition}} () override
+\begin{DoxyCompactList}\small\item\em Check if the winning condition is met. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a24ec7090abf404c95fc81b512ef3aeda}{Is\+Draw\+Condition}} () override
+\begin{DoxyCompactList}\small\item\em Check if the draw condition is met. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af92cffa9bada5835f69048746c3f620c}{Setup\+Players}} () override
+\begin{DoxyCompactList}\small\item\em Setup the players of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a97a759ff214c51adcb1a1731d78413eb}{Initialize}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user) override
+\begin{DoxyCompactList}\small\item\em Setup the core of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_acba9d0f7859a33a6d50492859275f69e}{On\+GUIUpdate\+Grid}} () override
+\begin{DoxyCompactList}\small\item\em Update the game\textquotesingle{}s GUI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a657164d309d360c8196575c567ab76be}{On\+GUIUpdate\+Grid\+Hover}} (Vector2 cell) override
+\begin{DoxyCompactList}\small\item\em Update the game\textquotesingle{}s GUI when hovering over a specific \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_acc00f9df718abbfb9f0d29a047b1911c}{Setup\+Board}} ()
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a91ff9b2f7ea2af9ee4cdce4f99253b2d}{Add\+As\+Super\+Piece}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_aa9d623f78c2d0a77a3b6e5387d03e1c5}{Remove\+Super\+Piece}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a6f08d2756e8679192ed150dbe019314b}{Is\+Super\+Piece}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a476a6cca3f2584ef78cf1da74aabeb9a}{Add\+Piece\+To\+Piece\+Manager}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, std\+::pair$<$ int, int $>$ position)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ab96f0747a5167d4e5a676ba881cd2c71}{Remove\+Piece\+From\+Piece\+Manager}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a62a722d5eb7d03dc41f3654d4c0512df}{Remove\+Piece\+From\+Piece\+Manager}} (std\+::pair$<$ int, int $>$ position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{OGRID\+::\+IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a9402d0e80b99c4d614dd7f693fe432b2}{Swap\+Player\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Switches the current player to the next player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a00907d3b2e135d3567c5d37d07877313}{Reset\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Call the \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} object\textquotesingle{}s \doxylink{class_o_g_r_i_d_1_1_i_game_a00907d3b2e135d3567c5d37d07877313}{Reset\+Grid()} function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a31bf54d15aa4175a0e648316eea77fe0}{Reset\+Players}} ()
+\begin{DoxyCompactList}\small\item\em Reset the players of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a28fe1d05d297b2a4441fa328c24d729c}{Print\+Players\+Turn\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Print the players of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a2fcacf697b5a0fa35aa28fcb00acd9c9}{Setup\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a5657abc82d07dd9a6a32af9a91148cf4}{Reset\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Resets the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a957000789a699a27e320b29f49d0b3ae}{Start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aaa36d718518f12c33ac396276e7a7082}{Print\+Player\+Moves}} () const
+\begin{DoxyCompactList}\small\item\em Prints the turn order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab97de6370e0c550ece9262fa8598997e}{Make\+Move}} (unsigned char row, unsigned char col)
+\begin{DoxyCompactList}\small\item\em Attempts to make a move. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0baa75d429221d772030d3f33ad3c685}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a42dbceed56cdbba541093cbc2db1b2fa}{Switch\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Sets the current player to the next player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{OGRID\+::\+Game\+Over\+Type}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a77bf28e364e0e18d36ff6a41161092e5}{Check\+Game\+Over\+State}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{OGRID\+::\+Grid}} \texorpdfstring{$\ast$}{*}grid, unsigned char row, unsigned char col)
+\begin{DoxyCompactList}\small\item\em Checks if the game is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a163bfa855a3e1a84543161b240f3da89}{Get\+Game\+State}} () const
+\begin{DoxyCompactList}\small\item\em Get the state of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a62eca02f475c251c51f0f1baddea24d0}{Set\+Game\+State}} (\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} game\+State)
+\begin{DoxyCompactList}\small\item\em Set the state of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{Game\+Over\+Type}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aca9c8ddfb70924a2e357e728c45b0cd7}{Get\+Game\+Over\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the game loop state of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab6c822d75b328f6b8183d9794efe4fc7}{Get\+Winner}} () const
+\begin{DoxyCompactList}\small\item\em Get the winner of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8cc65a67aa83ac1a934505f9a6a77331}{Get\+Game\+Configuration}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a80020005a89074227d7f628bc26f9c6a}{Set\+Game\+Configuration}} (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*}game\+Configuration)
+\begin{DoxyCompactList}\small\item\em Set the \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24a8dbd4667a1ba2a0298ce35ac591b7}{Get\+Game\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_grid}{Grid}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a126a74b45e75e95a609c86fa7656b826}{Get\+Grid}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_o_g_r_i_d_1_1_grid}{Grid} object of the game. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acc4e167e84db66fb567402b752764d12}{Get\+Players}} () const
+\begin{DoxyCompactList}\small\item\em Get the a Vector of the players of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a983ce3cdfb332d10e21e2ad8dee7e34d}{Set\+Randomize\+Turn\+Order}} (bool randomize)
+\begin{DoxyCompactList}\small\item\em Toggle the randomization of the turn order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a489056207a234d30d352fdffa1fc16fc}{Get\+Current\+Player}} () const
+\begin{DoxyCompactList}\small\item\em Get the current player of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4069fe73a90862afe70f3af6b11d8d3d}{Set\+Current\+Player}} (\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} player)
+\begin{DoxyCompactList}\small\item\em Set the current player of the game. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acfc2f1a8640f6509dffd1dea271d81e3}{Get\+Current\+Turn}} () const
+\begin{DoxyCompactList}\small\item\em Get the current turn of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a02bb9282b3db4264aa1eedd9d2805092}{Get\+Game\+State\+Checker}} () const
+\begin{DoxyCompactList}\small\item\em Get the current state of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a94a7ed72a96be86937fe025cdf1e3102}{Set\+Game\+State\+Checker}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*}game\+State\+Checker)
+\begin{DoxyCompactList}\small\item\em Set the current state of the game. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae025b3fd0dc22e76a0bfe3f8f567d09c}{Get\+Player\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Get a Vector of the names of the players from \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{OGRID\+::\+Player}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ac133e7c86762be0dcf212f5d630ed53f}{Get\+Player\+Ptrs}} () const
+\begin{DoxyCompactList}\small\item\em Get a Vector of the pointers of the players from \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a6bbecc67bf0f70b27d60632a6f54d479}{Get\+Player\+Pair}} (size\+\_\+t at) const
+\begin{DoxyCompactList}\small\item\em Get the name and pointer of the player from \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8e3b6647e39c0c41f021068fe7d638fa}{Get\+Player\+Pairs}} () const
+\begin{DoxyCompactList}\small\item\em Get a Vector of the names and pointers of the players from \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ac0e2d2a32f09bc04264edc46085fb7df}{Set\+Player\+Pairs}} (const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \&players)
+\begin{DoxyCompactList}\small\item\em Set the names and pointers of the players from \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_afe299a1c025372547eb36f30daa01003}{Get\+GUIInfo}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{struct_g_u_i_info}{GUIInfo} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_acf06334379c16547c5064f7bad6d9b17}{Set\+GUIInfo}} (const \mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \&gui\+Info)
+\begin{DoxyCompactList}\small\item\em Set the \doxylink{struct_g_u_i_info}{GUIInfo} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a9c1a4c36598d3e96a530f971550f3e48}{Get\+Piece\+Position}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a640dae346a149b5ed74b3c42c692ae46}{Set\+Piece\+Position}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, std\+::pair$<$ int, int $>$ position)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a2b6b93032e1c99741adc038b7ccc3a9e}{Draw\+Piece}} (int row, int col, Color color, bool blinking, bool super)
+\item 
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a6f825b4a3adddeed0f6067ad426effa8}{Draw\+Cell}} (int row, int col)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ac9e26fad423d06798cab8276053a68d5}{m\+\_\+\+Supers}}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a62fc648f38a837c2cab0ddc31d8c3812}{m\+\_\+\+Selected\+Piece}} = nullptr
+\item 
+std\+::map$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af1598864866890ba630b1d973b42170d}{m\+\_\+\+Pieces}}
+\item 
+float \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a5ad46179c2fefa5a935807b92bf2cd04}{alpha}} = 1.\+0f
+\item 
+float \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af4e476cac4bce1d5281c6bf80a62857e}{alpha\+Speed}} = 0.\+025f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{OGRID\+::\+IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_u_i_info}{GUIInfo}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aaac0b0d2bd9dd6b5fb52ff8f87433ca8}{m\+\_\+gui\+Info}}
+\item 
+bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_aa21339f8546f0a8636488dd95663edee}{m\+\_\+randomize\+Turn\+Order}} = true
+\begin{DoxyCompactList}\small\item\em To randomize the turn order of the players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{OGRID\+::\+IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ae996c3460111f4c51a6c7e473ecf10ad}{IGame}} ()=default
+\begin{DoxyCompactList}\small\item\em The constructor of the \doxylink{class_o_g_r_i_d_1_1_i_game}{IGame} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a380d8f14000f5aad4a7e86ff7986799f}{IGame}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_state}{IGame\+State}} \texorpdfstring{$\ast$}{*}game\+State\+Strategy, const std\+::vector$<$ \mbox{\hyperlink{struct_o_g_r_i_d_1_1_player_name_and_ptr}{OGRID\+::\+Player\+Name\+And\+Ptr}} $>$ \&players)
+\begin{DoxyCompactList}\small\item\em The constructor of the \doxylink{class_o_g_r_i_d_1_1_i_game}{IGame} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_af4a29c0847eab5d72d9279349385223d}{\texorpdfstring{$\sim$}{\string~}\+IGame}} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the \doxylink{class_o_g_r_i_d_1_1_i_game}{IGame} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{OGRID\+::\+IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_game_state_checker}{Game\+State\+Checker}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4c671da5dabf6f5c6b5d05771cf7d420}{m\+\_\+current\+Game\+State}}
+\begin{DoxyCompactList}\small\item\em Holds the logic to check the state of the specific game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3}{Game\+State}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a283d9fadb7ec021bdabf4f187bc1ec26}{m\+\_\+game\+State}} = \mbox{\hyperlink{namespace_o_g_r_i_d_a6cd6c6facf6d20217a9024a9b6d0c1c3af595cc685945e110cbdad08e3caf45e7}{Game\+State\+::\+Not\+Started}}
+\begin{DoxyCompactList}\small\item\em The state of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32}{Game\+Over\+Type}} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ad26a9d1d6d993def13ce5874e516ad80}{m\+\_\+game\+Over\+Type}} = \mbox{\hyperlink{namespace_o_g_r_i_d_ab2457694ead8d0c0582f967821ea3c32aa244146c048a352330efbc3f637918dd}{Game\+Over\+Type\+::\+None}}
+\begin{DoxyCompactList}\small\item\em The game loop state of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec}{m\+\_\+winner}} = nullptr
+\begin{DoxyCompactList}\small\item\em The winner of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a5e1a46cd6837aa1beff0bb745fae5a8b}{m\+\_\+current\+Player}} = nullptr
+\begin{DoxyCompactList}\small\item\em The current player of the game. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229edaf9c340}{m\+\_\+current\+Turn}} = 0
+\begin{DoxyCompactList}\small\item\em The current turn of the game. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea}{m\+\_\+total\+Turns}} = 0
+\begin{DoxyCompactList}\small\item\em Keeps the total number of turns. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc}{m\+\_\+\+Game\+Configuration}} = nullptr
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_af2632167ae5b3737138900b41a35750e}{m\+\_\+\+User}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_ac652cbcaf3e67fb645ba3b80f5fde9a5}\label{class_o_g_r_i_d_1_1_checkers_ac652cbcaf3e67fb645ba3b80f5fde9a5} 
+\index{OGRID::Checkers@{OGRID::Checkers}!Checkers@{Checkers}}
+\index{Checkers@{Checkers}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{Checkers()}{Checkers()}}
+{\footnotesize\ttfamily OGRID\+::\+Checkers\+::\+Checkers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a16df49ad33c08b93321bf59e8ddfdbb8}\label{class_o_g_r_i_d_1_1_checkers_a16df49ad33c08b93321bf59e8ddfdbb8} 
+\index{OGRID::Checkers@{OGRID::Checkers}!````~Checkers@{\texorpdfstring{$\sim$}{\string~}Checkers}}
+\index{````~Checkers@{\texorpdfstring{$\sim$}{\string~}Checkers}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Checkers()}{\string~Checkers()}}
+{\footnotesize\ttfamily OGRID\+::\+Checkers\+::\texorpdfstring{$\sim$}{\string~}\+Checkers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a91ff9b2f7ea2af9ee4cdce4f99253b2d}\label{class_o_g_r_i_d_1_1_checkers_a91ff9b2f7ea2af9ee4cdce4f99253b2d} 
+\index{OGRID::Checkers@{OGRID::Checkers}!AddAsSuperPiece@{AddAsSuperPiece}}
+\index{AddAsSuperPiece@{AddAsSuperPiece}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{AddAsSuperPiece()}{AddAsSuperPiece()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Add\+As\+Super\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a476a6cca3f2584ef78cf1da74aabeb9a}\label{class_o_g_r_i_d_1_1_checkers_a476a6cca3f2584ef78cf1da74aabeb9a} 
+\index{OGRID::Checkers@{OGRID::Checkers}!AddPieceToPieceManager@{AddPieceToPieceManager}}
+\index{AddPieceToPieceManager@{AddPieceToPieceManager}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{AddPieceToPieceManager()}{AddPieceToPieceManager()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Add\+Piece\+To\+Piece\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece,  }\item[{std\+::pair$<$ int, int $>$}]{position }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a6f825b4a3adddeed0f6067ad426effa8}\label{class_o_g_r_i_d_1_1_checkers_a6f825b4a3adddeed0f6067ad426effa8} 
+\index{OGRID::Checkers@{OGRID::Checkers}!DrawCell@{DrawCell}}
+\index{DrawCell@{DrawCell}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{DrawCell()}{DrawCell()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Draw\+Cell (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a2b6b93032e1c99741adc038b7ccc3a9e}\label{class_o_g_r_i_d_1_1_checkers_a2b6b93032e1c99741adc038b7ccc3a9e} 
+\index{OGRID::Checkers@{OGRID::Checkers}!DrawPiece@{DrawPiece}}
+\index{DrawPiece@{DrawPiece}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{DrawPiece()}{DrawPiece()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Draw\+Piece (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{Color}]{color,  }\item[{bool}]{blinking = {\ttfamily false},  }\item[{bool}]{super = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a9c1a4c36598d3e96a530f971550f3e48}\label{class_o_g_r_i_d_1_1_checkers_a9c1a4c36598d3e96a530f971550f3e48} 
+\index{OGRID::Checkers@{OGRID::Checkers}!GetPiecePosition@{GetPiecePosition}}
+\index{GetPiecePosition@{GetPiecePosition}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{GetPiecePosition()}{GetPiecePosition()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ OGRID\+::\+Checkers\+::\+Get\+Piece\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a97a759ff214c51adcb1a1731d78413eb}\label{class_o_g_r_i_d_1_1_checkers_a97a759ff214c51adcb1a1731d78413eb} 
+\index{OGRID::Checkers@{OGRID::Checkers}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setup the core of the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0727421010ad84487fc6b1ebb25b96e6}{OGRID\+::\+IGame}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a24ec7090abf404c95fc81b512ef3aeda}\label{class_o_g_r_i_d_1_1_checkers_a24ec7090abf404c95fc81b512ef3aeda} 
+\index{OGRID::Checkers@{OGRID::Checkers}!IsDrawCondition@{IsDrawCondition}}
+\index{IsDrawCondition@{IsDrawCondition}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{IsDrawCondition()}{IsDrawCondition()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Checkers\+::\+Is\+Draw\+Condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the draw condition is met. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+True if the draw condition is met, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4}{OGRID\+::\+IGame}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a6f08d2756e8679192ed150dbe019314b}\label{class_o_g_r_i_d_1_1_checkers_a6f08d2756e8679192ed150dbe019314b} 
+\index{OGRID::Checkers@{OGRID::Checkers}!IsSuperPiece@{IsSuperPiece}}
+\index{IsSuperPiece@{IsSuperPiece}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{IsSuperPiece()}{IsSuperPiece()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Checkers\+::\+Is\+Super\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a21bd82ff9e31c444c203d0d79139e063}\label{class_o_g_r_i_d_1_1_checkers_a21bd82ff9e31c444c203d0d79139e063} 
+\index{OGRID::Checkers@{OGRID::Checkers}!IsWinningCondition@{IsWinningCondition}}
+\index{IsWinningCondition@{IsWinningCondition}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{IsWinningCondition()}{IsWinningCondition()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Checkers\+::\+Is\+Winning\+Condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the winning condition is met. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+True if the winning condition is met, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_ab70fb5ae1606d585c94f9e825252e94f}{OGRID\+::\+IGame}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_acba9d0f7859a33a6d50492859275f69e}\label{class_o_g_r_i_d_1_1_checkers_acba9d0f7859a33a6d50492859275f69e} 
+\index{OGRID::Checkers@{OGRID::Checkers}!OnGUIUpdateGrid@{OnGUIUpdateGrid}}
+\index{OnGUIUpdateGrid@{OnGUIUpdateGrid}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{OnGUIUpdateGrid()}{OnGUIUpdateGrid()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+On\+GUIUpdate\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the game\textquotesingle{}s GUI. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0458b9fbf987ce4367e1ae36ce12bcc6}{OGRID\+::\+IGame}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a657164d309d360c8196575c567ab76be}\label{class_o_g_r_i_d_1_1_checkers_a657164d309d360c8196575c567ab76be} 
+\index{OGRID::Checkers@{OGRID::Checkers}!OnGUIUpdateGridHover@{OnGUIUpdateGridHover}}
+\index{OnGUIUpdateGridHover@{OnGUIUpdateGridHover}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{OnGUIUpdateGridHover()}{OnGUIUpdateGridHover()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+On\+GUIUpdate\+Grid\+Hover (\begin{DoxyParamCaption}\item[{Vector2}]{cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the game\textquotesingle{}s GUI when hovering over a specific \doxylink{struct_o_g_r_i_d_1_1_cell}{Cell}. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & The cell of the grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_o_g_r_i_d_1_1_cell}{Cell} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a817ed0e9a5f884931208c6508fe3a276}{OGRID\+::\+IGame}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_ab96f0747a5167d4e5a676ba881cd2c71}\label{class_o_g_r_i_d_1_1_checkers_ab96f0747a5167d4e5a676ba881cd2c71} 
+\index{OGRID::Checkers@{OGRID::Checkers}!RemovePieceFromPieceManager@{RemovePieceFromPieceManager}}
+\index{RemovePieceFromPieceManager@{RemovePieceFromPieceManager}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{RemovePieceFromPieceManager()}{RemovePieceFromPieceManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Remove\+Piece\+From\+Piece\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a62a722d5eb7d03dc41f3654d4c0512df}\label{class_o_g_r_i_d_1_1_checkers_a62a722d5eb7d03dc41f3654d4c0512df} 
+\index{OGRID::Checkers@{OGRID::Checkers}!RemovePieceFromPieceManager@{RemovePieceFromPieceManager}}
+\index{RemovePieceFromPieceManager@{RemovePieceFromPieceManager}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{RemovePieceFromPieceManager()}{RemovePieceFromPieceManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Remove\+Piece\+From\+Piece\+Manager (\begin{DoxyParamCaption}\item[{std\+::pair$<$ int, int $>$}]{position }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_aa9d623f78c2d0a77a3b6e5387d03e1c5}\label{class_o_g_r_i_d_1_1_checkers_aa9d623f78c2d0a77a3b6e5387d03e1c5} 
+\index{OGRID::Checkers@{OGRID::Checkers}!RemoveSuperPiece@{RemoveSuperPiece}}
+\index{RemoveSuperPiece@{RemoveSuperPiece}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{RemoveSuperPiece()}{RemoveSuperPiece()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Remove\+Super\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a640dae346a149b5ed74b3c42c692ae46}\label{class_o_g_r_i_d_1_1_checkers_a640dae346a149b5ed74b3c42c692ae46} 
+\index{OGRID::Checkers@{OGRID::Checkers}!SetPiecePosition@{SetPiecePosition}}
+\index{SetPiecePosition@{SetPiecePosition}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{SetPiecePosition()}{SetPiecePosition()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Set\+Piece\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece,  }\item[{std\+::pair$<$ int, int $>$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_acc00f9df718abbfb9f0d29a047b1911c}\label{class_o_g_r_i_d_1_1_checkers_acc00f9df718abbfb9f0d29a047b1911c} 
+\index{OGRID::Checkers@{OGRID::Checkers}!SetupBoard@{SetupBoard}}
+\index{SetupBoard@{SetupBoard}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{SetupBoard()}{SetupBoard()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Setup\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_af92cffa9bada5835f69048746c3f620c}\label{class_o_g_r_i_d_1_1_checkers_af92cffa9bada5835f69048746c3f620c} 
+\index{OGRID::Checkers@{OGRID::Checkers}!SetupPlayers@{SetupPlayers}}
+\index{SetupPlayers@{SetupPlayers}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{SetupPlayers()}{SetupPlayers()}}
+{\footnotesize\ttfamily void OGRID\+::\+Checkers\+::\+Setup\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Setup the players of the game. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4971fe78b8b2ebba20643942bb340ce4}{OGRID\+::\+IGame}}.
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_aced6fca13556b768fb105deaaf745fea}\label{class_o_g_r_i_d_1_1_checkers_aced6fca13556b768fb105deaaf745fea} 
+\index{OGRID::Checkers@{OGRID::Checkers}!TryMakeMove@{TryMakeMove}}
+\index{TryMakeMove@{TryMakeMove}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{TryMakeMove()}{TryMakeMove()}}
+{\footnotesize\ttfamily bool OGRID\+::\+Checkers\+::\+Try\+Make\+Move (\begin{DoxyParamCaption}\item[{unsigned char \&}]{row,  }\item[{unsigned char \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Try making a move with the current player. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row of the grid. \\
+\hline
+{\em col} & The column of the grid. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a280802193908fb45304ddfdd64bd37f2}{OGRID\+::\+IGame}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a5ad46179c2fefa5a935807b92bf2cd04}\label{class_o_g_r_i_d_1_1_checkers_a5ad46179c2fefa5a935807b92bf2cd04} 
+\index{OGRID::Checkers@{OGRID::Checkers}!alpha@{alpha}}
+\index{alpha@{alpha}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily float OGRID\+::\+Checkers\+::alpha = 1.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_af4e476cac4bce1d5281c6bf80a62857e}\label{class_o_g_r_i_d_1_1_checkers_af4e476cac4bce1d5281c6bf80a62857e} 
+\index{OGRID::Checkers@{OGRID::Checkers}!alphaSpeed@{alphaSpeed}}
+\index{alphaSpeed@{alphaSpeed}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{alphaSpeed}{alphaSpeed}}
+{\footnotesize\ttfamily float OGRID\+::\+Checkers\+::alpha\+Speed = 0.\+025f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_af1598864866890ba630b1d973b42170d}\label{class_o_g_r_i_d_1_1_checkers_af1598864866890ba630b1d973b42170d} 
+\index{OGRID::Checkers@{OGRID::Checkers}!m\_Pieces@{m\_Pieces}}
+\index{m\_Pieces@{m\_Pieces}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{m\_Pieces}{m\_Pieces}}
+{\footnotesize\ttfamily std\+::map$<$std\+::pair$<$int, int$>$, \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}$>$ OGRID\+::\+Checkers\+::m\+\_\+\+Pieces\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_a62fc648f38a837c2cab0ddc31d8c3812}\label{class_o_g_r_i_d_1_1_checkers_a62fc648f38a837c2cab0ddc31d8c3812} 
+\index{OGRID::Checkers@{OGRID::Checkers}!m\_SelectedPiece@{m\_SelectedPiece}}
+\index{m\_SelectedPiece@{m\_SelectedPiece}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{m\_SelectedPiece}{m\_SelectedPiece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\texorpdfstring{$\ast$}{*} OGRID\+::\+Checkers\+::m\+\_\+\+Selected\+Piece = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_o_g_r_i_d_1_1_checkers_ac9e26fad423d06798cab8276053a68d5}\label{class_o_g_r_i_d_1_1_checkers_ac9e26fad423d06798cab8276053a68d5} 
+\index{OGRID::Checkers@{OGRID::Checkers}!m\_Supers@{m\_Supers}}
+\index{m\_Supers@{m\_Supers}!OGRID::Checkers@{OGRID::Checkers}}
+\doxysubsubsection{\texorpdfstring{m\_Supers}{m\_Supers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}} \texorpdfstring{$\ast$}{*}$>$ OGRID\+::\+Checkers\+::m\+\_\+\+Supers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/ogrid/\+Games/\+Checkers/\mbox{\hyperlink{_checkers_8h}{Checkers.\+h}}\item 
+Source/ogrid/\+Games/\+Checkers/\mbox{\hyperlink{_checkers_8cpp}{Checkers.\+cpp}}\end{DoxyCompactItemize}

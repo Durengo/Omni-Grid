@@ -1,0 +1,57 @@
+\doxysection{Checkers.\+h}
+\hypertarget{_checkers_8h_source}{}\label{_checkers_8h_source}\index{Source/ogrid/Games/Checkers/Checkers.h@{Source/ogrid/Games/Checkers/Checkers.h}}
+\mbox{\hyperlink{_checkers_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_8h}{GameLogicInterface/IGame.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_user_8h}{User/User.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_o_g_r_i_d}{OGRID}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }Piece;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers}{Checkers}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game}{IGame}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Contains\ references\ to\ super\ pieces}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::vector<Piece\ *>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ac9e26fad423d06798cab8276053a68d5}{m\_Supers}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Contains\ reference\ to\ the\ selected\ piece}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *\mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a62fc648f38a837c2cab0ddc31d8c3812}{m\_SelectedPiece}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Just\ to\ keep\ track\ of\ positions}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::map<std::pair<int,\ int>,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af1598864866890ba630b1d973b42170d}{m\_Pieces}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Variables\ for\ alpha\ of\ circles}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a5ad46179c2fefa5a935807b92bf2cd04}{alpha}}\ =\ 1.0f;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Speed\ of\ the\ transition}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af4e476cac4bce1d5281c6bf80a62857e}{alphaSpeed}}\ =\ 0.025f;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ac652cbcaf3e67fb645ba3b80f5fde9a5}{Checkers}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a16df49ad33c08b93321bf59e8ddfdbb8}{\string~Checkers}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_aced6fca13556b768fb105deaaf745fea}{TryMakeMove}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \&col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a21bd82ff9e31c444c203d0d79139e063}{IsWinningCondition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a24ec7090abf404c95fc81b512ef3aeda}{IsDrawCondition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_af92cffa9bada5835f69048746c3f620c}{SetupPlayers}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a97a759ff214c51adcb1a1731d78413eb}{Initialize}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}*\ user)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_acba9d0f7859a33a6d50492859275f69e}{OnGUIUpdateGrid}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a657164d309d360c8196575c567ab76be}{OnGUIUpdateGridHover}}(Vector2\ cell)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_acc00f9df718abbfb9f0d29a047b1911c}{SetupBoard}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a91ff9b2f7ea2af9ee4cdce4f99253b2d}{AddAsSuperPiece}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_aa9d623f78c2d0a77a3b6e5387d03e1c5}{RemoveSuperPiece}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a6f08d2756e8679192ed150dbe019314b}{IsSuperPiece}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a476a6cca3f2584ef78cf1da74aabeb9a}{AddPieceToPieceManager}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece,\ std::pair<int,\ int>\ position);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ab96f0747a5167d4e5a676ba881cd2c71}{RemovePieceFromPieceManager}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ab96f0747a5167d4e5a676ba881cd2c71}{RemovePieceFromPieceManager}}(std::pair<int,\ int>\ position);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a9c1a4c36598d3e96a530f971550f3e48}{GetPiecePosition}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a640dae346a149b5ed74b3c42c692ae46}{SetPiecePosition}}(\mbox{\hyperlink{class_o_g_r_i_d_1_1_piece}{Piece}}\ *piece,\ std::pair<int,\ int>\ position);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a2b6b93032e1c99741adc038b7ccc3a9e}{DrawPiece}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ Color\ color,\ \textcolor{keywordtype}{bool}\ blinking,\ \textcolor{keywordtype}{bool}\ super);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a6f825b4a3adddeed0f6067ad426effa8}{DrawCell}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}

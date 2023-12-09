@@ -1,0 +1,21 @@
+<map id="Source/ogrid/Tools/Database/DatabaseUserWrapper.h" name="Source/ogrid/Tools/Database/DatabaseUserWrapper.h">
+<area shape="rect" id="Node000001" title="Contains the DatabaseUserWrapper class." alt="" coords="226,5,452,48"/>
+<area shape="rect" id="Node000002" href="$_database_8h.html" title="Contains the database class." alt="" coords="76,96,256,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,51,208,92,206,87,293,46"/>
+<area shape="rect" id="Node000006" href="$_user_8h.html" title="Contains the User class." alt="" coords="294,96,384,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="342,49,342,80,337,80,337,49"/>
+<area shape="rect" id="Node000009" href="$_score_8h.html" title="Contains the Score class." alt="" coords="416,96,513,123"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="373,46,434,85,431,90,370,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,171,76,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,126,77,165,74,160,143,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,171,171,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="163,124,149,157,144,155,158,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="196,171,251,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="178,122,206,157,202,160,174,125"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="354,245,407,272"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="333,124,316,158,313,177,316,196,330,217,348,234,344,238,326,220,311,198,307,177,311,156,328,122"/>
+<area shape="rect" id="Node000008" href="$_player_8h.html" title="Contains the Player class." alt="" coords="325,171,436,197"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="349,122,368,156,364,159,344,125"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="383,198,383,230,378,230,378,198"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="467,124,463,159,450,199,433,220,414,238,410,234,429,217,445,196,458,157,462,123"/>
+</map>

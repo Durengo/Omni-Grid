@@ -1,0 +1,66 @@
+\doxysection{Source/ogrid/\+Tools/\+Database/\+Database\+User\+Wrapper.h File Reference}
+\hypertarget{_database_user_wrapper_8h}{}\label{_database_user_wrapper_8h}\index{Source/ogrid/Tools/Database/DatabaseUserWrapper.h@{Source/ogrid/Tools/Database/DatabaseUserWrapper.h}}
+
+
+Contains the Database\+User\+Wrapper class.  
+
+
+{\ttfamily \#include $<$Tools/\+Database/database.\+h$>$}\newline
+{\ttfamily \#include "{}User/\+User.\+h"{}}\newline
+{\ttfamily \#include "{}User/\+Score.\+h"{}}\newline
+Include dependency graph for Database\+User\+Wrapper.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_database_user_wrapper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{_database_user_wrapper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_s_q_l_w_r_a_p}{SQLWRAP}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aedce763b803084a4e3a4c35b61f04e20}{SQLWRAP\+::\+Login}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em The Database\+User\+Wrapper class. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a24fbd0c4c98768d98cd2158d3c038b08}{SQLWRAP\+::\+Check\+Username\+Duplicates}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username)
+\begin{DoxyCompactList}\small\item\em Checks if the username already exists. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a49f6a96ef1380108d21e483836790ebe}{SQLWRAP\+::\+Register}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username, const std\+::string \&password, const std\+::string \&first\+Name, const std\+::string \&last\+Name)
+\begin{DoxyCompactList}\small\item\em Registers a new user. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a50bfac656a4c68ad7d3d08804bafe4c7}{SQLWRAP\+::\+Fetch\+User\+Data}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Fetches the user data. \end{DoxyCompactList}\item 
+static sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710}{SQLWRAP\+::prepare\+Statement}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&sql)
+\begin{DoxyCompactList}\small\item\em Fetches the user data. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af44f08fec8e6a7bdc5336e5aee2ee52c}{SQLWRAP\+::bind\+Parameters}} (sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}stmt, \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Binds the parameters to the prepared statement. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0}{SQLWRAP\+::execute\+Statement}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}stmt)
+\begin{DoxyCompactList}\small\item\em Executes the prepared statement. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a904250249c66ab9bec6c4270794f34bd}{SQLWRAP\+::begin\+Transaction}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Begins a transaction. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a263f46961bf2b2f64967b406ee8ca30f}{SQLWRAP\+::commit\+Transaction}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b}{SQLWRAP\+::rollback\+Transaction}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af8cc441f5c8dd07e0e418f603dae4128}{SQLWRAP\+::\+Test\+Update}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Tests the update statement. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a089f73cd289f2f5d57d0312b1127b798}{SQLWRAP\+::\+Update\+User\+Score}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Updates the user score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the Database\+User\+Wrapper class. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}

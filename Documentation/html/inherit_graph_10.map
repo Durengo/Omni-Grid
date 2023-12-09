@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_o_g_r_i_d_1_1_i_game.html" title="The IGame class. Used to represent a game." alt="" coords="5,56,114,83"/>
+<area shape="rect" id="Node000001" href="$class_o_g_r_i_d_1_1_checkers.html" title=" " alt="" coords="171,5,297,32"/>
+<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="122,48,185,30,186,35,124,54"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_connect_four.html" title=" " alt="" coords="162,56,306,83"/>
+<area shape="poly" id="edge9_Node000000_Node000002" title=" " alt="" coords="129,67,161,67,161,72,129,72"/>
+<area shape="rect" id="Node000003" href="$class_o_g_r_i_d_1_1_tic_tac_toe.html" title="TicTacToe game logic." alt="" coords="169,107,299,133"/>
+<area shape="poly" id="edge10_Node000000_Node000003" title=" " alt="" coords="124,85,186,104,185,109,122,90"/>
+</map>

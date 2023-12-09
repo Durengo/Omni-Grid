@@ -1,0 +1,5 @@
+<map id="OGRID::GameConfigurationBuilder" name="OGRID::GameConfigurationBuilder">
+<area shape="rect" id="Node000001" title="The GameConfigurationBuilder class. Used to build a GameConfiguration object." alt="" coords="8,80,188,123"/>
+<area shape="rect" id="Node000002" href="$struct_o_g_r_i_d_1_1_configuration_builder.html" title="The ConfigurationBuilder interface." alt="" coords="5,5,191,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,48,101,80,95,80,95,48"/>
+</map>

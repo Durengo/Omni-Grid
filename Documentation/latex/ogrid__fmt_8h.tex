@@ -1,0 +1,43 @@
+\doxysection{Source/ogrid/ogrid\+\_\+fmt.h File Reference}
+\hypertarget{ogrid__fmt_8h}{}\label{ogrid__fmt_8h}\index{Source/ogrid/ogrid\_fmt.h@{Source/ogrid/ogrid\_fmt.h}}
+
+
+This is used for fmt formatting from the \doxylink{namespace_o_g_r_i_d}{OGRID} namespace.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}fmt/format.\+h"{}}\newline
+{\ttfamily \#include "{}Grid/\+Grid.\+h"{}}\newline
+{\ttfamily \#include "{}Player/\+Player.\+h"{}}\newline
+{\ttfamily \#include "{}Player/\+Piece.\+h"{}}\newline
+Include dependency graph for ogrid\+\_\+fmt.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ogrid__fmt_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{ogrid__fmt_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4}{fmt\+::formatter$<$ OGRID\+::\+Grid $>$}}
+\begin{DoxyCompactList}\small\item\em This is used to format a Grid object into a string using fmt. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4}{fmt\+::formatter$<$ OGRID\+::\+Player\+Type $>$}}
+\begin{DoxyCompactList}\small\item\em This is used to format a Player\+Type enum into a string using fmt. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4}{fmt\+::formatter$<$ OGRID\+::\+Player $>$}}
+\begin{DoxyCompactList}\small\item\em This is used to format a Player object into a string using fmt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is used for fmt formatting from the \doxylink{namespace_o_g_r_i_d}{OGRID} namespace. 
+
+This is put in one file to avoid circular dependencies. \begin{DoxyDate}{Date}
+2023-\/12-\/06 
+\end{DoxyDate}

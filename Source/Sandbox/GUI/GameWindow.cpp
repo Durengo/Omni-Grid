@@ -4,6 +4,8 @@
 #include <ogrid.h>
 #include <ogrid_gui.h>
 
+#include "User/User.h"
+
 namespace Sandbox
 {
     template class Sandbox::GameWindow<OGRID::TicTacToe>;
@@ -17,11 +19,11 @@ namespace Sandbox
     }
 
     template <class T>
-    void GameWindow<T>::Start()
+    void GameWindow<T>::Start(OGRID::User *user)
     {
         m_Game = new T();
         m_Running = true;
-        m_Game->Initialize();
+        m_Game->Initialize(user);
         SetConfigFlags(FLAG_WINDOW_RESIZABLE);
         InitWindow(m_Game->m_guiInfo.width,
                    m_Game->m_guiInfo.height,
