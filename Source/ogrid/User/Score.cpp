@@ -5,11 +5,11 @@ namespace OGRID
     // Constructors & Destructors
 
     Score::Score()
-        : m_ScoreId(0), m_UserId(0), m_Wins(0), m_Losses(0), m_WinRate(0.0f)
+        : m_ScoreId(0), m_UserId(0), m_Wins(0), m_Losses(0), m_WinRate(0.0)
     {
     }
 
-    Score::Score(unsigned int scoreId, unsigned int userId, unsigned int wins, unsigned int losses, float winRate)
+    Score::Score(unsigned int scoreId, unsigned int userId, unsigned int wins, unsigned int losses, double winRate)
         : m_ScoreId(scoreId), m_UserId(userId), m_Wins(wins), m_Losses(losses), m_WinRate(winRate)
     {
     }
@@ -40,13 +40,33 @@ namespace OGRID
         m_Losses = losses;
     }
 
-    float Score::GetWinRate() const
+    double Score::GetWinRate() const
     {
         return m_WinRate;
     }
 
-    void Score::SetWinRate(float winRate)
+    void Score::SetWinRate(double winRate)
     {
         m_WinRate = winRate;
+    }
+
+    // Private methods
+
+    void Score::CalculateWinRate()
+    {
+        m_WinRate = (double)m_Wins / (double)(m_Wins + m_Losses);
+    }
+
+    // Methods
+    void Score::AddWin()
+    {
+        m_Wins++;
+        CalculateWinRate();
+    }
+
+    void Score::AddLoss()
+    {
+        m_Losses++;
+        CalculateWinRate();
     }
 }

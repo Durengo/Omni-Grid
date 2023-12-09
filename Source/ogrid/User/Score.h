@@ -19,12 +19,12 @@ namespace OGRID
 
         unsigned int m_Wins;
         unsigned int m_Losses;
-        float m_WinRate;
+        double m_WinRate;
 
         // Constructors & Destructors
     public:
         Score();
-        Score(unsigned int scoreId = 0, unsigned int userId = 0, unsigned int wins = 0, unsigned int losses = 0, float winRate = 0.0f);
+        Score(unsigned int scoreId = 0, unsigned int userId = 0, unsigned int wins = 0, unsigned int losses = 0, double winRate = 0.0);
         ~Score();
 
         // Getters & Setters
@@ -35,7 +35,16 @@ namespace OGRID
         unsigned int GetLosses() const;
         void SetLosses(unsigned int losses);
 
-        float GetWinRate() const;
-        void SetWinRate(float winRate);
+        double GetWinRate() const;
+        void SetWinRate(double winRate);
+
+        // Private methods
+    private:
+        void CalculateWinRate();
+
+        // Methods
+    public:
+        void AddWin();
+        void AddLoss();
     };
 }
