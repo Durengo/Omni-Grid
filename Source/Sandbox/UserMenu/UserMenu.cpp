@@ -45,6 +45,8 @@ namespace Sandbox
         m_Database->createTableFromString(createScoreTable);
 
         m_Database->displayAllTables();
+
+        PreLoginMenu();
     }
 
     void UserMenu::PreLoginMenu()

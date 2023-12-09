@@ -21,7 +21,6 @@ int main()
 
     Sandbox::UserMenu userMenu;
     userMenu.Start();
-    userMenu.PreLoginMenu();
 
     return 0;
 }
