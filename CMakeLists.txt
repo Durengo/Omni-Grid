@@ -368,12 +368,14 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
         file(GLOB_RECURSE Ogrid-Sandbox_CPP
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/UserMenu/*.cpp"
         )
 
         # Ogrid-Sandbox .H FILES
         file(GLOB_RECURSE Ogrid-Sandbox_H
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/Core/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/Sandbox/GUI/*.h"
+                "${PROJECT_SOURCE_DIR}/Source/Sandbox/UserMenu/*.h"
         )
 
         if(${VERBOSE})
