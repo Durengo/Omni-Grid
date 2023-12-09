@@ -82,7 +82,8 @@ namespace SQLWRAP
         sqlite3_finalize(stmt);
         db->close();
 
-        return rc == SQLITE_ROW; // Returns true if username exists
+        // Returns true if username exists
+        return rc == SQLITE_ROW;
     }
 
     static bool Register(Database *db, const std::string &username, const std::string &password, const std::string &firstName, const std::string &lastName)
@@ -196,18 +197,21 @@ namespace SQLWRAP
             user = new OGRID::User(userId, userName, userPassword, firstName, lastName);
 
             // Now fetch the score for this user
-            sql = "SELECT Wins, Losses, WinRate FROM Score WHERE UserId = ?;";
+            sql = "SELECT ScoreId, Wins, Losses, WinRate FROM Score WHERE UserId = ?;";
             sqlite3_prepare_v2(db->getSQLDB(), sql.c_str(), -1, &stmt, nullptr);
             sqlite3_bind_int(stmt, 1, userId);
 
             if (sqlite3_step(stmt) == SQLITE_ROW)
             {
-                unsigned int wins = sqlite3_column_int(stmt, 0);
-                unsigned int losses = sqlite3_column_int(stmt, 1);
-                float winRate = static_cast<float>(sqlite3_column_double(stmt, 2));
+                unsigned int scoreId = sqlite3_column_int(stmt, 0);
+                unsigned int wins = sqlite3_column_int(stmt, 1);
+                unsigned int losses = sqlite3_column_int(stmt, 2);
+                float winRate = static_cast<float>(sqlite3_column_double(stmt, 3));
 
                 // Assuming Score is a member of User and has a suitable constructor
-                user->SetScore(new OGRID::Score(userId, wins, losses, winRate));
+                user->SetScore(new OGRID::Score(scoreId, userId, wins, losses, winRate));
+
+                CLI_ERROR("SCORE: {0}, {1}, {2}, {3}, {4}", scoreId, userId, wins, losses, winRate);
             }
         }
 
@@ -215,5 +219,133 @@ namespace SQLWRAP
         db->close();
 
         return user;
+    }
+
+    static sqlite3_stmt *prepareStatement(Database *db, const std::string &sql)
+    {
+        sqlite3_stmt *stmt;
+        int rc = sqlite3_prepare_v2(db->getSQLDB(), sql.c_str(), -1, &stmt, nullptr);
+        if (rc != SQLITE_OK)
+        {
+            std::cerr << "Failed to prepare statement: " << sqlite3_errmsg(db->getSQLDB()) << std::endl;
+            return nullptr;
+        }
+        return stmt;
+    }
+
+    static bool bindParameters(sqlite3_stmt *stmt, OGRID::User *user)
+    {
+        if (!stmt || !user || !user->GetScore())
+        {
+            return false;
+        }
+
+        OGRID::Score *score = user->GetScore();
+        sqlite3_bind_int(stmt, 1, score->GetWins());
+        sqlite3_bind_int(stmt, 2, score->GetLosses());
+        sqlite3_bind_double(stmt, 3, score->GetWinRate());
+        sqlite3_bind_int(stmt, 4, user->GetUserId());
+
+        return true;
+    }
+
+    static bool executeStatement(Database *db, sqlite3_stmt *stmt)
+    {
+        int rc, retryCount = 0;
+        while (retryCount < 10)
+        {
+            rc = sqlite3_step(stmt);
+            if (rc == SQLITE_DONE)
+            {
+                return true;
+            }
+            else if (rc == SQLITE_BUSY)
+            {
+                std::cerr << "SQLite database is locked, retrying..." << std::endl;
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                retryCount++;
+            }
+            else
+            {
+                std::cerr << "Failed to execute statement: " << sqlite3_errmsg(db->getSQLDB()) << std::endl;
+                return false;
+            }
+        }
+        return false;
+    }
+
+    static void beginTransaction(Database *db)
+    {
+        char *errMsg = nullptr;
+        sqlite3_exec(db->getSQLDB(), "BEGIN TRANSACTION;", nullptr, nullptr, &errMsg);
+    }
+
+    static void commitTransaction(Database *db)
+    {
+        char *errMsg = nullptr;
+        sqlite3_exec(db->getSQLDB(), "COMMIT;", nullptr, nullptr, &errMsg);
+    }
+
+    static void rollbackTransaction(Database *db)
+    {
+        char *errMsg = nullptr;
+        sqlite3_exec(db->getSQLDB(), "ROLLBACK;", nullptr, nullptr, &errMsg);
+    }
+
+    static bool TestUpdate(Database *db)
+    {
+        std::string sql = "UPDATE Score SET Wins = 1, Losses = 1, WinRate = 0.5 WHERE UserId = 1;";
+        sqlite3_stmt *stmt = prepareStatement(db, sql);
+        if (!stmt)
+        {
+            return false;
+        }
+
+        if (executeStatement(db, stmt))
+        {
+            std::cout << "Update successful" << std::endl;
+            sqlite3_finalize(stmt);
+            return true;
+        }
+        else
+        {
+            std::cerr << "Update failed" << std::endl;
+            sqlite3_finalize(stmt);
+            return false;
+        }
+    }
+
+    static bool UpdateUserScore(Database *db, OGRID::User *user)
+    {
+        if (user == nullptr || user->GetScore() == nullptr)
+        {
+            std::cerr << "User or User's Score is null." << std::endl;
+            return false;
+        }
+
+        // Start a transaction
+        beginTransaction(db);
+
+        std::string sql = "UPDATE Score SET Wins = ?, Losses = ?, WinRate = ? WHERE UserId = ?;";
+        sqlite3_stmt *stmt = prepareStatement(db, sql);
+        if (!stmt || !bindParameters(stmt, user))
+        {
+            rollbackTransaction(db);
+            return false;
+        }
+
+        bool result = executeStatement(db, stmt);
+        sqlite3_finalize(stmt);
+
+        if (result)
+        {
+            commitTransaction(db);
+        }
+        else
+        {
+            rollbackTransaction(db);
+        }
+
+        return result;
     }
 }
