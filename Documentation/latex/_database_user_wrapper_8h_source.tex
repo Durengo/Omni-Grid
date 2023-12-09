@@ -1,0 +1,351 @@
+\doxysection{Database\+User\+Wrapper.\+h}
+\hypertarget{_database_user_wrapper_8h_source}{}\label{_database_user_wrapper_8h_source}\index{Source/ogrid/Tools/Database/DatabaseUserWrapper.h@{Source/ogrid/Tools/Database/DatabaseUserWrapper.h}}
+\mbox{\hyperlink{_database_user_wrapper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_database_8h}{Tools/Database/database.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_user_8h}{User/User.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_score_8h}{User/Score.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_s_q_l_w_r_a_p}{SQLWRAP}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Attempt\ to\ login\ with\ the\ given\ username\ and\ password}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aedce763b803084a4e3a4c35b61f04e20}{Login}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ \textcolor{keyword}{const}\ std::string\ \&username,\ \textcolor{keyword}{const}\ std::string\ \&password)}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ loginSuccess\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ sql;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Open\ the\ database}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}{open}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SQL\ to\ get\ user\ with\ given\ username}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ sql\ =\ \textcolor{stringliteral}{"{}SELECT\ UserPassword\ FROM\ User\ WHERE\ UserName\ =\ ?;"{}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ prepare\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ the\ username\ to\ the\ prepared\ statement}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ username.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sqlite3\_step(stmt)\ ==\ SQLITE\_ROW)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compare\ the\ provided\ password\ with\ the\ stored\ password}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ storedPassword\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}\ *\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 0));}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (password\ ==\ storedPassword)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loginSuccess\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Close\ the\ database}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ loginSuccess;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a24fbd0c4c98768d98cd2158d3c038b08}{CheckUsernameDuplicates}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ \textcolor{keyword}{const}\ std::string\ \&username)}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::string\ sql;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Open\ the\ database}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}{open}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SQL\ to\ check\ if\ the\ username\ already\ exists}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ sql\ =\ \textcolor{stringliteral}{"{}SELECT\ UserName\ FROM\ User\ WHERE\ UserName\ =\ ?;"{}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ prepare\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ username.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_step(stmt);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ true\ if\ username\ exists}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rc\ ==\ SQLITE\_ROW;}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a49f6a96ef1380108d21e483836790ebe}{Register}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ \textcolor{keyword}{const}\ std::string\ \&username,\ \textcolor{keyword}{const}\ std::string\ \&password,\ \textcolor{keyword}{const}\ std::string\ \&firstName,\ \textcolor{keyword}{const}\ std::string\ \&lastName)}
+\DoxyCodeLine{00116\ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a24fbd0c4c98768d98cd2158d3c038b08}{CheckUsernameDuplicates}}(db,\ username))}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Username\ already\ exists."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::string\ sql;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Open\ the\ database}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}{open}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SQL\ to\ insert\ a\ new\ user}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ sql\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ User\ (UserName,\ UserPassword,\ UserFirstName,\ UserLastName)\ VALUES\ (?,\ ?,\ ?,\ ?);"{}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ prepare\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ the\ details\ to\ the\ prepared\ statement}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ username.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 2,\ password.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 3,\ firstName.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 4,\ lastName.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_step(stmt);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_DONE)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ execute\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ last\ inserted\ user\ ID}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lastUserId\ =\ sqlite3\_last\_insert\_rowid(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}());}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SQL\ to\ insert\ a\ default\ score\ for\ the\ new\ user}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ sql\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ Score\ (UserId,\ Wins,\ Losses,\ WinRate)\ VALUES\ (?,\ 0,\ 0,\ 0.0);"{}};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ prepare\ statement\ for\ Score:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ the\ user\ ID\ to\ the\ prepared\ statement}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ sqlite3\_bind\_int(stmt,\ 1,\ lastUserId);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_step(stmt);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_DONE)}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ execute\ statement\ for\ Score:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}\ *\mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a50bfac656a4c68ad7d3d08804bafe4c7}{FetchUserData}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ \textcolor{keyword}{const}\ std::string\ \&username,\ \textcolor{keyword}{const}\ std::string\ \&password)}
+\DoxyCodeLine{00197\ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc;}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ std::string\ sql;}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Open\ the\ database}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}{open}}();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SQL\ to\ fetch\ the\ user}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ sql\ =\ \textcolor{stringliteral}{"{}SELECT\ UserId,\ UserName,\ UserPassword,\ UserFirstName,\ UserLastName\ FROM\ User\ WHERE\ UserName\ =\ ?\ AND\ UserPassword\ =\ ?;"{}};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ prepare\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ the\ username\ and\ password\ to\ the\ prepared\ statement}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ username.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ sqlite3\_bind\_text(stmt,\ 2,\ password.c\_str(),\ -\/1,\ SQLITE\_STATIC);}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}\ *user\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sqlite3\_step(stmt)\ ==\ SQLITE\_ROW)}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ userId\ =\ sqlite3\_column\_int(stmt,\ 0);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ userName\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}\ *\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 1));}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ userPassword\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}\ *\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 2));}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ firstName\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}\ *\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 3));}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ lastName\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}\ *\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 4));}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ user\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}(userId,\ userName,\ userPassword,\ firstName,\ lastName);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Now\ fetch\ the\ score\ for\ this\ user}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ sql\ =\ \textcolor{stringliteral}{"{}SELECT\ ScoreId,\ Wins,\ Losses,\ WinRate\ FROM\ Score\ WHERE\ UserId\ =\ ?;"{}};}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_bind\_int(stmt,\ 1,\ userId);}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sqlite3\_step(stmt)\ ==\ SQLITE\_ROW)}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ scoreId\ =\ sqlite3\_column\_int(stmt,\ 0);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wins\ =\ sqlite3\_column\_int(stmt,\ 1);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ losses\ =\ sqlite3\_column\_int(stmt,\ 2);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ winRate\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(sqlite3\_column\_double(stmt,\ 3));}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Assuming\ Score\ is\ a\ member\ of\ User\ and\ has\ a\ suitable\ constructor}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ user-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_ada4fe9d52ad65389af96096aeddd411d}{SetScore}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_score}{OGRID::Score}}(scoreId,\ userId,\ wins,\ losses,\ winRate));}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CLI\_ERROR(\textcolor{stringliteral}{"{}SCORE:\ \{0\},\ \{1\},\ \{2\},\ \{3\},\ \{4\}"{}},\ scoreId,\ userId,\ wins,\ losses,\ winRate);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user;}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keyword}{static}\ sqlite3\_stmt\ *\mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710}{prepareStatement}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ \textcolor{keyword}{const}\ std::string\ \&sql)}
+\DoxyCodeLine{00266\ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc\ =\ sqlite3\_prepare\_v2(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ sql.c\_str(),\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ prepare\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stmt;}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af44f08fec8e6a7bdc5336e5aee2ee52c}{bindParameters}}(sqlite3\_stmt\ *stmt,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}\ *user)}
+\DoxyCodeLine{00286\ \ \ \ \ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!stmt\ ||\ !user\ ||\ !user-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a280449413a7efd4279797b19bc221afa}{GetScore}}())}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_o_g_r_i_d_1_1_score}{OGRID::Score}}\ *score\ =\ user-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a280449413a7efd4279797b19bc221afa}{GetScore}}();}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ sqlite3\_bind\_int(stmt,\ 1,\ score-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a643cd5e0ecc3c29105d1937fc5524a1f}{GetWins}}());}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ sqlite3\_bind\_int(stmt,\ 2,\ score-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a5d75f8f686419223580827679641fa2d}{GetLosses}}());}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ sqlite3\_bind\_double(stmt,\ 3,\ score-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_score_a2f4e974272a36e932663ba9860fca36e}{GetWinRate}}());}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ sqlite3\_bind\_int(stmt,\ 4,\ user-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a6ff1d4e9c72682d3b6b97dd988979f12}{GetUserId}}());}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00299\ \ \ \ \ \}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0}{executeStatement}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ sqlite3\_stmt\ *stmt)}
+\DoxyCodeLine{00310\ \ \ \ \ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rc,\ retryCount\ =\ 0;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (retryCount\ <\ 10)}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ rc\ =\ sqlite3\_step(stmt);}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ ==\ SQLITE\_DONE)}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (rc\ ==\ SQLITE\_BUSY)}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}SQLite\ database\ is\ locked,\ retrying..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(100));}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ retryCount++;}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ execute\ statement:\ "{}}\ <<\ sqlite3\_errmsg(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}())\ <<\ std::endl;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00332\ \ \ \ \ \}}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a904250249c66ab9bec6c4270794f34bd}{beginTransaction}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db)}
+\DoxyCodeLine{00340\ \ \ \ \ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *errMsg\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ sqlite3\_exec(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ \textcolor{stringliteral}{"{}BEGIN\ TRANSACTION;"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \&errMsg);}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a263f46961bf2b2f64967b406ee8ca30f}{commitTransaction}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db)}
+\DoxyCodeLine{00351\ \ \ \ \ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *errMsg\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ sqlite3\_exec(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ \textcolor{stringliteral}{"{}COMMIT;"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \&errMsg);}
+\DoxyCodeLine{00354\ \ \ \ \ \}}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00361\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b}{rollbackTransaction}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db)}
+\DoxyCodeLine{00362\ \ \ \ \ \{}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *errMsg\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ sqlite3\_exec(db-\/>\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}(),\ \textcolor{stringliteral}{"{}ROLLBACK;"{}},\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr},\ \&errMsg);}
+\DoxyCodeLine{00365\ \ \ \ \ \}}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af8cc441f5c8dd07e0e418f603dae4128}{TestUpdate}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db)}
+\DoxyCodeLine{00375\ \ \ \ \ \{}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ std::string\ sql\ =\ \textcolor{stringliteral}{"{}UPDATE\ Score\ SET\ Wins\ =\ 1,\ Losses\ =\ 1,\ WinRate\ =\ 0.5\ WHERE\ UserId\ =\ 1;"{}};}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt\ =\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710}{prepareStatement}}(db,\ sql);}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!stmt)}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0}{executeStatement}}(db,\ stmt))}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Update\ successful"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Update\ failed"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a089f73cd289f2f5d57d0312b1127b798}{UpdateUserScore}}(\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}\ *db,\ \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID::User}}\ *user)}
+\DoxyCodeLine{00406\ \ \ \ \ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (user\ ==\ \textcolor{keyword}{nullptr}\ ||\ user-\/>\mbox{\hyperlink{class_o_g_r_i_d_1_1_user_a280449413a7efd4279797b19bc221afa}{GetScore}}()\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}User\ or\ User's\ Score\ is\ null."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Start\ a\ transaction}}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a904250249c66ab9bec6c4270794f34bd}{beginTransaction}}(db);}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ std::string\ sql\ =\ \textcolor{stringliteral}{"{}UPDATE\ Score\ SET\ Wins\ =\ ?,\ Losses\ =\ ?,\ WinRate\ =\ ?\ WHERE\ UserId\ =\ ?;"{}};}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ sqlite3\_stmt\ *stmt\ =\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710}{prepareStatement}}(db,\ sql);}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!stmt\ ||\ !\mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af44f08fec8e6a7bdc5336e5aee2ee52c}{bindParameters}}(stmt,\ user))}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b}{rollbackTransaction}}(db);}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ result\ =\ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0}{executeStatement}}(db,\ stmt);}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result)}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a263f46961bf2b2f64967b406ee8ca30f}{commitTransaction}}(db);}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b}{rollbackTransaction}}(db);}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00437\ \ \ \ \ \}}
+\DoxyCodeLine{00438\ \}}
+
+\end{DoxyCode}

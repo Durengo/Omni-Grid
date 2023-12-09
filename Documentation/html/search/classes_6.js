@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['normalcheckersmoverule_0',['NormalCheckersMoveRule',['../class_o_g_r_i_d_1_1_normal_checkers_move_rule.html',1,'OGRID']]]
+  ['jumpnormalcheckersattackrule_0',['JumpNormalCheckersAttackRule',['../class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule.html',1,'OGRID']]],
+  ['jumpsupercheckersattackrule_1',['JumpSuperCheckersAttackRule',['../class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule.html',1,'OGRID']]]
 ];

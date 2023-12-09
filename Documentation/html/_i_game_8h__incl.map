@@ -1,15 +1,21 @@
 <map id="Source/ogrid/GameLogicInterface/IGame.h" name="Source/ogrid/GameLogicInterface/IGame.h">
-<area shape="rect" id="Node000001" title="Contains the IGame class." alt="" coords="74,5,288,48"/>
+<area shape="rect" id="Node000001" title="Contains the IGame class." alt="" coords="92,5,305,48"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,104,74,131"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,51,74,98,71,93,146,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,51,77,98,74,94,160,46"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="97,104,161,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,50,146,92,142,89,166,47"/>
-<area shape="rect" id="Node000004" href="$_g_u_i_info_8h.html" title="GUI info." alt="" coords="184,104,284,131"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,47,221,89,216,92,191,50"/>
-<area shape="rect" id="Node000006" href="$_game_state_checker_8h.html" title="Contains the GameStateChecker class." alt="" coords="308,96,483,139"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="232,46,332,87,330,92,230,51"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="208,195,261,221"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,131,237,179,232,179,232,131"/>
-<area shape="rect" id="Node000007" href="$_i_game_state_8h.html" title="Contains the IGameState class." alt="" coords="327,187,464,229"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="398,139,398,171,393,171,393,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,50,150,93,146,90,180,47"/>
+<area shape="rect" id="Node000004" href="$_g_u_i_info_8h.html" title="GUI info." alt="" coords="139,195,239,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,49,193,180,188,179,194,48"/>
+<area shape="rect" id="Node000006" href="$_game_state_checker_8h.html" title="Contains the GameStateChecker class." alt="" coords="236,96,411,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="229,46,283,84,280,89,226,51"/>
+<area shape="rect" id="Node000008" href="$_user_8h.html" title="Contains the User class." alt="" coords="436,104,526,131"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="270,46,424,93,432,96,431,101,423,99,268,51"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="410,277,464,304"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,219,397,274,395,279,227,224"/>
+<area shape="rect" id="Node000007" href="$_i_game_state_8h.html" title="Contains the IGameState class." alt="" coords="263,187,400,229"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="328,139,331,171,326,171,323,139"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="480,132,465,187,446,263,441,262,460,186,475,130"/>
+<area shape="rect" id="Node000009" href="$_player_8h.html" title="Contains the Player class." alt="" coords="474,195,584,221"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="490,130,517,180,513,182,485,133"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="516,224,464,269,460,265,513,220"/>
 </map>

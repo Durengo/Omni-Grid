@@ -1,0 +1,62 @@
+\doxysection{Database.\+h}
+\hypertarget{_database_8h_source}{}\label{_database_8h_source}\index{Source/ogrid/Tools/Database/Database.h@{Source/ogrid/Tools/Database/Database.h}}
+\mbox{\hyperlink{_database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}sqlite3.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_s_q_l_w_r_a_p}{SQLWRAP}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}}
+\DoxyCodeLine{00021\ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ sqlite3\ *\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ac68eb92d95cf355700c91fc708ac5ebf}{SQLDB}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ sqlite3\_stmt\ *\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a00bee5551c32963643a4992d36ae739e}{stmt}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a53784a18c59f84fe453bb8aaccce0346}{FILEPATH}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a514daf075afcf1d697b9d1ffa9a638ae}{fpath}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Constructors\ \&\ Destructors}}
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}(\textcolor{keyword}{const}\ std::string\ \&path);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_aecfc6a0b4f230251b9ee50e679f7ec2b}{\string~Database}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Getters\ \&\ Setters}}
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \ \ \ \ sqlite3\ *\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a8fdc3c44a59b128c4cd301c985bd7c82}{getSQLDB}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ std::string\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_aa152ae0cf9dae1a93d81e892fb7d0ab6}{getFilePath}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_abf81736b50fd9c9945727e01c9c3cd04}{getRows}}(\textcolor{keyword}{const}\ std::string\ \&tableName);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a866358830769962b19b618a282875fdf}{getColumns}}(\textcolor{keyword}{const}\ std::string\ \&tableName);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ Methods}}
+\DoxyCodeLine{00093\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ Open\ a\ connection\ to\ the\ database}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_af8f6628fa9d95d9d43d55c3a288a4058}{open}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ Close\ the\ connection\ to\ the\ database}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ab136b42f97dceb011ff955c1aa19c580}{close}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ database\ by\ removing\ the\ .db\ file}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a5514f51acd9b31f19a28da5ed54048ba}{clear}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ Core\ callback\ function\ for\ sqlite3\_exec}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ad51a66fb0ca9e5971bdc69078e2833cd}{callback}}(\textcolor{keywordtype}{void}\ *context,\ \textcolor{keywordtype}{int}\ columnCount,\ \textcolor{keywordtype}{char}\ **columnValues,\ \textcolor{keywordtype}{char}\ **columnName);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ Create\ a\ table\ from\ a\ string,\ if\ a\ table\ with\ the\ same\ name\ already\ exists,\ the\ statement\ will\ not\ be\ executed}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_ad4b7edde9e17908a9f437b15c85cddb4}{createTableFromString}}(\textcolor{keyword}{const}\ std::string\ \&sqlCreateTable);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ Display\ all\ tables\ in\ the\ database}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database_a0342681fea0f7a6ac99d8e2d01404528}{displayAllTables}}();}
+\DoxyCodeLine{00139\ \ \ \};}
+\DoxyCodeLine{00140\ \}}
+
+\end{DoxyCode}

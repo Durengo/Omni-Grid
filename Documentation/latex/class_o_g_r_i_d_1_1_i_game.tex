@@ -11,8 +11,7 @@ The \doxylink{class_o_g_r_i_d_1_1_i_game}{IGame} class. Used to represent a game
 
 
 
-Inheritance diagram for OGRID\+::IGame\+:
-\nopagebreak
+Inheritance diagram for OGRID\+::IGame\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,7 +39,7 @@ virtual bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022
 \begin{DoxyCompactList}\small\item\em Check if the draw condition is met. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a4971fe78b8b2ebba20643942bb340ce4}{Setup\+Players}} ()=0
 \begin{DoxyCompactList}\small\item\em Setup the players of the game. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602}{Initialize}} ()=0
+virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0727421010ad84487fc6b1ebb25b96e6}{Initialize}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user)=0
 \begin{DoxyCompactList}\small\item\em Setup the core of the game. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0458b9fbf987ce4367e1ae36ce12bcc6}{On\+GUIUpdate\+Grid}} ()=0
 \begin{DoxyCompactList}\small\item\em Update the game\textquotesingle{}s GUI. \end{DoxyCompactList}\item 
@@ -148,7 +147,9 @@ size\+\_\+t \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229
 unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea}{m\+\_\+total\+Turns}} = 0
 \begin{DoxyCompactList}\small\item\em Keeps the total number of turns. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc}{m\+\_\+\+Game\+Configuration}} = nullptr
-\begin{DoxyCompactList}\small\item\em The \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_af2632167ae5b3737138900b41a35750e}{m\+\_\+\+User}} = nullptr
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -467,11 +468,11 @@ Get the winner of the game.
 \begin{DoxyDate}{Date}
 2023-\/12-\/06 
 \end{DoxyDate}
-\Hypertarget{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602}\label{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602} 
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_a0727421010ad84487fc6b1ebb25b96e6}\label{class_o_g_r_i_d_1_1_i_game_a0727421010ad84487fc6b1ebb25b96e6} 
 \index{OGRID::IGame@{OGRID::IGame}!Initialize@{Initialize}}
 \index{Initialize@{Initialize}!OGRID::IGame@{OGRID::IGame}}
 \doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
-{\footnotesize\ttfamily virtual void OGRID\+::\+IGame\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void OGRID\+::\+IGame\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -482,7 +483,7 @@ Setup the core of the game.
 \end{DoxyDate}
 
 
-Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_ad42257c45b758ef937f1df535a6b19b6}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a3d413f3f2fdd0f4fb631a1423925d352}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_ac5ce7d5d428af91eba08f5f7212d889e}{OGRID\+::\+Tic\+Tac\+Toe}}.
+Implemented in \mbox{\hyperlink{class_o_g_r_i_d_1_1_checkers_a97a759ff214c51adcb1a1731d78413eb}{OGRID\+::\+Checkers}}, \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a1f97865f40d92cdcd869f13be3798338}{OGRID\+::\+Connect\+Four}}, and \mbox{\hyperlink{class_o_g_r_i_d_1_1_tic_tac_toe_a0c31b082ef004e3448b895937f8c40c9}{OGRID\+::\+Tic\+Tac\+Toe}}.
 
 \Hypertarget{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4}\label{class_o_g_r_i_d_1_1_i_game_a239771459de29a76cf0022e28f1af8b4} 
 \index{OGRID::IGame@{OGRID::IGame}!IsDrawCondition@{IsDrawCondition}}
@@ -1000,6 +1001,12 @@ Keeps the total number of turns.
 \begin{DoxyNote}{Note}
 This is not used for anything yet. 
 \end{DoxyNote}
+\Hypertarget{class_o_g_r_i_d_1_1_i_game_af2632167ae5b3737138900b41a35750e}\label{class_o_g_r_i_d_1_1_i_game_af2632167ae5b3737138900b41a35750e} 
+\index{OGRID::IGame@{OGRID::IGame}!m\_User@{m\_User}}
+\index{m\_User@{m\_User}!OGRID::IGame@{OGRID::IGame}}
+\doxysubsubsection{\texorpdfstring{m\_User}{m\_User}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{User}}\texorpdfstring{$\ast$}{*} OGRID\+::\+IGame\+::m\+\_\+\+User = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
 \Hypertarget{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec}\label{class_o_g_r_i_d_1_1_i_game_a8d32cd53b9df2ecf2ffde0a899b54fec} 
 \index{OGRID::IGame@{OGRID::IGame}!m\_winner@{m\_winner}}
 \index{m\_winner@{m\_winner}!OGRID::IGame@{OGRID::IGame}}

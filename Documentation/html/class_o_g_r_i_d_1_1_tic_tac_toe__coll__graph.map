@@ -1,20 +1,25 @@
 <map id="OGRID::TicTacToe" name="OGRID::TicTacToe">
-<area shape="rect" id="Node000001" title="TicTacToe game logic." alt="" coords="184,449,314,476"/>
-<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_i_game.html" title="The IGame class. Used to represent a game." alt="" coords="195,373,303,400"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,415,252,449,246,449,246,415"/>
+<area shape="rect" id="Node000001" title="TicTacToe game logic." alt="" coords="259,449,388,476"/>
+<area shape="rect" id="Node000002" href="$class_o_g_r_i_d_1_1_i_game.html" title="The IGame class. Used to represent a game." alt="" coords="270,373,378,400"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="326,415,326,449,321,449,321,415"/>
 <area shape="rect" id="Node000003" href="$struct_g_u_i_info.html" title="GUI info." alt="" coords="5,283,69,309"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,317,111,347,153,363,195,373,194,379,151,368,109,352,61,321"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,318,85,334,110,347,150,361,192,370,270,380,269,386,191,376,149,366,108,352,82,338,60,322"/>
 <area shape="rect" id="Node000004" href="$class_o_g_r_i_d_1_1_game_state_checker.html" title="The GameStateChecker class. Used to check the state of the game." alt="" coords="93,283,277,309"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="177,324,176,337,179,348,191,361,206,370,204,375,188,365,175,351,171,337,171,324"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="176,324,175,337,179,348,192,357,214,365,270,376,269,382,213,370,190,362,175,351,170,338,171,324"/>
 <area shape="rect" id="Node000005" href="$class_o_g_r_i_d_1_1_i_game_state.html" title="The IGameState class. Used to check the state of the game." alt="" coords="115,189,255,216"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,232,188,282,182,282,182,232"/>
-<area shape="rect" id="Node000006" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="291,5,399,32"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="338,47,330,76,326,108,326,298,323,326,307,351,293,365,277,375,274,371,290,361,303,348,318,324,321,297,321,108,325,76,332,46"/>
-<area shape="rect" id="Node000009" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="401,96,505,123"/>
-<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="374,40,439,93,436,97,371,44"/>
-<area shape="rect" id="Node000007" href="$struct_o_g_r_i_d_1_1_game_configuration.html" title="The GameConfiguration class. Used to represent a game configuration." alt="" coords="383,283,563,309"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="429,318,343,352,283,375,281,370,341,347,427,313"/>
+<area shape="rect" id="Node000006" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="375,5,483,32"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="382,41,361,54,344,69,331,87,326,108,326,297,326,373,321,373,321,297,321,108,326,85,340,65,358,49,379,37"/>
+<area shape="rect" id="Node000009" href="$class_o_g_r_i_d_1_1_piece.html" title="The Piece class. Used to represent a piece." alt="" coords="391,96,494,123"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="431,47,433,72,440,95,435,96,428,72,426,48"/>
+<area shape="rect" id="Node000010" href="$class_o_g_r_i_d_1_1_user.html" title="The User class." alt="" coords="531,96,628,123"/>
+<area shape="poly" id="edge12_Node000010_Node000006" title=" " alt="" coords="465,38,559,93,557,98,462,43"/>
+<area shape="rect" id="Node000007" href="$struct_o_g_r_i_d_1_1_game_configuration.html" title="The GameConfiguration class. Used to represent a game configuration." alt="" coords="362,283,542,309"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="422,321,343,375,340,371,419,316"/>
 <area shape="rect" id="Node000008" href="$class_o_g_r_i_d_1_1_grid.html" title="The Grid class represents a 2D grid of Cells." alt="" coords="447,189,542,216"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="491,232,479,283,473,282,485,231"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="467,136,491,188,486,190,463,138"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="484,231,460,283,455,281,480,229"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="459,135,489,188,485,190,455,138"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="587,137,592,185,591,244,585,274,575,303,560,330,539,352,511,364,470,374,378,385,378,379,469,368,509,359,535,347,556,326,570,301,580,273,585,244,587,185,582,138"/>
+<area shape="rect" id="Node000011" href="$class_o_g_r_i_d_1_1_score.html" title="The Score class." alt="" coords="553,5,657,32"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="600,48,586,96,581,95,595,46"/>
 </map>
