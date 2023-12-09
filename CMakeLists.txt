@@ -159,6 +159,7 @@ find_package(fmt CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(raylib CONFIG REQUIRED)
+find_package(unofficial-sqlite3 CONFIG REQUIRED)
 
 if(${VERBOSE})
         message(STATUS "LOOKING FOR DURLIB...")
@@ -294,6 +295,7 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 OpenGL::GL
                 ${OPENGL_LIBRARIES}
                 ${raylib_LIBRARIES}
+                unofficial::sqlite3::sqlite3
         )
 
         target_precompile_headers(OMNI-GRID PUBLIC
