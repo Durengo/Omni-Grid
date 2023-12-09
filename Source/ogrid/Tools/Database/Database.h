@@ -12,7 +12,7 @@
 
 namespace SQLWRAP
 {
-  class database
+  class Database
   {
   private:
     sqlite3 *SQLDB;
@@ -23,11 +23,13 @@ namespace SQLWRAP
 
     // Constructors & Destructors
   public:
-    database(const std::string &path);
-    ~database();
+    Database(const std::string &path);
+    ~Database();
 
     // Getters & Setters
   public:
+    sqlite3 *getSQLDB() const;
+
     std::string getFilePath() const;
 
     int getRows(const std::string &tableName);

@@ -6,7 +6,7 @@ namespace SQLWRAP
 {
 
   // Constructors & Destructors
-  database::database(const std::string &path)
+  Database::Database(const std::string &path)
       : FILEPATH(path.c_str()), fpath(path)
   {
     sqlite3_open(FILEPATH, &SQLDB);
@@ -23,18 +23,23 @@ namespace SQLWRAP
     this->close();
   }
 
-  database::~database()
+  Database::~Database()
   {
   }
 
   // Getters & Setters
 
-  std::string database::getFilePath() const
+  sqlite3 *Database::getSQLDB() const
+  {
+    return SQLDB;
+  }
+
+  std::string Database::getFilePath() const
   {
     return fpath;
   }
 
-  int database::getRows(const std::string &tableName)
+  int Database::getRows(const std::string &tableName)
   {
     sqlite3_stmt *stmt;
     int rc;
@@ -71,7 +76,7 @@ namespace SQLWRAP
     return rowCount;
   }
 
-  int database::getColumns(const std::string &tableName)
+  int Database::getColumns(const std::string &tableName)
   {
     sqlite3_stmt *stmt;
     int rc;
@@ -110,7 +115,7 @@ namespace SQLWRAP
 
   // Methods
 
-  void database::open()
+  void Database::open()
   {
     if (sqlite3_open(fpath.c_str(), &SQLDB))
     {
@@ -122,17 +127,17 @@ namespace SQLWRAP
     };
   }
 
-  void database::close()
+  void Database::close()
   {
     sqlite3_close(SQLDB);
   }
 
-  void database::clear()
+  void Database::clear()
   {
     remove(fpath.c_str());
   }
 
-  int database::callback(void *NotUsed, int argc, char **argv, char **azColName)
+  int Database::callback(void *NotUsed, int argc, char **argv, char **azColName)
   {
 
     for (int i = 0; i < argc; i++)
@@ -148,7 +153,7 @@ namespace SQLWRAP
     return 0;
   }
 
-  void database::createTableFromString(const std::string &sqlCreateTable)
+  void Database::createTableFromString(const std::string &sqlCreateTable)
   {
     char *zErrMsg = nullptr;
     int rc;
@@ -173,7 +178,7 @@ namespace SQLWRAP
     this->close();
   }
 
-  void database::displayAllTables()
+  void Database::displayAllTables()
   {
     sqlite3_stmt *stmt;
     int rc;
