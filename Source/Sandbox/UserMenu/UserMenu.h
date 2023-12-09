@@ -14,7 +14,7 @@ namespace Sandbox
     class UserMenu
     {
     private:
-        SQLWRAP::database *m_Database;
+        SQLWRAP::Database *m_Database;
 
     public:
         UserMenu();
@@ -22,9 +22,10 @@ namespace Sandbox
 
         void Start();
         void FirstRun();
-        // void Login();
-        // void Register();
-        // void MainMenu();
+        void PreLoginMenu();
+        void Login();
+        void Register();
+        void MainMenu();
         // void Play();
     };
 

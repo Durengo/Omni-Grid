@@ -1,5 +1,9 @@
 #include "UserMenu.h"
 
+#include <durlib.h>
+
+#include <Tools/Database/DatabaseUserWrapper.h>
+
 namespace Sandbox
 {
 
@@ -14,7 +18,7 @@ namespace Sandbox
 
     void UserMenu::Start()
     {
-        m_Database = new SQLWRAP::database("omni-grid.db");
+        m_Database = new SQLWRAP::Database("omni-grid.db");
 
         FirstRun();
     }
@@ -40,6 +44,61 @@ namespace Sandbox
         m_Database->createTableFromString(createScoreTable);
 
         m_Database->displayAllTables();
+    }
+
+    void UserMenu::PreLoginMenu()
+    {
+        CLI_TRACE("Welcome to Omni Grid!");
+        CLI_TRACE("0. Exit");
+        CLI_TRACE("1. Login");
+        CLI_TRACE("2. Register");
+
+        int input = -1;
+
+        while (input == -1)
+        {
+            CLI_TRACE("Please enter your choice: ");
+            input = DURLIB::GIBI(0, 2);
+        }
+
+        switch (input)
+        {
+        case 0:
+            exit(0);
+            break;
+        case 1:
+            Login();
+            break;
+        case 2:
+            // Register();
+            break;
+        default:
+            CLI_FATAL("Invalid input");
+            break;
+        }
+    }
+
+    void UserMenu::Login()
+    {
+        CLI_TRACE("Login");
+
+        std::string userName;
+        std::string userPassword;
+
+        CLI_TRACE("Please enter your username:");
+        userName = DURLIB::GIBS();
+
+        CLI_TRACE("Please enter your password:");
+        userPassword = DURLIB::GIBS();
+
+        if (SQLWRAP::Login(m_Database, userName, userPassword))
+        {
+            CLI_TRACE("Login successful!");
+        }
+        else
+        {
+            CLI_TRACE("Login failed!");
+        }
     }
 
 }
