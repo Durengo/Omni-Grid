@@ -11,7 +11,7 @@ namespace OGRID
     {
     }
 
-    User::User(int userId, std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "", Score *score)
+    User::User(int userId, std::string userName, std::string userPassword, std::string userFirstName, std::string userLastName, Score *score)
         : m_UserId(userId), m_UserName(userName), m_UserPassword(userPassword), m_UserFirstName(userFirstName), m_UserLastName(userLastName), m_Score(score)
     {
     }
