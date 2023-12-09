@@ -104,4 +104,20 @@ namespace OGRID
             CLI_TRACE(output);
         }
     }
+
+    void User::DisplayScore() const
+    {
+        if (m_Score == nullptr)
+        {
+            CLI_TRACE("Score: NULL");
+            return;
+        }
+        else
+        {
+            std::string output = "User ID: " + std::to_string(m_UserId) + "\n";
+            output += "Username: " + m_UserName + "\n";
+            output += "Score: " + std::to_string(m_Score->GetWins()) + "W | " + std::to_string(m_Score->GetLosses()) + "L (" + std::to_string(m_Score->GetWinRate()) + "%)\n";
+            CLI_TRACE(output);
+        }
+    }
 }

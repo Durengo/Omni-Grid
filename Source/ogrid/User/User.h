@@ -55,5 +55,7 @@ namespace OGRID
         // Methods
     public:
         void Display() const;
+
+        void DisplayScore() const;
     };
 }
