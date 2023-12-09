@@ -15,8 +15,14 @@ namespace OGRID
     class Text;
 }
 
+namespace OGRID
+{
+    // Forward declaration
+    class User;
+}
 namespace Sandbox
 {
+
     /**
      * @brief Game window
      * @details Servers as a wrapper around raylib.
@@ -102,7 +108,7 @@ namespace Sandbox
          * @details Serves as an entry point for the game.
          * @date 2023-12-06
          */
-        void Start();
+        void Start(OGRID::User *user);
 
     private:
         /**
