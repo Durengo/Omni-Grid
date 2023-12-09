@@ -100,7 +100,6 @@ namespace OGRID
         }
         else
         {
-            // output += "Score: " + m_Score->GetWins().to_string() + "W | " + m_Score->GetLosses() + " L (" + m_Score->GetWinRate() + "%)\n";
             output += "Score: " + std::to_string(m_Score->GetWins()) + "W | " + std::to_string(m_Score->GetLosses()) + "L (" + std::to_string(m_Score->GetWinRate()) + "%)\n";
             CLI_TRACE(output);
         }
