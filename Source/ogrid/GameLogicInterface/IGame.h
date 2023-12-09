@@ -7,6 +7,8 @@
 #include "GUI/GUIInfo.h"
 #include "GameLogicImplementation/GameStateChecker.h"
 
+#include "User/User.h"
+
 // TODO: Keep track of the current player.
 
 /**
@@ -23,6 +25,7 @@ namespace OGRID
     class Grid;
     enum MoveType;
     struct PlayerNameAndPtr;
+    class User;
 
     /**
      * @brief The IGame class. Used to represent a game.
@@ -125,6 +128,8 @@ namespace OGRID
          */
         GameConfiguration *m_GameConfiguration = nullptr;
 
+        User *m_User = nullptr;
+
         /**
          * @brief The constructor of the IGame class.
          * @date 2023-12-06
@@ -182,7 +187,7 @@ namespace OGRID
          * @brief Setup the core of the game.
          * @date 2023-12-06
          */
-        virtual void Initialize() = 0;
+        virtual void Initialize(OGRID::User *user) = 0;
 
         /**
          * @brief Update the game's GUI.
