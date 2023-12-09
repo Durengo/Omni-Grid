@@ -94,12 +94,14 @@ namespace Sandbox
         if (SQLWRAP::Login(m_Database, userName, userPassword))
         {
             CLI_TRACE("Login successful!");
-            OGRID::User *user = SQLWRAP::FetchUserData(m_Database, userName, userPassword);
+            m_User = SQLWRAP::FetchUserData(m_Database, userName, userPassword);
 
-            if (user == nullptr)
-                throw std::runtime_error("Failed to fetch user data");
+            if (m_User == nullptr)
+                throw std::runtime_error("Failed to fetch user data even though login was successful");
 
-            user->Display();
+            m_User->Display();
+
+            PostLoginMenu();
         }
         else
         {
@@ -135,6 +137,40 @@ namespace Sandbox
         else
         {
             CLI_TRACE("Registration failed!");
+        }
+    }
+
+    void UserMenu::PostLoginMenu()
+    {
+        bool looping = true;
+
+        while (looping)
+        {
+            CLI_TRACE("0. Exit");
+            CLI_TRACE("1. Play");
+            CLI_TRACE("2. Show Score");
+
+            int input = -1;
+
+            while (input == -1)
+            {
+                CLI_TRACE("Please enter your choice: ");
+                input = DURLIB::GIBI(0, 2);
+            }
+
+            switch (input)
+            {
+            case 0:
+                looping = false;
+                break;
+            case 1:
+                // Play();
+                continue;
+            case 2:
+                m_User->DisplayScore();
+            default:
+                continue;
+            }
         }
     }
 

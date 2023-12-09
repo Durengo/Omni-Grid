@@ -2,6 +2,8 @@
 
 #include <Tools/Database/database.h>
 
+#include "User/User.h"
+
 /**
  * @file UserMenu.h
  * @brief Contains the UserMenu class
@@ -15,6 +17,7 @@ namespace Sandbox
     {
     private:
         SQLWRAP::Database *m_Database;
+        OGRID::User *m_User;
 
     public:
         UserMenu();
@@ -25,7 +28,7 @@ namespace Sandbox
         void PreLoginMenu();
         void Login();
         void Register();
-        void MainMenu();
+        void PostLoginMenu();
         // void Play();
     };
 
