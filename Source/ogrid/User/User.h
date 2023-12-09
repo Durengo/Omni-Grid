@@ -34,6 +34,9 @@ namespace OGRID
 
         // Getters & Setters
     public:
+        unsigned int GetUserId() const;
+        void SetUserId(unsigned int userId);
+
         std::string GetUserName() const;
         void SetUserName(const std::string &userName);
 
@@ -45,5 +48,12 @@ namespace OGRID
 
         std::string GetUserLastName() const;
         void SetUserLastName(const std::string &userLastName);
+
+        Score *GetScore() const;
+        void SetScore(Score *score);
+
+        // Methods
+    public:
+        void Display() const;
     };
 }

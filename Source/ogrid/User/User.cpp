@@ -1,5 +1,7 @@
 #include "User.h"
 
+#include <durlib.h>
+
 #include "Score.h"
 
 namespace OGRID
@@ -21,6 +23,17 @@ namespace OGRID
     }
 
     // Getters & Setters
+
+    unsigned int User::GetUserId() const
+    {
+        return m_UserId;
+    }
+
+    void User::SetUserId(unsigned int userId)
+    {
+        m_UserId = userId;
+    }
+
     std::string User::GetUserName() const
     {
         return m_UserName;
@@ -59,5 +72,37 @@ namespace OGRID
     void User::SetUserLastName(const std::string &userLastName)
     {
         m_UserLastName = userLastName;
+    }
+
+    Score *User::GetScore() const
+    {
+        return m_Score;
+    }
+
+    void User::SetScore(Score *score)
+    {
+        m_Score = score;
+    }
+
+    // Methods
+    void User::Display() const
+    {
+        std::string output = "User ID: " + std::to_string(m_UserId) + "\n";
+        output += "Username: " + m_UserName + "\n";
+        output += "Password: " + m_UserPassword + "\n";
+        output += "First Name: " + m_UserFirstName + "\n";
+        output += "Last Name: " + m_UserLastName + "\n";
+
+        if (m_Score == nullptr)
+        {
+            output += "Score: NULL\n";
+            CLI_TRACE(output);
+        }
+        else
+        {
+            // output += "Score: " + m_Score->GetWins().to_string() + "W | " + m_Score->GetLosses() + " L (" + m_Score->GetWinRate() + "%)\n";
+            output += "Score: " + std::to_string(m_Score->GetWins()) + "W | " + std::to_string(m_Score->GetLosses()) + "L (" + std::to_string(m_Score->GetWinRate()) + "%)\n";
+            CLI_TRACE(output);
+        }
     }
 }
