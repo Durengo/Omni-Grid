@@ -70,7 +70,7 @@ namespace Sandbox
             Login();
             break;
         case 2:
-            // Register();
+            Register();
             break;
         default:
             CLI_FATAL("Invalid input");
@@ -98,6 +98,37 @@ namespace Sandbox
         else
         {
             CLI_TRACE("Login failed!");
+        }
+    }
+
+    void UserMenu::Register()
+    {
+        CLI_TRACE("Register");
+
+        std::string userName;
+        std::string userPassword;
+        std::string userFirstName;
+        std::string userLastName;
+
+        CLI_TRACE("Please enter your username:");
+        userName = DURLIB::GIBS();
+
+        CLI_TRACE("Please enter your password:");
+        userPassword = DURLIB::GIBS();
+
+        CLI_TRACE("Please enter your first name:");
+        userFirstName = DURLIB::GIBS();
+
+        CLI_TRACE("Please enter your last name:");
+        userLastName = DURLIB::GIBS();
+
+        if (SQLWRAP::Register(m_Database, userName, userPassword, userFirstName, userLastName))
+        {
+            CLI_TRACE("Registration successful!");
+        }
+        else
+        {
+            CLI_TRACE("Registration failed!");
         }
     }
 
