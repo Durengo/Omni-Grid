@@ -5,7 +5,12 @@ namespace OGRID
     // Constructors & Destructors
 
     Score::Score()
-        : m_Wins(0), m_Losses(0), m_WinRate(0.0f)
+        : m_ScoreId(0), m_UserId(0), m_Wins(0), m_Losses(0), m_WinRate(0.0f)
+    {
+    }
+
+    Score::Score(unsigned int scoreId, unsigned int userId, unsigned int wins, unsigned int losses, float winRate)
+        : m_ScoreId(scoreId), m_UserId(userId), m_Wins(wins), m_Losses(losses), m_WinRate(winRate)
     {
     }
 
