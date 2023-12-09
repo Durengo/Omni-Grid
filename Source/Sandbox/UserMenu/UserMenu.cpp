@@ -3,6 +3,7 @@
 #include <durlib.h>
 
 #include <Tools/Database/DatabaseUserWrapper.h>
+#include "Core/GameInitializer.h"
 
 namespace Sandbox
 {
@@ -49,32 +50,41 @@ namespace Sandbox
     void UserMenu::PreLoginMenu()
     {
         CLI_TRACE("Welcome to Omni Grid!");
-        CLI_TRACE("0. Exit");
-        CLI_TRACE("1. Login");
-        CLI_TRACE("2. Register");
+        bool looping = true;
 
-        int input = -1;
-
-        while (input == -1)
+        while (looping)
         {
-            CLI_TRACE("Please enter your choice: ");
-            input = DURLIB::GIBI(0, 2);
-        }
+            CLI_TRACE("0. Exit");
+            CLI_TRACE("1. Login");
+            CLI_TRACE("2. Register");
+            CLI_TRACE("3. Show Database");
 
-        switch (input)
-        {
-        case 0:
-            exit(0);
-            break;
-        case 1:
-            Login();
-            break;
-        case 2:
-            Register();
-            break;
-        default:
-            CLI_FATAL("Invalid input");
-            break;
+            int input = -1;
+
+            while (input == -1)
+            {
+                CLI_TRACE("Please enter your choice: ");
+                input = DURLIB::GIBI(0, 3);
+            }
+
+            switch (input)
+            {
+            case 0:
+                looping = false;
+                break;
+            case 1:
+                Login();
+                m_User = nullptr;
+                continue;
+            case 2:
+                Register();
+                continue;
+            case 3:
+                m_Database->displayAllTables();
+                continue;
+            default:
+                continue;
+            }
         }
     }
 
@@ -142,6 +152,8 @@ namespace Sandbox
 
     void UserMenu::PostLoginMenu()
     {
+        // SQLWRAP::UpdateUserScore(m_Database, m_User);
+
         bool looping = true;
 
         while (looping)
@@ -164,7 +176,8 @@ namespace Sandbox
                 looping = false;
                 break;
             case 1:
-                // Play();
+                Sandbox::GameInitializer::Start(m_User);
+                SQLWRAP::UpdateUserScore(m_Database, m_User);
                 continue;
             case 2:
                 m_User->DisplayScore();
@@ -173,5 +186,4 @@ namespace Sandbox
             }
         }
     }
-
 }
