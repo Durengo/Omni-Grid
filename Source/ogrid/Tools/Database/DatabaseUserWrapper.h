@@ -7,11 +7,18 @@
 /**
  * @file DatabaseUserWrapper.h
  * @brief Contains the DatabaseUserWrapper class
- * @date 2023-12-06
+ * @date 2023-12-09
  */
 
 namespace SQLWRAP
 {
+    /**
+     * @brief The DatabaseUserWrapper class
+     * @details This class is used to manage the user and interact with the database
+     * @date 2023-12-09
+     * @see User
+     * @see Database
+     */
     // Attempt to login with the given username and password
     static bool Login(Database *db, const std::string &username, const std::string &password)
     {
@@ -55,6 +62,14 @@ namespace SQLWRAP
         return loginSuccess;
     }
 
+    /**
+     * @brief Checks if the username already exists
+     * @date 2023-12-09
+     * @param db The database
+     * @param username The username to check
+     * @return true if the username already exists
+     * @return false if the username does not exist
+     */
     static bool CheckUsernameDuplicates(Database *db, const std::string &username)
     {
         sqlite3_stmt *stmt;
@@ -86,6 +101,17 @@ namespace SQLWRAP
         return rc == SQLITE_ROW;
     }
 
+    /**
+     * @brief Registers a new user
+     * @date 2023-12-09
+     * @param db The database
+     * @param username The username
+     * @param password The password
+     * @param firstName The first name
+     * @param lastName The last name
+     * @return true if the user was registered successfully
+     * @return false if the user was not registered successfully
+     */
     static bool Register(Database *db, const std::string &username, const std::string &password, const std::string &firstName, const std::string &lastName)
     {
         if (CheckUsernameDuplicates(db, username))
@@ -159,6 +185,14 @@ namespace SQLWRAP
         return true;
     }
 
+    /**
+     * @brief Fetches the user data
+     * @date 2023-12-09
+     * @param db The database
+     * @param username The username
+     * @param password The password
+     * @return User* The user data
+     */
     static OGRID::User *FetchUserData(Database *db, const std::string &username, const std::string &password)
     {
         sqlite3_stmt *stmt;
@@ -221,6 +255,13 @@ namespace SQLWRAP
         return user;
     }
 
+    /**
+     * @brief Fetches the user data
+     * @date 2023-12-09
+     * @param db The database
+     * @param username The username
+     * @return User* The user data
+     */
     static sqlite3_stmt *prepareStatement(Database *db, const std::string &sql)
     {
         sqlite3_stmt *stmt;
@@ -233,6 +274,14 @@ namespace SQLWRAP
         return stmt;
     }
 
+    /**
+     * @brief Binds the parameters to the prepared statement
+     * @date 2023-12-09
+     * @param stmt The prepared statement
+     * @param user The user
+     * @return true if the parameters were bound successfully
+     * @return false if the parameters were not bound successfully
+     */
     static bool bindParameters(sqlite3_stmt *stmt, OGRID::User *user)
     {
         if (!stmt || !user || !user->GetScore())
@@ -249,6 +298,14 @@ namespace SQLWRAP
         return true;
     }
 
+    /**
+     * @brief Executes the prepared statement
+     * @date 2023-12-09
+     * @param db The database
+     * @param stmt The prepared statement
+     * @return true if the statement was executed successfully
+     * @return false if the statement was not executed successfully
+     */
     static bool executeStatement(Database *db, sqlite3_stmt *stmt)
     {
         int rc, retryCount = 0;
@@ -274,24 +331,46 @@ namespace SQLWRAP
         return false;
     }
 
+    /**
+     * @brief Begins a transaction
+     * @date 2023-12-09
+     * @param db The database
+     */
     static void beginTransaction(Database *db)
     {
         char *errMsg = nullptr;
         sqlite3_exec(db->getSQLDB(), "BEGIN TRANSACTION;", nullptr, nullptr, &errMsg);
     }
 
+    /**
+     * @brief Commits a transaction
+     * @date 2023-12-09
+     * @param db The database
+     */
     static void commitTransaction(Database *db)
     {
         char *errMsg = nullptr;
         sqlite3_exec(db->getSQLDB(), "COMMIT;", nullptr, nullptr, &errMsg);
     }
 
+    /**
+     * @brief Rolls back a transaction
+     * @date 2023-12-09
+     * @param db The database
+     */
     static void rollbackTransaction(Database *db)
     {
         char *errMsg = nullptr;
         sqlite3_exec(db->getSQLDB(), "ROLLBACK;", nullptr, nullptr, &errMsg);
     }
 
+    /**
+     * @brief Tests the update statement
+     * @date 2023-12-09
+     * @param db The database
+     * @return true if the update was successful
+     * @return false if the update was not successful
+     */
     static bool TestUpdate(Database *db)
     {
         std::string sql = "UPDATE Score SET Wins = 1, Losses = 1, WinRate = 0.5 WHERE UserId = 1;";
@@ -315,6 +394,14 @@ namespace SQLWRAP
         }
     }
 
+    /**
+     * @brief Updates the user score
+     * @date 2023-12-09
+     * @param db The database
+     * @param user The user
+     * @return true if the user score was updated successfully
+     * @return false if the user score was not updated successfully
+     */
     static bool UpdateUserScore(Database *db, OGRID::User *user)
     {
         if (user == nullptr || user->GetScore() == nullptr)

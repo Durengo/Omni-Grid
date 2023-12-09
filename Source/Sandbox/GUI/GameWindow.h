@@ -107,6 +107,8 @@ namespace Sandbox
          * @brief Start the game.
          * @details Serves as an entry point for the game.
          * @date 2023-12-06
+         * @param user User object.
+         * @see User
          */
         void Start(OGRID::User *user);
 

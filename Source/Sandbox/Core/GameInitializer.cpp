@@ -9,7 +9,7 @@
 
 namespace Sandbox
 {
-    void GameInitializer::Start(OGRID::User* user)
+    void GameInitializer::Start(OGRID::User *user)
     {
         int choice = 0;
         while (choice == 0)
