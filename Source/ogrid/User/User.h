@@ -6,6 +6,7 @@
  * @file User.h
  * @brief Contains the User class
  * @date 2023-12-06
+ * @todo Implement sqlite database into the user
  */
 namespace OGRID
 {
