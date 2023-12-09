@@ -1,58 +1,66 @@
 <map id="Source/ogrid/Games/TicTacToe/TicTacToe.cpp" name="Source/ogrid/Games/TicTacToe/TicTacToe.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="761,5,934,48"/>
-<area shape="rect" id="Node000002" href="$_tic_tac_toe_8h.html" title="TicTacToe game logic." alt="" coords="234,104,325,131"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="761,39,574,63,356,99,339,102,338,97,355,93,574,57,760,34"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="325,285,389,312"/>
-<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="761,36,675,44,583,56,502,74,470,85,448,98,429,116,412,137,388,184,372,231,363,271,358,270,367,230,383,182,408,134,425,112,445,94,468,81,500,69,582,51,675,38,761,31"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="1019,104,1082,131"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="896,46,1008,95,1006,100,894,51"/>
-<area shape="rect" id="Node000011" href="$_game_configuration_8h.html" title="Contains the GameConfiguration class." alt="" coords="667,187,842,229"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="839,50,774,174,769,172,834,47"/>
-<area shape="rect" id="Node000014" href="$_player_8h.html" title="Contains the Player class." alt="" coords="823,376,933,403"/>
-<area shape="poly" id="edge35_Node000001_Node000014" title=" " alt="" coords="852,48,878,360,873,361,847,49"/>
-<area shape="rect" id="Node000015" href="$_tic_tac_toe_pieces_8h.html" title="TicTacToe pieces." alt="" coords="968,187,1157,229"/>
-<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="883,46,950,94,996,135,1035,174,1032,178,993,138,947,98,880,51"/>
-<area shape="rect" id="Node000017" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="917,285,1023,312"/>
-<area shape="poly" id="edge34_Node000001_Node000017" title=" " alt="" coords="867,47,900,95,923,142,941,190,966,270,961,271,936,191,918,144,896,97,863,50"/>
-<area shape="rect" id="Node000019" href="$_tic_tac_toe_state_check_8h.html" title="TicTacToe state check." alt="" coords="458,96,648,139"/>
-<area shape="poly" id="edge27_Node000001_Node000019" title=" " alt="" coords="779,51,637,94,635,89,778,46"/>
-<area shape="rect" id="Node000003" href="$_i_game_8h.html" title="Contains the IGame class." alt="" coords="199,187,336,229"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,132,275,172,270,171,275,131"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="233,285,302,312"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="270,230,270,270,265,270,265,230"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="290,228,335,272,332,276,286,232"/>
-<area shape="rect" id="Node000006" href="$_g_u_i_info_8h.html" title="GUI info." alt="" coords="5,376,106,403"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="199,222,95,244,51,260,24,279,17,298,19,320,27,342,39,362,34,365,22,344,13,321,11,298,20,276,48,255,94,239,198,216"/>
-<area shape="rect" id="Node000008" href="$_game_state_checker_8h.html" title="Contains the GameStateChecker class." alt="" coords="35,277,210,320"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="235,232,170,271,167,267,232,228"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="654,459,708,485"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="106,395,639,463,638,468,106,400"/>
-<area shape="rect" id="Node000009" href="$_i_game_state_8h.html" title="Contains the IGameState class." alt="" coords="246,368,382,411"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="168,318,257,359,254,364,166,323"/>
-<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="751,231,691,444,686,443,746,229"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="744,376,799,403"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="759,230,772,361,766,361,754,230"/>
-<area shape="rect" id="Node000013" href="$_grid_8h.html" title="Contains the Grid class." alt="" coords="605,285,690,312"/>
-<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="731,232,676,277,673,273,728,228"/>
-<area shape="poly" id="edge17_Node000011_Node000014" title=" " alt="" coords="771,228,863,362,859,365,766,231"/>
-<area shape="poly" id="edge15_Node000013_Node000007" title=" " alt="" coords="653,312,678,443,673,444,647,313"/>
-<area shape="poly" id="edge16_Node000013_Node000012" title=" " alt="" coords="667,310,743,365,740,369,664,315"/>
-<area shape="poly" id="edge18_Node000014_Node000007" title=" " alt="" coords="848,406,723,457,721,452,846,401"/>
-<area shape="rect" id="Node000016" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="1167,368,1304,411"/>
-<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="1084,228,1207,355,1203,359,1080,232"/>
-<area shape="poly" id="edge21_Node000015_Node000017" title=" " alt="" coords="1043,232,996,276,992,272,1039,228"/>
-<area shape="poly" id="edge22_Node000017_Node000007" title=" " alt="" coords="974,313,971,361,963,388,947,413,930,424,907,434,848,450,724,469,723,464,847,445,906,429,928,419,943,409,958,386,966,360,969,312"/>
-<area shape="poly" id="edge23_Node000017_Node000012" title=" " alt="" coords="941,315,813,370,811,371,808,366,810,366,938,310"/>
-<area shape="poly" id="edge26_Node000017_Node000014" title=" " alt="" coords="959,315,904,367,901,363,955,311"/>
-<area shape="poly" id="edge25_Node000017_Node000016" title=" " alt="" coords="1009,310,1160,360,1158,365,1007,315"/>
-<area shape="rect" id="Node000018" href="$_i_attack_rule_8h.html" title=" " alt="" coords="1007,368,1144,411"/>
-<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="987,311,1041,356,1038,360,984,315"/>
-<area shape="poly" id="edge28_Node000019_Node000009" title=" " alt="" coords="513,141,482,162,455,188,436,222,429,253,422,286,403,322,384,343,362,361,359,357,380,339,399,318,417,284,424,252,431,220,451,185,479,158,510,137"/>
-<area shape="rect" id="Node000020" href="$_game_state_extensions_8h.html" title="Contains the GameStateExtensions class." alt="" coords="465,187,641,229"/>
-<area shape="poly" id="edge29_Node000019_Node000020" title=" " alt="" coords="556,139,556,171,550,171,550,139"/>
-<area shape="poly" id="edge30_Node000020_Node000007" title=" " alt="" coords="534,231,519,250,507,272,501,296,505,319,532,361,568,397,607,427,643,449,640,453,604,431,564,401,528,365,500,321,495,296,502,270,515,247,530,228"/>
-<area shape="poly" id="edge32_Node000020_Node000013" title=" " alt="" coords="577,228,625,273,621,277,573,232"/>
-<area shape="poly" id="edge33_Node000020_Node000017" title=" " alt="" coords="641,225,902,280,901,285,640,230"/>
-<area shape="rect" id="Node000021" title=" " alt="" coords="514,285,581,312"/>
-<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="554,230,552,270,547,269,549,230"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="792,5,964,48"/>
+<area shape="rect" id="Node000002" href="$_tic_tac_toe_8h.html" title="TicTacToe game logic." alt="" coords="668,104,760,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="841,51,752,99,750,94,838,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="114,285,178,312"/>
+<area shape="poly" id="edge15_Node000001_Node000005" title=" " alt="" coords="792,33,716,39,627,51,534,70,444,98,362,139,285,188,220,237,173,277,169,273,217,233,282,184,359,134,442,94,533,65,626,46,715,34,791,28"/>
+<area shape="rect" id="Node000011" href="$_player_8h.html" title="Contains the Player class." alt="" coords="1052,376,1163,403"/>
+<area shape="poly" id="edge39_Node000001_Node000011" title=" " alt="" coords="915,46,944,68,971,94,1018,164,1056,239,1084,308,1102,360,1097,362,1079,310,1051,241,1014,167,967,98,940,72,912,51"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1149,104,1212,131"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="965,46,1131,93,1137,96,1135,101,1129,99,963,51"/>
+<area shape="rect" id="Node000013" href="$_game_configuration_8h.html" title="Contains the GameConfiguration class." alt="" coords="1098,187,1274,229"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="966,45,1024,65,1081,94,1127,132,1164,173,1160,176,1124,136,1078,98,1022,70,964,50"/>
+<area shape="rect" id="Node000016" href="$_tic_tac_toe_pieces_8h.html" title="TicTacToe pieces." alt="" coords="783,187,973,229"/>
+<area shape="poly" id="edge23_Node000001_Node000016" title=" " alt="" coords="881,48,881,171,875,171,875,48"/>
+<area shape="rect" id="Node000018" href="$_piece_8h.html" title="Contains the Piece class." alt="" coords="893,285,999,312"/>
+<area shape="poly" id="edge38_Node000001_Node000018" title=" " alt="" coords="900,47,947,106,970,144,987,186,991,208,987,230,978,253,967,274,962,271,974,251,982,229,986,208,982,187,965,147,942,109,896,50"/>
+<area shape="rect" id="Node000020" href="$_tic_tac_toe_state_check_8h.html" title="TicTacToe state check." alt="" coords="455,96,645,139"/>
+<area shape="poly" id="edge31_Node000001_Node000020" title=" " alt="" coords="802,51,642,94,641,89,800,46"/>
+<area shape="rect" id="Node000023" href="$_score_8h.html" title="Contains the Score class." alt="" coords="5,104,103,131"/>
+<area shape="poly" id="edge40_Node000001_Node000023" title=" " alt="" coords="792,40,233,99,119,111,118,106,232,93,791,34"/>
+<area shape="rect" id="Node000003" href="$_i_game_8h.html" title="Contains the IGame class." alt="" coords="345,187,481,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="680,134,657,141,496,188,495,182,656,136,678,129"/>
+<area shape="rect" id="Node000010" href="$_user_8h.html" title="Contains the User class." alt="" coords="544,285,634,312"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="678,134,615,159,589,174,574,188,566,208,566,229,578,270,573,272,561,230,561,207,569,185,586,170,613,155,676,129"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="201,285,270,312"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="372,232,275,280,273,276,370,228"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="345,230,270,252,190,280,186,281,184,276,188,275,268,247,343,225"/>
+<area shape="rect" id="Node000006" href="$_g_u_i_info_8h.html" title="GUI info." alt="" coords="455,376,555,403"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="442,228,464,250,483,276,499,319,506,360,500,361,494,321,478,279,460,253,438,232"/>
+<area shape="rect" id="Node000008" href="$_game_state_checker_8h.html" title="Contains the GameStateChecker class." alt="" coords="293,277,468,320"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="408,231,396,264,391,262,403,229"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="455,228,551,276,549,280,453,232"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="722,459,775,485"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="544,401,708,454,706,460,542,406"/>
+<area shape="rect" id="Node000009" href="$_i_game_state_8h.html" title="Contains the IGameState class." alt="" coords="178,368,314,411"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="351,323,292,361,289,357,348,318"/>
+<area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="592,312,601,358,611,385,627,409,644,425,665,439,708,457,706,462,663,443,641,430,623,412,606,387,596,360,587,313"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="635,306,697,317,793,331,869,338,944,348,1040,365,1054,369,1053,374,1039,371,943,353,868,344,793,336,696,323,634,312"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="1067,406,1040,413,904,444,791,466,790,460,903,439,1039,408,1066,401"/>
+<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="1248,228,1279,248,1304,276,1309,292,1310,312,1302,356,1289,394,1280,413,1252,425,1204,435,1066,452,791,471,791,466,1065,447,1203,430,1251,419,1276,409,1284,392,1296,354,1304,311,1304,293,1300,279,1276,252,1245,232"/>
+<area shape="poly" id="edge22_Node000013_Node000011" title=" " alt="" coords="1179,231,1121,363,1116,361,1175,229"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1186,376,1242,403"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="1188,230,1190,272,1195,319,1207,361,1201,362,1190,321,1184,272,1183,230"/>
+<area shape="rect" id="Node000015" href="$_grid_8h.html" title="Contains the Grid class." alt="" coords="1205,285,1290,312"/>
+<area shape="poly" id="edge19_Node000013_Node000015" title=" " alt="" coords="1202,228,1232,271,1228,274,1198,231"/>
+<area shape="poly" id="edge20_Node000015_Node000007" title=" " alt="" coords="1256,312,1263,333,1269,360,1268,388,1256,413,1231,425,1186,436,1055,453,908,465,791,471,791,466,908,460,1054,448,1185,431,1229,420,1252,409,1263,386,1264,360,1258,334,1251,313"/>
+<area shape="poly" id="edge21_Node000015_Node000014" title=" " alt="" coords="1245,314,1227,362,1222,360,1240,312"/>
+<area shape="rect" id="Node000017" href="$_i_move_rule_8h.html" title="Contains the IMoveRule class." alt="" coords="681,368,817,411"/>
+<area shape="poly" id="edge24_Node000016_Node000017" title=" " alt="" coords="865,231,774,357,770,354,861,228"/>
+<area shape="poly" id="edge25_Node000016_Node000018" title=" " alt="" coords="896,228,929,271,925,275,892,231"/>
+<area shape="poly" id="edge26_Node000018_Node000007" title=" " alt="" coords="936,314,890,359,830,413,780,452,777,447,827,409,887,355,932,311"/>
+<area shape="poly" id="edge30_Node000018_Node000011" title=" " alt="" coords="970,310,1072,366,1070,370,968,315"/>
+<area shape="poly" id="edge27_Node000018_Node000014" title=" " alt="" coords="998,310,1082,334,1175,366,1178,367,1176,372,1173,370,1080,339,997,315"/>
+<area shape="poly" id="edge29_Node000018_Node000017" title=" " alt="" coords="919,315,810,364,808,359,917,310"/>
+<area shape="rect" id="Node000019" href="$_i_attack_rule_8h.html" title=" " alt="" coords="891,368,1028,411"/>
+<area shape="poly" id="edge28_Node000018_Node000019" title=" " alt="" coords="951,312,957,352,951,353,945,313"/>
+<area shape="poly" id="edge32_Node000020_Node000009" title=" " alt="" coords="455,124,366,136,318,147,269,162,221,182,177,208,137,240,104,279,97,299,104,319,131,346,165,365,162,370,127,350,100,321,92,299,100,276,133,236,173,204,219,178,267,157,316,142,365,131,454,119"/>
+<area shape="rect" id="Node000021" href="$_game_state_extensions_8h.html" title="Contains the GameStateExtensions class." alt="" coords="584,187,759,229"/>
+<area shape="poly" id="edge33_Node000020_Node000021" title=" " alt="" coords="580,137,632,175,629,179,577,141"/>
+<area shape="poly" id="edge34_Node000021_Node000007" title=" " alt="" coords="668,230,660,266,655,312,657,362,662,386,671,409,688,432,710,449,707,453,684,435,666,412,657,388,651,363,649,312,655,265,663,229"/>
+<area shape="poly" id="edge36_Node000021_Node000015" title=" " alt="" coords="760,225,772,227,1003,262,1190,287,1189,293,1003,268,771,232,759,230"/>
+<area shape="poly" id="edge37_Node000021_Node000018" title=" " alt="" coords="737,227,893,278,891,283,735,233"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="709,285,775,312"/>
+<area shape="poly" id="edge35_Node000021_Node000022" title=" " alt="" coords="690,228,725,271,720,275,686,231"/>
+<area shape="poly" id="edge41_Node000023_Node000007" title=" " alt="" coords="56,131,59,187,73,267,87,309,106,349,133,383,167,408,212,425,274,438,427,456,586,465,706,468,706,473,585,470,427,461,273,443,211,430,165,413,129,386,102,352,82,311,68,269,54,187,51,131"/>
 </map>

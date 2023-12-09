@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['gameconfiguration_0',['GameConfiguration',['../struct_o_g_r_i_d_1_1_game_configuration.html',1,'OGRID']]],
-  ['gameconfigurationbuilder_1',['GameConfigurationBuilder',['../class_o_g_r_i_d_1_1_game_configuration_builder.html',1,'OGRID']]],
-  ['gameinitializer_2',['GameInitializer',['../class_sandbox_1_1_game_initializer.html',1,'Sandbox']]],
-  ['gamestatechecker_3',['GameStateChecker',['../class_o_g_r_i_d_1_1_game_state_checker.html',1,'OGRID']]],
-  ['gamestateextensions_4',['GameStateExtensions',['../class_o_g_r_i_d_1_1_game_state_extensions.html',1,'OGRID']]],
-  ['gamewindow_5',['GameWindow',['../class_sandbox_1_1_game_window.html',1,'Sandbox']]],
-  ['grid_6',['Grid',['../class_o_g_r_i_d_1_1_grid.html',1,'OGRID']]],
-  ['guiinfo_7',['GUIInfo',['../struct_g_u_i_info.html',1,'']]]
+  ['formatter_3c_20ogrid_3a_3agrid_20_3e_0',['formatter&lt; OGRID::Grid &gt;',['../structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_grid_01_4.html',1,'fmt']]],
+  ['formatter_3c_20ogrid_3a_3aplayer_20_3e_1',['formatter&lt; OGRID::Player &gt;',['../structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_01_4.html',1,'fmt']]],
+  ['formatter_3c_20ogrid_3a_3aplayernameandptr_20_3e_2',['formatter&lt; OGRID::PlayerNameAndPtr &gt;',['../structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_name_and_ptr_01_4.html',1,'fmt']]],
+  ['formatter_3c_20ogrid_3a_3aplayertype_20_3e_3',['formatter&lt; OGRID::PlayerType &gt;',['../structfmt_1_1formatter_3_01_o_g_r_i_d_1_1_player_type_01_4.html',1,'fmt']]]
 ];

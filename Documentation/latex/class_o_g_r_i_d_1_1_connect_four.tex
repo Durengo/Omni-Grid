@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for OGRID\+::Connect\+Four\+:
-\nopagebreak
+Inheritance diagram for OGRID\+::Connect\+Four\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,7 +38,7 @@ bool \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a678f87aca17ff31042e4712a
 \begin{DoxyCompactList}\small\item\em Check if the draw condition is met. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_aaee552e87ce3b956fda482cc42d6addd}{Setup\+Players}} () override
 \begin{DoxyCompactList}\small\item\em Setup the players of the game. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a3d413f3f2fdd0f4fb631a1423925d352}{Initialize}} () override
+void \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a1f97865f40d92cdcd869f13be3798338}{Initialize}} (\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user) override
 \begin{DoxyCompactList}\small\item\em Setup the core of the game. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_o_g_r_i_d_1_1_connect_four_a3db9c070fbad52a269cf9b84918e42d2}{On\+GUIUpdate\+Grid}} () override
 \begin{DoxyCompactList}\small\item\em Update the game\textquotesingle{}s GUI. \end{DoxyCompactList}\item 
@@ -163,7 +162,9 @@ size\+\_\+t \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a03594957276982e4c188229
 unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d68cac4c0ea}{m\+\_\+total\+Turns}} = 0
 \begin{DoxyCompactList}\small\item\em Keeps the total number of turns. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a8d16333254a6e0155b7e7a962143e4bc}{m\+\_\+\+Game\+Configuration}} = nullptr
-\begin{DoxyCompactList}\small\item\em The \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_o_g_r_i_d_1_1_game_configuration}{Game\+Configuration} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_af2632167ae5b3737138900b41a35750e}{m\+\_\+\+User}} = nullptr
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -188,11 +189,11 @@ unsigned int \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a24b5b0bfef1f900ecdab9d
 \doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}}
 {\footnotesize\ttfamily void OGRID\+::\+Connect\+Four\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{Color}]{color,  }\item[{bool}]{blinking = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\Hypertarget{class_o_g_r_i_d_1_1_connect_four_a3d413f3f2fdd0f4fb631a1423925d352}\label{class_o_g_r_i_d_1_1_connect_four_a3d413f3f2fdd0f4fb631a1423925d352} 
+\Hypertarget{class_o_g_r_i_d_1_1_connect_four_a1f97865f40d92cdcd869f13be3798338}\label{class_o_g_r_i_d_1_1_connect_four_a1f97865f40d92cdcd869f13be3798338} 
 \index{OGRID::ConnectFour@{OGRID::ConnectFour}!Initialize@{Initialize}}
 \index{Initialize@{Initialize}!OGRID::ConnectFour@{OGRID::ConnectFour}}
 \doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
-{\footnotesize\ttfamily void OGRID\+::\+Connect\+Four\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void OGRID\+::\+Connect\+Four\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -203,7 +204,7 @@ Setup the core of the game.
 \end{DoxyDate}
 
 
-Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a19df9ab3a74fef0315f21bd9a025a602}{OGRID\+::\+IGame}}.
+Implements \mbox{\hyperlink{class_o_g_r_i_d_1_1_i_game_a0727421010ad84487fc6b1ebb25b96e6}{OGRID\+::\+IGame}}.
 
 \Hypertarget{class_o_g_r_i_d_1_1_connect_four_a678f87aca17ff31042e4712abf9ffe49}\label{class_o_g_r_i_d_1_1_connect_four_a678f87aca17ff31042e4712abf9ffe49} 
 \index{OGRID::ConnectFour@{OGRID::ConnectFour}!IsDrawCondition@{IsDrawCondition}}

@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['whitepiececheckers_0',['whitepiececheckers',['../class_o_g_r_i_d_1_1_white_piece_checkers.html',1,'OGRID::WhitePieceCheckers'],['../class_o_g_r_i_d_1_1_white_piece_checkers.html#ae885b34dc8df1b1e8837829502d7d6b1',1,'OGRID::WhitePieceCheckers::WhitePieceCheckers()']]],
-  ['width_1',['width',['../struct_g_u_i_info.html#a9cd46c8ff0b26b4d533fd71ac0f8579f',1,'GUIInfo']]],
-  ['win_2',['Win',['../namespace_o_g_r_i_d.html#ab2457694ead8d0c0582f967821ea3c32ab19376214085226069b90a33dc04b783',1,'OGRID']]],
-  ['windowname_3',['windowName',['../struct_g_u_i_info.html#ac0ce913607b6d13348954336a09ca9af',1,'GUIInfo']]],
-  ['winnertext_4',['winnerText',['../class_sandbox_1_1_game_window.html#a32a557704fc37f63afc17a362d0904d8',1,'Sandbox::GameWindow']]]
+  ['update_0',['Update',['../struct_o_g_r_i_d_1_1_button.html#abc14ab423e470c35d4ce412b58e89dd7',1,'OGRID::Button']]],
+  ['updateuserscore_1',['UpdateUserScore',['../namespace_s_q_l_w_r_a_p.html#a089f73cd289f2f5d57d0312b1127b798',1,'SQLWRAP']]],
+  ['updatewindowdimensions_2',['UpdateWindowDimensions',['../class_sandbox_1_1_game_window.html#a802009c0ca2a6570bb67104e95547a2e',1,'Sandbox::GameWindow']]],
+  ['user_3',['user',['../class_o_g_r_i_d_1_1_user.html',1,'OGRID::User'],['../class_o_g_r_i_d_1_1_user.html#ab506ef7a0281da426fa61b659d5c3f02',1,'OGRID::User::User()'],['../class_o_g_r_i_d_1_1_user.html#a543b0fcea53b981566cbe4b413917673',1,'OGRID::User::User(int userId, std::string userName, std::string userPassword, std::string userFirstName=&quot;&quot;, std::string userLastName=&quot;&quot;, Score *score=nullptr)']]],
+  ['user_2ecpp_4',['User.cpp',['../_user_8cpp.html',1,'']]],
+  ['user_2eh_5',['User.h',['../_user_8h.html',1,'']]],
+  ['usermenu_6',['usermenu',['../class_sandbox_1_1_user_menu.html',1,'Sandbox::UserMenu'],['../class_sandbox_1_1_user_menu.html#a52f3e42421abfe67dddc131d681323b7',1,'Sandbox::UserMenu::UserMenu()']]],
+  ['usermenu_2ecpp_7',['UserMenu.cpp',['../_user_menu_8cpp.html',1,'']]],
+  ['usermenu_2eh_8',['UserMenu.h',['../_user_menu_8h.html',1,'']]]
 ];

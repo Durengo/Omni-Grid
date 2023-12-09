@@ -1,0 +1,11 @@
+<map id="Sandbox::UserMenu" name="Sandbox::UserMenu">
+<area shape="rect" id="Node000001" title="The UserMenu class." alt="" coords="64,187,204,213"/>
+<area shape="rect" id="Node000002" href="$class_s_q_l_w_r_a_p_1_1_database.html" title="The Database class." alt="" coords="5,96,156,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,136,104,161,123,184,119,188,100,164,87,138"/>
+<area shape="rect" id="Node000003" href="$class_o_g_r_i_d_1_1_user.html" title="The User class." alt="" coords="180,96,277,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,136,181,165,152,188,149,184,177,161,206,132"/>
+<area shape="rect" id="Node000004" href="$class_o_g_r_i_d_1_1_score.html" title="The Score class." alt="" coords="112,5,217,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="185,43,222,94,217,97,180,46"/>
+<area shape="rect" id="Node000005" href="$class_o_g_r_i_d_1_1_player.html" title="The Player class. Used to represent a player." alt="" coords="240,5,348,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="283,47,267,74,245,97,241,94,262,70,279,44"/>
+</map>

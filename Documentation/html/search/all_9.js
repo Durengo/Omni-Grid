@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lastchangedchar_0',['lastChangedChar',['../class_o_g_r_i_d_1_1_grid.html#ad16f8deb9b1a58e6b95383d573d1f66e',1,'OGRID::Grid']]],
-  ['linethickness_1',['lineThickness',['../struct_g_u_i_info.html#a329bb9c008836c7e7a66bb669a97c782',1,'GUIInfo']]],
-  ['list_2',['Todo List',['../todo.html',1,'']]]
+  ['jumpnormalcheckersattackrule_0',['JumpNormalCheckersAttackRule',['../class_o_g_r_i_d_1_1_jump_normal_checkers_attack_rule.html',1,'OGRID']]],
+  ['jumpsupercheckersattackrule_1',['JumpSuperCheckersAttackRule',['../class_o_g_r_i_d_1_1_jump_super_checkers_attack_rule.html',1,'OGRID']]],
+  ['justify_2',['justify',['../struct_o_g_r_i_d_1_1_text.html#a428af81d6a962d85331a407083f5a8fe',1,'OGRID::Text::justify'],['../namespace_o_g_r_i_d.html#aea64e833804ca8030c960d41bea7a84e',1,'OGRID::Justify']]]
 ];

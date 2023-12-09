@@ -10,6 +10,7 @@
 #include "Player/Piece.h"
 #include "Player/Player.h"
 #include "GameLogicImplementation/PieceRules.h"
+#include "User/Score.h"
 
 namespace OGRID
 {
@@ -155,6 +156,16 @@ namespace OGRID
             return false;
         default:
             m_winner = m_currentPlayer;
+
+            if (m_winner == m_User->GetPlayer())
+            {
+                m_User->GetScore()->AddWin();
+            }
+            else
+            {
+                m_User->GetScore()->AddLoss();
+            }
+
             return true;
         }
     }
@@ -206,8 +217,9 @@ namespace OGRID
         SetupBoard();
     }
 
-    void Checkers::Initialize()
+    void Checkers::Initialize(OGRID::User *user)
     {
+        m_User = user;
         m_currentGameState = new GameStateChecker(new CheckersStateCheck());
 
         m_guiInfo = *new GUIInfo();
@@ -218,7 +230,8 @@ namespace OGRID
         m_guiInfo.lineThickness = 2.5f;
         m_guiInfo.margin = 30.0f;
 
-        auto *p1 = new OGRID::Player("Player1", OGRID::Human);
+        auto *p1 = new OGRID::Player(m_User->GetUserName(), OGRID::Human);
+        m_User->SetPlayer(p1);
         auto *p2 = new OGRID::Player("Player2", OGRID::Human);
 
         int choice = 0;

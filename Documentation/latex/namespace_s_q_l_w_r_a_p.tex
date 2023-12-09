@@ -1,0 +1,311 @@
+\doxysection{SQLWRAP Namespace Reference}
+\hypertarget{namespace_s_q_l_w_r_a_p}{}\label{namespace_s_q_l_w_r_a_p}\index{SQLWRAP@{SQLWRAP}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aedce763b803084a4e3a4c35b61f04e20}{Login}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em The Database\+User\+Wrapper class. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a24fbd0c4c98768d98cd2158d3c038b08}{Check\+Username\+Duplicates}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username)
+\begin{DoxyCompactList}\small\item\em Checks if the username already exists. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a49f6a96ef1380108d21e483836790ebe}{Register}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username, const std\+::string \&password, const std\+::string \&first\+Name, const std\+::string \&last\+Name)
+\begin{DoxyCompactList}\small\item\em Registers a new user. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a50bfac656a4c68ad7d3d08804bafe4c7}{Fetch\+User\+Data}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&username, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Fetches the user data. \end{DoxyCompactList}\item 
+static sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710}{prepare\+Statement}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, const std\+::string \&sql)
+\begin{DoxyCompactList}\small\item\em Fetches the user data. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af44f08fec8e6a7bdc5336e5aee2ee52c}{bind\+Parameters}} (sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}stmt, \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Binds the parameters to the prepared statement. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0}{execute\+Statement}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}stmt)
+\begin{DoxyCompactList}\small\item\em Executes the prepared statement. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a904250249c66ab9bec6c4270794f34bd}{begin\+Transaction}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Begins a transaction. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a263f46961bf2b2f64967b406ee8ca30f}{commit\+Transaction}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b}{rollback\+Transaction}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_af8cc441f5c8dd07e0e418f603dae4128}{Test\+Update}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Tests the update statement. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespace_s_q_l_w_r_a_p_a089f73cd289f2f5d57d0312b1127b798}{Update\+User\+Score}} (\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}db, \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Updates the user score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a904250249c66ab9bec6c4270794f34bd}\label{namespace_s_q_l_w_r_a_p_a904250249c66ab9bec6c4270794f34bd} 
+\index{SQLWRAP@{SQLWRAP}!beginTransaction@{beginTransaction}}
+\index{beginTransaction@{beginTransaction}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{beginTransaction()}{beginTransaction()}}
+{\footnotesize\ttfamily static void SQLWRAP\+::begin\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Begins a transaction. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_s_q_l_w_r_a_p_af44f08fec8e6a7bdc5336e5aee2ee52c}\label{namespace_s_q_l_w_r_a_p_af44f08fec8e6a7bdc5336e5aee2ee52c} 
+\index{SQLWRAP@{SQLWRAP}!bindParameters@{bindParameters}}
+\index{bindParameters@{bindParameters}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{bindParameters()}{bindParameters()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::bind\+Parameters (\begin{DoxyParamCaption}\item[{sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}}]{stmt,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Binds the parameters to the prepared statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em stmt} & The prepared statement \\
+\hline
+{\em user} & The user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the parameters were bound successfully 
+
+false if the parameters were not bound successfully 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a24fbd0c4c98768d98cd2158d3c038b08}\label{namespace_s_q_l_w_r_a_p_a24fbd0c4c98768d98cd2158d3c038b08} 
+\index{SQLWRAP@{SQLWRAP}!CheckUsernameDuplicates@{CheckUsernameDuplicates}}
+\index{CheckUsernameDuplicates@{CheckUsernameDuplicates}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{CheckUsernameDuplicates()}{CheckUsernameDuplicates()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::\+Check\+Username\+Duplicates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{username }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if the username already exists. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em username} & The username to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the username already exists 
+
+false if the username does not exist 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a263f46961bf2b2f64967b406ee8ca30f}\label{namespace_s_q_l_w_r_a_p_a263f46961bf2b2f64967b406ee8ca30f} 
+\index{SQLWRAP@{SQLWRAP}!commitTransaction@{commitTransaction}}
+\index{commitTransaction@{commitTransaction}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{commitTransaction()}{commitTransaction()}}
+{\footnotesize\ttfamily static void SQLWRAP\+::commit\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Commits a transaction. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0}\label{namespace_s_q_l_w_r_a_p_a7412463cbb4638c6ab47670b7ea7e9c0} 
+\index{SQLWRAP@{SQLWRAP}!executeStatement@{executeStatement}}
+\index{executeStatement@{executeStatement}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{executeStatement()}{executeStatement()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::execute\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}}]{stmt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Executes the prepared statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em stmt} & The prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the statement was executed successfully 
+
+false if the statement was not executed successfully 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a50bfac656a4c68ad7d3d08804bafe4c7}\label{namespace_s_q_l_w_r_a_p_a50bfac656a4c68ad7d3d08804bafe4c7} 
+\index{SQLWRAP@{SQLWRAP}!FetchUserData@{FetchUserData}}
+\index{FetchUserData@{FetchUserData}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{FetchUserData()}{FetchUserData()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*} SQLWRAP\+::\+Fetch\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fetches the user data. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em username} & The username \\
+\hline
+{\em password} & The password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\texorpdfstring{$\ast$}{*} The user data 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_aedce763b803084a4e3a4c35b61f04e20}\label{namespace_s_q_l_w_r_a_p_aedce763b803084a4e3a4c35b61f04e20} 
+\index{SQLWRAP@{SQLWRAP}!Login@{Login}}
+\index{Login@{Login}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::\+Login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The Database\+User\+Wrapper class. 
+
+This class is used to manage the user and interact with the database \begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+User 
+
+\doxylink{class_s_q_l_w_r_a_p_1_1_database}{Database} 
+\end{DoxySeeAlso}
+\Hypertarget{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710}\label{namespace_s_q_l_w_r_a_p_aaf781388a39a56da9d4baf9312dd1710} 
+\index{SQLWRAP@{SQLWRAP}!prepareStatement@{prepareStatement}}
+\index{prepareStatement@{prepareStatement}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{prepareStatement()}{prepareStatement()}}
+{\footnotesize\ttfamily static sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*} SQLWRAP\+::prepare\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fetches the user data. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em username} & The username \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\texorpdfstring{$\ast$}{*} The user data 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a49f6a96ef1380108d21e483836790ebe}\label{namespace_s_q_l_w_r_a_p_a49f6a96ef1380108d21e483836790ebe} 
+\index{SQLWRAP@{SQLWRAP}!Register@{Register}}
+\index{Register@{Register}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{const std\+::string \&}]{first\+Name,  }\item[{const std\+::string \&}]{last\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Registers a new user. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em username} & The username \\
+\hline
+{\em password} & The password \\
+\hline
+{\em first\+Name} & The first name \\
+\hline
+{\em last\+Name} & The last name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user was registered successfully 
+
+false if the user was not registered successfully 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b}\label{namespace_s_q_l_w_r_a_p_acd20e05720898f5e8a528262d7989d4b} 
+\index{SQLWRAP@{SQLWRAP}!rollbackTransaction@{rollbackTransaction}}
+\index{rollbackTransaction@{rollbackTransaction}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{rollbackTransaction()}{rollbackTransaction()}}
+{\footnotesize\ttfamily static void SQLWRAP\+::rollback\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rolls back a transaction. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_s_q_l_w_r_a_p_af8cc441f5c8dd07e0e418f603dae4128}\label{namespace_s_q_l_w_r_a_p_af8cc441f5c8dd07e0e418f603dae4128} 
+\index{SQLWRAP@{SQLWRAP}!TestUpdate@{TestUpdate}}
+\index{TestUpdate@{TestUpdate}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{TestUpdate()}{TestUpdate()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::\+Test\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tests the update statement. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the update was successful 
+
+false if the update was not successful 
+\end{DoxyReturn}
+\Hypertarget{namespace_s_q_l_w_r_a_p_a089f73cd289f2f5d57d0312b1127b798}\label{namespace_s_q_l_w_r_a_p_a089f73cd289f2f5d57d0312b1127b798} 
+\index{SQLWRAP@{SQLWRAP}!UpdateUserScore@{UpdateUserScore}}
+\index{UpdateUserScore@{UpdateUserScore}!SQLWRAP@{SQLWRAP}}
+\doxysubsubsection{\texorpdfstring{UpdateUserScore()}{UpdateUserScore()}}
+{\footnotesize\ttfamily static bool SQLWRAP\+::\+Update\+User\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_l_w_r_a_p_1_1_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db,  }\item[{\mbox{\hyperlink{class_o_g_r_i_d_1_1_user}{OGRID\+::\+User}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Updates the user score. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/09 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em user} & The user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the user score was updated successfully 
+
+false if the user score was not updated successfully 
+\end{DoxyReturn}

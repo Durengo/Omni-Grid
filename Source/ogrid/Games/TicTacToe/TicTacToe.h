@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameLogicInterface/IGame.h"
+#include "User/User.h"
 
 /**
  * @file TicTacToe.h
@@ -67,7 +68,7 @@ namespace OGRID
          * @brief Initialize the game
          * @date 2023-12-06
          */
-        void Initialize() override;
+        void Initialize(OGRID::User* user) override;
 
         /**
          * @brief Update the grid on the GUI
