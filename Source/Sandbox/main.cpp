@@ -16,9 +16,6 @@ int main()
 
     CLI_INFO("Welcome to Omni Grid Sandbox!");
 
-    // All the games are initialized in this class
-    // Sandbox::GameInitializer::Start();
-
     Sandbox::UserMenu userMenu;
     userMenu.Start();
 
