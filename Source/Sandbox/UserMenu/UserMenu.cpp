@@ -94,6 +94,12 @@ namespace Sandbox
         if (SQLWRAP::Login(m_Database, userName, userPassword))
         {
             CLI_TRACE("Login successful!");
+            OGRID::User *user = SQLWRAP::FetchUserData(m_Database, userName, userPassword);
+
+            if (user == nullptr)
+                throw std::runtime_error("Failed to fetch user data");
+
+            user->Display();
         }
         else
         {
