@@ -10,6 +10,9 @@
  */
 namespace OGRID
 {
+    // Forward declaration
+    class Score;
+
     class User
     {
     private:
@@ -18,9 +21,12 @@ namespace OGRID
         std::string m_UserFirstName;
         std::string m_UserLastName;
 
+        Score *m_Score;
+
         // Constructors & Destructors
     public:
-        User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "");
+        User();
+        User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "", Score *score = nullptr);
         ~User();
 
         // Getters & Setters

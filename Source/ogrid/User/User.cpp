@@ -1,11 +1,18 @@
 #include "User.h"
 
+#include "Score.h"
+
 namespace OGRID
 {
     // Constructors & Destructors
 
-    User::User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "")
-        : m_UserName(userName), m_UserPassword(userPassword), m_UserFirstName(userFirstName), m_UserLastName(userLastName)
+    User::User()
+        : m_UserName(""), m_UserPassword(""), m_UserFirstName(""), m_UserLastName(""), m_Score(nullptr)
+    {
+    }
+
+    User::User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "", Score *score)
+        : m_UserName(userName), m_UserPassword(userPassword), m_UserFirstName(userFirstName), m_UserLastName(userLastName), m_Score(score)
     {
     }
 
