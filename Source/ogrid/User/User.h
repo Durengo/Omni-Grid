@@ -2,6 +2,8 @@
 
 #include <string>
 
+#include "Player/Player.h"
+
 /**
  * @file User.h
  * @brief Contains the User class
@@ -25,6 +27,8 @@ namespace OGRID
         std::string m_UserLastName;
 
         Score *m_Score;
+
+        Player *m_Player;
 
         // Constructors & Destructors
     public:
@@ -51,6 +55,9 @@ namespace OGRID
 
         Score *GetScore() const;
         void SetScore(Score *score);
+
+        Player *GetPlayer() const;
+        void SetPlayer(Player *player);
 
         // Methods
     public:
