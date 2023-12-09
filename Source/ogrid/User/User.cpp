@@ -9,12 +9,12 @@ namespace OGRID
     // Constructors & Destructors
 
     User::User()
-        : m_UserId(0), m_UserName(""), m_UserPassword(""), m_UserFirstName(""), m_UserLastName(""), m_Score(nullptr)
+        : m_UserId(0), m_UserName(""), m_UserPassword(""), m_UserFirstName(""), m_UserLastName(""), m_Score(nullptr), m_Player(nullptr)
     {
     }
 
     User::User(int userId, std::string userName, std::string userPassword, std::string userFirstName, std::string userLastName, Score *score)
-        : m_UserId(userId), m_UserName(userName), m_UserPassword(userPassword), m_UserFirstName(userFirstName), m_UserLastName(userLastName), m_Score(score)
+        : m_UserId(userId), m_UserName(userName), m_UserPassword(userPassword), m_UserFirstName(userFirstName), m_UserLastName(userLastName), m_Score(score), m_Player(nullptr)
     {
     }
 
@@ -82,6 +82,16 @@ namespace OGRID
     void User::SetScore(Score *score)
     {
         m_Score = score;
+    }
+
+    Player *User::GetPlayer() const
+    {
+        return m_Player;
+    }
+
+    void User::SetPlayer(Player *player)
+    {
+        m_Player = player;
     }
 
     // Methods
