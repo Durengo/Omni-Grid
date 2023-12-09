@@ -248,6 +248,9 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
 
                 # USER
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.cpp"
+
+                # TOOLS
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Tools/Database/*.cpp"
         )
 
         # OMNI-GRID .H FILES
@@ -273,7 +276,10 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.h"
 
                 # USER
-                "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.cpp"
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.h"
+
+                # TOOLS
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/Tools/Database/*.h"
         )
 
         if(${VERBOSE})
