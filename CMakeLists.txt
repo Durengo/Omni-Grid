@@ -244,6 +244,9 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.cpp"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.cpp"
+
+                # USER
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.cpp"
         )
 
         # OMNI-GRID .H FILES
@@ -267,6 +270,9 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/TicTacToe/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/ConnectFour/*.h"
                 "${PROJECT_SOURCE_DIR}/Source/ogrid/Games/Checkers/*.h"
+
+                # USER
+                "${PROJECT_SOURCE_DIR}/Source/ogrid/User/*.cpp"
         )
 
         if(${VERBOSE})
@@ -336,10 +342,12 @@ if(COMPILATION_PLATFORM STREQUAL "WIN32")
                 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
                         # install(FILES ${GTK_DLL_DEBUG_FILES} DESTINATION bin)
                         install(FILES ${RAYLIB_DLL_DEBUG_FILES} DESTINATION bin)
-                        # install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
+
+                # install(FILES ${BOOST_PYTHON_DLL_DEBUG_FILES} DESTINATION bin)
                 elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
                         # install(FILES ${GTK_DLL_RELEASE_FILES} DESTINATION bin)
                         install(FILES ${RAYLIB_DLL_RELEASE_FILES} DESTINATION bin)
+
                         # install(FILES ${BOOST_PYTHON_DLL_RELEASE_FILES} DESTINATION bin)
                 endif()
         endif()
