@@ -16,6 +16,9 @@ namespace OGRID
     class User
     {
     private:
+        // Primary key
+        unsigned int m_UserId;
+
         std::string m_UserName;
         std::string m_UserPassword;
         std::string m_UserFirstName;
@@ -26,7 +29,7 @@ namespace OGRID
         // Constructors & Destructors
     public:
         User();
-        User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "", Score *score = nullptr);
+        User(int userId, std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "", Score *score = nullptr);
         ~User();
 
         // Getters & Setters
