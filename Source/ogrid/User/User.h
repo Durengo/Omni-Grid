@@ -17,18 +17,23 @@ namespace OGRID
         std::string m_UserFirstName;
         std::string m_UserLastName;
 
+        // Constructors & Destructors
     public:
-        User();
+        User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "");
         ~User();
 
+        // Getters & Setters
+    public:
         std::string GetUserName() const;
-        std::string GetUserPassword() const;
-        std::string GetUserFirstName() const;
-        std::string GetUserLastName() const;
-
         void SetUserName(const std::string &userName);
+
+        std::string GetUserPassword() const;
         void SetUserPassword(const std::string &userPassword);
+
+        std::string GetUserFirstName() const;
         void SetUserFirstName(const std::string &userFirstName);
+
+        std::string GetUserLastName() const;
         void SetUserLastName(const std::string &userLastName);
     };
 }
