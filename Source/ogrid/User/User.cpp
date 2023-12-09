@@ -5,6 +5,7 @@ namespace OGRID
     // Constructors & Destructors
 
     User::User(std::string userName, std::string userPassword, std::string userFirstName = "", std::string userLastName = "")
+        : m_UserName(userName), m_UserPassword(userPassword), m_UserFirstName(userFirstName), m_UserLastName(userLastName)
     {
     }
 
