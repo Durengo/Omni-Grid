@@ -43,10 +43,8 @@
 4. [pkgconfig](https://github.com/pkgconf/pkgconf)
 5. [raylib](https://github.com/raysan5/raylib)
 6. [gtest](https://github.com/google/googletest)
-7. [boost](https://github.com/boostorg/boost)
-8. [boost-python[python3]](https://github.com/boostorg/python)
-9. [gtkmm](https://github.com/GNOME/gtkmm)
-10. [opengl](https://www.opengl.org/)
+7. [opengl](https://www.opengl.org/)
+8. [sqlite](https://www.sqlite.org/index.html)
 
 * Make sure to install pkgconfig modules with
   > $ vcpkg install vcpkg-pkgconfig-get-modules
