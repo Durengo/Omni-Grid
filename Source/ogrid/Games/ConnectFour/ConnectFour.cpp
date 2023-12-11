@@ -65,13 +65,16 @@ namespace OGRID
         default:
             m_winner = m_currentPlayer;
 
-            if (m_winner == m_User->GetPlayer())
+            if (m_User != nullptr)
             {
-                m_User->GetScore()->AddWin();
-            }
-            else
-            {
-                m_User->GetScore()->AddLoss();
+                if (m_winner == m_User->GetPlayer())
+                {
+                    m_User->GetScore()->AddWin();
+                }
+                else
+                {
+                    m_User->GetScore()->AddLoss();
+                }
             }
 
             return true;
