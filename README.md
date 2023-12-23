@@ -2,7 +2,7 @@
 
 ## [Working With Source](Documentation/source.md)
 
-## Hardware/Software Requirements
+## Hardware Requirements
 
 ### Platform
 
